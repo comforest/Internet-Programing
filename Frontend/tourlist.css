@@ -1,0 +1,52 @@
+body{
+	background-color: black;
+}
+.tourList{
+	height:800px;
+	width:600px;
+	background-color: white;
+	border-radius: 5px;
+}
+.tourList_head{
+
+}
+
+.tourList_body{
+	height:100%;
+	overflow: auto;
+}
+
+.tourList_article{
+	height:150px;
+	border-left: solid 15px yellow;
+	border-top: solid 1px #a5a5a5;
+	padding-left:20px;
+	background-color: white;
+}
+.tourList_article:last-child{
+	border-bottom: solid 1px #a5a5a5;
+}
+.tourList_article h1{
+	margin: 0px;
+	margin-top: 20px;
+}
+.tourList_article p{
+	margin:0px;
+	margin-top: 10px;
+	width:300px;
+}
+.tourList_article img{
+	width:auto;
+	height:100%;
+	float: right;
+}
+
+
+.tourList::after{
+	display: block;
+	content: " ";
+	height:30px;
+	background-color: white;
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
