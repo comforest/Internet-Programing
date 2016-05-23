@@ -1,5 +1,5 @@
 body{
-	background-color: black;
+	background-color: tomato;
 	font-family: 'Hind', sans-serif;
 }
 .tourList{
@@ -15,6 +15,7 @@ body{
 .tourList_body{
 	height:100%;
 	overflow: auto;
+	background-color: white;
 }
 
 .tourList_article{
