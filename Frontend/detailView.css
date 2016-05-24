@@ -1,22 +1,4 @@
-body{
-	background-color: tomato;
-	font-family: 'Hind', sans-serif;
-}
 
-.detailView{
-	width:600px;
-	height:800px;
-	background-color: white;
-	border-radius: 5px;
-}
-
-.detailView_head{
-
-}
-.detailView_head img{
-	width: auto;
-	height: 30px;
-}
 
 .detailView figure {
 	margin: 0px;
