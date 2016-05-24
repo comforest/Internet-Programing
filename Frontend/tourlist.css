@@ -3,12 +3,13 @@ body{
 	font-family: 'Hind', sans-serif;
 }
 .tourList{
-	height: 550px; 
+	height: 581px; 
 	width: 350px;
 	background-color: white;
 	border-radius: 5px;
 }
 .tourList_head{
+	height: 7.4%;
 	border-bottom: solid gray 1px;
 	text-align: center;
 }
@@ -25,7 +26,8 @@ body{
 }
 
 .tourList_body{
-	height:100%;
+	height:87.1%;
+	width:100%;
 	overflow: auto;
 	background-color: #f3f3f3;
 }
@@ -41,19 +43,17 @@ body{
 .tourList_article:hover{
 	background-color: #f3f3f3;
 }
-
 .tourList_article:last-child{
 	border-bottom: solid 1px #b8b8b8;
 }
+
 .tourList_article h1{
 	font-weight: normal;
-	font-family: 'Hind', sans-serif;
 	margin: 0px;
 	margin-top: 15px;
 	font-size: 17px;
 }
 .tourList_article p{
-	font-family: 'Hind', sans-serif;
 	margin:0px;
 	margin-top: 0px;
 	width:180px;
@@ -71,7 +71,7 @@ body{
 .tourList::after{
 	display: block;
 	content: " ";
-	height:30px;
+	height:5.16%;
 	background-color: white;
 	border-bottom-right-radius: 5px;
 	border-bottom-left-radius: 5px;
