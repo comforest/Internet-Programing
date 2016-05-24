@@ -1,14 +1,6 @@
 .tourList .dialog_head{
 	text-align: center;
 }
-.tourList .dialog_head a{
-	display: inline-block;
-	padding: 10px 8px 3px 8px;
-}
-.tourList img{
-	height: 22px;
-	width: auto;
-}
 .tourList .search{
 	float:right;
 }

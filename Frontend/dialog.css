@@ -19,10 +19,13 @@ body{
 	color: #8e8e8e;
 	font-weight: bold;
 	text-decoration: none;
-	padding: 10px 8px 3px 8px;
+	height: 100%;
+	vertical-align: center;
+	padding: 0px 8px;
 }
 .dialog_head img{
-	height: 22px;
+	height: 50%;
+	margin-top:50%;
 	width: auto;
 }
 .dialog_body{
