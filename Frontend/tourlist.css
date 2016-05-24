@@ -1,38 +1,19 @@
-body{
-	background-color: tomato;
-	font-family: 'Hind', sans-serif;
-}
-.tourList{
-	height: 581px; 
-	width: 350px;
-	background-color: white;
-	border-radius: 5px;
-}
-.tourList_head{
-	height: 7.4%;
-	border-bottom: solid gray 1px;
+.tourList .dialog_head{
 	text-align: center;
 }
-.tourList_head a{
+.tourList .dialog_head a{
 	display: inline-block;
 	padding: 10px 8px 3px 8px;
 }
-.tourList_head img{
+.tourList img{
 	height: 22px;
 	width: auto;
 }
-.tourList_head .search{
+.tourList .search{
 	float:right;
 }
 
-.tourList_body{
-	height:87.1%;
-	width:100%;
-	overflow: auto;
-	background-color: #f3f3f3;
-}
-
-.tourList_article{
+.tourList .dialog_article{
 	height: 90px; 
 	border-left: solid 13px #8174ba;
 	border-top: solid 1px #b8b8b8;
@@ -40,40 +21,29 @@ body{
 	background-color: white;
 }
 
-.tourList_article:hover{
+.tourList .dialog_article:hover{
 	background-color: #f3f3f3;
 }
-.tourList_article:last-child{
+.tourList .dialog_article:last-child{
 	border-bottom: solid 1px #b8b8b8;
 }
 
-.tourList_article h1{
+.tourList .dialog_article h1{
 	font-weight: normal;
 	margin: 0px;
 	margin-top: 15px;
 	font-size: 17px;
 }
-.tourList_article p{
+.tourList .dialog_article p{
 	margin:0px;
 	margin-top: 0px;
 	width:180px;
 	font-size: 11px;
 	color: #7a7a7a;
 }
-.tourList_article img{
+.tourList .dialog_article img{
 	max-width:130px;
 	height:100%;
 	float: right;
 	object-fit: cover;
-}
-
-
-.tourList::after{
-	display: block;
-	content: " ";
-	height:5.16%;
-	background-color: white;
-	border-bottom-right-radius: 5px;
-	border-bottom-left-radius: 5px;
-	border-top: solid gray 1px; 
 }

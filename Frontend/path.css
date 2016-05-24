@@ -1,50 +1,25 @@
-body{
-	background-color: tomato;
-	font-family: 'Hind', sans-serif;
-}
-.pathList{
-	height:581px;
-	width:350px;
-	background-color: white;
-	border-radius: 5px;
-}
-.pathList_head{
-	height: 7.4%;
-	border-bottom: solid gray 1px;
-	text-align: right;
-}
-.pathList_head a{
-	display: inline-block;
-	color: #8e8e8e;
-	font-weight: bold;
-	text-decoration: none;
+
+.path .dialog_head a{
+	padding: 0px;
 	margin: 10px 25px 3px 8px;
+	float:right;
 }
 
-.pathList_body{
-	height:87.1%;
-	width:100%;
-	background-color: #f3f3f3;
-	overflow: auto;
-}
 
-.pathList_article, .pathList_pathinfo{
-	height:90px;
-	border-top: solid 1px #b8b8b8;
-	padding-left:20px;
-	background-color: white;
+.path_article, .path_info{
+	border-left: none;
 }
-.pathList_article:last-child, .pathList_pathinfo:last-child{
+.path_article:last-child, .path_info:last-child{
 	border-bottom: solid 1px #b8b8b8;
 }
 
 
 
-.pathList_article h1{
+.path_article h1{
 	margin: 0px;
 	margin-top: 20px;
 }
-.pathList_article .time{
+.path_article .time{
 	margin:0px;
 	margin-top: 3px;
 	max-width: 65px;
@@ -54,7 +29,7 @@ body{
 	text-align: center;
 	color:white;
 }
-.pathList_article img{
+.path_article img{
 	max-width:130px;
 	height:100%;
 	float: right;
@@ -64,7 +39,7 @@ body{
 
 
 
-.pathList_pathinfo{
+.path_info{
 	height:80px;
 	background-color: #ecf3f4;
 	display: flex;
@@ -72,26 +47,15 @@ body{
 	padding:0px;
 }
 
-.pathList_pathinfo img{
+.path_info img{
 	width: auto;
 	height:40px;
 	margin-left:20px;
 }
 
-.pathList_pathinfo p{
+.path_info p{
 	display: inline-block;
 	flex:5;
 	margin-left: 20px;
 	margin-right: 40px;
-}
-
-
-.pathList::after{
-	display: block;
-	content: " ";
-	height:5.16%;
-	background-color: white;
-	border-bottom-right-radius: 5px;
-	border-bottom-left-radius: 5px;
-	border-top: solid gray 1px; 
 }
