@@ -16,22 +16,25 @@
 }
 .detailView figure .Button{
 	position: absolute;
-	height: 30px;
-	width: 30px;
-	margin: -15px 13px;
+	height: 34px;
+	width: 34px;
+	margin: -17px 14px;
 	z-index: 20;
 	top:50%;
 }
 
 .detailView_info{
 	border-left: solid 15px yellow;
-	border-bottom: solid 1px #a5a5a5;
 	padding: 20px 15px;
+	position: relative;
 }
 .detailView_info img{
-	float: right;
 	width:auto;
 	height: 50px;
+	position: absolute;
+	right: 20px;
+	top: 50%;
+	margin-top: -25px;
 }
 .detailView_info h1{
 	margin: 0px;
@@ -39,4 +42,22 @@
 .detailView_info p{
 	margin: 0px;
 	margin-top: 10px;
+	font-size: 0.8em;
+	width:80%;
+}
+
+.detailView_location{
+	border-left:none;
+	display: flex;
+	align-items: center;
+}
+
+
+.detailView_location img{
+	width:auto;
+	height: 30px;
+}
+.detailView_location p{
+	width: 80%;
+	margin-left:20px;
 }
