@@ -10,6 +10,18 @@ body{
 }
 .tourList_head{
 	border-bottom: solid gray 1px;
+	text-align: center;
+}
+.tourList_head a{
+	display: inline-block;
+	padding: 10px 8px 3px 8px;
+}
+.tourList_head img{
+	height: 22px;
+	width: auto;
+}
+.tourList_head .search{
+	float:right;
 }
 
 .tourList_body{

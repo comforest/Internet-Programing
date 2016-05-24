@@ -1,0 +1,47 @@
+body{
+	background-color: tomato;
+	font-family: 'Hind', sans-serif;
+}
+
+.detailView{
+	width:600px;
+	height:800px;
+	background-color: white;
+	border-radius: 5px;
+}
+
+.detailView_head{
+
+}
+.detailView_head img{
+	width: auto;
+	height: 30px;
+}
+
+.detailView figure {
+	margin: 0px;
+}
+.detailView figure img{
+	height: auto;
+	width: 100%;
+	display: block;
+
+}
+
+.detailView_info{
+	border-left: solid 15px yellow;
+	border-bottom: solid 1px #a5a5a5;
+	padding: 20px 15px;
+}
+.detailView_info img{
+	float: right;
+	width:auto;
+	height: 50px;
+}
+.detailView_info h1{
+	margin: 0px;
+}
+.detailView_info p{
+	margin: 0px;
+	margin-top: 10px;
+}
