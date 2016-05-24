@@ -17,6 +17,7 @@ div{
 	width: 360px;
 	border-radius: 15px;
 	background-color: white;
+	box-shadow: 3px 3px 6px #a5a5a5;
 }
 			
 .datepage_div img{
@@ -28,7 +29,7 @@ div{
 .datapage_back{
 	width: auto;
 	color: #a0a0a0;
-	left: 20%
+	left: 10%;
 }
 			
 			
