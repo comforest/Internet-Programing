@@ -41,10 +41,10 @@ body{
 
 .imageview_div_delete{
 	
-	width:5%;
-	height:5%;
-	float: right;
-	float: top;
+	font-size: 5em;
+	float:right;
+	margin-top: 0;
+	
 	
 	
 }
