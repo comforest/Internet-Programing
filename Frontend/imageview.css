@@ -1,6 +1,5 @@
 body{
-	background-color: #f3f3f3;
-	font-family: 'Hind', sans-serif;
+	background: none rgba(0, 0, 0, 0.5);
 	color: #3f3f3f;
 }
 
@@ -59,9 +58,8 @@ body{
 	height: auto;
 	border: none;
 	border-radius: 15px;
-	background-color: #3f3f3f;
 	color: #a6a6a6;
-	
+	background: none rgba(63, 63, 63, 0.5);
 	
 	
 }
