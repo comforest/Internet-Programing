@@ -1,0 +1,71 @@
+.themeupper{
+	margin-top: 80px;
+	margin-bottom: 60px;
+	text-align: center;
+	color: #3f3f3f;
+	font-size: 24pt;
+	font-weight: bold;
+	position: relative;
+}
+
+.themebox{
+	width: 1600px;
+	margin-left: auto;
+	margin-right: auto;
+	display: flex;
+}
+
+.themeinner{
+	width: 350px;
+	margin-right: 25px;
+	margin-left: 25px;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	background-color: white;
+	box-shadow: 0 0 6px rgba(128,128,128,.2);
+	border-radius: 5% 5% 5% 5%;
+}
+
+.themeinner img{
+	width: 50%;
+	margin-left: 25%;
+	margin-right: 25%;
+	margin-top: 15%;
+	margin-bottom: 15%;
+	height: auto;
+}
+.themeinner div{
+	color: #3f3f3f;
+	font-size: 40pt;
+	text-align: center;
+}
+
+.themeinner p{
+	font-size: 20pt;
+	color: #8e8e8e;
+	margin-left: 10%;
+	margin-right: 10%;
+	text-align: center;
+}
+.themelower{
+
+}
+
+.themelower div{
+	width: 300px;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 10px 0 10px 0;
+	text-align: center;
+	font-size: 18pt;
+	color: white;
+	background-color: #ffa200;
+	border-radius: 40px;
+}
+@media (max-width: 1600px){
+	.themebox{
+		width: 800px;
+	}
+}
