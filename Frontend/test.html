@@ -3,50 +3,62 @@
 <head>
 	<meta charset = "utf-8">
 	<title>test</title>
-	<script src="jquery-1.12.2.min.js"></script>
 	<link href='https://fonts.googleapis.com/css?family=Hind' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="datebar.css">
 
 
 	</head>
-	<body>
+ <body>
+	<aside>
+      <div class="datebar_div">
+         <a onclick="WriteVerticalCalendar(currentYear,currentMonth,currentDay-7)"><img class="datebar_div_up" src="up_button.png"></a>
+         <script type = "text/javascript">
+         <!--   
+            WriteVerticalCalendar(2016,4,25);
+            function WriteVerticalCalendar(y, m, d){
+               var d = new Date(y,m,d);
+               var y = d.getFullYear();
+               var last = [31,28,31,30,31,30,31,31,30,31,30,31];
+               if (y%4===0 && y%100!=0 || y%400===0) {
 
-		<div class="datebar_div">
-			<a href="#"><img class="datebar_div_up" src="up_button.png"></a>
-			<script type = "text/javascript">
-			<!--	
-				WriteVerticlaCalendar(2016,4,26);
-				function WriteVerticlaCalendar(y, m, d){
-					var d = new Date(y,m,d);
-					var y = d.getFullYear();
-					var last = [31,28,31,30,31,30,31,31,30,31,30,31];
-					if (y%4===0 && y%100!=0 || y%400===0) {
-
-						lastDate = last[1] = 29;
+                  lastDate = last[1] = 29;
+               }
+               var currentDate=d.getDate();
+               var currentMonth=d.getMonth();
+               var currentYear=d.getYear();
+			   console.log(d);
+               var lastDate = last[currentMonth];
+               for(var i=0;i<7;i++){
+                  if(currentDate>lastDate){
+                     currentDate=currentDate-lastDate;
+                     currentMonth++;
 					}
-					var currentDate=d.getDate();
-					var currentMonth=d.getMonth();
-					console.log(d);
-					var lastDate = last[currentMonth];
-					for(var i=0;i<7;i++){
-						if(currentDate>lastDate){
-							currentDate=1;
-							currentMonth++;
-						}
-						if(currentMonth>12)
-							currentMonth = 1;
-
-						document.writeln("<p>"+currentDate + " / " + (currentMonth+1)+"</p><br>");	
-						currentDate++;
+					if(currentDate<1){
+					currentMonth--;
+					currentDate= lastDate-currentDate;
 					}
-				}
-			-->
-			</script>
-		
-			<a onclick="WriteVerticlaCalendar(2016,4,27)"><img class="datebar_div_down" src="down_button.png"></a>
-		</div>
-	</aside>
-	</body>
+					if(currentMonth<1){
+					currentYear--;
+					currentMonth=12;
+					}
+                  if(currentMonth>12){
+                     currentMonth = 1;
+					 currentYear++;
+					}
+
+                  document.writeln("<p>"+currentDate + " / " + (currentMonth+1)+"</p><br>");   
+                  currentDate++;
+               }
+			   
+            }
+         -->
+		 
+         </script>
+		<a onclick="WriteVerticalCalendar(currentYear,currentMonth,currentDay+7)"><img class="datebar_div_down" src="down_button.png"></a>
+         
+      </div>
+   </aside>
+   </body>
 	<footer>
 	</footer>
 </html>

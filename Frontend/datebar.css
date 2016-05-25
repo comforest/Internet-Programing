@@ -3,7 +3,7 @@
 	position: fixed;
 	left: 10px;
 	height: 100%;
-	width: 20px;
+	width: 30px;
 	background-color: black;
 	color:
 
@@ -33,7 +33,7 @@ body{
 }
 
 
-div{
+.datebar_div{
 	
 	width: 50px;
 	height: 80%;
