@@ -1,11 +1,42 @@
 .Llayer_fixed{
 
 	position: fixed;
-	right: 10px;
+	left: 10px;
 	height: 100%;
 	width: 20px;
-	background-color: white;
+	background-color: black;
 	color:
 
 
+}
+body{
+	background-color: #f3f3f3;
+	color: #3f3f3f;
+	font-size: 23px;
+}
+
+.datebar_div_down{
+	
+	width: 30px;
+	height: auto;
+	
+	
+	
+}
+.datebar_div_up{
+	
+	width: 30px;
+	height: auto;
+	
+	
+	
+}
+
+
+div{
+	
+	width: 50px;
+	height: 80%;
+	
+	
 }
