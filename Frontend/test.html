@@ -13,30 +13,34 @@
 			<a href="#"><img class="datebar_div_up" src="up_button.png"></a>
 			<script type = "text/javascript">
 			<!--	
-				var currentDay,
-					currentMonth;
-				var last = [31,28,31,30,31,30,31,31,30,31,30,31];
-					if (y%4==0 && y%100!=0 || y%400=0) {
+				WriteVerticlaCalendar(2016,4,26);
+				function WriteVerticlaCalendar(y, m, d){
+					var d = new Date(y,m,d);
+					var y = d.getFullYear();
+					var last = [31,28,31,30,31,30,31,31,30,31,30,31];
+					if (y%4===0 && y%100!=0 || y%400===0) {
 						lastDate = last[1] = 29;
-						}
-				var d = new Date(y,m,d)
-				currentDay=d.getDay();
-				currentMonth=m.getMonth();
-
-		   var lastDate = last[m];
-		   var i = 0;
-					for(i=0;i<7;i++){
-					if(currentDay>lastDate){currentDay=1; currentMonth++;}
-					if(currentMonth>12){currentMonth = 1;}
-					document.writeln("<p>"currentDay + " / " + currentMonth"</p>");
-					
-					<br>
-					currentDay++;
 					}
-					-->
+					var currentDate=d.getDate();
+					var currentMonth=d.getMonth();
+					console.log(d);
+					var lastDate = last[currentMonth];
+					for(var i=0;i<7;i++){
+						if(currentDate>lastDate){
+							currentDate=1;
+							currentMonth++;
+						}
+						if(currentMonth>12)
+							currentMonth = 1;
+
+						document.writeln("<p>"+currentDate + " / " + (currentMonth+1)+"</p><br>");	
+						currentDate++;
+					}
+				}
+			-->
 			</script>
 		
-			<a href="#"><img class="datebar_div_down" src="down_button.png"></a>
+			<a onclick="WriteVerticlaCalendar(2016,4,27)"><img class="datebar_div_down" src="down_button.png"></a>
 		</div>
 	</aside>
 	</body>
