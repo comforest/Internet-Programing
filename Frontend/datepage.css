@@ -18,12 +18,20 @@ div{
 	border-radius: 15px;
 	background-color: white;
 	box-shadow: 3px 3px 6px #a5a5a5;
+
 }
 			
 .datepage_div img{
 	width: 1.2em;
 	height: 100%;
 	float: left;
+}
+
+.datepage_div input {
+	border: transparent;
+	font-size: 25px;
+	size = 16%;	
+	
 }
 			
 .datapage_back{
