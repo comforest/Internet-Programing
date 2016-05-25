@@ -1,0 +1,56 @@
+body{
+	background-color: #f3f3f3;
+	color: #3f3f3f;
+	font-size: 23px;
+}
+div{
+	width: 60%;
+	position: relative;
+	height: 1.5em;
+}
+.datepage_div {
+	text-align:center;
+	margin-bottom:.3em;
+	margin: auto;
+	padding: .3em;
+	border: none;
+	width: 360px;
+	border-radius: 15px;
+	background-color: white;
+	box-shadow: 3px 3px 6px #a5a5a5;
+
+}
+			
+.datepage_div img{
+	width: 1.2em;
+	height: 100%;
+	float: left;
+}
+
+.datepage_div input {
+	border: transparent;
+	font-size: 25px;
+	size = 16%;	
+	
+}
+			
+.datapage_back{
+	width: auto;
+	color: #a0a0a0;
+	
+}
+			
+			
+.datepage_roundclick{
+	border: 1px #000000;
+	text-align: center;
+	margin-bottom: 20px;
+	width: 160px;
+	margin: auto;
+	padding: .3em;
+	height: auto;
+	border: none;
+	border-radius: 15px;
+	background-color: #ffa200;
+	color: white;
+}

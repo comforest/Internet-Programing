@@ -1,0 +1,45 @@
+<!Doctype html>
+<html>
+<head>
+	<meta charset = "utf-8">
+	<title>test</title>
+	<link href='https://fonts.googleapis.com/css?family=Hind' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="datebar.css">
+
+	</head>
+	<body>
+
+		<div class="datebar_div">
+			<a href="#"><img class="datebar_div_up" src="up_button.png"></a>
+			<script type = "text/javascript">
+			<!--	
+				var currentDay,
+					currentMonth;
+				var last = [31,28,31,30,31,30,31,31,30,31,30,31];
+					if (y%4==0 && y%100!=0 || y%400=0) {
+						lastDate = last[1] = 29;
+						}
+				var d = new Date(y,m,d)
+				currentDay=d.getDay();
+				currentMonth=m.getMonth();
+
+		   var lastDate = last[m];
+		   var i = 0;
+					for(i=0;i<7;i++){
+					if(currentDay>lastDate){currentDay=1; currentMonth++;}
+					if(currentMonth>12){currentMonth = 1;}
+					document.writeln("<p>"currentDay + " / " + currentMonth"</p>");
+					
+					<br>
+					currentDay++;
+					}
+					-->
+			</script>
+		
+			<a href="#"><img class="datebar_div_down" src="down_button.png"></a>
+		</div>
+	</aside>
+	</body>
+	<footer>
+	</footer>
+</html>
