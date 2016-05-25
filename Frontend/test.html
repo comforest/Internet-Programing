@@ -3,8 +3,10 @@
 <head>
 	<meta charset = "utf-8">
 	<title>test</title>
+	<script src="jquery-1.12.2.min.js"></script>
 	<link href='https://fonts.googleapis.com/css?family=Hind' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="datebar.css">
+
 
 	</head>
 	<body>
@@ -16,7 +18,7 @@
 				var currentDay,
 					currentMonth;
 				var last = [31,28,31,30,31,30,31,31,30,31,30,31];
-					if (y%4==0 && y%100!=0 || y%400=0) {
+					if (y%4==0 && y%100!=0 || y%400==0) {
 						lastDate = last[1] = 29;
 						}
 				var d = new Date(y,m,d)
