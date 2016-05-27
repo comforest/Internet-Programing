@@ -1,8 +1,7 @@
 .Llayer_fixed{
 
-	position: fixed;
 	left: 10px;
-	height: 550px;
+	height: 80%;
 	width: 80px;
 	background-color: 3f3f3f;
 	color: #888888;
@@ -12,7 +11,7 @@
 }
 body{
 
-
+	font-size: 1em;
 	color: #3f3f3f;
 	font-size: 20px;
 }
@@ -21,7 +20,7 @@ body{
 	
 	width: 30px;
 	height: auto;
-	
+		font-size: 1em
 	
 	
 }
@@ -36,7 +35,7 @@ body{
 
 
 .datebar_div{
-	
+	font-size: 1em;
 	width: auto;
 	height: 80%;
 	text-align:center;

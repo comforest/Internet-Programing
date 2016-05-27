@@ -12,10 +12,11 @@
  <body>
 	<aside class="Llayer_fixed">
       <div class="datebar_div">
-         <a onclick="WriteVerticalCalendar(2016,4,26)"><img class="datebar_div_up" src="up_button.png"></a>
+			
+		 <a onclick="WriteVerticalCalendar(2016,4,26)"><img class="datebar_div_up" src="up_button.png"></a>
          <script type = "text/javascript">
          <!--   
-            WriteVerticalCalendar(2016,4,25);
+
             function WriteVerticalCalendar(y, m, d){
                var d = new Date(y,m,d);
                var y = d.getFullYear();
@@ -48,10 +49,12 @@
 					}
 
                   document.writeln("<p>"+currentDate + " / " + (currentMonth+1)+"</p>");   
+				  document.writeln("<p>"+"day"+"</p>");   
                   currentDate++;
                }
-			   
+			 
             }
+		WriteVerticalCalendar(2016,4,25); 
          -->
 		 
          </script>
