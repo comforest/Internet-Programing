@@ -3,7 +3,7 @@
 	margin-bottom: 60px;
 	text-align: center;
 	color: #3f3f3f;
-	font-size: 48pt;
+	font-size: 56pt;
 	font-weight: bold;
 	position: relative;
 }
@@ -29,7 +29,7 @@
 	border-radius: 30px 30px 30px 30px;
 }
 
-.themeinner img{
+.innerimage img{
 	width: 50%;
 	margin-left: 25%;
 	margin-right: 25%;
@@ -37,13 +37,13 @@
 	margin-bottom: 15%;
 	height: auto;
 }
-.themeinner div{
+.innercontent div{
 	color: #3f3f3f;
 	font-size: 40pt;
 	text-align: center;
 }
 
-.themeinner p{
+.innercontent p{
 	font-size: 20pt;
 	color: #8e8e8e;
 	margin-left: 10%;
@@ -68,7 +68,56 @@
 	border-radius: 40px;
 }
 @media (max-width: 1600px){
+	.themeupper{
+		font-size: 40pt;
+	}
 	.themebox{
 		width: 800px;
+	}
+}
+
+@media (max-width: 800px){
+	.themeupper{
+		font-size: 10vw;
+	}
+	.themebox{
+		width: 100vw;
+	}
+
+	.themeinner{
+		width: 80vw;
+		margin: 2vw 5vw 2vw 5vw;
+		padding: 5vw 5vw 5vw 5vw;
+		background-color: white;
+		box-shadow: 0 0 6px rgba(128,128,128,.2);
+		border-radius: 30px 30px 30px 30px;
+	}
+	.innerimage{
+		width: 30vw;
+		height: 30vw;
+		padding: 0 0 0 0;
+		float: left;
+	}
+	.innerimage img{
+		width: 80%;
+		margin: 10% 10% 10% 10%;
+		height: auto;
+	}
+	.innercontent{
+		width: 45vw;
+		margin-left: 5vw;
+		float: left;
+	}
+	.innercontent div{
+		font-size: 10vw;
+		margin-top: 2vw;
+		font-weight: bold;
+		text-align: left;
+	}
+
+	.innercontent p{
+		font-size: 3vw;
+		text-align: left;
+		margin: 0 0 0 0;
 	}
 }
