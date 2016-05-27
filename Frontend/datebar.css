@@ -2,17 +2,19 @@
 
 	position: fixed;
 	left: 10px;
-	height: 100%;
-	width: 30px;
-	background-color: black;
-	color:
-
+	height: 550px;
+	width: 80px;
+	background-color: 3f3f3f;
+	color: #888888;
+	border-radius: 15px;
+	box-shadow: 3px 3px 6px dimgrey;
 
 }
 body{
-	background-color: #f3f3f3;
+
+
 	color: #3f3f3f;
-	font-size: 23px;
+	font-size: 20px;
 }
 
 .datebar_div_down{
@@ -27,7 +29,7 @@ body{
 	
 	width: 30px;
 	height: auto;
-	
+	font-size: 1em;
 	
 	
 }
@@ -35,8 +37,12 @@ body{
 
 .datebar_div{
 	
-	width: 50px;
+	width: auto;
 	height: 80%;
-	
-	
+	text-align:center;
+}
+
+.datebar_aside{
+	position: fixed;
+
 }
