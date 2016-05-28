@@ -1,0 +1,123 @@
+.themeupper{
+	margin-top: 80px;
+	margin-bottom: 60px;
+	text-align: center;
+	color: #3f3f3f;
+	font-size: 56pt;
+	font-weight: bold;
+	position: relative;
+}
+
+.themebox{
+	width: 1600px;
+	margin-left: auto;
+	margin-right: auto;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.themeinner{
+	width: 350px;
+	margin-right: 25px;
+	margin-left: 25px;
+	margin-top: 25px;
+	margin-bottom: 25px;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	background-color: white;
+	box-shadow: 0 0 6px rgba(128,128,128,.2);
+	border-radius: 30px 30px 30px 30px;
+}
+
+.innerimage img{
+	width: 50%;
+	margin-left: 25%;
+	margin-right: 25%;
+	margin-top: 15%;
+	margin-bottom: 15%;
+	height: auto;
+}
+.innercontent div{
+	color: #3f3f3f;
+	font-size: 40pt;
+	text-align: center;
+}
+
+.innercontent p{
+	font-size: 20pt;
+	color: #8e8e8e;
+	margin-left: 10%;
+	margin-right: 10%;
+	text-align: center;
+}
+.themelower{
+
+}
+
+.themelower div{
+	width: 300px;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 10px 0 10px 0;
+	text-align: center;
+	font-size: 18pt;
+	color: white;
+	background-color: #ffa200;
+	border-radius: 40px;
+}
+@media (max-width: 1600px){
+	.themeupper{
+		font-size: 40pt;
+	}
+	.themebox{
+		width: 800px;
+	}
+}
+
+@media (max-width: 800px){
+	.themeupper{
+		font-size: 10vw;
+	}
+	.themebox{
+		width: 100vw;
+	}
+
+	.themeinner{
+		width: 80vw;
+		margin: 2vw 5vw 2vw 5vw;
+		padding: 5vw 5vw 5vw 5vw;
+		background-color: white;
+		box-shadow: 0 0 6px rgba(128,128,128,.2);
+		border-radius: 30px 30px 30px 30px;
+	}
+	.innerimage{
+		width: 30vw;
+		height: 30vw;
+		padding: 0 0 0 0;
+		float: left;
+	}
+	.innerimage img{
+		width: 80%;
+		margin: 10% 10% 10% 10%;
+		height: auto;
+	}
+	.innercontent{
+		width: 40vw;
+		margin-left: 10vw;
+		float: left;
+	}
+	.innercontent div{
+		font-size: 10vw;
+		margin-top: 2vw;
+		font-weight: bold;
+		text-align: left;
+	}
+
+	.innercontent p{
+		font-size: 3vw;
+		text-align: left;
+		margin: 0 0 0 0;
+	}
+}
