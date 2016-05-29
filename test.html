@@ -14,57 +14,64 @@
       <div class="datebar_div">
          
       
-         <script type = "text/javascript">
+		<script type = "text/javascript">
 
-         <!--   
-         var p = new Date();
-         var td = p.getDate();
-         var tm = p.getMonth();
-         var ty = p.getFullYear();
-         WriteVerticalCalendar(ty,tm,td);
-         function WriteVerticalCalendar(y, m, d){         
-            var d = new Date(y,m,d);
-            var y = d.getFullYear();
-            var last = [31,28,31,30,31,30,31,31,30,31,30,31];               
-            var week = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat','Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
-            if (y%4===0 && y%100!=0 || y%400===0) {
-               lastDate = last[1] = 29;
-            }
-         var currentDate=d.getDate();
-         var currentMonth=d.getMonth();
-         var currentYear=d.getYear();
-         console.log(d);
-         var lastDate = last[currentMonth];
-            var div = document.getElementsByClassName("datebar_div")[0];
-          div.innerHTML = ("<a href='#' onclick=\"WriteVerticalCalendar("+currentYear+","+currentMonth+","+(currentDate-7)+")\"><img class=\"datebar_div_up\" src=\"static/image/up_button.png\"></a>");
-         for(var i=0;i<7;i++){
-                if(currentDate>lastDate){
-                     currentDate=currentDate-lastDate;
-                     currentMonth++;
-               }
-            if(currentDate<1){
-               currentMonth--;
-               currentDate= currentDate-lastDate;
-               }
-            if(currentMonth<1){
-               currentYear--;
-               currentMonth=12;
-               }
+		<!--   
+			var p = new Date();
+			var td = p.getDate();
+			var tm = p.getMonth();
+			var ty = p.getFullYear();
+			WriteVerticalCalendar(ty,tm,td);
+			
+			function AddDate(dd,y,m,d){
+				var fd = dd.getDate() + d;
+				var fm = dd.getMonth() + m;
+				var fy = dd.getFullYear() + y;
+				if(fd < 1){
+					--fm;
+					fd = getLastDate(fy, fm) + fd;
+					console.log(fd + " " + fm);
+				}else if(fd > getLastDate(fy,fm)){
+					fd -= getLastDate(fy, fm);
+					++fm;
+				}
+				if(fm < 0){
+					fm = 12 - fm;
+					-- fy;
+				}else if(fm > 11){
+					fm = fm - 12;
+					++ fy;
+				}
+				var da = new Date(fy,fm,fd);
+				return da;
+			}
 
-                if(currentMonth>11){
-                currentMonth = 0;
-                currentYear++;
-              }
-		
-                  div.innerHTML += ("<p>"+currentDate + " / " + (currentMonth+1)+"</p>");   
-              div.innerHTML += ("<p style = \"font-size: 15px\">"+week[d.getDay()+i]+"</p>"+"<br>");   
-                  currentDate++;
-          
-                }
-            div.innerHTML += ("<a href='#' onclick=\"WriteVerticalCalendar("+currentYear+","+currentMonth+","+currentDate+")\"><img class=\"datebar_div_down\" src=\"static/image/down_button.png\"></a>");
-            }
-         -->
-         </script>
+			function getLastDate(y, m){
+				var last = [31,28,31,30,31,30,31,31,30,31,30,31];        
+				if (y%4===0 && y%100!=0 || y%400===0) {
+					lastDate = last[1] = 29;
+				}
+				return last[m];
+			}
+
+			function WriteVerticalCalendar(y, m, d){            
+				var week = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+
+				var d = new Date(y,m,d);
+				var div = document.getElementsByClassName("datebar_div")[0];
+			
+				var dd = AddDate(d,0,0,-7);
+				div.innerHTML = ("<a href='#' onclick=\"WriteVerticalCalendar("+dd.getFullYear()+","+dd.getMonth()+","+dd.getDate()+")\"><img class=\"datebar_div_up\" src=\"static/image/up_button.png\"></a>");
+				for(var i=0;i<7;i++){
+					dd = AddDate(d,0,0,i);
+					div.innerHTML += ("<p>"+dd.getDate() + " / " + (dd.getMonth()+1)+"</p>");   
+					div.innerHTML += ("<p style = \"font-size: 15px\">"+week[dd.getDay()]+"</p>"+"<br>");   
+				}
+				var dd = AddDate(d,0,0,7);
+				div.innerHTML += ("<a href='#' onclick=\"WriteVerticalCalendar("+dd.getFullYear()+","+dd.getMonth()+","+dd.getDate()+")\"><img class=\"datebar_div_down\" src=\"static/image/down_button.png\"></a>");
+			}
+		-->
+		</script>
       
          
       </div>
