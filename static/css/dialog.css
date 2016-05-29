@@ -3,15 +3,20 @@ body{
 }
 
 .dialog{
-	height: 581px; 
+	position: fixed;
+	top: 46px;
+	bottom:0px;
+	height: auto;
 	width: 350px;
 	background-color: white;
 	border-radius: 5px;
+	margin:10px;
+	box-shadow: 3px 3px 6px dimgrey;
 }
 
 
 .dialog_head{
-	height: 7.4%;
+	height: 46px;
 	border-bottom: solid gray 1px;
 }
 .dialog_head a{
@@ -29,10 +34,14 @@ body{
 	margin-top:50%;
 }
 .dialog_body{
-	height:87.1%;
+	position: absolute;
+	top:46px;
+	bottom:46px;
+	height: auto;
 	width:100%;
 	overflow: auto;
 	background-color: #f3f3f3;
+	border-bottom: solid gray 1px; 
 }
 
 .dialog_article{
@@ -44,13 +53,4 @@ body{
 }
 .dialog_article:last-child{
 	border-bottom: solid 1px #b8b8b8;
-}
-.dialog::after{
-	display: block;
-	content: " ";
-	height:5.16%;
-	background-color: white;
-	border-bottom-right-radius: 5px;
-	border-bottom-left-radius: 5px;
-	border-top: solid gray 1px; 
 }

@@ -1,51 +1,38 @@
 .Llayer_fixed{
+	position: absolute;
+	left: 0px;
+	top: 46px;
+	bottom:0px;
+	margin: 30px;
+	
 
-	left: 10px;
-	height: 80%;
+	line-height: 50%;
 	width: 80px;
-	background-color: 3f3f3f;
+	background-color: #ffffff;
 	color: #888888;
 	border-radius: 15px;
 	box-shadow: 3px 3px 6px dimgrey;
 
-}
-body{
-
-	font-size: 1em;
-	color: #3f3f3f;
-	font-size: 20px;
-	line-height: 50%;
-}
-
-.datebar_div_down{
-	
-	width: 30px;
-	height: auto;
-	font-size: 1em
-	
-	
-}
-.datebar_div_up{
-	
-	width: 30px;
-	height: auto;
-	font-size: 1em;
-	
-	
-}
-
-
-.datebar_div{
-	font-size: 1em;
-	width: auto;
-	height: 80%;
 	text-align:center;
 }
 
-.datebar_aside{
-	position: fixed;
-
+.datebar_div_down{
+	width: 30px;
+	height: auto;
+	font-size: 1em;
+	
 }
+.datebar_div_up{
+	width: 30px;
+	height: auto;
+	font-size: 1em;
+	margin-bottom: 10px;
+}
+
+.Llayer_fixed .date{
+	margin-bottom: 30px;
+}
+
 
 @media screen and (max-width: 400px){
 	
