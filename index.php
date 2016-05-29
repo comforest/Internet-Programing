@@ -1,6 +1,7 @@
 <?php // header.php
 session_start();
-include 'functions.php';
+require_once 'functions.php';
+require_once 'setup.php';
 
 if (isset($_SESSION['user'])) {
     $user     = $_SESSION['user'];
