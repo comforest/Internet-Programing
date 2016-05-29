@@ -1,6 +1,7 @@
 .detailView{
-	height: 620px; 
 	width: 400px;
+	float:right;
+	right: 0px;
 }
 
 .detailView figure {
