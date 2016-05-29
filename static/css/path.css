@@ -1,3 +1,20 @@
+.path{
+	display: inline-block;
+	margin-left:0px;
+
+	border-top-left-radius: 0px;
+	border-bottom-left-radius: 0px;
+}
+
+.Llayer_fixed{
+	display: inline-block;
+	position: initial;
+	margin-right:0px;
+
+	border-top-right-radius: 0px;
+	border-bottom-right-radius: 0px;
+}
+
 
 .path .dialog_head a{
 	float:right;

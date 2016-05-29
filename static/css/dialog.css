@@ -3,7 +3,7 @@ body{
 }
 
 .dialog{
-	position: absolute;
+	position: fixed;
 	top: 46px;
 	bottom:0px;
 	height: auto;
@@ -11,6 +11,7 @@ body{
 	background-color: white;
 	border-radius: 5px;
 	margin:10px;
+	box-shadow: 3px 3px 6px dimgrey;
 }
 
 
@@ -33,7 +34,10 @@ body{
 	margin-top:50%;
 }
 .dialog_body{
-	height:90%;
+	position: absolute;
+	top:46px;
+	bottom:46px;
+	height: auto;
 	width:100%;
 	overflow: auto;
 	background-color: #f3f3f3;
