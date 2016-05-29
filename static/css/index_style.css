@@ -63,7 +63,16 @@ p
 	color: white;
 }
 
-#fb_login iframe
+#fb_login span iframe
+{
+    background-color: rgba(255,255,255,0);
+	color: white;
+	font-family: 'Hind', sans-serif;
+	font-size: 20px;
+	border: 0px;
+}
+
+#fb_login span
 {
     background-color: rgba(255,255,255,0);
 	color: white;
