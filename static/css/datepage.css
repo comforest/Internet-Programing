@@ -1,0 +1,135 @@
+body{
+	background-color: #f3f3f3;
+	color: #3f3f3f;
+	font-size: 23px;
+}
+div{
+	width: 60%;
+	position: relative;
+	height: 1.5em;
+}
+.datepage_div {
+	text-align:center;
+	margin-bottom:.3em;
+	margin: auto;
+	padding: .3em;
+	border: none;
+	width: 360px;
+	border-radius: 15px;
+	background-color: white;
+	box-shadow: 3px 3px 6px #a5a5a5;
+
+}
+			
+.datepage_div img{
+	width: 1.2em;
+	height: 100%;
+	float: left;
+}
+
+.datepage_div input {
+	border: transparent;
+	font-size: 25px;
+	
+}
+			
+.datapage_back{
+	width: 40%;
+	color: #a0a0a0;
+	text-align: center;
+	
+	
+}
+			
+			
+.datepage_roundclick{
+	border: 1px #000000;
+	text-align: center;
+	margin-bottom: 20px;
+	width: 160px;
+	margin: auto;
+	padding: .3em;
+	height: auto;
+	border: none;
+	border-radius: 15px;
+	background-color: #ffa200;
+	color: white;
+}
+
+
+
+@media screen and (max-width: 400px)
+{
+	
+.datepage_div{
+	width: 95%;
+	text-align:center;
+	margin-bottom:.3em;
+	margin: auto;
+	padding: .3em;
+	border: none;
+	border-radius: 15px;
+	background-color: white;
+	box-shadow: 3px 3px 6px #a5a5a5;
+	
+
+}
+	
+.datepage_div input {
+	border: transparent;
+	font-size: 1em;
+	width:80%;
+}	
+	
+	
+	
+	
+.datapage_back{
+	float: left;
+	color: #a0a0a0;
+	text-align: left;
+}
+	
+}
+
+
+
+
+@media screen and (min-width: 800px)
+{
+	
+.datepage_div{
+	width: 480px;
+	text-align:center;
+	margin-bottom:.3em;
+	margin: auto;
+	padding: .3em;
+	border: none;
+	border-radius: 15px;
+	background-color: white;
+	box-shadow: 3px 3px 6px #a5a5a5;
+	
+
+}
+	
+.datepage_div input {
+	border: transparent;
+	font-size: 1em;
+	width:80%;
+}	
+	
+	
+	
+	
+.datapage_back{
+	width: 40%;
+	margin: center;
+	text-align: center;
+	color: #a0a0a0;
+}
+div{
+	width: 60%;
+	position: relative;
+	height: 1.5em;
+}
+}
