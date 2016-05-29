@@ -9,8 +9,8 @@ if (isset($_SESSION['user'])) {
     $userstr  = " ($user)";
 }
 else $loggedin = FALSE; 
-?>
 
+echo <<<_END
 <!DOCTYPE html>
 
 <html>
@@ -266,3 +266,5 @@ else $loggedin = FALSE;
 	</body>
 
 </html>
+_END;
+?>
