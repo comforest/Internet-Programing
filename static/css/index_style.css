@@ -63,13 +63,6 @@ p
 	color: white;
 }
 
-#fb_login:hover
-{
-	color: white;
-	border-color: white;
-	background-color: rgba(59,89,152,0.7);
-}
-
 .nav
 {
 	background-color: rgba(255,255,255,0);
@@ -102,7 +95,7 @@ p
 	color: white;
 	font-family: 'Hind', sans-serif;
 	font-size: 20px;
-	border: solid 2px white;
+	border: solid 0px white;
 }
 
 .thumbnail
