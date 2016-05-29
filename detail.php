@@ -12,9 +12,11 @@
 	<link rel="stylesheet" type="text/css" href="static/css/navbar_style.css">
 	<link rel="stylesheet" type="text/css" href="static/css/dialog.css">
 	<link rel="stylesheet" type="text/css" href="static/css/detailView.css">
+	<link rel="stylesheet" type="text/css" href="static/css/datebar.css">
 </head>
 <body>
 	<?php require_once("navbar.inc");
+	require_once("datebar.inc");
 	require_once("detailView.inc");
 	?>
 </body>
