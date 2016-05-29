@@ -1,7 +1,8 @@
 <!-- 
 작성자 : 이호연
 페이지 설명 : 관광지 목록 리스트
- -->
+필요한 css : dialog.css, tourlist.css
+-->
 <!DOCTYPE html>
 <html>
 <head>

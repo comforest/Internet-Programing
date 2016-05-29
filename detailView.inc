@@ -1,6 +1,7 @@
 <!-- 
 작성자 : 이호연
 페이지 설명 : 관광지 상세 설명
+필요한 css : dialog.css, detailView.css
  -->
 <!DOCTYPE html>
 <html>

@@ -1,6 +1,7 @@
 <!-- 
 작성자 : 이호연
 페이지 설명 : 경로 보여주기
+필요한 css : dialog.css, path.css
  -->
  <!DOCTYPE html>
 <html>
