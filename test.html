@@ -11,7 +11,7 @@
 	</head>
  <body>
 	<aside class="Llayer_fixed">
-      <div class="datebar_div">
+      <div id="dd" class="datebar_div">
 			
 		
          <script type = "text/javascript">
@@ -21,23 +21,24 @@
 			var td = p.getDate();
 			var tm = p.getMonth();
 			var ty = p.getFullYear();
-				WriteVerticalCalendar(ty,tm,td);
-				function WriteVerticalCalendar(y, m, d){
-					var d = new Date(y,m,d);
-					var y = d.getFullYear();
-					var last = [31,28,31,30,31,30,31,31,30,31,30,31];
-					var week = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
-					if (y%4===0 && y%100!=0 || y%400===0) {
+			WriteVerticalCalendar(ty,tm,td);
+			function WriteVerticalCalendar(y, m, d){
+				var d = new Date(y,m,d);
+				var y = d.getFullYear();
+				var last = [31,28,31,30,31,30,31,31,30,31,30,31];
+				var week = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+				if (y%4===0 && y%100!=0 || y%400===0) {
 
-                  lastDate = last[1] = 29;
+		            lastDate = last[1] = 29;
                }
                var currentDate=d.getDate();
                var currentMonth=d.getMonth();
                var currentYear=d.getYear();
 			   console.log(d);
                var lastDate = last[currentMonth];
-			   document.writeln("<a href='#' onclick=\"WriteVerticalCalendar(2016,4,25)\"><img class=\"datebar_div_up\" src=\"static/image/up_button.png\"></a>");
-			   for(var i=0;i<7;i++){
+               var div = document.getElementById("dd");
+			   div.innerHTML = "<a href='#' onclick=\"WriteVerticalCalendar(2016,4,25)\"><img class=\"datebar_div_up\" src=\"static/image/up_button.png\"></a>";
+			    for(var i=0;i<7;i++){
                   if(currentDate>lastDate){
                      currentDate=currentDate-lastDate;
                      currentMonth++;
@@ -54,13 +55,13 @@
                   if(currentMonth>12){
                      currentMonth = 1;
 					 currentYear++;
-					}
-                  document.writeln("<p>"+currentDate + " / " + (currentMonth+1)+"</p>");   
-				  document.writeln("<p style = \"font-size: 15px\">"+week[d.getDay()+i]+"</p>"+"<br>");   
+				  }
+                  div.innerHTML += ("<p>"+currentDate + " / " + (currentMonth+1)+"</p>");   
+				  div.innerHTML += ("<p style = \"font-size: 15px\">"+week[d.getDay()+i]+"</p>"+"<br>");   
                   currentDate++;
 				  
-               }
-				document.writeln("<a href='#' onclick=\"WriteVerticalCalendar(2016,5,29)\"><img class=\"datebar_div_down\" src=\"static/image/down_button.png\"></a>");
+                }
+				div.innerHTML += ("<a href='#' onclick=\"WriteVerticalCalendar(2016,5,29)\"><img class=\"datebar_div_down\" src=\"static/image/down_button.png\"></a>");
             }
          -->
 			</script>
