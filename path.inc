@@ -1,4 +1,8 @@
-<!DOCTYPE html>
+<!-- 
+작성자 : 이호연
+페이지 설명 : 경로 보여주기
+ -->
+ <!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">
