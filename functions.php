@@ -11,7 +11,9 @@ $dbpass  = 'haveagoodtrip';
 $appname = "Travers";
 
 mysql_connect($dbhost, $dbuser, $dbpass) or die(mysql_error());
+echo "this is " . __FILE__ . ": " . __LINE__;
 mysql_select_db($dbname) or die(mysql_error());
+echo "this is " . __FILE__ . ": " . __LINE__;
 
 function createTable($name, $query) {
     queryMysql("CREATE TABLE IF NOT EXISTS $name($query)");
