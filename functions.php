@@ -9,7 +9,7 @@ $dbname  = 'travers';
 $dbuser  = 'traversapp';
 $dbpass  = 'haveagoodtrip';
 $appname = "Travers";
-
+echo "this is " . __FILE__ . ": " . __LINE__;
 mysql_connect($dbhost, $dbuser, $dbpass) or die(mysql_error());
 echo "this is " . __FILE__ . ": " . __LINE__;
 mysql_select_db($dbname) or die(mysql_error());
