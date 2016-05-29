@@ -1,4 +1,8 @@
-
+<!-- 
+작성자 : 성수아
+페이지 설명 : php 페이지에서 쓰이는 함수들이 있다.
+            header.php가 이 파일을 include하고 있으므로 따로 include 할 필요는 없다.
+-->
 <?php // functions.php
 $dbhost  = 'localhost';
 $dbname  = 'travers';

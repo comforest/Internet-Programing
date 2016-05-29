@@ -1,3 +1,15 @@
+<?php // header.php
+session_start();
+include 'functions.php';
+
+if (isset($_SESSION['user'])) {
+    $user     = $_SESSION['user'];
+    $loggedin = TRUE;
+    $userstr  = " ($user)";
+}
+else $loggedin = FALSE; 
+?>
+
 <!DOCTYPE html>
 
 <html>
@@ -27,12 +39,14 @@
                     // Logged into your app and Facebook.
                     testAPI();
                     var userID = "";
+                    var userName = "";
                     FB.api('/me', function(response) {
                         userID = response.id;
+                        userName = response.name;
                     });
-                    params = "user=" + userID;
+                    params = "user=" + userID + "%userName=" + userName;
                     request = new ajaxRequest();
-                    request.open("POST", "theme.php", true);
+                    request.open("POST", "adduser.php", true);
                     request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
                     request.setRequestHeader("Content-length", params.length);
                     request.setRequestHeader("Connection", "close");
@@ -41,9 +55,10 @@
                         if (this.readyState == 4)
                             if (this.status == 200)
                                 if (this.responseText != null)
-                                    Document.getElementById('info').innerHTML = this.responseText;
+                                    document.getElementById('status').innerHTML = this.responseText;
                     }
                     request.send(params);
+                    location.replace('theme.php');
                     
                 } else if (response.status === 'not_authorized') {
                     // The person is logged into Facebook, but not your app.
@@ -109,7 +124,7 @@
                 FB.api('/me', function(response) {
                     console.log('Successful login for: ' + response.name);
                     document.getElementById('status').innerHTML =
-                    'Thanks for logging in, ' + response.name + '!';
+                    'Thanks for logging in, ' + response.id + '!';
                 });
             }
             function ajaxRequest() {
