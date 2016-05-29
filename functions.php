@@ -9,20 +9,17 @@ $appname = "Travers";
 mysql_connect($dbhost, $dbuser, $dbpass) or die(mysql_error());
 mysql_select_db($dbname) or die(mysql_error());
 
-function createTable($name, $query)
-{
+function createTable($name, $query) {
     queryMysql("CREATE TABLE IF NOT EXISTS $name($query)");
     echo "Table '$name' created or already exists.<br />";
 }
 
-function queryMysql($query)
-{
+function queryMysql($query) {
     $result = mysql_query($query) or die(mysql_error());
 	 return $result;
 }
 
-function destroySession()
-{
+function destroySession() {
     $_SESSION=array();
     
     if (session_id() != "" || isset($_COOKIE[session_name()]))
@@ -31,8 +28,7 @@ function destroySession()
     session_destroy();
 }
 
-function sanitizeString($var)
-{
+function sanitizeString($var) {
     $var = strip_tags($var);
     $var = htmlentities($var);
     $var = stripslashes($var);
