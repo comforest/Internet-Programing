@@ -1,8 +1,12 @@
 .detailView{
-	height: 700px; 
+	position: absolute;
+	height: auto;
 	width: 400px;
 	float:right;
 	margin:10px;
+	top: 46px;
+	bottom:0px;
+	right: 0px;
 }
 
 .detailView figure {

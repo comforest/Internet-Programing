@@ -1,3 +1,7 @@
+.tourList{
+	float:right;
+	margin:10px;
+}
 .tourList .dialog_head{
 	text-align: center;
 }
