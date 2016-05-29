@@ -14,13 +14,14 @@ body{
 	font-size: 1em;
 	color: #3f3f3f;
 	font-size: 20px;
+	line-height: 50%;
 }
 
 .datebar_div_down{
 	
 	width: 30px;
 	height: auto;
-		font-size: 1em
+	font-size: 1em
 	
 	
 }
