@@ -63,6 +63,15 @@ p
 	color: white;
 }
 
+#fb_login
+{
+    background-color: rgba(255,255,255,0) !important;
+	color: white !important;
+	font-family: 'Hind', sans-serif !important;
+	font-size: 20px !important;
+	border: solid 2px white !important;
+}
+
 #fb_login:hover
 {
 	color: white;
