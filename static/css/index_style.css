@@ -63,6 +63,15 @@ p
 	color: white;
 }
 
+#fb_login
+{
+    background-color: rgba(255,255,255,0);
+	color: white;
+	font-family: 'Hind', sans-serif;
+	font-size: 20px;
+	border: solid 2px white;
+}
+
 #fb_login:hover
 {
 	color: white;
@@ -94,14 +103,6 @@ p
 	margin: auto;
 	display: inline-block;
 	border: 2px white solid;
-}
-
-fb:login-button {
-    background-color: rgba(255,255,255,0);
-	color: white;
-	font-family: 'Hind', sans-serif;
-	font-size: 20px;
-	border: solid 2px white;
 }
 
 .btn
