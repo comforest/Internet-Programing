@@ -11,7 +11,7 @@
 	</head>
  <body>
 	<aside class="Llayer_fixed">
-      <div id="dd" class="datebar_div">
+      <div class="datebar_div">
 			
 		
          <script type = "text/javascript">
@@ -35,7 +35,7 @@
 			var currentYear=d.getYear();
 			console.log(d);
 			var lastDate = last[currentMonth];
-            var div = document.getElementById("dd");
+            var div = document.getElementsByClassName("datebar_div")[0];
 		    div.innerHTML = ("<a href='#' onclick=\"WriteVerticalCalendar(2016,4,26)\"><img class=\"datebar_div_up\" src=\"static/image/up_button.png\"></a>");
 			for(var i=0;i<7;i++){
                 if(currentDate>lastDate){
