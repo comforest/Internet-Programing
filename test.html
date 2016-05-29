@@ -26,11 +26,12 @@
 				
 				var d = new Date(y,m,d);
 				var y = d.getFullYear();
-				var last = [31,28,31,30,31,30,31,31,30,31,30,31];					var week = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+				var last = [31,28,31,30,31,30,31,31,30,31,30,31];					
+				var week = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
 				if (y%4===0 && y%100!=0 || y%400===0) {
 					lastDate = last[1] = 29;
 				}
-			currentDate=d.getDate();
+			var currentDate=d.getDate();
 			var currentMonth=d.getMonth();
 			var currentYear=d.getYear();
 			console.log(d);
@@ -43,7 +44,7 @@
 					}
 				if(currentDate<1){
 					currentMonth--;
-					currentDate= lascurrentDateate;
+					currentDate= currentDate-lastDate;
 					}
 				if(currentMonth<1){
 					currentYear--;
@@ -54,12 +55,13 @@
                      currentMonth = 1;
 					 currentYear++;
 					}
+				var k = (i%7);
                   document.writeln("<p onclick = 'ClickDate()'>"+currentDate + " / " + (currentMonth+1)+"</p>");   
-				  document.writeln("<p style = \"font-size: 15px\">"+week[d.getDay()+i]+"</p>"+"<br>");   
+				  document.writeln("<p style = \"font-size: 15px\">"+week[d.getDay()+k]+"</p>"+"<br>");   
                   currentDate++;
 				  
                }
-				document.writeln("<a href='#' \"WriteVerticalCalendar(2016,5,29)\"><img class=\"datebar_div_down\" src=\"static/image/down_button.png\"></a>");
+				document.writeln("<a href='#' onclick=\"WriteVerticalCalendar(2016,4,25)\"><img class=\"datebar_div_down\" src=\"static/image/down_button.png\"></a>");
 				
 			}
 
