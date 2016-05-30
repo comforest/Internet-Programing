@@ -7,7 +7,7 @@ createTable('user',
             INDEX(userName(6))');
 
 createTable('plan', 
-            'planID INT UNSIGNED AUTO_INCREMENT,
+            'planID INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
             userID VARCHAR(30),
             travelStart DATE, 
             travelEnd DATE, 
@@ -16,14 +16,14 @@ createTable('plan',
             INDEX(userID)');
 
 createTable('route', 
-            'routeID INT UNSIGNED AUTO_INCREMENT,
+            'routeID INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
             planID INT,
             routeDate DATE,
             INDEX(planID),
             INDEX(routeDate)');
 
 createTable('place',
-            'placeID INT UNSIGNED AUTO_INCREMENT,
+            'placeID INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
             visitOrder INT,
             routeID INT,
             INDEX(routeID)');
