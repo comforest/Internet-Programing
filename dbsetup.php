@@ -30,7 +30,7 @@ createTable($connect, 'place',
 echo "this is " . __FILE__ . ": " . __LINE__ . "OK.";
 createTable($connect, 'location',
             'locationID INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-            latitude DECIMAL(2, 10),
-            longtitude DECIMAL(2, 10)');
+            latitude DECIMAL(12, 10),
+            longtitude DECIMAL(12, 10)');
 echo "this is " . __FILE__ . ": " . __LINE__ . "OK.";
 ?>
