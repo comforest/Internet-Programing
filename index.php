@@ -1,6 +1,7 @@
 <?php // header.php
 session_start();
 echo __FILE__ .": " . __LINE__;
+require_once 'test.php';
 require_once 'functions.php';
 echo __FILE__ .": " . __LINE__;
 require_once 'dbsetup.php';
