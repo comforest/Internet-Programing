@@ -17,7 +17,7 @@ if ($server) {
     die("Connection failed: ". $conn->connect_error);
 }
 echo "this is " . __FILE__ . ": " . __LINE__;
-mysqli_select_db($dbname, $server);// or die(mysqli_error());
+mysqli_select_db($dbname, $server) or die("!!DB 선택 에러!!");
 echo "this is " . __FILE__ . ": " . __LINE__;
 
 function createTable($name, $query) {
