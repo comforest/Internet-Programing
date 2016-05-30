@@ -10,18 +10,20 @@ $dbuser  = 'traversapp';
 $dbpass  = 'haveagoodtrip';
 $appname = "Travers";
 echo "this is " . __FILE__ . ": " . __LINE__;
-$con = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname) or die(mysqli_error());
+$server = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);// or die(mysqli_error());
 echo "this is " . __FILE__ . ": " . __LINE__;
-mysqli_select_db($con, $dbname) or die(mysqli_error());
+mysqli_select_db($server, $dbname);// or die(mysqli_error());
 echo "this is " . __FILE__ . ": " . __LINE__;
 
 function createTable($name, $query) {
     queryMysql("CREATE TABLE IF NOT EXISTS $name($query)");
     echo "Table '$name' created or already exists.<br />";
+    echo "this is " . __FILE__ . ": " . __FUNCTION__ . "OK.";
 }
 
 function queryMysql($query) {
-    $result = mysql_query($query) or die(mysql_error());
+    $result = mysqli_query($server, $query);// or die(mysqli_error());
+    echo "this is " . __FILE__ . ": " . __FUNCTION__ . "OK.";
 	 return $result;
 }
 
@@ -32,13 +34,15 @@ function destroySession() {
         setcookie(session_name(), '', time()-2592000, '/');
 
     session_destroy();
+    echo "this is " . __FILE__ . ": " . __FUNCTION__ . "OK.";
 }
 
 function sanitizeString($var) {
     $var = strip_tags($var);
     $var = htmlentities($var);
     $var = stripslashes($var);
-    return mysql_real_escape_string($var);
+    echo "this is " . __FILE__ . ": " . __FUNCTION__ . "OK.";
+    return mysqli_real_escape_string($server, $var);
 }
 
 

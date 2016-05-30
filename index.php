@@ -10,6 +10,7 @@ if (isset($_SESSION['user'])) {
     $userstr  = " ($user)";
 }
 else $loggedin = FALSE; 
+echo "this is " . __FILE__ . ": " . __LINE__ . "OK.";
 ?>
 
 <!DOCTYPE html>

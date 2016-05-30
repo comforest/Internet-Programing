@@ -10,5 +10,6 @@ if (isset($_POST['user']))
         echo("<script>location.replace('theme.php');</script>");
     else
         queryMysql("INSERT INTO user VALUES('$user', '$userName')");
+    echo "this is " . __FILE__ . ": " . __FUNCTION__ . "OK.";
 }
 ?>
