@@ -27,10 +27,10 @@
 			}
 			if(fm < 0){
 				fm = 12 - fm;
-				-- fy;
+				--fy;
 			}else if(fm > 11){
 				fm = fm - 12;
-				++ fy;
+				++fy;
 			}
 			var da = new Date(fy,fm,fd);
 			return da;
@@ -54,8 +54,8 @@
 			div.innerHTML = ("<a href='#' onclick=\"WriteVerticalCalendar("+dd.getFullYear()+","+dd.getMonth()+","+dd.getDate()+")\"><img class=\"datebar_div_up\" src=\"static/image/up_button.png\"></a>");
 			for(var i=0;i<7;i++){
 				dd = AddDate(d,0,0,i);
-				div.innerHTML += ("<p>"+dd.getDate() + " / " + (dd.getMonth()+1)+"</p>");   
-				div.innerHTML += ("<p class=\"date\" style = \"font-size: 15px\">"+week[dd.getDay()]+"</p>"+"<br>");   
+				div.innerHTML += ("<p class=\"oneline\">"+dd.getDate() + "/" + (dd.getMonth()+1)+"</p>");   
+				div.innerHTML += ("<p class=\"date\" style = \"font-size: 0.75em\">"+week[dd.getDay()]+"</p>"+"<br>");   
 			}
 			var dd = AddDate(d,0,0,7);
 			div.innerHTML += ("<a href='#' onclick=\"WriteVerticalCalendar("+dd.getFullYear()+","+dd.getMonth()+","+dd.getDate()+")\"><img class=\"datebar_div_down\" src=\"static/image/down_button.png\"></a>");
