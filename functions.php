@@ -10,9 +10,9 @@ $dbuser  = 'traversapp';
 $dbpass  = 'haveagoodtrip';
 $appname = "Travers";
 echo "this is " . __FILE__ . ": " . __LINE__;
-mysqli_connect($dbhost, $dbuser, $dbpass) or die(mysqli_error());
+$con = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname) or die(mysqli_error());
 echo "this is " . __FILE__ . ": " . __LINE__;
-mysqli_select_db($dbname) or die(mysqli_error());
+mysqli_select_db($con, $dbname) or die(mysqli_error());
 echo "this is " . __FILE__ . ": " . __LINE__;
 
 function createTable($name, $query) {
