@@ -10,7 +10,10 @@ $dbuser  = 'traversapp';
 $dbpass  = 'haveagoodtrip';
 $appname = "Travers";
 echo "this is " . __FILE__ . ": " . __LINE__;
-$server = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);// or die(mysqli_error());
+$server = mysqli($dbhost, $dbuser, $dbpass);// or die(mysqli_error());
+if ($server->connect_error) {
+    die("Connection failed: ". $conn->connect_error);
+}
 echo "this is " . __FILE__ . ": " . __LINE__;
 mysqli_select_db($server, $dbname);// or die(mysqli_error());
 echo "this is " . __FILE__ . ": " . __LINE__;
