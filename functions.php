@@ -20,7 +20,7 @@ function createTable($name, $query) {
 }
 
 function queryMysql($query) {
-    $result = mysqli_query($server, $query) or die("쿼리 실패" . mysqli_error($server));
+    $result = mysqli_query($server, $query) or die("쿼리 실패: $query");
     echo "this is " . __FILE__ . ": " . __FUNCTION__ . "OK.";
 	 return $result;
 }
