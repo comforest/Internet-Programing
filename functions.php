@@ -18,7 +18,14 @@ if (mysqli_connect_errno()) {
 echo "this is " . __FILE__ . ": " . __LINE__;
 
 function createTable($name, $query) {
-    queryMysql("CREATE TABLE IF NOT EXISTS $name($query)") or die("테이블 생성 실패" . mysqli_error($connect));
+    $sql = "CREATE TABLE IF NOT EXISTS $name ( $query )";
+    if ($conn->query($sql) === TRUE) {
+        echo "Table $name created successfully";
+    } else {
+        echo "Error creating table: " . $conn->error;
+        die("테이블 생성 실패" . mysqli_error($connect));
+    }
+    //queryMysql("CREATE TABLE IF NOT EXISTS $name($query)") or die("테이블 생성 실패" . mysqli_error($connect));
     echo "Table '$name' created or already exists.<br />";
     echo "this is " . __FILE__ . ": " . __FUNCTION__ . "OK.";
 }
