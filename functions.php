@@ -11,17 +11,13 @@ $dbpass  = 'haveagoodtrip';
 $appname = "Travers";
 echo "this is " . __FILE__ . ": " . __LINE__;
 $server = new mysqli($dbhost, $dbuser, $dbpass);// or die(mysqli_error());
-if ($server->connect_error) {
+if ($server) {
+    echo "연결 성공";
+} else {
     die("Connection failed: ". $conn->connect_error);
 }
 echo "this is " . __FILE__ . ": " . __LINE__;
-$sql = "CREATE DATABASE $dbname";
-if ($conn->query($sql) === TRUE) {
-    echo "Database created successfully";
-} else {
-    echo "Error creating database: " . $conn->error;
-}
-//mysqli_select_db($server, $dbname);// or die(mysqli_error());
+mysqli_select_db($dbname, $server);// or die(mysqli_error());
 echo "this is " . __FILE__ . ": " . __LINE__;
 
 function createTable($name, $query) {
