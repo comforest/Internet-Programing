@@ -1,5 +1,5 @@
 <?php // setup.php
-require_once 'functions.php';
+//require_once 'functions.php';
 echo "this is " . __FILE__ . ": " . __LINE__ . "OK.";
 createTable('user',
             'userID INT UNSIGNED PRIMARY KEY,
