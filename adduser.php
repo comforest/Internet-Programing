@@ -5,11 +5,11 @@ if (isset($_POST['user']))
 {
     $user = sanitizeString($_POST['user']);
 
-    if (mysql_num_rows(queryMysql("SELECT * FROM members
+    if (mysql_num_rows(queryMysql($connect, "SELECT * FROM members
         WHERE user='$user'")))
         echo("<script>location.replace('theme.php');</script>");
     else
-        queryMysql("INSERT INTO user VALUES('$user', '$userName')");
+        queryMysql($connect, "INSERT INTO user VALUES('$user', '$userName')");
     echo "this is " . __FILE__ . ": " . __FUNCTION__ . "OK.";
 }
 ?>

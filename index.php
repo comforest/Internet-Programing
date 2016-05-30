@@ -1,18 +1,13 @@
 <?php // header.php
 session_start();
-echo __FILE__ .": " . __LINE__;
-require_once 'test.php';
 require_once 'functions.php';
-echo __FILE__ .": " . __LINE__;
 require_once 'dbsetup.php';
-echo "this is " . __FILE__ . ": " . __LINE__ . "OK.";
 if (isset($_SESSION['user'])) {
     $user     = $_SESSION['user'];
     $loggedin = TRUE;
     $userstr  = " ($user)";
 }
 else $loggedin = FALSE; 
-echo "this is " . __FILE__ . ": " . __LINE__ . "OK.";
 ?>
 
 <!DOCTYPE html>
@@ -49,12 +44,14 @@ echo "this is " . __FILE__ . ": " . __LINE__ . "OK.";
                         userID = response.id;
                         userName = response.name;
                     });
-                    params = "user=" + userID + "%userName=" + userName;
+                    params = "user=" + userID + "&userName=" + userName;
+                    
                     request = new ajaxRequest();
                     request.open("POST", "adduser.php", true);
                     request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
                     request.setRequestHeader("Content-length", params.length);
                     request.setRequestHeader("Connection", "close");
+                    console.log('check1');
 
                     request.onreadystatechange = function() {
                         if (this.readyState == 4)
@@ -63,6 +60,7 @@ echo "this is " . __FILE__ . ": " . __LINE__ . "OK.";
                                     document.getElementById('status').innerHTML = this.responseText;
                     }
                     request.send(params);
+                    console.log('check2');
                     location.replace('theme.php');
                     
                 } else if (response.status === 'not_authorized') {
