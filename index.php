@@ -1,143 +1,263 @@
-<?
-	if( $_GET["page"] == "phpinfo" )
-	{
-		phpinfo();
-		exit;
-	}
+<?php // header.php
+session_start();
+require_once 'functions.php';
+require_once 'dbsetup.php';
+if (isset($_SESSION['user'])) {
+    $user     = $_SESSION['user'];
+    $loggedin = TRUE;
+    $userstr  = " ($user)";
+}
+else $loggedin = FALSE; 
 ?>
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!DOCTYPE html>
+
 <html>
-<head>
-<title> APMSETUP </title>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<style type="text/css">
-body
-{
-	background-color:#a776d5;
-	margin:0 auto;
-}
-p { margin:0; }
 
-#wrap
-{
-	width:100%;
-	height:100%;
-	margin:0 auto;
-	text-align:center;
-}
-#container
-{
-	width:600px;
-	height:100%;
-	background-color:#FFF;
-	margin:0 auto;
-}
-	.logo
-	{
-		text-align:center;
-		padding-top:40px;
-		padding-bottom:40px;
-	}
-	.setup_msg
-	{
-		text-align:center;
-		font-weight:bold;
-		padding-bottom:30px;
-	}
-	.info_msg
-	{
-		font-size:9pt;
-		color:#666;
-		text-align:left;
-		padding-left:10px;
-	}
+	<head>
+		<title>Travers :: Login</title>
+		<meta charset = "utf-8">
+		<meta name = "viewport" content = "width-device, initial-scale = 1" >
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+		<link href='https://fonts.googleapis.com/css?family=Hind' rel='stylesheet' type='text/css'>
+		<link rel = "stylesheet" href = "static/css/index_style.css">
+		<link rel="stylesheet" type="text/css" href="https://ddo7jzca0m2vt.cloudfront.net/unify/css/plugins.css">
+		<link rel="stylesheet" href="static/css/font-awesome.min.css">
+	</head>
 
-.info_table td
-{
-	font-size:9pt;
-	padding-top:8px;
-	padding-bottom:5px;
-	color:#666;
-}
-	.info_category
-	{
-		background-color:#ececec;
-		padding-left:10px;
-	}
-	.info_bg
-	{
-		background-color:#FFF;
-		padding-left:10px;
-	}
+	<body>
+		<script>
+            // This is called with the results from from FB.getLoginStatus().
+            function statusChangeCallback(response) {
+                console.log('statusChangeCallback');
+                console.log(response);
+                // The response object is returned with a status field that lets the
+                // app know the current login status of the person.
+                // Full docs on the response object can be found in the documentation
+                // for FB.getLoginStatus().
+                if (response.status === 'connected') {
+                    // Logged into your app and Facebook.
+                    testAPI();
+                    FB.api('/me', function(response) {
+                        console.log("userID: " + response.id + ", userName: " + response.name);
+                        $.post( "adduser.php", { user: response.id, userN: response.name })
+                            .done(function( data ) {
+                            alert( "Data Loaded: " + data );
+                        });
+                    });
+                    //params = "user=" + userID + "&userName=" + userName;
+                    
+                    /*request = new ajaxRequest();
+                    request.open("GET", "adduser.php?user=", true);
+                    console.log('check1');
+                    request.onreadystatechange = function() {
+                        if (this.readyState == 4)
+                            if (this.status == 200)
+                                if (this.responseText != null)
+                                    document.getElementById('status').innerHTML = this.responseText;
+                    }
+                    request.send(params);*/
+                    //console.log('check2');
+                    //location.replace('theme.php');
+                    
+                } else if (response.status === 'not_authorized') {
+                    // The person is logged into Facebook, but not your app.
+                    alert('Please log into travers.');
+                } else {
+                    // The person is not logged into Facebook, so we're not sure if
+                    // they are logged into this app or not.
+                    alert('Please log into Facebook.');
+                }
+            }
 
-	.go_home
-	{
-		text-align:center;
-		padding-top:20px;
-		padding-bottom:20px;
-	}
+            // This function is called when someone finishes with the Login
+            // Button.  See the onlogin handler attached to it in the sample
+            // code below.
+            function checkLoginState() {
+                FB.getLoginStatus(function(response) {
+                    statusChangeCallback(response);
+                });
+            }
 
-	.copy
-	{
-		background-color:#f3f3f3;
-		padding-top:10px;
-		height:35px;
-		font-family:verdana,tahoma;
-		text-align:center;
-		font-size:8pt;
-	}
+            window.fbAsyncInit = function() {
+                FB.init({
+                    appId      : '242716299430774',
+                    cookie     : true,  // enable cookies to allow the server to access 
+                                        // the session
+                    xfbml      : true,  // parse social plugins on this page
+                    version    : 'v2.2' // use version 2.2
+                });
 
-.c_00 { color:#000; }
-.c_red { color:#9e0b0f; }
+            // Now that we've initialized the JavaScript SDK, we call 
+            // FB.getLoginStatus().  This function gets the state of the
+            // person visiting this page and can return one of three states to
+            // the callback you provide.  They can be:
+            //
+            // 1. Logged into your app ('connected')
+            // 2. Logged into Facebook, but not your app ('not_authorized')
+            // 3. Not logged into Facebook and can't tell if they are logged into
+            //    your app or not.
+            //
+            // These three cases are handled in the callback function.
 
-.p_b10 { padding-bottom:10px; }
-</style>
-</head>
+                FB.getLoginStatus(function(response) {
+                    statusChangeCallback(response);
+                });
 
-<body>
-<div id="wrap">
+            };
 
-	<div id="container" align="center">
-		<div class="logo"><a href="http://www.apmsetup.com/" target="_blank"><img src="http://www.apmsetup.com/images/apmsetupCi.gif" alt="" border="0"></a></div>
+            // Load the SDK asynchronously
+            (function(d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) return;
+                js = d.createElement(s); js.id = id;
+                js.src = "//connect.facebook.net/en_US/sdk.js";
+                fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
 
-		<div class="setup_msg">APMSETUP이 정상적으로 설치 되었습니다.</div>
-		<div class="info_msg">
-			<p class="p_b10">ㆍ<u class="c_00"><?=$_SERVER["DOCUMENT_ROOT"]?></u> 디렉터리에 홈페이지를 작성해서 넣으시기 바랍니다.</p>
-			<p class="p_b10">ㆍ지금 화면이 계속 보인다면 <u class="c_00"><?=$_SERVER["SCRIPT_FILENAME"]?></u> <font class="c_red">파일을 삭제</font>해 주시기 바랍니다.</p>
-		</div>
+            // Here we run a very simple test of the Graph API after login is
+            // successful.  See statusChangeCallback() for when this call is made.
+            function testAPI() {
+                console.log('Welcome!  Fetching your information.... ');
+                FB.api('/me', function(response) {
+                    console.log('Successful login for: ' + response.name);
+                });
+            }
+            function ajaxRequest() {
+                try { var request = new XMLHttpRequest() }
+                catch(e1) {
+                    try { request = new ActiveXObject("Msxml2.XMLHTTP"); }
+                    catch(e2) {
+                        try { request = new ActiveXObject("Microsoft.XMLHTTP"); }
+                        catch(e3) {
+                            request = false;
+                }   }   }
+                return request;
+            }
+        </script>
+		<section class = "jumbotron">
+			<div class = "container text-center">
 
-		<table cellpadding="0" cellspacing="1" border="0" width="580" bgcolor="#d7d7d7" class="info_table">
-		<tr>
-		<td class="info_category">PHP 설정파일</td>
-		<td class="info_bg">[설치디렉터리]<font class="c_00">\APM_Setup\php.ini</font></td>
-		</tr>
-		<tr>
-		<td class="info_category">MySQL 설정파일</td>
-		<td class="info_bg">[설치디렉터리]<font class="c_00">\APM_Setup\Server\MySQL5\data\my.ini</font></td>
-		</tr>
-		<tr>
-		<td class="info_category">MySQL Data 파일 위치</td>
-		<td class="info_bg">[설치디렉터리]<font class="c_00">\APM_Setup\Server\MySQL5\data</font></td>
-		</tr>
-		<tr>
-		<td class="info_category">Apache 설정파일</td>
-		<td class="info_bg">[설치디렉터리]<font class="c_00">\APM_Setup\Server\Apache\conf\httpd.conf </font></td>
-		</tr>
-		<tr>
-		<td class="info_category">Apache 로그 위치</td>
-		<td class="info_bg">[설치디렉터리]<font class="c_00">\APM_Setup\Server\Apache\logs </font></td>
-		</tr>
-		<tr>
-		<td class="info_category">PHP Info</td>
-		<td class="info_bg"><font class="c_00"><A HREF="http://127.0.0.1/?page=phpinfo" target="_blank">http://127.0.0.1/?page=phpinfo</A></font></td>
-		</tr>
-		<tr>
-		<td class="info_category">phpMyAdmin</td>
-		<td class="info_bg"><font class="c_00"><a href="http://127.0.0.1/myadmin/" target="_blank">http://127.0.0.1/myadmin/</a></font></td>
-		</tr>
-		</table>
+				<nav class = "nav navbar-default">
+					<div class = "container-fluid">
+						<div class = "navbar-header">
+							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="false">
+        					<span class="sr-only">Toggle navigation</span>
+        					<span class="icon-bar"></span>
+        					<span class="icon-bar"></span>
+        					<span class="icon-bar"></span>
+      						</button>
+							<a class = "navbar-brand" href = "#"><img src = "static/image/logo_white.png" id = "logo_img" class = "img-responsive"/></a>
+						</div>
+						<div class="collapse navbar-collapse" id=".navbar-collapse">
+						<ul class = "nav navbar-nav navbar-right">
+							<li><a href = "#"><p>About</p></a></li>
+						</ul>
+						</div>
+					</div>
+				</nav>
 
-		<div class="go_home"><a href="http://www.apmsetup.com/apmsetup7_qa.php" target="_blank"><img src="http://www.apmsetup.com/images/setup_btn01.gif" alt="" border="0"></a>&nbsp;<a href="http://www.apmsetup.com/tutorials.php" target="_blank"><img src="http://www.apmsetup.com/images/setup_btn02.gif" alt="" border="0"></a></div>
+				<div class = "main-text">
+					<h1>Travel traversly</h1>
+					<p>Only three steps for an epic travel experience</p>
+                    <fb:login-button scope="public_profile,email" onlogin="checkLoginState();" class="btn btn-default" id = "fb_login" data-max-rows="1" data-size="xlarge" data-show-faces="false" data-auto-logout-link="false">
+				      <span><img src = "static/image/fb.png" id = "fb"/></span>Login with facebook
+				    </fb:login-button>
+				</div>
+			</div>
+		</section>
 
-</body>
+		<section class = "container text-center" id = "set">
+			<div class = "row" id = "theme_row">
+				<div class = "col-sm-3 col-xs-6">
+					<div class = "thumbnail slideanim">
+						<img src = "static/image/culture_theme.png">
+					</div>
+				</div>
+				<div class = "col-sm-3 col-xs-6">
+					<div class = "thumbnail slideanim">
+						<img src = "static/image/shopping_theme.png">
+					</div>
+				</div>
+				<div class = "col-sm-3 col-xs-6">
+					<div class = "thumbnail slideanim">
+						<img src = "static/image/nature_theme.png">
+					</div>
+				</div>
+				<div class = "col-sm-3 col-xs-6">
+					<div class = "thumbnail slideanim">
+						<img src = "static/image/trend_theme.png">
+					</div>
+				</div>
+			</div>
+
+			<br/><br/>
+			<h1>Set</h1>
+			<p>We know that every people seek different things when they travel.</p>
+			<p>So we let you set the theme for your adventure.</p>
+		</section>
+
+		<section class = "container" id = "add">
+			<h1>Add</h1>
+			<p>We give you a list of interesting places.<br/>Then you add those that you like.<br/>Yup, it's that simple.</p>
+			<img src = "static/image/clipone.png" class = "img-responsive slideanim" alt = "Responsive image" id = "clip1">
+			<img src = "static/image/cliptwo.png" class = "img-responsive slideanim" alt = "Responsive image" id = "clip2">
+		</section>
+
+		<section class = "container text-center" id = "plan">
+			<h1>Plan</h1>
+			<p>Then we plan your trip from the places you've added.<br/>So that you don't have to.</p>
+			<div class "row">
+				<div class = "col-sm-2 col-sm-offset-1 col-xs-12">
+					<img src = "static/image/round1.png" class = "img-responsive slideanim" alt = "Responsive image" id = "round1">
+				</div>
+				<div class = "col-sm-2 col-xs-12">
+					<img src = "static/image/walk.png" class = "img-responsive slideanim" alt = "Responsive image" id = "walk_icon">
+				</div>
+				<div class = "col-sm-2 col-xs-12">
+					<img src = "static/image/round2.png" class = "img-responsive slideanim" alt = "Responsive image" id = "round2">
+				</div>
+				<div class = "col-sm-2 col-xs-12">
+					<img src = "static/image/subway.png" class = "img-responsive slideanim" alt = "Responsive image" id = "subway_icon">
+				</div>
+				<div class = "col-sm-2 col-xs-12">
+					<img src = "static/image/round3.png" class = "img-responsive slideanim" alt = "Responsive image" id = "round3">
+				</div>
+			</div>
+		</section>
+
+		<footer>
+			<div class = "container text-center">
+				<a href="#top" title="To Top">
+	    			<span class="glyphicon glyphicon-chevron-up" id = "arrow_top"></span>
+	  			</a>
+				<p> &copy; Travers, 2016</p>
+			</div>
+		</footer>
+
+
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="https://ddo7jzca0m2vt.cloudfront.net/unify/plugins/back-to-top.js"></script>
+ <script>
+  			
+ $(document).ready(function(){
+  $(window).scroll(function() {
+    $(".slideanim").each(function(){
+      var pos = $(this).offset().top;
+
+      var winTop = $(window).scrollTop();
+        if (pos < winTop + 600) {
+          $(this).addClass("slide");
+        }
+    });
+  });
+})
+
+
+ </script>
+
+	</body>
+
 </html>

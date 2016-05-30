@@ -1,35 +1,36 @@
 <?php // setup.php
-include_once 'functions.php';
-
-createTable('user',
+//require_once 'functions.php';
+echo "this is " . __FILE__ . ": " . __LINE__ . "OK.";
+createTable($connect, 'user',
             'userID INT UNSIGNED PRIMARY KEY,
-            userName VARCHAR2(30),
+            userName VARCHAR(30),
             INDEX(userName(6))');
-
-createTable('plan', 
-            'planID INT UNSIGNED AUTO_INCREMENT,
-            userID VARCHAR2(30),
+echo "this is " . __FILE__ . ": " . __LINE__ . "OK.";
+createTable($connect, 'plan', 
+            'planID INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+            userID VARCHAR(30),
             travelStart DATE, 
             travelEnd DATE, 
-            hotelID VARCHAR2(30), 
+            hotelID VARCHAR(30), 
             lastLocation INT, 
             INDEX(userID)');
-
-createTable('route', 
-            'routeID INT UNSIGNED AUTO_INCREMENT,
+echo "this is " . __FILE__ . ": " . __LINE__ . "OK.";
+createTable($connect, 'route', 
+            'routeID INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
             planID INT,
             routeDate DATE,
             INDEX(planID),
             INDEX(routeDate)');
-
-createTable('place',
-            'placeID INT UNSIGNED AUTO_INCREMENT,
+echo "this is " . __FILE__ . ": " . __LINE__ . "OK.";
+createTable($connect, 'place',
+            'placeID INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
             visitOrder INT,
             routeID INT,
             INDEX(routeID)');
-
-createTable('location',
+echo "this is " . __FILE__ . ": " . __LINE__ . "OK.";
+createTable($connect, 'location',
             'locationID INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-            latitude DECIMAL(2, 10),
-            longtitude DECIMAL(2, 10)');
+            latitude DECIMAL(12, 10),
+            longtitude DECIMAL(12, 10)');
+echo "this is " . __FILE__ . ": " . __LINE__ . "OK.";
 ?>
