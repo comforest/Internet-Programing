@@ -38,31 +38,26 @@ else $loggedin = FALSE;
                 if (response.status === 'connected') {
                     // Logged into your app and Facebook.
                     testAPI();
-                    var userID = "";
-                    var userName = "";
                     FB.api('/me', function(response) {
-                        userID = response.id;
-                        userName = response.name;
+                        console.log("userID: " + response.id + ", userName: " + response.name);
+                        $.post( "adduser.php", { user: response.id, userN: response.name })
+                            .done(function( data ) {
+                            alert( "Data Loaded: " + data );
+                        });
                     });
-                    console.log("userID: " + userID + ", userName: " + userName);
                     //params = "user=" + userID + "&userName=" + userName;
                     
-                    request = new ajaxRequest();
+                    /*request = new ajaxRequest();
                     request.open("GET", "adduser.php?user=", true);
                     console.log('check1');
-
-                    $.post( "adduser.php", { user: userID, userN: userName })
-                      .done(function( data ) {
-                        alert( "Data Loaded: " + data );
-                    });
-                    /*request.onreadystatechange = function() {
+                    request.onreadystatechange = function() {
                         if (this.readyState == 4)
                             if (this.status == 200)
                                 if (this.responseText != null)
                                     document.getElementById('status').innerHTML = this.responseText;
                     }
                     request.send(params);*/
-                    console.log('check2');
+                    //console.log('check2');
                     //location.replace('theme.php');
                     
                 } else if (response.status === 'not_authorized') {
