@@ -1,5 +1,5 @@
 <?php // setup.php
-include_once 'functions.php';
+require_once 'functions.php';
 
 createTable('user',
             'userID INT UNSIGNED PRIMARY KEY,

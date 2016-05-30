@@ -2,7 +2,7 @@
 session_start();
 echo __FILE__ .": " . __LINE__;
 require_once 'functions.php';
-require_once 'setup.php';
+require_once 'dbsetup.php';
 
 if (isset($_SESSION['user'])) {
     $user     = $_SESSION['user'];
@@ -10,8 +10,8 @@ if (isset($_SESSION['user'])) {
     $userstr  = " ($user)";
 }
 else $loggedin = FALSE; 
+?>
 
-echo <<<_END
 <!DOCTYPE html>
 
 <html>
@@ -267,5 +267,3 @@ echo <<<_END
 	</body>
 
 </html>
-_END;
-?>
