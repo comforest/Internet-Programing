@@ -20,10 +20,10 @@ echo "this is " . __FILE__ . ": " . __LINE__;
 function createTable($name, $query) {
     echo __FILE__ .": " . __LINE__ . "in createTable()";
     $sql = "CREATE TABLE IF NOT EXISTS $name ( $query )";
-    if ($conn->query($sql) === TRUE) {
+    if ($connect->query($sql) === TRUE) {
         echo "Table $name created successfully";
     } else {
-        echo "Error creating table: " . $conn->error;
+        echo "Error creating table: " . $connect->error;
         die("테이블 생성 실패" . mysqli_error($connect));
     }
     //queryMysql("CREATE TABLE IF NOT EXISTS $name($query)") or die("테이블 생성 실패" . mysqli_error($connect));
