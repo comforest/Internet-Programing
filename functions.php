@@ -27,7 +27,7 @@ function queryMysql($query) {
     if (mysqli_connect_errno()) {
         die("!!쿼리를 하고 싶으나 서버 연결 안 됨!!" . mysqli_connect_error());
     }
-    $result = mysqli_query($query) or die("쿼리 실패: $query");
+    $result = mysqli_query($connect, $query) or die("쿼리 실패: $query". mysqli_error($connect));
     echo "this is " . __FILE__ . ": " . __FUNCTION__ . "OK.";
     return $result;
 }
