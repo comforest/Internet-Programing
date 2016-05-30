@@ -3,15 +3,15 @@ require_once 'functions.php';
 
 createTable('user',
             'userID INT UNSIGNED PRIMARY KEY,
-            userName VARCHAR2(30),
+            userName VARCHAR(30),
             INDEX(userName(6))');
 
 createTable('plan', 
             'planID INT UNSIGNED AUTO_INCREMENT,
-            userID VARCHAR2(30),
+            userID VARCHAR(30),
             travelStart DATE, 
             travelEnd DATE, 
-            hotelID VARCHAR2(30), 
+            hotelID VARCHAR(30), 
             lastLocation INT, 
             INDEX(userID)');
 
@@ -32,4 +32,5 @@ createTable('location',
             'locationID INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
             latitude DECIMAL(2, 10),
             longtitude DECIMAL(2, 10)');
+echo "this is " . __FILE__ . ": " . __LINE__ . "OK.";
 ?>
