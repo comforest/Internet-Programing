@@ -10,6 +10,9 @@ $dbuser  = 'traversapp';
 $dbpass  = 'haveagoodtrip';
 $appname = "Travers";
 $server = new mysqli($dbhost, $dbuser, $dbpass) or die("!!서버 연결 에러!!");
+if ($server) {
+    echo "서버 연결 성공!!";
+}
 mysqli_select_db($server, $dbname) or die("!!DB 선택 에러!!");
 echo "this is " . __FILE__ . ": " . __LINE__;
 
