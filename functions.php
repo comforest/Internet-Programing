@@ -18,6 +18,7 @@ if (mysqli_connect_errno()) {
 echo "this is " . __FILE__ . ": " . __LINE__;
 
 function createTable($name, $query) {
+    echo __FILE__ .": " . __LINE__ . "in createTable()";
     $sql = "CREATE TABLE IF NOT EXISTS $name ( $query )";
     if ($conn->query($sql) === TRUE) {
         echo "Table $name created successfully";
