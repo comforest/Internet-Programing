@@ -44,13 +44,14 @@ else $loggedin = FALSE;
                         userID = response.id;
                         userName = response.name;
                     });
-                    params = "user=" + userID + "&userName=" + userName;
+                    console.log("userID: " + userID + ", userName: " + userName);
+                    //params = "user=" + userID + "&userName=" + userName;
                     
                     request = new ajaxRequest();
                     request.open("GET", "adduser.php?user=", true);
                     console.log('check1');
 
-                    $.post( "adduser.php", { user: userID, time: userName })
+                    $.post( "adduser.php", { user: userID, userN: userName })
                       .done(function( data ) {
                         alert( "Data Loaded: " + data );
                     });
@@ -66,13 +67,11 @@ else $loggedin = FALSE;
                     
                 } else if (response.status === 'not_authorized') {
                     // The person is logged into Facebook, but not your app.
-                    document.getElementById('status').innerHTML = 'Please log ' +
-                    'into this app.';
+                    alert('Please log into travers.');
                 } else {
                     // The person is not logged into Facebook, so we're not sure if
                     // they are logged into this app or not.
-                    document.getElementById('status').innerHTML = 'Please log ' +
-                    'into Facebook.';
+                    alert('Please log into Facebook.');
                 }
             }
 
@@ -127,8 +126,6 @@ else $loggedin = FALSE;
                 console.log('Welcome!  Fetching your information.... ');
                 FB.api('/me', function(response) {
                     console.log('Successful login for: ' + response.name);
-                    document.getElementById('status').innerHTML =
-                    'Thanks for logging in, ' + response.id + '!';
                 });
             }
             function ajaxRequest() {

@@ -4,6 +4,7 @@ require_once 'functions.php';
 if (isset($_POST['user']))
 {
     $user = sanitizeString($_POST['user']);
+    $userName = sanitizeString($_POST['userN']);
 
     if (mysql_num_rows(queryMysql($connect, "SELECT * FROM members
         WHERE user='$user'")))
