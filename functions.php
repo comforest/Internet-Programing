@@ -17,14 +17,14 @@ if (mysqli_connect_errno()) {
 }
 echo "this is " . __FILE__ . ": " . __LINE__;
 
-function createTable($name, $query) {
+function createTable($connect, $name, $query) {
     echo __FILE__ .": " . __LINE__ . "in createTable()";
     queryMysql("CREATE TABLE IF NOT EXISTS $name($query)") or die("테이블 생성 실패" . mysqli_error($connect));
     echo "Table '$name' created or already exists.<br />";
     echo "this is " . __FILE__ . ": " . __FUNCTION__ . "OK.";
 }
 
-function queryMysql($query) {
+function queryMysql($connect, $query) {
     echo __FILE__ .": " . __LINE__ . "in queryMysel()";
     if (!$connect) {
         die("!!쿼리를 하고 싶으나 서버 연결 안 됨!!" . mysqli_connect_error());
