@@ -9,23 +9,25 @@ $dbname  = 'travers';
 $dbuser  = 'traversapp';
 $dbpass  = 'haveagoodtrip';
 $appname = "Travers";
-$server = new mysqli($dbhost, $dbuser, $dbpass) or die("!!서버 연결 에러!!");
-if ($server) {
-    echo "서버 연결 성공!!";
+
+$connect = mysqli_connect($dbhost,$dbuser,$dbpass,$dbname);
+// Check connection
+if (mysqli_connect_errno()) {
+  echo "Failed to connect to MySQL: " . mysqli_connect_error();
 }
-mysqli_select_db($server, $dbname) or die("!!DB 선택 에러!!");
 echo "this is " . __FILE__ . ": " . __LINE__;
 
-function createTable($server, $name, $query) {
-    queryMysql($server, "CREATE TABLE IF NOT EXISTS $name($query)") or die("테이블 생성 실패" . mysqli_error($server));
+function createTable($name, $query) {
+    queryMysql("CREATE TABLE IF NOT EXISTS $name($query)") or die("테이블 생성 실패" . mysqli_error($connect));
     echo "Table '$name' created or already exists.<br />";
     echo "this is " . __FILE__ . ": " . __FUNCTION__ . "OK.";
 }
 
-function queryMysql($server, $query) {
-    if (!$server)
-        die("!!쿼리를 하고 싶으나 서버 연결 안 됨!!")
-    $result = mysqli_query($server, $query) or die("쿼리 실패: $query");
+function queryMysql($query) {
+    if (mysqli_connect_errno()) {
+        die("!!쿼리를 하고 싶으나 서버 연결 안 됨!!" . mysqli_connect_error());
+    }
+    $result = mysqli_query($query) or die("쿼리 실패: $query");
     echo "this is " . __FILE__ . ": " . __FUNCTION__ . "OK.";
     return $result;
 }
