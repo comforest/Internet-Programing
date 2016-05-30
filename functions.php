@@ -15,7 +15,13 @@ if ($server->connect_error) {
     die("Connection failed: ". $conn->connect_error);
 }
 echo "this is " . __FILE__ . ": " . __LINE__;
-mysqli_select_db($server, $dbname);// or die(mysqli_error());
+$sql = "CREATE DATABASE $dbname";
+if ($conn->query($sql) === TRUE) {
+    echo "Database created successfully";
+} else {
+    echo "Error creating database: " . $conn->error;
+}
+//mysqli_select_db($server, $dbname);// or die(mysqli_error());
 echo "this is " . __FILE__ . ": " . __LINE__;
 
 function createTable($name, $query) {
