@@ -3,7 +3,7 @@ session_start();
 echo __FILE__ .": " . __LINE__;
 require_once 'functions.php';
 require_once 'dbsetup.php';
-
+echo "this is " . __FILE__ . ": " . __LINE__ . "OK.";
 if (isset($_SESSION['user'])) {
     $user     = $_SESSION['user'];
     $loggedin = TRUE;
