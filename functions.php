@@ -19,22 +19,17 @@ echo "this is " . __FILE__ . ": " . __LINE__;
 
 function createTable($name, $query) {
     echo __FILE__ .": " . __LINE__ . "in createTable()";
-    $sql = "CREATE TABLE IF NOT EXISTS $name ( $query )";
-    if ($connect->query($sql) === TRUE) {
-        echo "Table $name created successfully";
-    } else {
-        echo "Error creating table: " . $connect->error;
-        die("테이블 생성 실패" . mysqli_error($connect));
-    }
-    //queryMysql("CREATE TABLE IF NOT EXISTS $name($query)") or die("테이블 생성 실패" . mysqli_error($connect));
+    queryMysql("CREATE TABLE IF NOT EXISTS $name($query)") or die("테이블 생성 실패" . mysqli_error($connect));
     echo "Table '$name' created or already exists.<br />";
     echo "this is " . __FILE__ . ": " . __FUNCTION__ . "OK.";
 }
 
 function queryMysql($query) {
+    echo __FILE__ .": " . __LINE__ . "in queryMysel()";
     if (mysqli_connect_errno()) {
         die("!!쿼리를 하고 싶으나 서버 연결 안 됨!!" . mysqli_connect_error());
     }
+    echo __FILE__ .": " . __LINE__;
     $result = mysqli_query($connect, $query) or die("쿼리 실패: $query". mysqli_error($connect));
     echo "this is " . __FILE__ . ": " . __FUNCTION__ . "OK.";
     return $result;
