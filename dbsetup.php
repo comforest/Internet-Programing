@@ -4,7 +4,7 @@ echo "this is " . __FILE__ . ": " . __LINE__ . "OK.";
 createTable($connect, 'user',
             'userID INT UNSIGNED PRIMARY KEY,
             userName VARCHAR(30),
-            INDEX(userName(6))') or die("Error: in createTable uer");
+            INDEX(userName(6))');
 echo "this is " . __FILE__ . ": " . __LINE__ . "OK.";
 createTable($connect, 'plan', 
             'planID INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
