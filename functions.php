@@ -19,7 +19,7 @@ echo "this is " . __FILE__ . ": " . __LINE__;
 
 function createTable($connect, $name, $query) {
     echo __FILE__ .": " . __LINE__ . "in createTable()";
-    queryMysql("CREATE TABLE IF NOT EXISTS $name($query)") or die("테이블 생성 실패" . mysqli_error($connect));
+    queryMysql($connect, "CREATE TABLE IF NOT EXISTS $name($query)") or die("테이블 생성 실패" . mysqli_error($connect));
     echo "Table '$name' created or already exists.<br />";
     echo "this is " . __FILE__ . ": " . __FUNCTION__ . "OK.";
 }
