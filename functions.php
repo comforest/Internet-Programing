@@ -30,7 +30,7 @@ function queryMysql($connect, $query) {
         die("!!쿼리를 하고 싶으나 서버 연결 안 됨!!" . mysqli_connect_error());
     }
     echo __FILE__ .": " . __LINE__;
-    $result = mysqli_query($connect, $query) or die("쿼리 실패: $query". mysqli_error($connect));
+    $result = mysqli_query($connect, $query) or die(mysqli_error($connect));
     echo "this is " . __FILE__ . ": " . __FUNCTION__ . "OK.";
     return $result;
 }
