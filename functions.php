@@ -14,7 +14,7 @@ mysqli_select_db($server, $dbname) or die("!!DB 선택 에러!!");
 echo "this is " . __FILE__ . ": " . __LINE__;
 
 function createTable($name, $query) {
-    queryMysql("CREATE TABLE IF NOT EXISTS $name($query)") or die("테이블 생성 실패" . mysqli_error($server));
+    queryMysql("CREATE TABLE IF NOT EXISTS $name($query);") or die("테이블 생성 실패" . mysqli_error($server));
     echo "Table '$name' created or already exists.<br />";
     echo "this is " . __FILE__ . ": " . __FUNCTION__ . "OK.";
 }
