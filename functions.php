@@ -33,6 +33,7 @@ function queryMysql($connect, $query) {
     }
     echo __FILE__ .": " . __LINE__;
     $result = mysqli_query($connect, $query, MYSQLI_USE_RESULT) or die("쿼리 실패: $query". mysqli_error($connect));
+    mysqli_close($connect);
     echo "this is " . __FILE__ . ": " . __FUNCTION__ . "OK.";
     return $result;
 }
