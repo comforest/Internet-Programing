@@ -9,15 +9,8 @@ $dbname  = 'travers';
 $dbuser  = 'traversapp';
 $dbpass  = 'haveagoodtrip';
 $appname = "Travers";
-echo "this is " . __FILE__ . ": " . __LINE__;
-$server = new mysqli($dbhost, $dbuser, $dbpass);// or die(mysqli_error());
-if ($server) {
-    echo "연결 성공";
-} else {
-    die("Connection failed: ". $conn->connect_error);
-}
-echo "this is " . __FILE__ . ": " . __LINE__;
-mysqli_select_db($dbname, $server) or die("!!DB 선택 에러!!");
+$server = new mysqli($dbhost, $dbuser, $dbpass) or die("!!서버 연결 에러!!");
+mysqli_select_db($server, $dbname) or die("!!DB 선택 에러!!");
 echo "this is " . __FILE__ . ": " . __LINE__;
 
 function createTable($name, $query) {
