@@ -3,8 +3,12 @@ require_once 'functions.php';
 
 echo "Hello world!";
 echo $_POST['userinfo'] . $_POST['userinfo2'];
-/*
+
 if (isset($_POST["userinfo"]))
+{
+    echo "check2!";
+}
+/*if (isset($_POST["userinfo"]))
 {
     $userID = $_POST['userinfo'];
     $userName = $_POST['userinfo2'];
