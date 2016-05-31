@@ -12,10 +12,11 @@
 }
 .nav a{
 	display:inline-block;
-	padding:10px;
+	padding: 15px 20px 15px 20px;
 	color:#ababab;
 	text-decoration:none;
 	font-weight:bold;
+	font-size: 16pt;
 }
 .nav a:hover{
 	text-decoration: none;
@@ -25,11 +26,16 @@
 }
 
 .navicon{
-	margin-right: 5vw;
+	margin-left: 3vw;
+	width: 10%;
+	float: left;
+	vertical-align: middle;
+	margin-top: 10px;
+	margin-bottom: auto;
 }
 
 .navicon img{
-	height:40px;
+	height: 40px;
 	width:auto;
 	vertical-align: middle;
 	margin: 0px;
@@ -37,13 +43,52 @@
 }
 
 .userinfo{
-	margin-left: 5vw;
+	margin-right: 3%;
+	margin-top: 10px;
+	width: 200px;
+	float: right;
+}
+.userinfo span{
+	color: #a7a7a7;
+	font-size: 16pt;
+	margin-right: 10px;
 }
 .userinfo img{
 	height: 40px;
 	width: auto;
 	vertical-align: middle;
 	margin: 0px;
-	padding: 5px 0 5px 0;
+	padding: 0 0 0 0;
+	border-radius: 50% 50% 50% 50%;
+	border: lightblue solid 2px;
 }
 
+.mobnav{
+	width: 100%;
+	display: none;
+	background-color: #ebebec;
+	float: left;
+	overflow: auto;
+	text-align: center;
+}
+
+.navblock{
+	width: 25%;
+	font-size: 20pt;
+	color: #ababab;
+	float: left;
+}
+
+.navblock img{
+	width: 25%;
+	height: auto;
+}
+
+@media (max-width: 1000px){
+	.nav{
+		display: none;
+	}
+	.mobnav{
+		display: block;
+	}
+}
