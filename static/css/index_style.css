@@ -313,4 +313,55 @@ footer p
 	max-width: 70px;
 }
 
+.row, #clip1, #clip2
+{
+	display: none;
+}
+
+h1
+{
+	font-size: 40px;
+}
+
+p
+{
+	font-size: 20px;
+}
+
+.jumbotron p
+{
+	font-size: 15px;
+}
+
+
+#set h1
+{
+	margin-top: 25%;
+}
+
+#set p
+{
+	margin-left: 8%;
+}
+
+#add h1
+{
+	margin-left: 8%;
+	margin-top: 25%;
+}
+
+#add p
+{
+	margin-left: 8%;
+}
+
+#plan h1
+{
+	margin-top: 25%;
+}
+
+#plan p
+{
+}
+
 }
