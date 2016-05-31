@@ -62,7 +62,7 @@
 
 
 
-@media screen and (max-width: 532px){
+@media screen and (max-width: 1000px){
 .Llayer_fixed{	
 	position: absolute;
 	left: -40px;
@@ -99,7 +99,7 @@
 .Llayer_fixed .oneline{
 	display: inline;
 	float: left;
-	width: 7%;
+	width: 8.2%;
 	height: auto;
 	margin:2%;
 	margin-top: 20px;
@@ -110,6 +110,7 @@
 	float: left;
 	margin-top: 10px;
 	height: 7%;
+	
 }
 .Llayer_fixed .mobile_right{
 	float: right;
