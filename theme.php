@@ -34,7 +34,7 @@
 </head>
 <body style="background-color: #f3f3f3;">
     <form action="datepage.php" method="post" id="themeinfoForm">
-            <input type="hidden" name="userinfo" id="themeinfo" value="">
+            <input type="hidden" name="themeinfo" id="themeinfo" value="">
     </form>
 	<div class="themeupper">Set the theme for your travel</div>
 	<div class="themebox">
