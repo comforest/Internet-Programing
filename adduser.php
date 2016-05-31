@@ -12,12 +12,6 @@ if (isset($_POST["userinfo"]))
         queryMysql($connect, "INSERT INTO user VALUES('$userID', '$userName')");
     }
     $_SESSION['userID'] = $userID;
-    echo $_SESSION['userID'];
-    if (isset($_SESSION['userID'])) {
-        echo "setted.";
-    } else {
-        echo "fail.";
-    }
     $_SESSION['userName'] = $userName;
     echo "<script>location.replace('theme.php');</script>";
 }

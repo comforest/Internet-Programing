@@ -9,12 +9,7 @@
 session_start();
 require_once 'functions.php';
 
-if (isset($_SESSION['userID'])) {
-        echo "setted.";
-} else {
-    echo "fail.";
-}
-/*if (!isset($_SESSION['userID'])) {
+if (!isset($_SESSION['userID'])) {
     echo("<script>location.replace('index.php');</script>");
-}*/
+}
 ?>
