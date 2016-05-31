@@ -5,8 +5,9 @@ if (isset($_POST['userinfo']))
 {
     $userID = $_POST['userinfo'];
     $userName = $_POST['userinfo2'];
-    echo "userID: " . $userID . "userName: " . userName;
-    $numOfuser = queryMysql($connect, "SELECT * FROM user WHERE userID='$userID'");
+    echo "userID: " . $userID . "userName: " . $userName;
+    $numOfuser = mysqli_query($connect, "SELECT * FROM user WHERE userID='$userID'", MYSQLI_USE_RESULT) or die("쿼리 실패: $query". mysqli_error($connect));
+    // $numOfuser = queryMysql($connect, "SELECT * FROM user WHERE userID='$userID'");
     echo "유저 수: " . $numOfuser;
     if (mysqli_num_rows($numOfuser) == 0) {
         //queryMysql($connect, "INSERT INTO `user` VALUES('$userID', '$numOfuser')");
