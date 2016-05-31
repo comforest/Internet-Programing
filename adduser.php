@@ -13,7 +13,11 @@ if (isset($_POST["userinfo"]))
     }
     $_SESSION['userID'] = $userID;
     echo $_SESSION['userID'];
-    echo isset($_SESSION['userID']);
+    if (isset($_SESSION['userID'])) {
+        echo "setted.";
+    } else {
+        echo "fail.";
+    }
     $_SESSION['userName'] = $userName;
     //echo "<script>location.replace('theme.php');</script>";
 }
