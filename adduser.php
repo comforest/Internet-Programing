@@ -1,12 +1,14 @@
 <?php // Example 21-6: checkuser.php
 require_once 'functions.php';
 
-if (isset($_POST['userinfo']))
+echo "check1! in adduser.php";
+echo $_POST['userinfo'] . $_POST['userinfo2'];
+if (isset($_POST["userinfo"]))
 {
     $userID = $_POST['userinfo'];
     $userName = $_POST['userinfo2'];
     echo "userID: " . $userID . " userName: " . $userName;
-    echo "check! in adduser.php";
+    echo "check2! in adduser.php";
     echo __FILE__ . ": " . __LINE__;
     $numOfuser = mysqli_query($connect, "SELECT * FROM user WHERE userID='$userID'", MYSQLI_USE_RESULT) or die("쿼리 실패: $query". mysqli_error($connect));
     echo __FILE__ . ": " . __LINE__;
