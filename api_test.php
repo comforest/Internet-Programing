@@ -29,11 +29,11 @@
 	</head>
 	<body>
 		<h1>Map1</h1>
-		<div class="row" style="height: 400px;">
+		<div style="height: 400px;">
 			<div id="map1" class="col-md-8 col-md-offset-2"></div>
 		</div>
 		<h1>Map2</h1>
-		<div class="row" style="height: 400px;">
+		<div style="height: 400px;">
 			<div id="map2" class="col-md-8 col-md-offset-2"></div>
 		</div>
 
