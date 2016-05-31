@@ -7,7 +7,6 @@ if (isset($_POST['userID']))
     $userName = sanitizeString($_POST['userName']);
 
     echo "this is " . __FILE__ . ": " . __FUNCTION__;
-    global $connect;
     if(!$connect){
         /*서버 연결이 안 됨*/
         echo("__FILE__ . ": " . __FUNCTION__" . "mysql 연결 안 됨");
@@ -19,5 +18,4 @@ if (isset($_POST['userID']))
         queryMysql($connect, "INSERT INTO user VALUES($userID, '$userName')");
     echo "this is " . __FILE__ . ": " . __FUNCTION__ . "OK.";
 }
-echo "this is " . __FILE__ . ": " . __LINE__;
 ?>
