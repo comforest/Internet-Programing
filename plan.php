@@ -13,15 +13,19 @@
 	<link rel="stylesheet" type="text/css" href="static/css/dialog.css">
 	<link rel="stylesheet" type="text/css" href="static/css/datebar.css">
 	<link rel="stylesheet" type="text/css" href="static/css/path.css">
-	
+	<link rel="stylesheet" type="text/css" href="static/css/plan.css">       
 </head>
 <body>
-
+    <div class="plancontainer">
 	<?php
 		require_once("navbar.inc");
+    ?>
+	<?php
 		require_once("datebar.inc");
+    ?>
+ 	<?php
 		require_once("path.inc");
 	?>
-
+    </div>
 </body>
 </html>

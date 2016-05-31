@@ -4,14 +4,32 @@ Youn Inseop
 필요한 css : navbar_style.css
 -->
 <ul class = "nav">
-	<li class="navicon">
-		<img src="static/image/logo.png"/>
-	</li>
-	<li><a href="#">Set</a></li>
-	<li><a href="#">Add</a></li>
-	<li><a href="#">Plan</a></li>
-	<li class="userinfo">
-		<img src="static/image/nature_theme.png"/>
-		<span>Inseop Youn</span>
-	</li>
-</ul>
+		<li>
+			<div class="navicon">
+				<img src="static/image/logo.png"/>
+			</div>
+		</li>
+		<li><a href="#">Set</a></li>
+		<li><a href="#">Add</a></li>
+		<li><a href="#">Plan</a></li>
+		<li>
+			<div class="userinfo">
+				<span>Inseop Youn</span>
+				<img src="static/image/nature_theme.png"/>
+			</div>
+		</li>
+	</ul>
+	<div class="mobnav">
+		<div class="navblock">
+			Set
+		</div>
+		<div class="navblock">
+			Add
+		</div>
+		<div class="navblock">
+			Plan
+		</div>
+		<div class="navblock">
+			<img src="static/image/hamburger_nonactive.png"/>
+		</div>
+	</div>
