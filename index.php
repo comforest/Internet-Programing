@@ -42,7 +42,7 @@ else $loggedin = FALSE;
                         console.log("userID: " + response.id + ", userName: " + response.name);
                         document.getElementById('userinfo').setAttribute('value', response.id);
                         document.getElementById('userinfo2').setAttribute('value', response.name);
-                        document.userinfoForm.submit();
+                        document.getElementById('userinfoForm').submit();
                     });
                     /*request = new ajaxRequest();
                     request.open('POST', 'http://dm1463990271564.fun25.co.kr/adduser.php', true);
@@ -133,7 +133,7 @@ else $loggedin = FALSE;
                 return request;
             }
         </script>
-        <form action="/adduser.php" method="post" name="userinfoForm">
+        <form action="/adduser.php" method="post" id="userinfoForm">
             <input type="hidden" name="userinfo" id="userinfo" value="">
             <input type="hidden" name="userinfo2" id="userinfo2" value="">
         </form>
