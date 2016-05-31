@@ -40,23 +40,25 @@ else $loggedin = FALSE;
                     testAPI();
                     FB.api('/me', function(response) {
                         console.log("userID: " + response.id + ", userName: " + response.name);
-                        $.post( "adduser.php", { user: response.id, userN: response.name })
+                        request = new ajaxRequest();
+                        request.open('GET', 'http://dm1463990271564.fun25.co.kr/adduser.php', true);
+                        console.log('check1');
+                        request.onreadystatechange = function() {
+                            if (this.readyState == 4)
+                                if (this.status == 200)
+                                    if (this.responseText != null)
+                                        document.getElementById('status').innerHTML = this.responseText;
+                            else
+                                console.log("!!POST 요청에서 에러남!!");
+                        }
+                        params = "user=" + response.id + "&userName=" + response.name;
+                        request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+                        request.send(params);
+                        /*$.post( "adduser.php", { user: response.id, userN: response.name })
                             .done(function( data ) {
                             alert( "Data Loaded: " + data );
-                        });
+                        });*/
                     });
-                    //params = "user=" + userID + "&userName=" + userName;
-                    
-                    /*request = new ajaxRequest();
-                    request.open("GET", "adduser.php?user=", true);
-                    console.log('check1');
-                    request.onreadystatechange = function() {
-                        if (this.readyState == 4)
-                            if (this.status == 200)
-                                if (this.responseText != null)
-                                    document.getElementById('status').innerHTML = this.responseText;
-                    }
-                    request.send(params);*/
                     //console.log('check2');
                     //location.replace('theme.php');
                     
