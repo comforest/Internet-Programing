@@ -6,7 +6,6 @@
 -->
 
 <?php // header.php
-session_start();
 require_once 'functions.php';
 
 if (!isset($_SESSION['userID'])) {
