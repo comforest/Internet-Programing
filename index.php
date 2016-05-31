@@ -47,7 +47,7 @@ else $loggedin = FALSE;
                             if (this.readyState == 4)
                                 if (this.status == 200)
                                     if (this.responseText != null) {
-                                        console.log("POST 요청 완료!");
+                                        console.log("POST 요청 완료!"+this.responseText);
                                         location.replace('theme.php');
                                     }
                             console.log("!!POST 요청에서 에러남!!");
