@@ -7,6 +7,7 @@ if (isset($_POST["userinfo"]))
     $userName = $_POST['userinfo2'];
     echo "check1!";
     $numOfuser = queryMysql($connect, "SELECT * FROM user WHERE userID='$userID'");
+    echo "유저 수" . $numOfuser;
     if (mysqli_num_rows($numOFuser) == 0) {
         queryMysql($connect, "INSERT INTO user VALUES('$userID', '$userName')");
         echo "check2";
