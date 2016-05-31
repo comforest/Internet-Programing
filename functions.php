@@ -10,7 +10,7 @@ $dbuser  = 'traversapp';
 $dbpass  = 'haveagoodtrip';
 $appname = "Travers";
 
-global $connect = mysqli_connect($dbhost,$dbuser,$dbpass,$dbname);
+$connect = mysqli_connect($dbhost,$dbuser,$dbpass,$dbname);
 // Check connection
 if (mysqli_connect_errno()) {
   echo "Failed to connect to MySQL: " . mysqli_connect_error();

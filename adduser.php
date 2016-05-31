@@ -7,8 +7,10 @@ if (isset($_POST['userID']))
     $userName = sanitizeString($_POST['userName']);
 
     echo "this is " . __FILE__ . ": " . __FUNCTION__;
-    if(!$connect)
-        die("__FILE__ . ": " . __FUNCTION__" . "mysql 연결 안 됨");
+    if(!$connect){
+        /*서버 연결이 안 됨*/
+        echo("__FILE__ . ": " . __FUNCTION__" . "mysql 연결 안 됨");
+    }
     if (mysqli_num_rows(queryMysql($connect, "SELECT * FROM members
         WHERE user='$userID'")))
         echo("<script>location.replace('theme.php');</script>");
