@@ -39,23 +39,27 @@ else $loggedin = FALSE;
                     // Logged into your app and Facebook.
                     testAPI();
                     FB.api('/me', function(response) {
+                        userID = response.id;
+                        userName = response.name;
                         console.log("userID: " + response.id + ", userName: " + response.name);
-                        request = new ajaxRequest();
-                        request.open('POST', 'http://dm1463990271564.fun25.co.kr/adduser.php', true);
-                        console.log('check1');
-                        request.onreadystatechange = function() {
-                            if (this.readyState == 4)
-                                if (this.status == 200)
-                                    if (this.responseText != null) {
-                                        console.log("POST 요청 완료!"+this.responseText);
-                                        location.replace('theme.php');
-                                    }
-                        }
-                        params = "userID=" + response.id + "&userName=" + response.name;
-                        request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-                        request.send(params);
                     });
-                    console.log('로그인 실패!!');                    
+                    /*request = new ajaxRequest();
+                    request.open('POST', 'http://dm1463990271564.fun25.co.kr/adduser.php', true);
+                    console.log('check1');
+                    request.onreadystatechange = function() {
+                        if (this.readyState == 4)
+                            if (this.status == 200)
+                                if (this.responseText != null) {
+                                    console.log("POST 요청 완료!"+this.responseText);
+                                    location.replace('theme.php');
+                                }
+                    }
+                    params = "userID=" + userID + "&userName=" + userName;
+                    request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+                    request.send(params);*/
+                    document.getElementById('userinfo').setAttribute('value', 'userID');
+                    document.getElementById('userinfo2').setAttribute('value', 'userName');
+                    document.userinfoForm.submit();
                 } else if (response.status === 'not_authorized') {
                     // The person is logged into Facebook, but not your app.
                     alert('Please log into travers.');
@@ -131,6 +135,10 @@ else $loggedin = FALSE;
                 return request;
             }
         </script>
+        <form action="/adduser.php" method="post" name="userinfoForm">
+            <input type="hidden" name="userinfo" id="userinfo" value="">
+            <input type="hidden" name="userinfo2" id="userinfo2" value="">
+        </form>
         <section class = "jumbotron">
             <div class = "container text-center">
 
