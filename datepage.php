@@ -5,6 +5,8 @@
  -->
 <?php // datepage.php
 require_once 'header.php';
+if (!isset($_POST['themeinfo']))
+    echo("<script>location.replace('theme.php');</script>");
 $_SESSION['theme'] = $_POST['themeinfo'];
 ?>
 <html>
@@ -19,7 +21,14 @@ $_SESSION['theme'] = $_POST['themeinfo'];
         </style>
         <script>
             function clickLetsDoThis() {
-                document.getElementById('datePlaceInfoForm').submit();
+                if (document.getElementById('date').value == "") {
+                    // 경고 메시지 출력 : 디자인이 필요함.
+                    console.log("date 없음");
+                } else if (document.getElementById('place').value == "") {
+                    console.log("place 없음");
+                } else {
+                    document.getElementById('datePlaceInfoForm').submit();
+                }
             }
         </script>
     </head>
@@ -31,12 +40,12 @@ $_SESSION['theme'] = $_POST['themeinfo'];
         <p style= "text-align: center;">When is your trip?</p>
             <div class ="datepage_div">
                 <a href="#"><img src="static/image/calendar_grey.png"></a>
-                <input type="text" name = "date">
+                <input type="text" id = "date" name = "date" value = "">
             </div><br>
             <p style= "text-align: center">Where will you stay?</p>
             <div class = "datepage_div">
                 <a href="#"><img src="static/image/accomodation_grey.png"></a>
-                <input type="text" name="place">
+                <input type="text" id = "place" name="place" value = "">
             </div><br>
         </form>
         <a href="#"><div class = "datepage_roundclick" onclick="clickLetsDoThis()">let's do this</div></a>
