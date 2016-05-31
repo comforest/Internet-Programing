@@ -15,23 +15,16 @@ $connect = mysqli_connect($dbhost,$dbuser,$dbpass,$dbname);
 if (mysqli_connect_errno()) {
   echo "Failed to connect to MySQL: " . mysqli_connect_error();
 }
-echo "this is " . __FILE__ . ": " . __LINE__;
 
 function createTable($connect, $name, $query) {
-    echo __FILE__ .": " . __LINE__ . "in createTable()";
     queryMysql($connect, "CREATE TABLE IF NOT EXISTS $name($query)") or die("테이블 생성 실패" . mysqli_error($connect));
-    echo "Table '$name' created or already exists.<br />";
-    echo "this is " . __FILE__ . ": " . __FUNCTION__ . "OK.";
 }
 
 function queryMysql($connect, $query) {
-    echo __FILE__ .": " . __LINE__ . "in queryMysel()";
     if (!$connect) {
         die("!!쿼리를 하고 싶으나 서버 연결 안 됨!!" . mysqli_connect_error());
     }
-    echo __FILE__ .": " . __LINE__;
     $result = mysqli_query($connect, $query, MYSQLI_USE_RESULT) or die("쿼리 실패: $query". mysqli_error($connect));
-    echo "this is " . __FILE__ . ": " . __FUNCTION__ . "OK.";
     return $result;
 }
 
@@ -42,14 +35,12 @@ function destroySession() {
         setcookie(session_name(), '', time()-2592000, '/');
 
     session_destroy();
-    echo "this is " . __FILE__ . ": " . __FUNCTION__ . "OK.";
 }
 
-function sanitizeString($var) {
+function sanitizeString($var) { // 에러 있음. 쓰려면 고쳐야 함!!
     $var = strip_tags($var);
     $var = htmlentities($var);
     $var = stripslashes($var);
-    echo "this is " . __FILE__ . ": " . __FUNCTION__ . "OK.";
     return mysqli_real_escape_string($server, $var);
 }
 
