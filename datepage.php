@@ -3,6 +3,9 @@
 페이지 설명 : 날짜 및 숙박 검색
 필요한 css : datepage.css
  -->
+<?php // theme.php
+    require_once 'header.php';
+?>
 <html>
 <head>
 	<meta charset = "utf-8">
