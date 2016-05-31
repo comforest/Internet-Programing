@@ -1,4 +1,8 @@
-<!Doctype html>
+<!-- 
+작성자 : 김기현
+페이지 설명 : 날짜 및 숙박 검색
+필요한 css : datepage.css
+ -->
 <html>
 <head>
 	<meta charset = "utf-8">
