@@ -45,7 +45,7 @@ function destroySession() {
     echo "this is " . __FILE__ . ": " . __FUNCTION__ . "OK.";
 }
 
-function sanitizeString($var) {
+function sanitizeString($var) { // 에러 있음. 쓰려면 고쳐야 함!!
     $var = strip_tags($var);
     $var = htmlentities($var);
     $var = stripslashes($var);

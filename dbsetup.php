@@ -1,20 +1,17 @@
 <?php // setup.php
 //require_once 'functions.php';
-echo "this is " . __FILE__ . ": " . __LINE__ . "OK.";
 createTable($connect, 'user',
-            'userID INT UNSIGNED PRIMARY KEY,
+            'userID CHAR(16) PRIMARY KEY,
             userName VARCHAR(30),
             INDEX(userName(6))');
-echo "this is " . __FILE__ . ": " . __LINE__ . "OK.";
 createTable($connect, 'plan', 
             'planID INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-            userID VARCHAR(30),
+            userID CHAR(16),
             travelStart DATE, 
             travelEnd DATE, 
             hotelID VARCHAR(30), 
             lastLocation INT, 
-            INDEX(userID)');
-echo "this is " . __FILE__ . ": " . __LINE__ . "OK.";
+            INDEX(userID(6))');
 createTable($connect, 'route', 
             'routeID INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
             planID INT,
