@@ -5,7 +5,8 @@ if (isset($_POST['userinfo']))
 {
     $userID = $_POST['userinfo'];
     $userName = $_POST['userinfo2'];
-    echo "userID: " . $userID . "userName: " . $userName;
+    echo "userID: " . $userID . " userName: " . $userName;
+    echo "check! in adduser.php";
     echo __FILE__ . ": " . __LINE__;
     $numOfuser = mysqli_query($connect, "SELECT * FROM user WHERE userID='$userID'", MYSQLI_USE_RESULT) or die("쿼리 실패: $query". mysqli_error($connect));
     echo __FILE__ . ": " . __LINE__;
