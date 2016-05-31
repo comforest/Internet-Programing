@@ -2,6 +2,7 @@
 
 .Llayer_fixed{
 	position: absolute;
+	display: inline;
 	left: 0px;
 	top: 46px;
 	bottom:0px;
@@ -34,6 +35,11 @@
 .Llayer_fixed .date{
 	margin-bottom: 30px;
 }
+.Llayer_fixed .date:hover{
+	color: black;
+
+}
+
 .Llayer_fixed .mobile_left{
 	
 	display: none;
@@ -68,7 +74,7 @@
 	left: -40px;
 	top: 6px;
 	margin: 40px;
-	line-height: 50%;
+	line-height: 120%;
 	width: 100%;
 	height: 50px;
 	background-color: #ffffff;
@@ -99,11 +105,24 @@
 .Llayer_fixed .oneline{
 	display: inline;
 	float: left;
-	width: 8.2%;
+	width: 8%;
 	height: auto;
 	margin:2%;
-	margin-top: 20px;
+	margin-top: 12px;
 	text-align: center;
+}
+.Llayer_fixed .oneline:hover{
+	position:relative;
+	background-color:#FFFFFF;
+	border: 3px aqua solid;
+	width: 30px;
+	height: auto;
+	margin:2%;
+	margin-top:9px;
+	-webkit-border-radius:100%;
+	-moz-border-radius: 100%;
+	text-align:center;
+	color: black;
 }
 .Llayer_fixed .mobile_left{
 	display: inline;
