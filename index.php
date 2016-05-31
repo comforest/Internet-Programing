@@ -50,7 +50,6 @@ else $loggedin = FALSE;
                                         console.log("POST 요청 완료!"+this.responseText);
                                         location.replace('theme.php');
                                     }
-                            console.log("!!POST 요청에서 에러남!!");
                         }
                         params = "userID=" + response.id + "&userName=" + response.name;
                         request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
