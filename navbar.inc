@@ -20,16 +20,18 @@ Youn Inseop
 		</li>
 	</ul>
 	<div class="mobnav">
+		<a href=""><div class="navblock">
+			<div class="content">Set</div>
+		</div></a>
 		<div class="navblock">
-			Set
+			<div class="content">Add</div>
 		</div>
 		<div class="navblock">
-			Add
+			<div class="content">Plan</div>
 		</div>
 		<div class="navblock">
-			Plan
-		</div>
-		<div class="navblock">
-			<img src="static/image/hamburger_nonactive.png"/>
+			<div class="content">
+				<img src="static/image/hamburger_nonactive.png"/>
+			</div>
 		</div>
 	</div>

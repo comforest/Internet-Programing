@@ -16,7 +16,6 @@
 	padding: 15px 20px 15px 20px;
 	color:#ababab;
 	text-decoration:none;
-	font-weight:bold;
 	font-size: 16pt;
 }
 .nav a:hover{
@@ -85,8 +84,8 @@
 }
 
 .navblock img{
-	width: 16%;
-	height: auto;
+	height: 40px;
+	width: auto;
 	vertical-align: middle;
 }
 
