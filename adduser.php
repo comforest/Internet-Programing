@@ -12,7 +12,9 @@ if (isset($_POST["userinfo"]))
         queryMysql($connect, "INSERT INTO user VALUES('$userID', '$userName')");
     }
     $_SESSION['userID'] = $userID;
+    echo $_SESSION['userID'];
+    echo isset($_SESSION['userID']);
     $_SESSION['userName'] = $userName;
-    echo "<script>location.replace('theme.php');</script>";
+    //echo "<script>location.replace('theme.php');</script>";
 }
 ?>
