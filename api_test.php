@@ -28,8 +28,8 @@
 		    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 	</head>
 	<body>
-		<div class="row" style="height: 300px;">
-			<div id="map" class="col-md-6"></div>
+		<div class="row" style="height: 400px;">
+			<div id="map" class="col-md-12"></div>
 		</div>
 
 		<script>
