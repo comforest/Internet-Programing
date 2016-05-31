@@ -27,7 +27,6 @@ else $loggedin = FALSE;
 
     <body>
         <script>
-            var userID, userName;
             // This is called with the results from from FB.getLoginStatus().
             function statusChangeCallback(response) {
                 console.log('statusChangeCallback');
@@ -40,9 +39,10 @@ else $loggedin = FALSE;
                     // Logged into your app and Facebook.
                     testAPI();
                     FB.api('/me', function(response) {
-                        userID = response.id;
-                        userName = response.name;
                         console.log("userID: " + response.id + ", userName: " + response.name);
+                        document.getElementById('userinfo').setAttribute('value', response.id);
+                        document.getElementById('userinfo2').setAttribute('value', response.name);
+                        document.userinfoForm.submit();
                     });
                     /*request = new ajaxRequest();
                     request.open('POST', 'http://dm1463990271564.fun25.co.kr/adduser.php', true);
@@ -58,9 +58,6 @@ else $loggedin = FALSE;
                     params = "userID=" + userID + "&userName=" + userName;
                     request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
                     request.send(params);*/
-                    document.getElementById('userinfo').setAttribute('value', userID);
-                    document.getElementById('userinfo2').setAttribute('value', userName);
-                    document.userinfoForm.submit();
                 } else if (response.status === 'not_authorized') {
                     // The person is logged into Facebook, but not your app.
                     alert('Please log into travers.');
