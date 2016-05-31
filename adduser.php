@@ -1,9 +1,9 @@
 <?php // adduser.php
-echo "Hellow world";
-/*require_once 'functions.php';
+require_once 'functions.php';
 
-echo "check1! in adduser.php";
+echo "Hello world!";
 echo $_POST['userinfo'] . $_POST['userinfo2'];
+/*
 if (isset($_POST["userinfo"]))
 {
     $userID = $_POST['userinfo'];
