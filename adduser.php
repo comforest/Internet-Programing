@@ -1,5 +1,5 @@
-<?php // Example 21-6: checkuser.php
-echo "check1! in adduser.php";
+<?php // adduser.php
+/*echo "check1! in adduser.php";
 require_once 'functions.php';
 
 echo "check1! in adduser.php";
@@ -23,5 +23,5 @@ if (isset($_POST["userinfo"]))
     }
     echo __FILE__ . ": " . __LINE__;
     echo "<script>location.replace('theme.php');</script>"
-}
+}*/
 ?>
