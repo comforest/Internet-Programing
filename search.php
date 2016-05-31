@@ -13,7 +13,7 @@
 	<link rel="stylesheet" type="text/css" href="static/css/dialog.css">
 	<link rel="stylesheet" type="text/css" href="static/css/tourlist.css">
 	<link rel="stylesheet" type="text/css" href="static/css/datebar.css">
-	
+	<link rel="stylesheet" type="text/css" href="static/css/tab.css">
 </head>
 <body>
 
@@ -21,6 +21,7 @@
 		require_once("navbar.inc");
 		require_once("datebar.inc");
 		require_once("tourlist.inc");
+		require_once("tab.inc");
 	?>
 
 </body>
