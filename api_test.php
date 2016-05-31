@@ -29,13 +29,13 @@
 	</head>
 	<body>
 		<h1>Map1</h1>
-		<div id="map1" style="height: 400px; width: 100%;"></div>
+		<div id="map1" style="height: 400px; width: 60%; margin-left: 20%;"></div>
 		<h1>Map2</h1>
-		<div id="map2" style="height: 400px; width: 100%;"></div>
+		<div id="map2" style="height: 400px; width: 60%; margin-left: 20%;"></div>
 
 		<script>
 			function initMap1() {
-				var map = new google.maps.Map(document.getElementById('map1'), {
+				var map1 = new google.maps.Map(document.getElementById('map1'), {
 					center: {lat: -34.397, lng: 150.644},
 			    	zoom: 8
 				});
@@ -46,13 +46,13 @@
 				var chicago = {lat: 41.85, lng: -87.65};
 				var indianapolis = {lat: 39.79, lng: -86.14};
 
-				var map = new google.maps.Map(document.getElementById('map2'), {
+				var map2 = new google.maps.Map(document.getElementById('map2'), {
 					center: chicago,
 					zoom: 7
 				});
 
 				var directionsDisplay = new google.maps.DirectionsRenderer({
-					map: map
+					map: map2
 				});
 
 				var request = {
