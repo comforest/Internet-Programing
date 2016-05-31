@@ -133,7 +133,7 @@ else $loggedin = FALSE;
                 return request;
             }
         </script>
-        <form action="/adduser.php" method="post" name="userinfoForm">
+        <form action="/adduser.php" method="post" id="userinfoForm">
             <input type="hidden" name="userinfo" id="userinfo" value="">
             <input type="hidden" name="userinfo2" id="userinfo2" value="">
         </form>
