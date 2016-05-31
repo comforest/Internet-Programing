@@ -6,6 +6,7 @@
 	margin: 0;
 	padding: 0;
 	text-align:center;
+	box-shadow: 0px 5px 2px #888888;
 }
 .nav li{
 	display:inline;
@@ -15,7 +16,6 @@
 	padding: 15px 20px 15px 20px;
 	color:#ababab;
 	text-decoration:none;
-	font-weight:bold;
 	font-size: 16pt;
 }
 .nav a:hover{
@@ -65,23 +65,37 @@
 
 .mobnav{
 	width: 100%;
+	height: 50px;
 	display: none;
 	background-color: #ebebec;
 	float: left;
-	overflow: auto;
 	text-align: center;
+
 }
 
 .navblock{
 	width: 25%;
-	font-size: 20pt;
+	height: 100%;
+	font-size: 16pt;
 	color: #ababab;
 	float: left;
+	display: table;
+	vertical-align: middle;
 }
 
 .navblock img{
-	width: 25%;
-	height: auto;
+	height: 40px;
+	width: auto;
+	vertical-align: middle;
+}
+
+.mobnav a:active .navblock{
+	color: #323232;
+}
+
+.content{
+	display: table-cell;
+	vertical-align: middle;
 }
 
 @media (max-width: 1000px){
