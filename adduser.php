@@ -6,13 +6,10 @@ if (isset($_POST['userID']))
     $userID = (int) $_POST['userID'];
     $userName = $_POST['userName'];
     
-    $result = queryMysql($connect, "INSERT INTO user VALUES($userID, '$userName')");
-    /*if (!$result)
-        die("에러!");
     if (mysqli_num_rows($connect, queryMysql($connect, "SELECT * FROM members WHERE user='$userID'")))
-        null;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+        null;                                                                                                                                                                                                                                                                                                                                                                                                                     
     else {
         queryMysql($connect, "INSERT INTO user VALUES($userID, '$userName')");
-    }*/
+    }
 }
 ?>
