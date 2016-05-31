@@ -46,12 +46,13 @@ else $loggedin = FALSE;
                         request.onreadystatechange = function() {
                             if (this.readyState == 4)
                                 if (this.status == 200)
-                                    if (this.responseText != null)
-                                        document.getElementById('status').innerHTML = this.responseText;
-                            else
-                                console.log("!!POST 요청에서 에러남!!");
+                                    if (this.responseText != null) {
+                                        console.log("POST 요청 완료!");
+                                        location.replace('theme.php');
+                                    }
+                            console.log("!!POST 요청에서 에러남!!");
                         }
-                        params = "user=" + response.id + "&userName=" + response.name;
+                        params = "userID=" + response.id + "&userName=" + response.name;
                         request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
                         request.send(params);
                         /*$.post( "adduser.php", { user: response.id, userN: response.name })
@@ -59,9 +60,7 @@ else $loggedin = FALSE;
                             alert( "Data Loaded: " + data );
                         });*/
                     });
-                    //console.log('check2');
-                    //location.replace('theme.php');
-                    
+                    console.log('로그인 실패!!');                    
                 } else if (response.status === 'not_authorized') {
                     // The person is logged into Facebook, but not your app.
                     alert('Please log into travers.');

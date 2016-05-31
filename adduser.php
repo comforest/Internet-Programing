@@ -3,14 +3,14 @@ require_once 'functions.php';
 
 if (isset($_POST['user']))
 {
-    $user = sanitizeString($_POST['user']);
-    $userName = sanitizeString($_POST['userN']);
+    $userID = sanitizeString($_POST['userID']);
+    $userName = sanitizeString($_POST['userName']);
 
     if (mysql_num_rows(queryMysql($connect, "SELECT * FROM members
-        WHERE user='$user'")))
+        WHERE user='$userID'")))
         echo("<script>location.replace('theme.php');</script>");
     else
-        queryMysql($connect, "INSERT INTO user VALUES('$user', '$userName')");
+        queryMysql($connect, "INSERT INTO user VALUES('$userID', '$userName')");
     echo "this is " . __FILE__ . ": " . __FUNCTION__ . "OK.";
 }
 ?>
