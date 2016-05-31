@@ -2,6 +2,11 @@
 작성자 : 이호연
 페이지 설명 : Serach page
 -->
+<?php // theme.php
+require_once 'header.php';
+$_SESSION['date'] = $_POST['date'];
+$_SESSION['place'] = $_POST['place'];
+?>
 <!DOCTYPE html>
 <html>
 <head>

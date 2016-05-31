@@ -3,7 +3,7 @@
 페이지 설명 : 날짜 및 숙박 검색
 필요한 css : datepage.css
  -->
-<?php // theme.php
+<?php // datepage.php
 require_once 'header.php';
 $_SESSION['theme'] = $_POST['themeinfo'];
 ?>
@@ -27,7 +27,7 @@ $_SESSION['theme'] = $_POST['themeinfo'];
         <br><br>
         <a href="theme.php"><div class = "datapage_back">&lt; back </div></a><br>
         
-        <form action="???.php" method="post" id="datePlaceInfoForm">
+        <form action="search.php" method="post" id="datePlaceInfoForm">
         <p style= "text-align: center;">When is your trip?</p>
             <div class ="datepage_div">
                 <a href="#"><img src="static/image/calendar_grey.png"></a>
