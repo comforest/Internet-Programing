@@ -47,13 +47,15 @@ else $loggedin = FALSE;
                             if (this.readyState == 4)
                                 if (this.status == 200)
                                     if (this.responseText != null) {
-                                        console.log("POST 요청 완료!");
+                                        console.log("POST 요청 완료!"+this.responseText);
                                         location.replace('theme.php');
                                     }
                             console.log("!!POST 요청에서 에러남!!");
                         }
                         params = "userID=" + response.id + "&userName=" + response.name;
                         request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+                        request.setRequestHeader('Content-length', params.length);
+                        request.setRequestHeader('Connection', 'close');
                         request.send(params);
                         /*$.post( "adduser.php", { user: response.id, userN: response.name })
                             .done(function( data ) {
