@@ -6,7 +6,8 @@ if (isset($_POST['userID']))
     $userID = $_POST['userID'];
     $userName = $_POST['userName'];
     
-    if ((0 == mysqli_num_rows(queryMysql($connect, "SELECT * FROM user WHERE userID='$userID'"))) {
+    $numOfuser = queryMysql($connect, "SELECT COUNT(userID) FROM user WHERE userID='".$userID."'");
+    if ($numOfuser == 0) {
         queryMysql($connect, "INSERT INTO user VALUES('$userID', '$userName')");
     }
 }
