@@ -1,4 +1,5 @@
 <?php // Example 21-6: checkuser.php
+echo "check1! in adduser.php";
 require_once 'functions.php';
 
 echo "check1! in adduser.php";
