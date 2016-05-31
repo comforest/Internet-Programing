@@ -18,16 +18,13 @@ createTable($connect, 'route',
             routeDate DATE,
             INDEX(planID),
             INDEX(routeDate)');
-echo "this is " . __FILE__ . ": " . __LINE__ . "OK.";
 createTable($connect, 'place',
             'placeID INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
             visitOrder INT,
             routeID INT,
             INDEX(routeID)');
-echo "this is " . __FILE__ . ": " . __LINE__ . "OK.";
 createTable($connect, 'location',
             'locationID INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
             latitude DECIMAL(12, 10),
             longtitude DECIMAL(12, 10)');
-echo "this is " . __FILE__ . ": " . __LINE__ . "OK.";
 ?>

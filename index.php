@@ -54,10 +54,6 @@ else $loggedin = FALSE;
                         params = "userID=" + response.id + "&userName=" + response.name;
                         request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
                         request.send(params);
-                        /*$.post( "adduser.php", { user: response.id, userN: response.name })
-                            .done(function( data ) {
-                            alert( "Data Loaded: " + data );
-                        });*/
                     });
                     console.log('로그인 실패!!');                    
                 } else if (response.status === 'not_authorized') {
