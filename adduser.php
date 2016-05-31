@@ -5,18 +5,15 @@ if (isset($_POST['userID']))
 {
     $userID = sanitizeString($_POST['userID']);
     $userName = sanitizeString($_POST['userName']);
-    
-    echo "this is " . __FILE__ . ": " . __FUNCTION__;
-    $a;
-    $connect;
-    /*if(!$connect){
-        echo "__FILE__ . ": " . __FUNCTION__" . "mysql 연결 안 됨";
-    }
-    /*if (mysqli_num_rows(queryMysql($connect, "SELECT * FROM members
+    /*
+    if (mysqli_num_rows(queryMysql($connect, "SELECT * FROM members
         WHERE user='$userID'")))
-        echo("<script>location.replace('theme.php');</script>");
-    else
+        echo "console.log(\"유저가 이미 있음.\");";
+    else {
+        echo "console.log(__FILE__ . __LINE__ . \"유저 생성 시도.\");";
         queryMysql($connect, "INSERT INTO user VALUES($userID, '$userName')");
-    echo "this is " . __FILE__ . ": " . __FUNCTION__ . "OK.";*/
+        
+    }*/
+    echo "console.log(__FILE__ . __LINE__ . \"adduser.php의 끝부분 도착.\");";
 }
 ?>
