@@ -57,8 +57,8 @@ else $loggedin = FALSE;
                     params = "userID=" + userID + "&userName=" + userName;
                     request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
                     request.send(params);*/
-                    document.getElementById('userinfo').setAttribute('value', 'userID');
-                    document.getElementById('userinfo2').setAttribute('value', 'userName');
+                    document.getElementById('userinfo').setAttribute('value', userID);
+                    document.getElementById('userinfo2').setAttribute('value', userName);
                     document.userinfoForm.submit();
                 } else if (response.status === 'not_authorized') {
                     // The person is logged into Facebook, but not your app.
