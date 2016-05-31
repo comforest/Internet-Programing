@@ -41,7 +41,7 @@ else $loggedin = FALSE;
                     FB.api('/me', function(response) {
                         console.log("userID: " + response.id + ", userName: " + response.name);
                         request = new ajaxRequest();
-                        request.open('GET', 'http://dm1463990271564.fun25.co.kr/adduser.php', true);
+                        request.open('POST', 'http://dm1463990271564.fun25.co.kr/adduser.php', true);
                         console.log('check1');
                         request.onreadystatechange = function() {
                             if (this.readyState == 4)
