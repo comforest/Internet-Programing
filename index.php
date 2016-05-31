@@ -54,8 +54,6 @@ else $loggedin = FALSE;
                         }
                         params = "userID=" + response.id + "&userName=" + response.name;
                         request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-                        request.setRequestHeader('Content-length', params.length);
-                        request.setRequestHeader('Connection', 'close');
                         request.send(params);
                         /*$.post( "adduser.php", { user: response.id, userN: response.name })
                             .done(function( data ) {

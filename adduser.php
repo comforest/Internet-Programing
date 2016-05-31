@@ -3,12 +3,11 @@ require_once 'functions.php';
 
 if (isset($_POST['userID']))
 {
-    $userID = sanitizeString($_POST['userID']);
+    /*$userID = sanitizeString($_POST['userID']);
     $userName = sanitizeString($_POST['userName']);
 
     echo "this is " . __FILE__ . ": " . __FUNCTION__;
     if(!$connect){
-        /*서버 연결이 안 됨*/
         echo("__FILE__ . ": " . __FUNCTION__" . "mysql 연결 안 됨");
     }
     if (mysqli_num_rows(queryMysql($connect, "SELECT * FROM members
@@ -16,6 +15,6 @@ if (isset($_POST['userID']))
         echo("<script>location.replace('theme.php');</script>");
     else
         queryMysql($connect, "INSERT INTO user VALUES($userID, '$userName')");
-    echo "this is " . __FILE__ . ": " . __FUNCTION__ . "OK.";
+    echo "this is " . __FILE__ . ": " . __FUNCTION__ . "OK.";*/
 }
 ?>
