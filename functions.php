@@ -9,20 +9,23 @@ $dbname  = 'travers';
 $dbuser  = 'traversapp';
 $dbpass  = 'haveagoodtrip';
 $appname = "Travers";
-$server = new mysqli($dbhost, $dbuser, $dbpass) or die("!!서버 연결 에러!!");
-mysqli_select_db($server, $dbname) or die("!!DB 선택 에러!!");
-echo "this is " . __FILE__ . ": " . __LINE__;
 
-function createTable($name, $query) {
-    queryMysql("CREATE TABLE IF NOT EXISTS $name($query)") or die("테이블 생성 실패" . mysqli_error($server));
-    echo "Table '$name' created or already exists.<br />";
-    echo "this is " . __FILE__ . ": " . __FUNCTION__ . "OK.";
+$connect = mysqli_connect($dbhost,$dbuser,$dbpass,$dbname);
+// Check connection
+if (mysqli_connect_errno()) {
+  echo "Failed to connect to MySQL: " . mysqli_connect_error();
 }
 
-function queryMysql($query) {
-    $result = mysqli_query($server, $query) or die("쿼리 실패" . mysqli_error($server));
-    echo "this is " . __FILE__ . ": " . __FUNCTION__ . "OK.";
-	 return $result;
+function createTable($connect, $name, $query) {
+    queryMysql($connect, "CREATE TABLE IF NOT EXISTS $name($query)") or die("테이블 생성 실패" . mysqli_error($connect));
+}
+
+function queryMysql($connect, $query) {
+    if (!$connect) {
+        die("!!쿼리를 하고 싶으나 서버 연결 안 됨!!" . mysqli_connect_error());
+    }
+    $result = mysqli_query($connect, $query, MYSQLI_USE_RESULT) or die("쿼리 실패: $query". mysqli_error($connect));
+    return $result;
 }
 
 function destroySession() {
@@ -32,14 +35,12 @@ function destroySession() {
         setcookie(session_name(), '', time()-2592000, '/');
 
     session_destroy();
-    echo "this is " . __FILE__ . ": " . __FUNCTION__ . "OK.";
 }
 
-function sanitizeString($var) {
+function sanitizeString($var) { // 에러 있음. 쓰려면 고쳐야 함!!
     $var = strip_tags($var);
     $var = htmlentities($var);
     $var = stripslashes($var);
-    echo "this is " . __FILE__ . ": " . __FUNCTION__ . "OK.";
     return mysqli_real_escape_string($server, $var);
 }
 

@@ -1,0 +1,62 @@
+body
+{
+	background-color: tomato;
+	margin: 0px;
+}
+
+@media screen and (max-width: 2000px){
+.tab
+{
+	display: none;
+}
+}
+
+@media screen and (max-width: 800px){
+.tab
+{
+	display: unset;
+	background-color: white;
+	margin: 0px;
+	position: absolute;
+	bottom: 0%;
+	width: 100%;
+	text-align: center;
+}
+
+
+.tab ul
+{
+	/*position: absolute;*/
+	margin: auto;
+	padding: 0;
+}
+
+.tab ul li
+{
+	display: inline;
+}
+
+.tab_button
+{
+	height: 30px;
+	width: 70px;
+	margin-left: -2.5px;
+    margin-right: -2.5px;
+    font-family: 'Hind', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    border: 0px;
+    color: #323232;
+    background-color: white;
+}
+
+.tab_button:active
+{
+	background-color: #87b4bd;
+}
+
+#list_button
+{
+	background-color: #87b4bd;
+}
+}

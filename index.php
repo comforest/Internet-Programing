@@ -1,35 +1,33 @@
 <?php // header.php
 session_start();
-echo __FILE__ .": " . __LINE__;
 require_once 'functions.php';
 require_once 'dbsetup.php';
-
 if (isset($_SESSION['user'])) {
     $user     = $_SESSION['user'];
     $loggedin = TRUE;
     $userstr  = " ($user)";
 }
 else $loggedin = FALSE; 
-echo "this is " . __FILE__ . ": " . __LINE__ . "OK.";
 ?>
 
 <!DOCTYPE html>
 
 <html>
 
-	<head>
-		<title>Travers :: Login</title>
-		<meta charset = "utf-8">
-		<meta name = "viewport" content = "width-device, initial-scale = 1" >
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-		<link href='https://fonts.googleapis.com/css?family=Hind' rel='stylesheet' type='text/css'>
-		<link rel = "stylesheet" href = "static/css/index_style.css">
-		<link rel="stylesheet" type="text/css" href="https://ddo7jzca0m2vt.cloudfront.net/unify/css/plugins.css">
-		<link rel="stylesheet" href="static/css/font-awesome.min.css">
-	</head>
+    <head>
+        <title>Travers :: Login</title>
+        <meta charset = "utf-8">
+        <meta name = "viewport" content = "width-device, initial-scale = 1" >
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+        <link href='https://fonts.googleapis.com/css?family=Hind' rel='stylesheet' type='text/css'>
+        <link rel = "stylesheet" href = "static/css/index_style.css">
+        <link rel="stylesheet" type="text/css" href="https://ddo7jzca0m2vt.cloudfront.net/unify/css/plugins.css">
+        <link rel="stylesheet" href="static/css/font-awesome.min.css">
+    </head>
 
-	<body>
-		<script>
+    <body>
+        <script>
+            var userID, userName;
             // This is called with the results from from FB.getLoginStatus().
             function statusChangeCallback(response) {
                 console.log('statusChangeCallback');
@@ -41,37 +39,35 @@ echo "this is " . __FILE__ . ": " . __LINE__ . "OK.";
                 if (response.status === 'connected') {
                     // Logged into your app and Facebook.
                     testAPI();
-                    var userID = "";
-                    var userName = "";
                     FB.api('/me', function(response) {
                         userID = response.id;
                         userName = response.name;
+                        console.log("userID: " + response.id + ", userName: " + response.name);
                     });
-                    params = "user=" + userID + "%userName=" + userName;
-                    request = new ajaxRequest();
-                    request.open("POST", "adduser.php", true);
-                    request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-                    request.setRequestHeader("Content-length", params.length);
-                    request.setRequestHeader("Connection", "close");
-
+                    /*request = new ajaxRequest();
+                    request.open('POST', 'http://dm1463990271564.fun25.co.kr/adduser.php', true);
+                    console.log('check1');
                     request.onreadystatechange = function() {
                         if (this.readyState == 4)
                             if (this.status == 200)
-                                if (this.responseText != null)
-                                    document.getElementById('status').innerHTML = this.responseText;
+                                if (this.responseText != null) {
+                                    console.log("POST 요청 완료!"+this.responseText);
+                                    location.replace('theme.php');
+                                }
                     }
-                    request.send(params);
-                    location.replace('theme.php');
-                    
+                    params = "userID=" + userID + "&userName=" + userName;
+                    request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+                    request.send(params);*/
+                    document.getElementById('userinfo').setAttribute('value', userID);
+                    document.getElementById('userinfo2').setAttribute('value', userName);
+                    document.userinfoForm.submit();
                 } else if (response.status === 'not_authorized') {
                     // The person is logged into Facebook, but not your app.
-                    document.getElementById('status').innerHTML = 'Please log ' +
-                    'into this app.';
+                    alert('Please log into travers.');
                 } else {
                     // The person is not logged into Facebook, so we're not sure if
                     // they are logged into this app or not.
-                    document.getElementById('status').innerHTML = 'Please log ' +
-                    'into Facebook.';
+                    alert('Please log into Facebook.');
                 }
             }
 
@@ -126,8 +122,6 @@ echo "this is " . __FILE__ . ": " . __LINE__ . "OK.";
                 console.log('Welcome!  Fetching your information.... ');
                 FB.api('/me', function(response) {
                     console.log('Successful login for: ' + response.name);
-                    document.getElementById('status').innerHTML =
-                    'Thanks for logging in, ' + response.id + '!';
                 });
             }
             function ajaxRequest() {
@@ -142,113 +136,117 @@ echo "this is " . __FILE__ . ": " . __LINE__ . "OK.";
                 return request;
             }
         </script>
-		<section class = "jumbotron">
-			<div class = "container text-center">
+        <form action="/adduser.php" method="post" name="userinfoForm">
+            <input type="hidden" name="userinfo" id="userinfo" value="">
+            <input type="hidden" name="userinfo2" id="userinfo2" value="">
+        </form>
+        <section class = "jumbotron">
+            <div class = "container text-center">
 
-				<nav class = "nav navbar-default">
-					<div class = "container-fluid">
-						<div class = "navbar-header">
-							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="false">
-        					<span class="sr-only">Toggle navigation</span>
-        					<span class="icon-bar"></span>
-        					<span class="icon-bar"></span>
-        					<span class="icon-bar"></span>
-      						</button>
-							<a class = "navbar-brand" href = "#"><img src = "static/image/logo_white.png" id = "logo_img" class = "img-responsive"/></a>
-						</div>
-						<div class="collapse navbar-collapse" id=".navbar-collapse">
-						<ul class = "nav navbar-nav navbar-right">
-							<li><a href = "#"><p>About</p></a></li>
-						</ul>
-						</div>
-					</div>
-				</nav>
+                <nav class = "nav navbar-default">
+                    <div class = "container-fluid">
+                        <div class = "navbar-header">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            </button>
+                            <a class = "navbar-brand" href = "#"><img src = "static/image/logo_white.png" id = "logo_img" class = "img-responsive"/></a>
+                        </div>
+                        <div class="collapse navbar-collapse" id=".navbar-collapse">
+                        <ul class = "nav navbar-nav navbar-right">
+                            <li><a href = "#"><p>About</p></a></li>
+                        </ul>
+                        </div>
+                    </div>
+                </nav>
 
-				<div class = "main-text">
-					<h1>Travel traversly</h1>
-					<p>Only three steps for an epic travel experience</p>
+                <div class = "main-text">
+                    <h1>Traversify your trip</h1>
+                    <p>Only three steps for an epic travel experience</p>
                     <fb:login-button scope="public_profile,email" onlogin="checkLoginState();" class="btn btn-default" id = "fb_login" data-max-rows="1" data-size="xlarge" data-show-faces="false" data-auto-logout-link="false">
-				      <span><img src = "static/image/fb.png" id = "fb"/></span>Login with facebook
-				    </fb:login-button>
-				</div>
-			</div>
-		</section>
+                      <span><img src = "static/image/fb.png" id = "fb"/></span>Login with facebook
+                    </fb:login-button>
+                </div>
+            </div>
+        </section>
 
-		<section class = "container text-center" id = "set">
-			<div class = "row" id = "theme_row">
-				<div class = "col-sm-3 col-xs-6">
-					<div class = "thumbnail slideanim">
-						<img src = "static/image/culture_theme.png">
-					</div>
-				</div>
-				<div class = "col-sm-3 col-xs-6">
-					<div class = "thumbnail slideanim">
-						<img src = "static/image/shopping_theme.png">
-					</div>
-				</div>
-				<div class = "col-sm-3 col-xs-6">
-					<div class = "thumbnail slideanim">
-						<img src = "static/image/nature_theme.png">
-					</div>
-				</div>
-				<div class = "col-sm-3 col-xs-6">
-					<div class = "thumbnail slideanim">
-						<img src = "static/image/trend_theme.png">
-					</div>
-				</div>
-			</div>
+        <section class = "container text-center" id = "set">
+            <div class = "row" id = "theme_row">
+                <div class = "col-sm-3 col-xs-6">
+                    <div class = "thumbnail slideanim">
+                        <img src = "static/image/culture_theme.png">
+                    </div>
+                </div>
+                <div class = "col-sm-3 col-xs-6">
+                    <div class = "thumbnail slideanim">
+                        <img src = "static/image/shopping_theme.png">
+                    </div>
+                </div>
+                <div class = "col-sm-3 col-xs-6">
+                    <div class = "thumbnail slideanim">
+                        <img src = "static/image/nature_theme.png">
+                    </div>
+                </div>
+                <div class = "col-sm-3 col-xs-6">
+                    <div class = "thumbnail slideanim">
+                        <img src = "static/image/trend_theme.png">
+                    </div>
+                </div>
+            </div>
 
-			<br/><br/>
-			<h1>Set</h1>
-			<p>We know that every people seek different things when they travel.</p>
-			<p>So we let you set the theme for your adventure.</p>
-		</section>
+            <br/><br/>
+            <h1>Set</h1>
+            <p>We know that every people seek different things when they travel.</p>
+            <p>So we let you set the theme for your adventure.</p>
+        </section>
 
-		<section class = "container" id = "add">
-			<h1>Add</h1>
-			<p>We give you a list of interesting places.<br/>Then you add those that you like.<br/>Yup, it's that simple.</p>
-			<img src = "static/image/clipone.png" class = "img-responsive slideanim" alt = "Responsive image" id = "clip1">
-			<img src = "static/image/cliptwo.png" class = "img-responsive slideanim" alt = "Responsive image" id = "clip2">
-		</section>
+        <section class = "container" id = "add">
+            <h1>Add</h1>
+            <p>We give you a list of interesting places.<br/>Then you add those that you like.<br/>Yup, it's that simple.</p>
+            <img src = "static/image/clipone.png" class = "img-responsive slideanim" alt = "Responsive image" id = "clip1">
+            <img src = "static/image/cliptwo.png" class = "img-responsive slideanim" alt = "Responsive image" id = "clip2">
+        </section>
 
-		<section class = "container text-center" id = "plan">
-			<h1>Plan</h1>
-			<p>Then we plan your trip from the places you've added.<br/>So that you don't have to.</p>
-			<div class "row">
-				<div class = "col-sm-2 col-sm-offset-1 col-xs-12">
-					<img src = "static/image/round1.png" class = "img-responsive slideanim" alt = "Responsive image" id = "round1">
-				</div>
-				<div class = "col-sm-2 col-xs-12">
-					<img src = "static/image/walk.png" class = "img-responsive slideanim" alt = "Responsive image" id = "walk_icon">
-				</div>
-				<div class = "col-sm-2 col-xs-12">
-					<img src = "static/image/round2.png" class = "img-responsive slideanim" alt = "Responsive image" id = "round2">
-				</div>
-				<div class = "col-sm-2 col-xs-12">
-					<img src = "static/image/subway.png" class = "img-responsive slideanim" alt = "Responsive image" id = "subway_icon">
-				</div>
-				<div class = "col-sm-2 col-xs-12">
-					<img src = "static/image/round3.png" class = "img-responsive slideanim" alt = "Responsive image" id = "round3">
-				</div>
-			</div>
-		</section>
+        <section class = "container text-center" id = "plan">
+            <h1>Plan</h1>
+            <p>Then we plan your trip from the places you've added.<br/>So that you don't have to.</p>
+            <div class = "row">
+                <div class = "col-sm-2 col-sm-offset-1 col-xs-12">
+                    <img src = "static/image/round1.png" class = "img-responsive slideanim" alt = "Responsive image" id = "round1">
+                </div>
+                <div class = "col-sm-2 col-xs-12">
+                    <img src = "static/image/walk.png" class = "img-responsive slideanim" alt = "Responsive image" id = "walk_icon">
+                </div>
+                <div class = "col-sm-2 col-xs-12">
+                    <img src = "static/image/round2.png" class = "img-responsive slideanim" alt = "Responsive image" id = "round2">
+                </div>
+                <div class = "col-sm-2 col-xs-12">
+                    <img src = "static/image/subway.png" class = "img-responsive slideanim" alt = "Responsive image" id = "subway_icon">
+                </div>
+                <div class = "col-sm-2 col-xs-12">
+                    <img src = "static/image/round3.png" class = "img-responsive slideanim" alt = "Responsive image" id = "round3">
+                </div>
+            </div>
+        </section>
 
-		<footer>
-			<div class = "container text-center">
-				<a href="#top" title="To Top">
-	    			<span class="glyphicon glyphicon-chevron-up" id = "arrow_top"></span>
-	  			</a>
-				<p> &copy; Travers, 2016</p>
-			</div>
-		</footer>
+        <footer>
+            <div class = "container text-center">
+                <a href="#top" title="To Top">
+                    <span class="glyphicon glyphicon-chevron-up" id = "arrow_top"></span>
+                </a>
+                <p> &copy; Travers, 2016</p>
+            </div>
+        </footer>
 
 
 
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
-  		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-		<script type="text/javascript" src="https://ddo7jzca0m2vt.cloudfront.net/unify/plugins/back-to-top.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="https://ddo7jzca0m2vt.cloudfront.net/unify/plugins/back-to-top.js"></script>
  <script>
-  			
+            
  $(document).ready(function(){
   $(window).scroll(function() {
     $(".slideanim").each(function(){
@@ -265,6 +263,6 @@ echo "this is " . __FILE__ . ": " . __LINE__ . "OK.";
 
  </script>
 
-	</body>
+    </body>
 
 </html>

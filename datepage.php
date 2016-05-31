@@ -1,4 +1,8 @@
-<!Doctype html>
+<!-- 
+작성자 : 김기현
+페이지 설명 : 날짜 및 숙박 검색
+필요한 css : datepage.css
+ -->
 <html>
 <head>
 	<meta charset = "utf-8">
@@ -17,10 +21,10 @@
 	<p style= "text-align: center;">When is your trip?</p>
 	<div class ="datepage_div">
 		<a href="#"><img src="static/image/calendar_grey.png"></a>
-		<input type="text" name = "date"">
+		<input type="text" name = "date">
 	</div><br>
-	<p style= "text-align: center;">Where will you stay?</p>
-	<div class ="datepage_div">
+	<p style= "text-align: center">Where will you stay?</p>
+	<div class = "datepage_div">
 		<a href="#"><img src="static/image/accomodation_grey.png"></a>
 		<input type="text" name="place">
 	</div><br>

@@ -54,3 +54,69 @@ body{
 .dialog_article:last-child{
 	border-bottom: solid 1px #b8b8b8;
 }
+
+
+@media screen and (max-width: 1000px){
+
+.dialog{
+	position: fixed;
+	top: 46px;
+	bottom:0px;
+	height: auto;
+	width: 350px;
+	background-color: white;
+	border-radius: 5px;
+	margin:10px;
+	box-shadow: 3px 3px 6px dimgrey;
+	margin-top:60px;
+}
+
+
+.dialog_head{
+	height: 46px;
+	border-bottom: solid gray 1px;
+}
+.dialog_head a{
+	display: inline-block;
+	color: #8e8e8e;
+	font-weight: bold;
+	text-decoration: none;
+	height: 100%;
+	vertical-align: center;
+	padding: 0px 8px;
+	margin-top: 30px;
+}
+.dialog_head img{
+	height: 50%;
+	width: auto;
+	margin-top:50%;
+}
+.dialog_body{
+	position: absolute;
+	top:46px;
+	bottom:46px;
+	height: auto;
+	width:100%;
+	overflow: auto;
+	background-color: #f3f3f3;
+	border-bottom: solid gray 1px; 
+}
+
+.dialog_article{
+	height: 90px; 
+	border-left: solid 13px #8174ba;
+	border-top: solid 1px #b8b8b8;
+	padding-left:20px;
+	background-color: white;
+}
+.dialog_article:last-child{
+	border-bottom: solid 1px #b8b8b8;
+}	
+	
+	
+	
+	
+	
+	
+	
+}

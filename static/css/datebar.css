@@ -1,21 +1,83 @@
+
+
 .Llayer_fixed{
 	position: absolute;
 	left: 0px;
 	top: 46px;
 	bottom:0px;
 	margin: 30px;
-	
-
-	line-height: 50%;
+	line-height: 100%;
 	width: 80px;
 	background-color: #ffffff;
 	color: #888888;
 	border-radius: 15px;
 	box-shadow: 3px 3px 6px dimgrey;
-
 	text-align:center;
+	font-size:28px;
+}
+.Llayer_fixed p:active{
+	color: #323232;
+}
+.datebar_div_down{
+	width: 1.4rem;
+	height: auto;
+	font-size: 1em;
+	
+}
+.datebar_div_up{
+	width: 1.4rem;
+	height: auto;
+	font-size: 1em;
+	margin-bottom: 10px;
 }
 
+.Llayer_fixed .date{
+	margin-bottom: 30px;
+}
+.Llayer_fixed .mobile_left{
+	
+	display: none;
+}	
+.Llayer_fixed .mobile_right{
+	
+	display: none;
+}	
+.Llayer_fixed .desktop{
+	
+}
+	@media screen and (max-height: 620px){.Llayer_fixed{font-size: 10px;}}
+	@media screen and (min-height:620px) and (max-height: 650px){.Llayer_fixed{font-size: 10%;}}
+	@media screen and (min-height:650px) and (max-height: 690px){.Llayer_fixed{font-size: 11px;}}
+	@media screen and (min-height:690px) and (max-height: 720px){.Llayer_fixed{font-size: 12px;}}
+	@media screen and (min-height:720px) and (max-height: 750px){.Llayer_fixed{font-size: 13px;}}
+	@media screen and (min-height:750px) and (max-height: 800px){.Llayer_fixed{font-size: 14px;}}	
+	@media screen and (min-height:800px) and (max-height: 840px){.Llayer_fixed{font-size: 16px;}}
+	@media screen and (min-height:840px) and (max-height: 880px){.Llayer_fixed{font-size: 17.5px;}}
+	@media screen and (min-height:880px) and (max-height: 920px){.Llayer_fixed{font-size: 18px;}}
+	@media screen and (min-height:920px) and (max-height: 950px){.Llayer_fixed{font-size: 20px;}}
+	@media screen and (min-height:950px) and (max-height: 980px){.Llayer_fixed{font-size: 23px;}}
+	@media screen and (min-height:980px) and (max-height: 1020px){.Llayer_fixed{font-size: 24px;}}
+	@media screen and (min-height:1020px) and (max-height: 1080px){.Llayer_fixed{font-size: 26.8px;}}
+
+
+
+
+@media screen and (max-width: 1000px){
+.Llayer_fixed{	
+	position: absolute;
+	left: -40px;
+	top: 6px;
+	margin: 40px;
+	line-height: 50%;
+	width: 100%;
+	height: 50px;
+	background-color: #ffffff;
+	color: #888888;
+	border-radius: 0px;
+	box-shadow: none;
+	text-align:center;
+	font-size: 1.5em;
+}
 .datebar_div_down{
 	width: 30px;
 	height: auto;
@@ -30,15 +92,36 @@
 }
 
 .Llayer_fixed .date{
-	margin-bottom: 30px;
+	margin-bottom: 0px;
+	display:none;
 }
-
-
-@media screen and (max-width: 400px){
 	
-	
-	
-	
+.Llayer_fixed .oneline{
+	display: inline;
+	float: left;
+	width: 8.2%;
+	height: auto;
+	margin:2%;
+	margin-top: 20px;
+	text-align: center;
+}
+.Llayer_fixed .mobile_left{
+	display: inline;
+	float: left;
+	margin-top: 10px;
+	height: 7%;
+	width: 7%;
+}
+.Llayer_fixed .mobile_right{
+	float: right;
+	display: inline;
+	margin-top: 10px;
+	height: 7%;
+	width:7%;
+}	
+.Llayer_fixed .desktop{
+	display: none;
+}
 	
 	
 }

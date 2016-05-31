@@ -1,15 +1,16 @@
 <?php // Example 21-6: checkuser.php
 require_once 'functions.php';
 
-if (isset($_POST['user']))
+if (isset($_POST['userinfo']))
 {
-    $user = sanitizeString($_POST['user']);
-
-    if (mysql_num_rows(queryMysql("SELECT * FROM members
-        WHERE user='$user'")))
-        echo("<script>location.replace('theme.php');</script>");
-    else
-        queryMysql("INSERT INTO user VALUES('$user', '$userName')");
-    echo "this is " . __FILE__ . ": " . __FUNCTION__ . "OK.";
+    $userID = $_POST['userinfo'];
+    $userName = $_POST['userinfo2'];
+    echo "userID: " . $userID . "userName: " . userName;
+    $numOfuser = queryMysql($connect, "SELECT * FROM user WHERE userID='$userID'");
+    echo "유저 수: " . $numOfuser;
+    if (mysqli_num_rows($numOfuser) == 0) {
+        //queryMysql($connect, "INSERT INTO `user` VALUES('$userID', '$numOfuser')");
+        mysqli_query($connect, "INSERT INTO `user` VALUES('$userID', '$numOfuser')", MYSQLI_USE_RESULT) or die("쿼리 실패: $query". mysqli_error($connect));
+    }
 }
 ?>

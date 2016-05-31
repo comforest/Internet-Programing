@@ -1,0 +1,109 @@
+hotel.json 은 숙박업소 찾기
+nature.json 은 자연생타관람
+sight.json은 트랜드 ㅇㅇ
+historic site.json 전통 ㅇㅇ
+shopping.json은 쇼핑 ㅇㅇ
+
+
+유지보수 할 떄 JSON 파일 형식 맞춰주는 자바 소스
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.InputStreamReader;
+import java.net.URL;
+import java.net.URLConnection;
+
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+import org.json.simple.JSONValue;
+import org.json.simple.parser.JSONParser;
+
+class GpsToAddress {
+	public Double latitude; // y
+	public Double longitude; // x
+	public String regionAddress;
+
+	public GpsToAddress(String regionAddress) {
+		this.regionAddress = regionAddress;
+	}
+
+	private String getApiURL() {
+		String apiURL = "https://maps.googleapis.com/maps/api/geocode/json?address=";
+		for(int i=0; i<regionAddress.length(); i++) {
+			if (regionAddress.charAt(i)==32){
+				apiURL+="%20";
+			}
+			else apiURL=apiURL+regionAddress.charAt(i);
+		}
+		return apiURL;
+	}
+
+	private String getJSONData(String apiURL) throws Exception {
+		String jsonString = new String();
+		String buf;
+		URL url = new URL(apiURL);
+		URLConnection conn = url.openConnection();
+		InputStreamReader input = new InputStreamReader(conn.getInputStream(), "UTF-8");
+		BufferedReader br = new BufferedReader(input);
+		while ((buf = br.readLine()) != null) {
+			jsonString += buf;
+		}
+		return jsonString;
+	}
+	
+	public boolean setLL() throws Exception {
+		JSONObject jObj = (JSONObject)JSONValue.parse(getJSONData(getApiURL()));
+		final String CONST_OK = "OK";
+		String imsi = jObj.get("status").toString();
+		System.out.println(imsi);
+		if (imsi.equals(CONST_OK)==false) return false;
+		JSONArray jArray = (JSONArray) jObj.get("results");
+		jObj = (JSONObject) jArray.get(0);
+		jObj = (JSONObject) jObj.get("geometry");
+		jObj = (JSONObject) jObj.get("location");
+		latitude =(Double)jObj.get("lat");
+		longitude =(Double)jObj.get("lng");
+		return true;
+	}
+}
+
+public class JSON_S {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		JSONParser parser = new JSONParser(); // 1. read
+		try {
+			Object obj = parser.parse(new FileReader("historic site.json"));
+			JSONArray sight = (JSONArray) obj;
+			
+			// 2. change
+			JSONArray sight_output = new JSONArray();
+			for (int i=0; i<sight.size(); i++) {
+				JSONObject in = new JSONObject();
+				in = (JSONObject) sight.get(i);
+				
+				JSONObject imsi = new JSONObject();
+				String address = in.get("NAME_ENG").toString() +" " + in.get("H_ENG_DONG").toString() + " "+ in.get("H_ENG_GU").toString() +" "+ in.get("H_ENG_CITY").toString();
+				GpsToAddress ll = new GpsToAddress(address);
+				if (ll.setLL()==true) {
+					imsi.put("LOCATION_X", ll.longitude);
+					imsi.put("LOCATION_Y", ll.latitude);
+					imsi.put("NAME", in.get("NAME_ENG"));
+					imsi.put("ADDRESS", address);
+					sight_output.add(imsi);
+					for (int j=0; j<1000000000; j++); // delay
+				}
+			}
+					
+			// 3. write
+			FileWriter file = new FileWriter("result_historic site.json");
+			file.write(sight_output.toJSONString());
+			file.flush();
+			file.close();
+		} catch (Exception e){
+			System.out.println(e.getMessage());
+		}
+		
+	}
+
+}
+// made by BSJ
