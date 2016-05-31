@@ -8,7 +8,12 @@
 <?php // header.php
 require_once 'functions.php';
 
-if (!isset($_SESSION['userID'])) {
-    echo("<script>location.replace('index.php');</script>");
+if (isset($_SESSION['userID'])) {
+        echo "setted.";
+} else {
+    echo "fail.";
 }
+/*if (!isset($_SESSION['userID'])) {
+    echo("<script>location.replace('index.php');</script>");
+}*/
 ?>

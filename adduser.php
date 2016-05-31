@@ -19,6 +19,6 @@ if (isset($_POST["userinfo"]))
         echo "fail.";
     }
     $_SESSION['userName'] = $userName;
-    //echo "<script>location.replace('theme.php');</script>";
+    echo "<script>location.replace('theme.php');</script>";
 }
 ?>
