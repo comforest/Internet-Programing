@@ -1,6 +1,6 @@
 <?php // adduser.php
-/*echo "check1! in adduser.php";
-require_once 'functions.php';
+echo "Hellow world";
+/*require_once 'functions.php';
 
 echo "check1! in adduser.php";
 echo $_POST['userinfo'] . $_POST['userinfo2'];
