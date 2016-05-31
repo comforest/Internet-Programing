@@ -27,6 +27,7 @@ else $loggedin = FALSE;
 
     <body>
         <script>
+            var userID, userName;
             // This is called with the results from from FB.getLoginStatus().
             function statusChangeCallback(response) {
                 console.log('statusChangeCallback');
