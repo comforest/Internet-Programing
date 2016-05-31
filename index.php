@@ -42,7 +42,7 @@ else $loggedin = FALSE;
                         console.log("userID: " + response.id + ", userName: " + response.name);
                         document.getElementById('userinfo').setAttribute('value', response.id);
                         document.getElementById('userinfo2').setAttribute('value', response.name);
-                        document.userinfoForm.submit();
+                        document.getElementById('userinfoForm').submit();
                     });
                     /*request = new ajaxRequest();
                     request.open('POST', 'http://dm1463990271564.fun25.co.kr/adduser.php', true);
