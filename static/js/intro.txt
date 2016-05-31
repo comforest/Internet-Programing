@@ -1,5 +1,5 @@
 hotel.json 은 숙박업소 찾기
 nature.json 은 자연생타관람
 sight.json은 관광거리 ㅇㅇ
-
-기본 JSON은 안 올릴꺼고 JSON이 들어오면 우리 형식에 맞춰 정리해주는 소스코드는 나중에 모든 JSON이 올라오면 올릴예정!
+historic site.json 관광거리 ㅇㅇ
+shopping.json은 쇼핑 ㅇㅇ
