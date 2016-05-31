@@ -34,7 +34,11 @@
 .Llayer_fixed .date{
 	margin-bottom: 30px;
 }
-.Llayer_fixed .mobile{
+.Llayer_fixed .mobile_left{
+	
+	display: none;
+}	
+.Llayer_fixed .mobile_right{
 	
 	display: none;
 }	
@@ -58,7 +62,7 @@
 
 
 
-@media screen and (max-width: 532px){
+@media screen and (max-width: 1000px){
 .Llayer_fixed{	
 	position: absolute;
 	left: -40px;
@@ -71,8 +75,8 @@
 	color: #888888;
 	border-radius: 0px;
 	box-shadow: none;
-	text-align:left;
-	font-size: 20px;
+	text-align:center;
+	font-size: 1.5em;
 }
 .datebar_div_down{
 	width: 30px;
@@ -95,15 +99,25 @@
 .Llayer_fixed .oneline{
 	display: inline;
 	float: left;
-	width: 8%;
+	width: 8.2%;
 	height: auto;
-	margin:10px;
+	margin:2%;
 	margin-top: 20px;
+	text-align: center;
 }
-.Llayer_fixed .mobile{
+.Llayer_fixed .mobile_left{
 	display: inline;
-	top: 30px;
+	float: left;
+	margin-top: 10px;
+	height: 7%;
+	
 }
+.Llayer_fixed .mobile_right{
+	float: right;
+	display: inline;
+	margin-top: 10px;
+	height: 7%;
+}	
 .Llayer_fixed .desktop{
 	display: none;
 }

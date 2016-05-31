@@ -56,7 +56,7 @@ body{
 }
 
 
-@media screen and (max-width: 532px){
+@media screen and (max-width: 1000px){
 
 .dialog{
 	position: fixed;
