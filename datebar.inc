@@ -52,8 +52,8 @@
 			var div = document.getElementsByClassName("Llayer_fixed")[0];
 		
 			var dd = AddDate(d,0,0,-7);
-			div.innerHTML = ("<a href='#' class=\"mobile\" onclick=\"WriteVerticalCalendar("+dd.getFullYear()+","+dd.getMonth()+","+dd.getDate()+")\"><img class=\"datebar_div_up\" src=\"static/image/left_button.png\"></a>");
-			div.innerHTML = ("<a href='#' class=\"desktop\" onclick=\"WriteVerticalCalendar("+dd.getFullYear()+","+dd.getMonth()+","+dd.getDate()+")\"><img class=\"datebar_div_up\" src=\"static/image/up_button.png\"></a>");
+			div.innerHTML = ("<a href='#' class=\"mobile_left\" onclick=\"WriteVerticalCalendar("+dd.getFullYear()+","+dd.getMonth()+","+dd.getDate()+")\"><img class=\"datebar_div_up\" src=\"static/image/left_button.png\"></a>");
+			div.innerHTML += ("<a href='#' class=\"desktop\" onclick=\"WriteVerticalCalendar("+dd.getFullYear()+","+dd.getMonth()+","+dd.getDate()+")\"><img class=\"datebar_div_up\" src=\"static/image/up_button.png\"></a>");
 			for(var i=0;i<7;i++){
 				dd = AddDate(d,0,0,i);
 				div.innerHTML += ("<div href='#' class=\"oneline\">"+dd.getDate() +"<span class=\"desktop\">"+ " / " + (dd.getMonth()+1)+"</span>"+"</div>");   
@@ -62,7 +62,7 @@
 			}
 			var dd = AddDate(d,0,0,7);
 			div.innerHTML += ("<a href='#' class=\"desktop\" onclick=\"WriteVerticalCalendar("+dd.getFullYear()+","+dd.getMonth()+","+dd.getDate()+")\"><img class=\"datebar_div_down\" src=\"static/image/down_button.png\"></a>");
-			div.innerHTML += ("<a href='#' class=\"mobile\" onclick=\"WriteVerticalCalendar("+dd.getFullYear()+","+dd.getMonth()+","+dd.getDate()+")\"><img class=\"datebar_div_down\" src=\"static/image/right_button.png\"></a>");
+			div.innerHTML += ("<a href='#' class=\"mobile_right\" onclick=\"WriteVerticalCalendar("+dd.getFullYear()+","+dd.getMonth()+","+dd.getDate()+")\"><img class=\"datebar_div_down\" src=\"static/image/right_button.png\"></a>");
 		}
 	-->
 	</script>     
