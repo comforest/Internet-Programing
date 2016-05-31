@@ -28,9 +28,10 @@
 		    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 	</head>
 	<body>
-		<div class="row">
+		<div class="row" style="height: 300px;">
 			<div id="map" class="col-md-6"></div>
 		</div>
+
 		<script>
 			function initMap() {
 				var chicago = {lat: 41.85, lng: -87.65};
