@@ -60,11 +60,11 @@ else $loggedin = FALSE;
                     request.send(params);*/
                 } else if (response.status === 'not_authorized') {
                     // The person is logged into Facebook, but not your app.
-                    alert('Please log into travers.');
+                    //alert('Please log into travers.');
                 } else {
                     // The person is not logged into Facebook, so we're not sure if
                     // they are logged into this app or not.
-                    alert('Please log into Facebook.');
+                    //alert('Please log into Facebook.');
                 }
             }
 

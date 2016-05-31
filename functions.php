@@ -10,7 +10,6 @@ $dbuser  = 'traversapp';
 $dbpass  = 'haveagoodtrip';
 $appname = "Travers";
 
-echo "check in functions.php";
 $connect = mysqli_connect($dbhost,$dbuser,$dbpass,$dbname);
 // Check connection
 if (mysqli_connect_errno()) {
