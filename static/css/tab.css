@@ -4,8 +4,17 @@ body
 	margin: 0px;
 }
 
+@media screen and (max-width: 2000px){
 .tab
 {
+	display: none;
+}
+}
+
+@media screen and (max-width: 800px){
+.tab
+{
+	display: unset;
 	background-color: white;
 	margin: 0px;
 	position: absolute;
@@ -49,4 +58,5 @@ body
 #list_button
 {
 	background-color: #87b4bd;
+}
 }
