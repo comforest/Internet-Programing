@@ -1,7 +1,7 @@
 hotel.json 은 숙박업소 찾기
 nature.json 은 자연생타관람
-sight.json은 관광거리 ㅇㅇ
-historic site.json 관광거리 ㅇㅇ
+sight.json은 트랜드 ㅇㅇ
+historic site.json 전통 ㅇㅇ
 shopping.json은 쇼핑 ㅇㅇ
 
 
