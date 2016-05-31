@@ -11,25 +11,25 @@
 	<link rel="stylesheet" type="text/css" href="static/css/theme_style.css">
     <script>
         document.getElementById("culture_theme")
-            .onclick("function() {
+            .onclick(function() {
                 document.getElementById("themeinfo").setAttribute('value', 'culture');
                 document.getElementById("themeinfoForm").submit();
-        }");
+        });
         document.getElementById("shopping_theme")
-            .onclick("function() {
+            .onclick(function() {
                 document.getElementById("themeinfo").setAttribute('value', 'shopping');
                 document.getElementById("themeinfoForm").submit();
-        }");
+        });
         document.getElementById("nature_theme")
-            .onclick("function() {
+            .onclick(function() {
                 document.getElementById("themeinfo").setAttribute('value', 'nature');
                 document.getElementById("themeinfoForm").submit();
-        }");
+        });
         document.getElementById("trend_theme")
-            .onclick("function() {
+            .onclick(function() {
                 document.getElementById("themeinfo").setAttribute('value', 'trend');
                 document.getElementById("themeinfoForm").submit();
-        }");
+        });
     </script>
 </head>
 <body style="background-color: #f3f3f3;">

@@ -1,5 +1,5 @@
 <?php // adduser.php
-require_once 'functions.php';
+require_once 'header.php';
 
 if (isset($_POST["userinfo"]))
 {
