@@ -71,21 +71,21 @@
 	max-height: 35%
 }
 .detailView figure .Button{
-	height: 12%;
+	height: 16%;
 	width: auto;
-	margin: -6% 3%;
+	margin: -8% 3%;
 }
 .detailView_info{
 	height: 20%;
-	padding: 3%;
+	padding: 5%;
 }
 .detailView_info p{
 	margin-top:3%;
 }
 .detailView_info img{
-	height: 30%;
-	margin-top:-15%;
-
+	height: 24%;
+	margin-top:-12%;
+	margin-right:3%;
 }
 .detailView_location img{
 	height: 30%;
