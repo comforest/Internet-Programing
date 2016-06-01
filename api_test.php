@@ -28,31 +28,20 @@
 		    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 	</head>
 	<body>
-		<h1>Map1</h1>
-		<div id="map1" style="height: 400px; width: 60%; margin-left: 20%;"></div>
-		<h1>Map2</h1>
-		<div id="map2" style="height: 400px; width: 60%; margin-left: 20%;"></div>
+		<div id="map" style="height: 400px; width: 60%; margin-left: 20%;"></div>
 
 		<script>
-			function initMap1() {
-				var map1 = new google.maps.Map(document.getElementById('map1'), {
-					center: {lat: -34.397, lng: 150.644},
-			    	zoom: 8
-				});
-			}
-    	</script>
-		<script>
-			function initMap2() {
+			function initMap() {
 				var chicago = {lat: 41.85, lng: -87.65};
 				var indianapolis = {lat: 39.79, lng: -86.14};
 
-				var map2 = new google.maps.Map(document.getElementById('map2'), {
+				var map = new google.maps.Map(document.getElementById('map'), {
 					center: chicago,
 					zoom: 7
 				});
 
 				var directionsDisplay = new google.maps.DirectionsRenderer({
-					map: map2
+					map: map
 				});
 
 				var request = {
@@ -70,7 +59,6 @@
 			}
 		</script>
 
-		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCG21Y5X-wARtfSC6WkgO1nxoVU0WwcjwE&callback=initMap1" async defer></script>
-		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCG21Y5X-wARtfSC6WkgO1nxoVU0WwcjwE&callback=initMap2" async defer></script>
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCG21Y5X-wARtfSC6WkgO1nxoVU0WwcjwE&callback=initMap" async defer></script>
 	</body>
 </html>
