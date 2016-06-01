@@ -50,7 +50,7 @@
 			  service.nearbySearch({
 			    location: pyrmont,
 			    radius: 500,
-			    types: ['store']
+			    types: ['store', 'food', 'cafe', 'school', 'zoo', 'museum', 'shopping_mall']
 			  }, callback);
 			}
 
