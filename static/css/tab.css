@@ -11,13 +11,13 @@ body
 }
 }
 
-@media screen and (max-width: 1000px){
+@media screen and (max-width: 800px){
 .tab
 {
 	display: unset;
 	background-color: white;
 	margin: 0px;
-	position: fixed;
+	position: absolute;
 	bottom: 0%;
 	width: 100%;
 	text-align: center;
