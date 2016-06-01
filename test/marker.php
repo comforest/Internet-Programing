@@ -51,7 +51,7 @@
 			  });
 			}
 		</script>
-
+		
 		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCG21Y5X-wARtfSC6WkgO1nxoVU0WwcjwE&callback=initMap" async defer></script>
 	</body>
 </html>
