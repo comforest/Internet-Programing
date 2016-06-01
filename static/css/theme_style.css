@@ -9,7 +9,7 @@
 }
 
 .themebox{
-	width: 1600px;
+	width: 1480px;
 	margin-left: auto;
 	margin-right: auto;
 	display: flex;
@@ -18,8 +18,8 @@
 
 .themeinner{
 	width: 350px;
-	margin-right: 25px;
-	margin-left: 25px;
+	margin-right: 10px;
+	margin-left: 10px;
 	margin-top: 25px;
 	margin-bottom: 25px;
 	padding-top: 30px;
@@ -67,7 +67,7 @@
 	background-color: #ffa200;
 	border-radius: 40px;
 }
-@media (max-width: 1600px){
+@media (max-width: 1480px){
 	.themeupper{
 		font-size: 40pt;
 	}
@@ -76,7 +76,7 @@
 	}
 }
 
-@media (max-width: 800px){
+@media (max-width: 1000px){
 	.themeupper{
 		font-size: 10vw;
 	}
