@@ -49,7 +49,7 @@
 			  var service = new google.maps.places.PlacesService(map);
 			  service.nearbySearch({
 			    location: pyrmont,
-			    radius: 500,
+			    radius: 2000,
 			    types: []
 			  }, callback);
 			}
