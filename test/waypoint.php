@@ -140,7 +140,7 @@ function calculateAndDisplayRoute(directionsService, directionsDisplay) {
 }
 
     </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBwN8HhDGDlySr99hcEv2MaAbmLzUgmQOo&signed_in=true&callback=initMap"
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCG21Y5X-wARtfSC6WkgO1nxoVU0WwcjwE&signed_in=true&callback=initMap"
         async defer></script>
   </body>
 </html>
