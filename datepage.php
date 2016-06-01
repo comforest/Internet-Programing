@@ -31,78 +31,73 @@ $_SESSION['theme'] = $_POST['themeinfo'];
                 }
             }
         </script>
+    
+        <style>
+        </style>
     </head>
     <body>
         <br><br>
-        <a href="theme.php"><div class = "datapage_back">&lt; back </div></a><br>
         
-        <form action="search.php" method="post" id="datePlaceInfoForm">
+        <!--<form action="search.php" method="post" id="datePlaceInfoForm" style="display: block">
         <p style= "text-align: center;">When is your trip?</p>
             <div class ="datepage_div">
                 <a href="#"><img src="static/image/calendar_grey.png"></a>
                 <input type="text" id = "date" name = "date" value = "">
             </div><br>
-            <p style= "text-align: center">Where will you stay?</p>
+            <div>Where will you stay?</div>
             <div class = "datepage_div">
                 <a href="#"><img src="static/image/accomodation_grey.png"></a>
                 <input type="text" id = "place" name="place" value = "">
             </div><br>
-        </form>
+        </form>-->
+        <div class="leftContent">
+            <div class="text">search accomodation</div>
+            <div class = "datepage_div">
+                <input type="text" id = "place" name="place" value = "">
+                <a href="#"><img src="static/image/search_grey.png"></a>
+            </div><br>
+            <div id="listing">
+                <table id="resultsTable">
+                    <tbody id="results"></tbody>
+                </table>
+            </div>
+            <div style="display: none">
+                <div id="info-content">
+                    <table>
+                      <tr id="iw-url-row" class="iw_table_row">
+                        <td id="iw-icon" class="iw_table_icon"></td>
+                        <td id="iw-url"></td>
+                      </tr>
+                      <tr id="iw-address-row" class="iw_table_row">
+                        <td class="iw_attribute_name">Address:</td>
+                        <td id="iw-address"></td>
+                      </tr>
+                      <tr id="iw-phone-row" class="iw_table_row">
+                        <td class="iw_attribute_name">Telephone:</td>
+                        <td id="iw-phone"></td>
+                      </tr>
+                      <tr id="iw-rating-row" class="iw_table_row">
+                        <td class="iw_attribute_name">Rating:</td>
+                        <td id="iw-rating"></td>
+                      </tr>
+                      <tr id="iw-website-row" class="iw_table_row">
+                        <td class="iw_attribute_name">Website:</td>
+                        <td id="iw-website"></td>
+                      </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        
 
-    <div id="controls">
-      <select id="country">
-        <option value="all">All</option>
-        <option value="au">Australia</option>
-        <option value="br">Brazil</option>
-        <option value="ca">Canada</option>
-        <option value="fr">France</option>
-        <option value="de">Germany</option>
-        <option value="mx">Mexico</option>
-        <option value="nz">New Zealand</option>
-        <option value="it">Italy</option>
-        <option value="ko" selected>Korea</option>
-        <option value="za">South Africa</option>
-        <option value="es">Spain</option>
-        <option value="pt">Portugal</option>
-        <option value="us">U.S.A.</option>
-        <option value="uk">United Kingdom</option>
-      </select>
-    </div>
+        <div id="controls" style="display: none">
+          <select id="country">
+            <option value="all" selected>All</option>
+            <option value="ko" selected>Korea</option>
+          </select>
+        </div>
 
-    <div id="map"></div>
-
-    <div id="listing">
-      <table id="resultsTable">
-        <tbody id="results"></tbody>
-      </table>
-    </div>
-
-    <div style="display: none">
-      <div id="info-content">
-        <table>
-          <tr id="iw-url-row" class="iw_table_row">
-            <td id="iw-icon" class="iw_table_icon"></td>
-            <td id="iw-url"></td>
-          </tr>
-          <tr id="iw-address-row" class="iw_table_row">
-            <td class="iw_attribute_name">Address:</td>
-            <td id="iw-address"></td>
-          </tr>
-          <tr id="iw-phone-row" class="iw_table_row">
-            <td class="iw_attribute_name">Telephone:</td>
-            <td id="iw-phone"></td>
-          </tr>
-          <tr id="iw-rating-row" class="iw_table_row">
-            <td class="iw_attribute_name">Rating:</td>
-            <td id="iw-rating"></td>
-          </tr>
-          <tr id="iw-website-row" class="iw_table_row">
-            <td class="iw_attribute_name">Website:</td>
-            <td id="iw-website"></td>
-          </tr>
-        </table>
-      </div>
-    </div>
+        <div id="map"></div>
         
         <a href="#"><div class = "datepage_roundclick" onclick="clickLetsDoThis()">let's do this</div></a>
     </body>
@@ -115,7 +110,7 @@ $_SESSION['theme'] = $_POST['themeinfo'];
 var map, places, infoWindow;
 var markers = [];
 var autocomplete;
-var countryRestrict = {'country': 'ko'};
+var countryRestrict = {};
 var MARKER_PATH = 'https://maps.gstatic.com/intl/en_us/mapfiles/marker_green';
 var hostnameRegexp = new RegExp('^https?://.+?/');
 
@@ -123,58 +118,6 @@ var countries = {
   'ko': {
     center: {lat: 37.55, lng: 127},
     zoom: 10
-  },
-  'au': {
-    center: {lat: -25.3, lng: 133.8},
-    zoom: 4
-  },
-  'br': {
-    center: {lat: -14.2, lng: -51.9},
-    zoom: 3
-  },
-  'ca': {
-    center: {lat: 62, lng: -110.0},
-    zoom: 3
-  },
-  'fr': {
-    center: {lat: 46.2, lng: 2.2},
-    zoom: 5
-  },
-  'de': {
-    center: {lat: 51.2, lng: 10.4},
-    zoom: 5
-  },
-  'mx': {
-    center: {lat: 23.6, lng: -102.5},
-    zoom: 4
-  },
-  'nz': {
-    center: {lat: -40.9, lng: 174.9},
-    zoom: 5
-  },
-  'it': {
-    center: {lat: 41.9, lng: 12.6},
-    zoom: 5
-  },
-  'za': {
-    center: {lat: -30.6, lng: 22.9},
-    zoom: 5
-  },
-  'es': {
-    center: {lat: 40.5, lng: -3.7},
-    zoom: 5
-  },
-  'pt': {
-    center: {lat: 39.4, lng: -8.2},
-    zoom: 6
-  },
-  'us': {
-    center: {lat: 37.1, lng: -95.7},
-    zoom: 3
-  },
-  'uk': {
-    center: {lat: 54.8, lng: -4.6},
-    zoom: 5
   }
 };
 
