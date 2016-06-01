@@ -14,6 +14,7 @@ Youn Inseop
 		}
 	}
 </script>
+<script type="text/javascript" src="loginFB.js"></script>
 <ul class = "nav">
 	<li>
 		<div class="navicon">
@@ -47,4 +48,4 @@ Youn Inseop
 		</div>
 	</div>
 </div>
-<div class="logout" id="logout" onclick="Fb.logout();">Log out</div>
+<div class="logout" id="logout" onclick="FB.logout();">Log out</div>
