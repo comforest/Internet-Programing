@@ -67,5 +67,20 @@
 .detailView{
 	width: auto;
 }
-
+.detailView figure .thumbnail{
+	max-height: 35%
+}
+.detailView figure .Button{
+	height: 10%;
+	width: auto;
+}
+.detailView_info{
+	height: 20%;
+}
+.detailView_info img, .detailView_location img{
+	height: 30%;
+}
+.detailView_location{
+	height: 15%;
+}
 }
