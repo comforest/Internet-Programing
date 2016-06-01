@@ -14,6 +14,7 @@ Youn Inseop
 		}
 	}
 </script>
+<script type="text/javascript" src="loginFB.js"></script>
 <ul class = "nav">
 	<li>
 		<div class="navicon">
