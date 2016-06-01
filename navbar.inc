@@ -25,13 +25,12 @@ Youn Inseop
 	<li><a href="#">Plan</a></li>
 	<li>
 		<div class="userinfo">
-			<span onclick="toggle_visibility('logoutdesktop');">Inseop Youn</span>
+			<span onclick="toggle_visibility('logout');">Inseop Youn</span>
 			<img src="static/image/nature_theme.png"/>
 			
 		</div>
 	</li>
 </ul>
-<div class="logout" id="logoutdesktop">Hi</div>
 <div class="mobnav">
 	<a href=""><div class="navblock">
 		<div class="content">Set</div>
@@ -44,8 +43,8 @@ Youn Inseop
 	</div></a>
 	<div class="navblock">
 		<div class="content">
-			<img src="static/image/hamburger_nonactive.png" onclick="toggle_visibility('logoutmoblie');" />
+			<img src="static/image/hamburger_nonactive.png" onclick="toggle_visibility('logout');" />
 		</div>
 	</div>
 </div>
-<div class="logout" id="logoutmoblie">Hello</div>
+<div class="logout" id="logout" onclick="FB.logout();">Log out</div>
