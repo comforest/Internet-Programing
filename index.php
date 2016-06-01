@@ -2,12 +2,6 @@
 session_start();
 require_once 'functions.php';
 require_once 'dbsetup.php';
-if (isset($_SESSION['user'])) {
-    $user     = $_SESSION['user'];
-    $loggedin = TRUE;
-    $userstr  = " ($user)";
-}
-else $loggedin = FALSE; 
 ?>
 
 <!DOCTYPE html>
@@ -44,27 +38,13 @@ else $loggedin = FALSE;
                         document.getElementById('userinfo2').setAttribute('value', response.name);
                         document.getElementById('userinfoForm').submit();
                     });
-                    /*request = new ajaxRequest();
-                    request.open('POST', 'http://dm1463990271564.fun25.co.kr/adduser.php', true);
-                    console.log('check1');
-                    request.onreadystatechange = function() {
-                        if (this.readyState == 4)
-                            if (this.status == 200)
-                                if (this.responseText != null) {
-                                    console.log("POST 요청 완료!"+this.responseText);
-                                    location.replace('theme.php');
-                                }
-                    }
-                    params = "userID=" + userID + "&userName=" + userName;
-                    request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-                    request.send(params);*/
                 } else if (response.status === 'not_authorized') {
                     // The person is logged into Facebook, but not your app.
-                    alert('Please log into travers.');
+                    //alert('Please log into travers.');
                 } else {
                     // The person is not logged into Facebook, so we're not sure if
                     // they are logged into this app or not.
-                    alert('Please log into Facebook.');
+                    //alert('Please log into Facebook.');
                 }
             }
 

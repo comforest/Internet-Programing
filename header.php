@@ -8,15 +8,8 @@
 <?php // header.php
 session_start();
 require_once 'functions.php';
-
-if (isset($_SESSION['user'])) {
-    $user     = $_SESSION['user'];
-    $loggedin = TRUE;
-    $userstr  = " ($user)";
-}
-else $loggedin = FALSE;
-
-if (!$loggedin) {
+//$_SESSION['userID'] = '1065100166913049';
+if (!isset($_SESSION['userID'])) {
     echo("<script>location.replace('index.php');</script>");
 }
 ?>

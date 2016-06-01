@@ -3,35 +3,49 @@ Navigation bar
 Youn Inseop
 필요한 css : navbar_style.css
 -->
+<script type="text/javascript">
+	function toggle_visibility(id){
+		var e = document.getElementById(id);
+		if(e.style.display == 'block'){
+			e.style.display = 'none';
+		}
+		else{
+			e.style.display = 'block';
+		}
+	}
+</script>
 <ul class = "nav">
-		<li>
-			<div class="navicon">
-				<img src="static/image/logo.png"/>
-			</div>
-		</li>
-		<li><a href="#">Set</a></li>
-		<li><a href="#">Add</a></li>
-		<li><a href="#">Plan</a></li>
-		<li>
-			<div class="userinfo">
-				<span>Inseop Youn</span>
-				<img src="static/image/nature_theme.png"/>
-			</div>
-		</li>
-	</ul>
-	<div class="mobnav">
-		<a href=""><div class="navblock">
-			<div class="content">Set</div>
-		</div></a>
-		<div class="navblock">
-			<div class="content">Add</div>
+	<li>
+		<div class="navicon">
+			<img src="static/image/logo.png"/>
 		</div>
-		<div class="navblock">
-			<div class="content">Plan</div>
+	</li>
+	<li><a href="#">Set</a></li>
+	<li><a href="#">Add</a></li>
+	<li><a href="#">Plan</a></li>
+	<li>
+		<div class="userinfo">
+			<span onclick="toggle_visibility('logoutdesktop');">Inseop Youn</span>
+			<img src="static/image/nature_theme.png"/>
+			
 		</div>
-		<div class="navblock">
-			<div class="content">
-				<img src="static/image/hamburger_nonactive.png"/>
-			</div>
+	</li>
+</ul>
+<div class="logout" id="logoutdesktop">Hi</div>
+<div class="mobnav">
+	<a href=""><div class="navblock">
+		<div class="content">Set</div>
+	</div></a>
+	<a href=""><div class="navblock">
+		<div class="content">Add</div>
+	</div></a>
+	<a href=""><div class="navblock">
+		<div class="content">Plan</div>
+	</div></a>
+	<div class="navblock">
+		<div class="content">
+			<img src="static/image/hamburger_nonactive.png" onclick="toggle_visibility('logoutmoblie');" />
 		</div>
 	</div>
+</div>
+<div class="logout" id="logoutmoblie">Hello</div>

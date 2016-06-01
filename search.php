@@ -2,6 +2,13 @@
 작성자 : 이호연
 페이지 설명 : Serach page
 -->
+<?php // theme.php
+require_once 'header.php';
+if (!isset($_POST['date']) || !isset($_POST['place']))
+    echo("<script>location.replace('datepage.php');</script>");
+$_SESSION['date'] = $_POST['date'];
+$_SESSION['place'] = $_POST['place'];
+?>
 <!DOCTYPE html>
 <html>
 <head>

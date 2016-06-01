@@ -2,6 +2,9 @@
 작성자 : 이호연
 페이지 설명 : ADD 페이지
 -->
+<?php // theme.php
+    require_once 'header.php';
+?>
 <!DOCTYPE html>
 <html>
 <head>
