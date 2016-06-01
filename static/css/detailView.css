@@ -62,3 +62,36 @@
 	width: 80%;
 	margin-left:20px;
 }
+
+@media screen and (max-width: 1000px){
+.detailView{
+	width: auto;
+}
+.detailView figure .thumbnail{
+	max-height: 35%
+}
+.detailView figure .Button{
+	height: 12%;
+	width: auto;
+	margin: -6% 3%;
+}
+.detailView_info{
+	height: 20%;
+	padding: 3%;
+}
+.detailView_info p{
+	margin-top:3%;
+}
+.detailView_info img{
+	height: 30%;
+	margin-top:-15%;
+
+}
+.detailView_location img{
+	height: 30%;
+
+}
+.detailView_location{
+	height: 15%;
+}
+}

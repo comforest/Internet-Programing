@@ -1,53 +1,109 @@
-<!-- 
-작성자 : 김기현
-페이지 설명 : 날짜 및 숙박 검색
-필요한 css : datepage.css
- -->
-<?php // datepage.php
-require_once 'header.php';
-if (!isset($_POST['themeinfo']))
-    echo("<script>location.replace('theme.php');</script>");
-$_SESSION['theme'] = $_POST['themeinfo'];
-?>
+<!DOCTYPE html>
 <html>
-    <head>
-        <meta charset = "utf-8">
-        <title>Date Page</title>
-        <link href='https://fonts.googleapis.com/css?family=Hind' rel='stylesheet' type='text/css'>
-        <link rel="stylesheet" type="text/css" href="static/css/style.css">
-        <link rel="stylesheet" type="text/css" href="static/css/datepage.css">
-        <style type = "text/css">
-        a{text-decoration:none}
-        </style>
-        <script>
-            function clickLetsDoThis() {
-                if (document.getElementById('date').value == "") {
-                    // 경고 메시지 출력 : 디자인이 필요함.
-                    console.log("date 없음");
-                } else if (document.getElementById('place').value == "") {
-                    console.log("place 없음");
-                } else {
-                    document.getElementById('datePlaceInfoForm').submit();
-                }
-            }
-        </script>
-    </head>
-    <body>
-        <br><br>
-        <a href="theme.php"><div class = "datapage_back">&lt; back </div></a><br>
-        
-        <form action="search.php" method="post" id="datePlaceInfoForm">
-        <p style= "text-align: center;">When is your trip?</p>
-            <div class ="datepage_div">
-                <a href="#"><img src="static/image/calendar_grey.png"></a>
-                <input type="text" id = "date" name = "date" value = "">
-            </div><br>
-            <p style= "text-align: center">Where will you stay?</p>
-            <div class = "datepage_div">
-                <a href="#"><img src="static/image/accomodation_grey.png"></a>
-                <input type="text" id = "place" name="place" value = "">
-            </div><br>
-        </form>
+  <head>
+    <title>Place Autocomplete Hotel Search</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <style>
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      #map {
+        height: 100%;
+      }
+    </style>
+
+    <style>
+      table {
+        font-size: 12px;
+      }
+      #map {
+        width: 440px;
+        height: 400px;
+      }
+      #listing {
+        position: absolute;
+        width: 200px;
+        height: 470px;
+        overflow: auto;
+        left: 442px;
+        top: 0px;
+        cursor: pointer;
+        overflow-x: hidden;
+      }
+      #findhotels {
+        position: absolute;
+        text-align: right;
+        width: 100px;
+        font-size: 14px;
+        padding: 4px;
+        z-index: 5;
+        background-color: #fff;
+      }
+      #locationField {
+        position: absolute;
+        width: 190px;
+        height: 25px;
+        left: 108px;
+        top: 0px;
+        z-index: 5;
+        background-color: #fff;
+      }
+      #controls {
+        position: absolute;
+        left: 300px;
+        width: 140px;
+        top: 0px;
+        z-index: 5;
+        background-color: #fff;
+      }
+      #autocomplete {
+        width: 100%;
+      }
+      #country {
+        width: 100%;
+      }
+      .placeIcon {
+        width: 20px;
+        height: 34px;
+        margin: 4px;
+      }
+      .hotelIcon {
+        width: 24px;
+        height: 24px;
+      }
+      #resultsTable {
+        border-collapse: collapse;
+        width: 240px;
+      }
+      #rating {
+        font-size: 13px;
+        font-family: Arial Unicode MS;
+      }
+      .iw_table_row {
+        height: 18px;
+      }
+      .iw_attribute_name {
+        font-weight: bold;
+        text-align: right;
+      }
+      .iw_table_icon {
+        text-align: right;
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <div id="findhotels">
+      Find hotels in:
+    </div>
+
+    <div id="locationField">
+      <input id="autocomplete" placeholder="Enter a city" type="text" />
+    </div>
 
     <div id="controls">
       <select id="country">
@@ -103,9 +159,7 @@ $_SESSION['theme'] = $_POST['themeinfo'];
         </table>
       </div>
     </div>
-        
-        <a href="#"><div class = "datepage_roundclick" onclick="clickLetsDoThis()">let's do this</div></a>
-    </body>
+
     <script>
 // This example uses the autocomplete feature of the Google Places API.
 // It allows the user to find all hotels in a given place, within a given
@@ -196,7 +250,7 @@ function initMap() {
   // Restrict the search to the default country, and to place type "cities".
   autocomplete = new google.maps.places.Autocomplete(
       /** @type {!HTMLInputElement} */ (
-          document.getElementById('place')), {
+          document.getElementById('autocomplete')), {
         types: ['(cities)'],
         componentRestrictions: countryRestrict
       });
@@ -218,7 +272,7 @@ function onPlaceChanged() {
     map.setZoom(15);
     search();
   } else {
-    document.getElementById('place').placeholder = 'Enter a city';
+    document.getElementById('autocomplete').placeholder = 'Enter a city';
   }
 }
 
@@ -388,8 +442,5 @@ function buildIWContent(place) {
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCG21Y5X-wARtfSC6WkgO1nxoVU0WwcjwE&signed_in=true&libraries=places&callback=initMap"
         async defer></script>
-	<footer>
-	</footer>
+  </body>
 </html>
-
-
