@@ -47,4 +47,4 @@ Youn Inseop
 		</div>
 	</div>
 </div>
-<div class="logout" id="logout" onclick="Fb.logout();">Log out</div>
+<div class="logout" id="logout" onclick="FB.logout();">Log out</div>
