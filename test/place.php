@@ -41,7 +41,7 @@
 
 			  map = new google.maps.Map(document.getElementById('map'), {
 			    center: pyrmont,
-			    zoom: 15
+			    zoom: 8
 			  });
 
 			  infowindow = new google.maps.InfoWindow();
@@ -49,7 +49,7 @@
 			  var service = new google.maps.places.PlacesService(map);
 			  service.nearbySearch({
 			    location: pyrmont,
-			    radius: 5000,
+			    radius: 7000,
 			    types: []
 			  }, callback);
 			}
