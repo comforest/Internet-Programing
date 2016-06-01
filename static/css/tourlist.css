@@ -45,10 +45,11 @@
 }
 
 
-@media screen and (max-width: 1200px){
+@media screen and (max-width: 1000px){
 
 .tourList .dialog_article{
 	height: 20%;
+	border-left: solid 20px #8174ba;
 }
 
 .tourList .dialog_article h1{
@@ -59,11 +60,11 @@
 .tourList .dialog_article p{
 	margin: 2% 0 0 5%;
 	margin-top:3%;
-	width: 40%;
+	width: 50%;
 	font-size:1em;
 }
 .tourList .dialog_article img{
-	max-width:50%;
+	max-width:40%;
 	height:100%;
 	float: right;
 	object-fit: cover;
