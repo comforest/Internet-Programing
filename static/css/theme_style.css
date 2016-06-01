@@ -18,8 +18,8 @@
 
 .themeinner{
 	width: 350px;
-	margin-right: 25px;
-	margin-left: 25px;
+	margin-right: 10px;
+	margin-left: 10px;
 	margin-top: 25px;
 	margin-bottom: 25px;
 	padding-top: 30px;
@@ -76,7 +76,7 @@
 	}
 }
 
-@media (max-width: 800px){
+@media (max-width: 1000px){
 	.themeupper{
 		font-size: 10vw;
 	}
