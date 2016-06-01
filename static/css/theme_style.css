@@ -67,7 +67,7 @@
 	background-color: #ffa200;
 	border-radius: 40px;
 }
-@media (max-width: 1600px){
+@media (max-width: 1480px){
 	.themeupper{
 		font-size: 40pt;
 	}
