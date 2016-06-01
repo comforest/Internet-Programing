@@ -8,7 +8,7 @@
 <?php // header.php
 session_start();
 require_once 'functions.php';
-
+//$_SESSION['userID'] = '1065100166913049';
 if (!isset($_SESSION['userID'])) {
     echo("<script>location.replace('index.php');</script>");
 }

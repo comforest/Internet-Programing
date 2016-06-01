@@ -1,6 +1,6 @@
 <?php // header.php
 session_start();
-require_once 'header.php';
+require_once 'functions.php';
 require_once 'dbsetup.php';
 ?>
 
@@ -38,20 +38,6 @@ require_once 'dbsetup.php';
                         document.getElementById('userinfo2').setAttribute('value', response.name);
                         document.getElementById('userinfoForm').submit();
                     });
-                    /*request = new ajaxRequest();
-                    request.open('POST', 'http://dm1463990271564.fun25.co.kr/adduser.php', true);
-                    console.log('check1');
-                    request.onreadystatechange = function() {
-                        if (this.readyState == 4)
-                            if (this.status == 200)
-                                if (this.responseText != null) {
-                                    console.log("POST 요청 완료!"+this.responseText);
-                                    location.replace('theme.php');
-                                }
-                    }
-                    params = "userID=" + userID + "&userName=" + userName;
-                    request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-                    request.send(params);*/
                 } else if (response.status === 'not_authorized') {
                     // The person is logged into Facebook, but not your app.
                     //alert('Please log into travers.');
