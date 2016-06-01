@@ -3,7 +3,7 @@
 페이지 설명 : ADD 페이지
 -->
 <?php // theme.php
-   // require_once 'header.php';
+    require_once 'header.php';
 ?>
 <!DOCTYPE html>
 <html>
