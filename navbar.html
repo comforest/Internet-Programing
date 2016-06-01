@@ -17,6 +17,10 @@ Youn Inseop
 				e.style.display = 'block';
 			}
 		}
+        function logout_this_app() {
+            FB.logout();
+            location.replace('index.php');
+        }
 	</script>
 	<script type="text/javascript" src="loginFB.js"></script>
 	<ul class = "nav">
@@ -52,5 +56,5 @@ Youn Inseop
 			</div>
 		</div>
 	</div>
-	<div class="logout" id="logout" onclick="FB.logout();">Log out</div>
+	<div class="logout" id="logout" onclick="logout_this_app()">Log out</div>
 </header>
