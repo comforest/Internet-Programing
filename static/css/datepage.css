@@ -6,9 +6,9 @@ body{
 }
 	.datepage_roundclick{
 		border: 1px #000000;
-		margin-bottom: 20px;
 		width: 250px;
 		margin: auto;
+		margin-top: 400px;
 		padding: .3em;
 		height: 30px;
 		border: none;
@@ -20,6 +20,7 @@ body{
 		box-shadow: -1px 4px 20px -2px rgba(0,0,0,0.28);
 		font-size: 25px;
 	}
+	
 	.datepage_roundclick2{
 		border: 1px #000000;
 		margin-bottom: 20px;
@@ -33,36 +34,55 @@ body{
 		color: #ffa200;
 		font-size: 25px;
 	}
+	
 	.datepage_roundclick:hover{
 	-webkit-box-shadow: -1px 4px 20px -2px rgba(0,0,0,0.67);
 	-moz-box-shadow: -1px 4px 20px -2px rgba(0,0,0,0.67);
 	box-shadow: -1px 4px 20px -2px rgba(0,0,0,0.67);
 	}
+	
 	.datepage_div input{
 		border:transparent;
 	}
+	
 	.datepage_word{
 		width: 25%;
 		float:left;
+		font-weight: bold;
 	}
+	
 	.datepage_space1{
 		width: 25%;
 		float: left;
-	}	
+	}
+	
 	.datepage_space2{
 		width: 5%;
 		float: left;
 	}
+	
 	.datepage_input{
 		width: 90%;
+		font-weight: bold;
 	}
+	
 	.datepage_word_mobile{
 		display:none;
 	}
+	
 	.datepage_word_desktop{
 		width: 25%;
 		float:left;
+		font-weight: bold;
 	}
+	
+	.progress-box {
+	width: 100%;
+	text-align: center;
+	margin-top: 50px;
+	}
+	
+	
 	
 	
 	
@@ -90,7 +110,9 @@ body{
 	.datepage_input{
 		width: 90%;
 	}
-
+	.progress-box {
+		margin-bottom: 100px;
+	}
 }
 
 @media screen and (min-width: 1000px) and (max-width: 1480px){
@@ -110,13 +132,25 @@ body{
 		margin-top:.3em;
 		font-size: 25px;	
 	}
+	
 	.datepage_word{
 		width: 22.5%;
 		float:left;
 	}
+	
+	.progress-box {
+		margin-bottom: 100px;
+	}
 }
 
 @media screen and (max-width: 1000px){
+	
+	.datepage_roundclick{
+		margin-top:3px;
+	}
+	.progress-box {
+		margin-bottom: 50px;
+	}
 	.datepage_div{
 		border: none;
 		height:2em;
@@ -148,6 +182,8 @@ body{
 	}
 	.datepage_word_mobile{
 		display:block;
+		
+		font-weight: bold;
 		
 	}
 }
