@@ -27,7 +27,7 @@
 		    	html, body {
 		    		height: 100%;
 		    	}
-		    	#map {
+		    	#mapbox {
 		    		height: 100%;
 		    		width: 100%;
 		    	}
@@ -41,7 +41,9 @@
 		require_once("tourlist.inc");
 		require_once("tab.inc");
 	?>
-	<div id="map"></div>
+	<div class="mapbox">
+		<div id="map"></div>
+	</div>
 	<script>
 			function initMap() {
 				var chicago = {lat: 41.85, lng: -87.65};
