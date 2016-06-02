@@ -52,7 +52,7 @@
 			<div class="innercontent">
 				<div> Culture </div>
 				<p>
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit
+					Experience interesting local culture, history and beauty
 				</p>
 			</div>
 		</div>
@@ -61,7 +61,7 @@
 			<div class="innercontent">
 				<div> Shopping </div>
 				<p>
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit
+					Spend money and shop till you drop with the best deals
 				</p>
 			</div>
 		</div>
@@ -70,7 +70,7 @@
 			<div class="innercontent">	
 				<div> Nature </div>
 				<p>
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit
+					Spend some quality time with the best of mother nature
 				</p>
 			</div>
 		</div>
@@ -79,7 +79,7 @@
 			<div class="innercontent">
 				<div> Trend </div>
 				<p>
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit
+					Get wild and crazy by experiencing hot local trends
 				</p>
 			</div>
 		</div>
