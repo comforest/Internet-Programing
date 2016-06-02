@@ -25,14 +25,12 @@
             $(document).ready(function() {
                 $.getJSON("shopping.json", function(json1) {
                     $.each(json1, function(key, data) {
-                        var latLng = new google.maps.LatLng(data.LOCATION_Y, data.LOCATION_X); // Creating a marker and putting it on the map 
+                        var latLng = new google.maps.LatLng(data.LOCATION_X, data.LOCATION_Y); // Creating a marker and putting it on the map 
                         var marker = new google.maps.Marker({
                             position: latLng,
-                            title: data.title,
-                            map:map
+                            title: data.title
                         }); 
                         marker.setMap(map);
-                        console.log(marker);
                     });
                 });
             });
