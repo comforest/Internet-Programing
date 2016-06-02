@@ -67,6 +67,22 @@
 	background-color: #ffa200;
 	border-radius: 40px;
 }
+
+
+
+.progress-box {
+	width: 100%;
+	text-align: center;
+	margin-top: 50px;
+}
+
+.progress-box img {
+	display: inline;
+	margin-left: 3px;
+	margin-right: 3px;
+}
+
+
 @media (max-width: 1480px){
 	.themeupper{
 		font-size: 40pt;
@@ -79,6 +95,7 @@
 @media (max-width: 1000px){
 	.themeupper{
 		font-size: 10vw;
+		margin-top: 160px;
 	}
 	.themebox{
 		width: 100vw;

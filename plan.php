@@ -24,6 +24,9 @@
 		require_once("datebar.inc");
 		require_once("path.inc");
 	?>
+		<div class="mapbox-lg">
+			
+		</div>
     </div>
 </body>
 </html>
