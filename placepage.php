@@ -1,14 +1,12 @@
-<!-- 
-작성자 : 김기현
-페이지 설명 : 날짜 및 숙박 검색
-필요한 css : datepage.css
- -->
-<?php // datepage.php
-/*require_once 'header.php';
+<?php
+require_once 'header.php';
+
+/*
 if (!isset($_POST['themeinfo']))
     echo("<script>location.replace('theme.php');</script>");
 $_SESSION['theme'] = $_POST['themeinfo'];
-*/?>
+*/
+?>
 <html>
     <head>
         <meta charset = "utf-8">
