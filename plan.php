@@ -16,14 +16,12 @@
 	<link rel="stylesheet" type="text/css" href="static/css/plan.css">       
 </head>
 <body>
-    <div class="plancontainer">
 	<?php
 		require_once("navbar.inc");
     ?>
+    <div class="plancontainer">
 	<?php
 		require_once("datebar.inc");
-    ?>
- 	<?php
 		require_once("path.inc");
 	?>
     </div>

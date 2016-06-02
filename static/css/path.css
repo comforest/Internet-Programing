@@ -1,30 +1,17 @@
-.path{
-	display: inline-block;
-	margin-left:0px;
-
-	border-top-left-radius: 0px;
-	border-bottom-left-radius: 0px;
-}
-
-.Llayer_fixed{
-	display: inline-block;
-	position: initial;
-	margin-right:0px;
-
-	border-top-right-radius: 0px;
-	border-bottom-right-radius: 0px;
-}
-
-
 .path .dialog_head a{
+	display: inline-block;
+	height: 46px;
+	line-height: 50px;
+	font-weight: 900;
 	float:right;
+	color : black;
+	font-size: 1.15em;
+	margin-right:10px;
 }
+
 
 .path_article, .path_info{
 	border-left: none;
-}
-.path_article:last-child, .path_info:last-child{
-	border-bottom: solid 1px #b8b8b8;
 }
 
 
@@ -44,8 +31,7 @@
 	color:white;
 }
 .path_article img{
-	max-width:130px;
-	height:100%;
+	max-height: 90px;
 	float: right;
 	object-fit: cover;
 }
@@ -72,4 +58,42 @@
 	flex:5;
 	margin-left: 20px;
 	margin-right: 40px;
+}
+
+@media screen and (max-width: 1000px){
+
+.path .dialog_head{
+	display: none;
+}
+.path .dialog_body{
+	top:0px;
+}
+.path_article{
+	height:13%;
+}
+.path_article h1{
+	margin-top: 3%;
+	margin-left: 2%;
+}
+.path_article .time{
+	margin-top: 1%;
+	margin-left: 2%;
+	max-width: 18%;
+}
+.path_article img{
+	max-width: 40%;
+    height: 100%;
+}
+.path_info{
+	height: 8%;
+}
+.path_info img{
+	width: auto;
+	height:50%;
+	margin-left:2%;
+}
+.path_info p{
+	margin-left: 2%;
+	margin-right: 2%;
+}
 }
