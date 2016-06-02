@@ -1,14 +1,8 @@
-html {
-    padding-left: 3em;
-    padding-right: 3em;
-    
-}
+
 body{
 	background-color: #f3f3f3;
 	color: #3f3f3f;
 	font-size: 23px;
-    max-width: 1250px;
-    margin: auto;
 }
 
 .datePlaceInfoForm {
