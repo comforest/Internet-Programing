@@ -35,7 +35,7 @@
 	position: absolute;
 	right: 20px;
 	top: 50%;
-	margin-top: -25px;
+	transform: translateY(-50%);
 }
 .detailView_info h1{
 	margin: 0px;
@@ -76,19 +76,20 @@
 	margin: -8% 3%;
 }
 .detailView_info{
-	height: 20%;
+	min-height: 10%;
 	padding: 5%;
 }
 .detailView_info p{
 	margin-top:3%;
 }
 .detailView_info img{
-	height: 24%;
-	margin-top:-12%;
+	width: 12%;
+	height: auto;
 	margin-right:3%;
 }
 .detailView_location img{
-	height: 30%;
+	height: 50%;
+	margin-left: 2%;
 
 }
 .detailView_location{

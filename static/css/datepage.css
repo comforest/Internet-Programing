@@ -3,9 +3,9 @@ body{
 	color: #3f3f3f;
 	font-size: 23px;
 }
-div{
+.image_div{
 	width: 60%;
-	position: relative;
+	position:relative;
 	height: 1.5em;
 }
 .datepage_div {
@@ -15,6 +15,7 @@ div{
 	padding: .3em;
 	border: none;
 	width: 360px;
+	height:1.5em;
 	border-radius: 5px;
 	background-color: white;
 	-webkit-box-shadow: -1px 4px 20px -2px rgba(0,0,0,0.28);
@@ -30,7 +31,6 @@ div{
 }
 
 .datepage_div input {
-	border: transparent;
 	font-size: 25px;
 	
 }
@@ -88,7 +88,6 @@ div{
 }
 	
 .datepage_div input {
-	border: transparent;
 	font-size: 1em;
 	width:80%;
 }	
@@ -126,7 +125,6 @@ div{
 }
 	
 .datepage_div input {
-	border: transparent;
 	font-size: 1em;
 	width:80%;
 }	
@@ -134,15 +132,16 @@ div{
 	
 	
 	
-.datapage_back{
+.datepage_back{
 	width: 40%;
 	margin: center;
 	text-align: center;
 	color: #a0a0a0;
 }
-div{
+
+
+.image_div{
 	width: 60%;
-	position: relative;
-	height: 1.5em;
+	height: auto;
 }
 }
