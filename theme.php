@@ -40,11 +40,11 @@
             <input type="hidden" name="themeinfo" id="themeinfo" value="">
     </form>
     <div class="progress-box">
-    	<img src="/static/image/culture_grey.png">
-    	<img src="/static/image/progresslinegreylong.png" style="width: 20%;">
-    	<img src="/static/image/culture_grey.png">
-    	<img src="/static/image/progresslinegreylong.png" style="width: 20%;">
-    	<img src="/static/image/culture_grey.png">
+    	<img src="/static/image/culture_grey.png" style="width: 10%;">
+    	<img src="/static/image/progresslinegreylong.png" style="width: 10%;">
+    	<img src="/static/image/culture_grey.png" style="width: 10%;">
+    	<img src="/static/image/progresslinegreylong.png" style="width: 10%;">
+    	<img src="/static/image/culture_grey.png" style="width: 10%;">
     </div>
 	<div class="themeupper">Set the theme for your travel</div>
 	<div class="themebox">
