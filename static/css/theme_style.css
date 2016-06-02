@@ -130,4 +130,6 @@
 
 .progress-box img {
 	display: inline;
+	margin-left: 3px;
+	margin-right: 3px;
 }
