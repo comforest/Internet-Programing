@@ -22,7 +22,12 @@
 
 .mapbox-lg {
 	float: right;
-    border: 1px solid black;
-    margin: 3%;
-    width: calc(90% - 400px);
+    border: 25px solid white;
+    border-radius: 10px;
+    position: absolute;
+    top: 80px;
+    bottom: 30px;
+    left: 490px;
+    right: 30px;
+    height: auto;
 }
