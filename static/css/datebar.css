@@ -105,9 +105,9 @@
 .Llayer_fixed .oneline{
 	display: inline;
 	float: left;
-	width: 8%;
+	width: 2%;
 	height: auto;
-	margin:2%;
+	margin:2% 6%;
 	margin-top: 12px;
 	text-align: center;
 }
@@ -115,10 +115,10 @@
 	position:relative;
 	background-color:#FFFFFF;
 	border: 3px aqua solid;
-	width: 30px;
+	/*width: 30px;
 	height: auto;
 	margin:2%;
-	margin-top:9px;
+	margin-top:9px;*/
 	-webkit-border-radius:100%;
 	-moz-border-radius: 100%;
 	text-align:center;
