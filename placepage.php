@@ -30,8 +30,6 @@ $_SESSION['theme'] = $_POST['themeinfo'];
         </script>
     </head>
     <body>
-        <br><br>
-        
         <!--<form action="search.php" method="post" id="datePlaceInfoForm" style="display: block">
         <p style= "text-align: center;">When is your trip?</p>
             <div class ="datepage_div">
