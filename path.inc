@@ -6,7 +6,7 @@
 <!-- 경로 목록 -->
 <section class="dialog path">
 	<section class="dialog_head">
-		<a href="#"><img src="static/image/edit_black.png"></a>
+		<a href="#">edit</a>
 	</section>
 	<section class="dialog_body">
 		<article class="dialog_article path_article">
@@ -42,5 +42,9 @@
 				Lorem ipsum dolor sit arnet, ee cctur consectetur ad...
 			</p>
 		</article>
+	</section>
+	<section class="dialog_foot">
+		<a class="click">list</a>
+		<a>map</a>
 	</section>
 </section>
