@@ -14,14 +14,15 @@
             
             function initialize() {
                 var mapOptions = {
-                    center: new google.maps.LatLng(58, 16), zoom: 7, mapTypeId: google.maps.MapTypeId.ROADMAP
+                    center: new google.maps.LatLng(58, 16),
+                    zoom: 7
                 };
                 map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions); 
             }
         </script>
     </head>
-    <body onload="initialize()">
-        <div id="map_canvas" style="width:100%; height:100%"></div>
+    <body onload="initialize();">
+        <div id="map_canvas" style="width:90%; height:90%"></div>
         <script type="text/javascript">
             $(document).ready(function() {
                 $.getJSON("shopping.json", function(json1) {
