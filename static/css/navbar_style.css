@@ -68,7 +68,7 @@
 
 .mobnav{
 	width: 100%;
-	height: 50px;
+	height: 100px;
 	display: none;
 	background-color:rgba(230,236,236,1);
 	float: left;
@@ -79,7 +79,7 @@
 .navblock{
 	width: 25%;
 	height: 100%;
-	font-size: 16pt;
+	font-size: 24pt;
 	font-weight: bold;
 	color: #ababab;
 	float: left;
@@ -88,7 +88,7 @@
 }
 
 .navblock img{
-	height: 40px;
+	height: 60px;
 	width: auto;
 	vertical-align: middle;
 }
