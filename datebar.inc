@@ -57,7 +57,7 @@
 			for(var i=0;i<7;i++){
 				dd = AddDate(d,0,0,i);
 				div.innerHTML += ("<div href='#' class=\"oneline\">"+"<span class=\"desktop\">"+  (dd.getMonth()+1)+" / " +"</span>"+dd.getDate() +"</div>");   
-				div.innerHTML += ("<p class=\"date\" style = \"font-size: 15px\">"+week[dd.getDay()]+"</p>");
+				div.innerHTML += ("<p class=\"date\" >"+week[dd.getDay()]+"</p>");
 				div.innerHTML += ("<br class=\"desktop\">");
 			}
 			var dd = AddDate(d,0,0,7);
