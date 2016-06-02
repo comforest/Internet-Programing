@@ -25,4 +25,8 @@
 			<p>야라라라랄라ㅏㄹ라라라라라로호ddd호호호</p>
 		</article>
 	</section>
+	<section class="dialog_foot">
+		<a class="click">list</a>
+		<a>map</a>
+	</section>
 </section>
