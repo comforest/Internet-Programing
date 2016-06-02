@@ -44,6 +44,11 @@ $_SESSION['theme'] = $_POST['themeinfo'];
                 <input type="text" id = "place" name="place" value = "">
             </div><br>
         </form>-->
+
+        <?php
+          require_once 'navbar.inc';
+        ?>
+
         <div id="textMapContainer">
             <div class="leftContent">
                 <div class="text">search accomodation</div>

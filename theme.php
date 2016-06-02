@@ -46,7 +46,6 @@
     	<img src="/static/image/progresslinegrey.png" style="width: 10%; margin-bottom: 1.2%;">
     	<img src="/static/image/progress_accommodation_grey.png" style="width: 4.5%;">
     </div>
-	<div class="themeupper">Set the theme for your travel</div>
 	<div class="themebox">
 		<div class="themeinner" onclick="cilck_culture_theme()">
             <div class="innerimage"><img src="static/image/culture_theme.png"/></div>
