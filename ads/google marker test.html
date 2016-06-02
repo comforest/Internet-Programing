@@ -7,21 +7,20 @@
             body { height: 100%; margin: 0; padding: 0 }
             #map_canvas { height: 100% }
         </style>
-        <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key= AIzaSyCG21Y5X-wARtfSC6WkgO1nxoVU0WwcjwE&sensor=true"></script>
+        <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+    </head>
+    <body onload="initialize()">
+        <div id="map_canvas" style="width:100%; height:100%"></div>
         <script type="text/javascript">
             var map;
+            
             function initialize() {
                 var mapOptions = {
                     center: new google.maps.LatLng(58, 16), zoom: 7, mapTypeId: google.maps.MapTypeId.ROADMAP
                 };
                 map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions); 
             }
-        </script>
-        <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
-    </head>
-    <body onload="initialize()">
-        <div id="map_canvas" style="width:100%; height:100%"></div>
-        <script type="text/javascript">
+
             $(document).ready(function() {
                 $.getJSON("shopping.json", function(json1) {
                     $.each(json1, function(key, data) {
@@ -34,5 +33,6 @@
                 });
             });
         </script>
+        <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key= AIzaSyCG21Y5X-wARtfSC6WkgO1nxoVU0WwcjwE&sensor=true"></script>
     </body>
 </html>
