@@ -91,6 +91,8 @@ body{
     padding: .3em;
     margin-bottom:.3em;
     margin: auto;
+    font-weight: bolder;
+    color: #888888;
 }
 
 .leftContent div{
