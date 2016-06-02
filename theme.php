@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>thema page</title>
+	<title>Theme Page</title>
 	<link href='https://fonts.googleapis.com/css?family=Hind' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="static/css/style.css">
 	<link rel="stylesheet" type="text/css" href="static/css/theme_style.css">
@@ -39,6 +39,13 @@
     <form action="datepage.php" method="post" id="themeinfoForm">
             <input type="hidden" name="themeinfo" id="themeinfo" value="">
     </form>
+    <div class="progress-box">
+    	<img src="/static/culture_grey.png">
+    	<img src="/static/image/progresslinegreylong.png">
+    	<img src="/static/culture_grey.png">
+    	<img src="/static/image/progresslinegreylong.png">
+    	<img src="/static/culture_grey.png">
+    </div>
 	<div class="themeupper">Set the theme for your travel</div>
 	<div class="themebox">
 		<div class="themeinner" onclick="cilck_culture_theme()">
