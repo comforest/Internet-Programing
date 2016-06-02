@@ -121,3 +121,15 @@
 		margin: 0 0 0 0;
 	}
 }
+
+.progress-box {
+	width: 100%;
+	text-align: center;
+	margin-top: 50px;
+}
+
+.progress-box img {
+	display: inline;
+	margin-left: 3px;
+	margin-right: 3px;
+}
