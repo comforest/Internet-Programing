@@ -61,7 +61,7 @@ $_SESSION['theme'] = $_POST['themeinfo'];
         <p style= "text-align: center;">When is your trip?</p>
             <div class ="datepage_div">
                 <a href="#"><img class="image_div" src="static/image/calendar_grey.png"></a>
-				<input type="text" id="from">
+				<input class="mobile_size" type="text" id="from">
             </div><br>
             <p style= "text-align: center">Where will you stay?</p>
             <div class = "datepage_div">
