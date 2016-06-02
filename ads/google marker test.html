@@ -27,7 +27,9 @@
                     $.each(json1, function(key, data) {
                         var latLng = new google.maps.LatLng(data.LOCATION_Y, data.LOCATION_X); // Creating a marker and putting it on the map 
                         var marker = new google.maps.Marker({
-                            position: latLng, title: data.title 
+                            position: latLng,
+                            title: data.title,
+                            map:map
                         }); 
                         marker.setMap(map);
                         console.log(marker);
