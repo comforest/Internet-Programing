@@ -12,7 +12,7 @@ $_SESSION['theme'] = $_POST['themeinfo'];
 <html>
     <head>
         <meta charset = "utf-8">
-        <title>Date Page</title>
+        <title>Place Page</title>
         <link href='https://fonts.googleapis.com/css?family=Hind' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" type="text/css" href="static/css/style.css">
         <link rel="stylesheet" type="text/css" href="static/css/placepage.css">
