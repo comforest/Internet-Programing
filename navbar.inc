@@ -36,7 +36,12 @@ Youn Inseop
 			<div class="userinfo">
 				<span onclick="toggle_visibility('logout');">
 					<?php
-						$_SESSION['userName']
+						if (isset($_SESSION['userName'])) {
+							echo $_SESSION['userName']
+						}
+						else {
+							echo 'NoName'
+						}
 					?>
 				</span>
 				<img src="static/image/nature_theme.png"/>
