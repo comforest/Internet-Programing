@@ -92,4 +92,8 @@
 			</p>
 		</article>
 	</section>
+	<section class="dialog_foot">
+		<a class="click">list</a>
+		<a>map</a>
+	</section>
 </section>
