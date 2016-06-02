@@ -8,7 +8,7 @@
 	<title>Theme Page</title>
 	<link href='https://fonts.googleapis.com/css?family=Hind' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="static/css/style.css">
-	<link rel="stylesheet" type="text/css" href="static/css/theme_style2.css">
+	<link rel="stylesheet" type="text/css" href="static/css/theme_style.css">
     <script>
         function cilck_culture_theme() {
             document.getElementById("themeinfo").setAttribute('value', 'culture');
@@ -86,8 +86,7 @@
 	</div>
 	<div class="themelower">
 		<div> okay, cool </div>
-		<!--div onclick="cilck_nothing_theme()"> nah, nevermind</div-->
+		<div onclick="cilck_nothing_theme()"> nah, nevermind</div>
 	</div>
-	<p onclick="cilck_nothing_theme()" id = "nevermind">nah, nevermind</p>
 </body>
 </html>
