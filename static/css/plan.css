@@ -1,22 +1,33 @@
 
 @media screen and (min-width: 1001px){
-
-.plancontainer .Llayer_fixed {
-	position: absolute;	
-	left:30px;
-	top:80px;
-	bottom:30px;
-	margin:0px;
-	border-top-right-radius: 0px;
-	border-bottom-right-radius: 0px;
-	box-shadow: none;
-}.plancontainer .path {
-	left:110px;
-	top:80px;
-	bottom:30px;
-	margin:0px;
-	border-top-left-radius: 0px;
-	border-bottom-left-radius: 0px;
-	box-shadow: none;
+	.plancontainer .Llayer_fixed {
+		position: absolute;	
+		left:30px;
+		top:80px;
+		bottom:30px;
+		margin:0px;
+		border-top-right-radius: 0px;
+		border-bottom-right-radius: 0px;
+		box-shadow: none;
+	}.plancontainer .path {
+		left:110px;
+		top:80px;
+		bottom:30px;
+		margin:0px;
+		border-top-left-radius: 0px;
+		border-bottom-left-radius: 0px;
+		box-shadow: none;
+	}
 }
+
+.mapbox-lg {
+	float: right;
+    border: 25px solid white;
+    border-radius: 10px;
+    position: absolute;
+    top: 80px;
+    bottom: 30px;
+    left: 490px;
+    right: 30px;
+    height: auto;
 }

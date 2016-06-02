@@ -1,263 +1,189 @@
 body{
 	background-color: #f3f3f3;
 	color: #3f3f3f;
-	font-size: 23px;
-    max-width: 1200px;
-    margin: auto;
-}
-<<<<<<< HEAD
-
-.leftContent {
-    float: left;
-    text-align: center;
-    padding-top: 15px;
-    width: 30%;
-    max-width: 450px;
-}
-
-.leftContent .text {
-    font-size: 1em;
-    height: 35px;
-    padding: .3em;
-    margin-bottom:.3em;
-    margin: auto;
-    width: 100%;
-}
-
-.leftContent div{
-	position: relative;
-=======
-.image_div{
-	width: 60%;
-	position:relative;
->>>>>>> 27986bfb700e6abbe9cd237e5328dfea5c2f5114
-	height: 1.5em;
-    width: 100%;
-}
-
-.datePlaceInfoForm {
-    display: block;
-    max-width: 250px;
-    float: left;
-}
-.datepage_div {
-	margin-bottom:.3em;
-	margin: auto;
-	padding: .3em;
-	border: none;
-<<<<<<< HEAD
-	width: 450px;
-=======
-	width: 360px;
-	height:1.5em;
->>>>>>> 27986bfb700e6abbe9cd237e5328dfea5c2f5114
-	border-radius: 5px;
-	background-color: white;
-	-webkit-box-shadow: -1px 4px 20px -2px rgba(0,0,0,0.28);
-	-moz-box-shadow: -1px 4px 20px -2px rgba(0,0,0,0.28);
-	box-shadow: -1px 4px 20px -2px rgba(0,0,0,0.28);
-
-}
-			
-.datepage_div img{
-	width: 1.4em;
-	height: 100%;
-	float: right;
-}
-
-.datepage_div input {
 	font-size: 25px;
-	
+	text-align:center;
 }
-			
-.datapage_back{
-	width: 40%;
-	color: #a0a0a0;
-	text-align: center;
+	.datepage_roundclick{
+		border: 1px #000000;
+		width: 250px;
+		margin: auto;
+		margin-top: 400px;
+		padding: .3em;
+		height: 30px;
+		border: none;
+		border-radius: 25px;
+		background-color: #ffa200;
+		color: white;
+		-webkit-box-shadow: -1px 4px 20px -2px rgba(0,0,0,0.28);
+		-moz-box-shadow: -1px 4px 20px -2px rgba(0,0,0,0.28);
+		box-shadow: -1px 4px 20px -2px rgba(0,0,0,0.28);
+		font-size: 25px;
+	}
 	
+	.datepage_roundclick2{
+		border: 1px #000000;
+		margin-bottom: 20px;
+		width: 160px;
+		margin: auto;
+		padding: .3em;
+		height: auto;
+		border: none;
+		border-radius: 25px;
+		background-color: #white;
+		color: #ffa200;
+		font-size: 25px;
+	}
 	
-}
-			
-			
-.datepage_roundclick{
-	border: 1px #000000;
-	text-align: center;
-    bottom: 20px;
-	margin-bottom: 50px;
-	width: 190px;
-	margin: auto;
-	padding: .3em;
-	height: auto;
-	border: none;
-	border-radius: 15px;
-	background-color: #ffa200;
-	color: white;
-	-webkit-box-shadow: -1px 4px 20px -2px rgba(0,0,0,0.28);
-	-moz-box-shadow: -1px 4px 20px -2px rgba(0,0,0,0.28);
-	box-shadow: -1px 4px 20px -2px rgba(0,0,0,0.28);
-
-}
-
-.datepage_roundclick:hover{
+	.datepage_roundclick:hover{
 	-webkit-box-shadow: -1px 4px 20px -2px rgba(0,0,0,0.67);
 	-moz-box-shadow: -1px 4px 20px -2px rgba(0,0,0,0.67);
 	box-shadow: -1px 4px 20px -2px rgba(0,0,0,0.67);
-}
-
-
-
-@media screen and (max-width: 400px)
-{
+	}
 	
-.datepage_div{
-	width: 95%;
-	text-align:center;
-	margin-bottom:.3em;
-	margin: auto;
-	padding: .3em;
-	border: none;
-	border-radius: 15px;
-	background-color: white;
-	box-shadow: 3px 3px 6px #a5a5a5;
+	.datepage_div input{
+		border:transparent;
+	}
 	
-
-}
-.mobile_size{
+	.datepage_word{
+		width: 25%;
+		float:left;
+		font-weight: bold;
+	}
 	
-	width:50px;
+	.datepage_space1{
+		width: 25%;
+		float: left;
+	}
 	
-}
+	.datepage_space2{
+		width: 5%;
+		float: left;
+	}
 	
-.datepage_div input {
-	font-size: 1em;
-	width:80%;
-}	
+	.datepage_input{
+		width: 90%;
+		font-weight: bold;
+	}
 	
+	.datepage_word_mobile{
+		display:none;
+	}
 	
+	.datepage_word_desktop{
+		width: 25%;
+		float:left;
+		font-weight: bold;
+	}
 	
-	
-.datapage_back{
-	float: left;
-	color: #a0a0a0;
-	text-align: left;
-}
-	
-}
-
-
-
-
-@media screen and (min-width: 1480px)
-{
-
-.datepage_div{
-	width: 480px;
-	text-align: left;
-	margin-bottom:.3em;
-	margin: auto;
-	padding: .3em;
-	border: none;
-	border-radius: 5px;
-	background-color: white;
-	-webkit-box-shadow: -1px 4px 20px -2px rgba(0,0,0,0.28);
-	-moz-box-shadow: -1px 4px 20px -2px rgba(0,0,0,0.28);
-	box-shadow: -1px 4px 20px -2px rgba(0,0,0,0.28);
-}	
-.datepage_div input {
-	font-size: 1em;
-	width:80%;
-<<<<<<< HEAD
-}		
-.datapage_back{
-=======
-}	
-	
-	
-	
-	
-.datepage_back{
->>>>>>> 27986bfb700e6abbe9cd237e5328dfea5c2f5114
-	width: 40%;
-	margin: center;
+	.progress-box {
+	width: 100%;
 	text-align: center;
-	color: #a0a0a0;
+	margin-top: 50px;
+	}
+	
+	
+	
+	
+	
+@media screen and (min-width: 1480px){
+	.datepage_div{
+		border: none;
+		height:2em;
+		border-radius: 5px;
+		background-color: white;
+		-webkit-box-shadow: -1px 4px 20px -2px rgba(0,0,0,0.28);
+		-moz-box-shadow: -1px 4px 20px -2px rgba(0,0,0,0.28);
+		box-shadow: -1px 4px 20px -2px rgba(0,0,0,0.28);
+		width: 22.5%;
+		float:left;
+	}
+
+	.datepage_div input {
+		margin-top:.3em;
+		font-size: 25px;	
+	}
+	.datepage_word{
+		width: 22.5%;
+		float:left;
+	}
+	.datepage_input{
+		width: 90%;
+	}
+	.progress-box {
+		margin-bottom: 100px;
+	}
 }
 
+@media screen and (min-width: 1000px) and (max-width: 1480px){
+	.datepage_div{
+		border: none;
+		height:2em;
+		border-radius: 5px;
+		background-color: white;
+		-webkit-box-shadow: -1px 4px 20px -2px rgba(0,0,0,0.28);
+		-moz-box-shadow: -1px 4px 20px -2px rgba(0,0,0,0.28);
+		box-shadow: -1px 4px 20px -2px rgba(0,0,0,0.28);
+		width: 22.5%;
+		float:left;
+	}
 
-.image_div{
-	width: 60%;
-	height: auto;
+	.datepage_div input {
+		margin-top:.3em;
+		font-size: 25px;	
+	}
+	
+	.datepage_word{
+		width: 22.5%;
+		float:left;
+	}
+	
+	.progress-box {
+		margin-bottom: 100px;
+	}
 }
-    table {
-            font-size: 12px;
-          }
-#map {
-    width: 650px;
-    height: 470px;
-    float: right;
-}
-  #listing {   /*hotel result list*/
-    position: relative;
-    width: 100%;
-    height: 470px;
-    overflow: auto;
-    float: left;
-    cursor: pointer;
-    overflow-x: hidden;
-  }
-  #findhotels {
-    position: relative;
-    text-align: right;
-    width: 100px;
-    font-size: 14px;
-    padding: 4px;
-    z-index: 5;
-    background-color: #fff;
-  }
-  #locationField {
-    position: relative;
-    width: 190px;
-    height: 25px;
-    left: 108px;
-    top: 0px;
-    z-index: 5;
-    background-color: #fff;
-  }
-  #controls {
-    width: 0px;
-  }
-  #autocomplete {
-    width: 100%;
-  }
-  #country {
-    width: 100%;
-    height: 100%;
-  }
-  .placeIcon {
-    width: 20px;
-    height: 34px;
-    margin: 4px;
-  }
-  .hotelIcon {
-    width: 24px;
-    height: 24px;
-  }
-  #resultsTable { /*hotel result list*/
-    border-collapse: collapse;
-    width: 100%;
-  }
-  #rating {
-    font-size: 13px;
-    font-family: Arial Unicode MS;
-  }
-  .iw_table_row { /* iw : 호텔 클릭하면 뜨는 정보창 */
-    height: 35px;
-  }
-  .iw_attribute_name {
-    font-weight: bold;
-    text-align: right;
-  }
-  .iw_table_icon {
-    text-align: right;
-}
+
+@media screen and (max-width: 1000px){
+	
+	.datepage_roundclick{
+		margin-top:3px;
+	}
+	.progress-box {
+		margin-bottom: 50px;
+	}
+	.datepage_div{
+		border: none;
+		height:2em;
+		border-radius: 5px;
+		background-color: white;
+		-webkit-box-shadow: -1px 4px 20px -2px rgba(0,0,0,0.28);
+		-moz-box-shadow: -1px 4px 20px -2px rgba(0,0,0,0.28);
+		box-shadow: -1px 4px 20px -2px rgba(0,0,0,0.28);
+		width: 90%;
+		margin: auto;
+	}
+	.datepage_div input {
+		margin-top:.3em;
+		font-size: 25px;	
+	}
+	.datepage_word{
+		margin: auto;
+		float: none;
+		width: 100%;
+	}
+	.datepage_space1{
+		display: none;
+	}	
+	.datepage_space2{
+		display: none;	
+	}
+	.datepage_word_desktop{
+		display: none;
+	}
+	.datepage_word_mobile{
+		display:block;
+		
+		font-weight: bold;
+		
+	}
 }

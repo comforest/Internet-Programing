@@ -1,5 +1,7 @@
 html {
-    padding: 5px;
+    padding-left: 3em;
+    padding-right: 3em;
+    
 }
 body{
 	background-color: #f3f3f3;
@@ -56,122 +58,188 @@ body{
 }
 
 
+.datepage_div{
+    float: right;
+    text-align: center;
+    margin-bottom:.3em;
+    margin: auto;
+    padding: .3em;
+    border: none;
+    border-radius: 5px;
+    background-color: white;
+    -webkit-box-shadow: -1px 4px 20px -2px rgba(0,0,0,0.28);
+    -moz-box-shadow: -1px 4px 20px -2px rgba(0,0,0,0.28);
+    box-shadow: -1px 4px 20px -2px rgba(0,0,0,0.28);
+}	
+.datepage_div input {
+    border: transparent;
+    font-size: 1em;
+}		
+.datapage_back{
+    margin: center;
+    text-align: center;
+    color: #a0a0a0;
+}
+.leftContent {
+    text-align: center;
+    padding-top: 15px;
+    padding-right: 0px;
+}
 
-@media screen and (max-width: 400px)
-{
-	
-    .datepage_div{
-        width: 95%;
-        text-align:center;
-        margin-bottom:.3em;
-        margin: auto;
-        padding: .3em;
-        border: none;
-        border-radius: 15px;
-        background-color: white;
-        box-shadow: 3px 3px 6px #a5a5a5;
+.leftContent .text {
+    font-size: 1em;
+    padding: .3em;
+    margin-bottom:.3em;
+    margin: auto;
+    font-weight: bolder;
+    color: #888888;
+}
 
+.leftContent div{
+    margin-top: 3px;
+}
 
-    }
+table {
+    font-size: 12px;
+}
+#map {
+    float: right;
+}
+  #listing {   /*hotel result list*/
+    position: relative;
+    width: 100%;
+    overflow: auto;
+    float: right;
+    cursor: pointer;
+    overflow-x: hidden;
+  }
+  #findhotels {
+    position: relative;
+    text-align: right;
+    width: 100px;
+    font-size: 14px;
+    padding: 4px;
+    z-index: 5;
+    background-color: #fff;
+  }
+  #locationField {
+    position: relative;
+    width: 190px;
+    height: 25px;
+    left: 108px;
+    top: 0px;
+    z-index: 5;
+    background-color: #fff;
+  }
+  #controls {
+    width: 0px;
+  }
+  #autocomplete {
+    width: 100%;
+  }
+  #country {
+    width: 100%;
+    height: 100%;
+  }
+  .placeIcon {
+    width: 20px;
+    height: 34px;
+    margin: 4px;
+  }
+  .hotelIcon {
+    width: 24px;
+    height: 24px;
+  }
+  #resultsTable { /*hotel result list*/
+    border-collapse: collapse;
+    width: 100%;
+  }
+  #rating {
+    font-size: 13px;
+    font-family: Arial Unicode MS;
+  }
+  .iw_table_row { /* iw : 호텔 클릭하면 뜨는 정보창 */
+    height: 35px;
+  }
+  .iw_attribute_name {
+    font-weight: bold;
+    text-align: right;
+  }
+  .iw_table_icon {
+    text-align: right;
+}
+.datepage_roundclick{
+    border: 1px #000000;
+    text-align: center;
+    bottom: 20px;
+    margin: auto;
+    padding: .3em;
+    border: none;
+    background-color: #ffa200;
+    color: white;
+    -webkit-box-shadow: -1px 4px 20px -2px rgba(0,0,0,0.28);
+    -moz-box-shadow: -1px 4px 20px -2px rgba(0,0,0,0.28);
+    box-shadow: -1px 4px 20px -2px rgba(0,0,0,0.28);
 
-    .datepage_div input {
-        border: transparent;
-        font-size: 1em;
-        width:80%;
-    }	
-
-
-
-
-    .datapage_back{
-        float: left;
-        color: #a0a0a0;
-        text-align: left;
-    }
-	
 }
 
 
 
-@media screen and (max-width: 1480px and min-width: 1001px) {
-    
-}
 
-
-
-@media screen and (min-width: 1481px)
+@media screen and (max-width: 1000px)
 {
-
-    .datepage_div{
-        width: 480px;
-        float: right;
-        text-align: center;
-        margin-bottom:.3em;
-        margin: auto;
-        padding: .3em;
-        border: none;
+   .datepage_div{
+        width: 400px;
         border-radius: 5px;
-        background-color: white;
-        -webkit-box-shadow: -1px 4px 20px -2px rgba(0,0,0,0.28);
-        -moz-box-shadow: -1px 4px 20px -2px rgba(0,0,0,0.28);
-        box-shadow: -1px 4px 20px -2px rgba(0,0,0,0.28);
     }	
     .datepage_div input {
-        border: transparent;
         font-size: 1em;
         width:80%;
     }		
     .datapage_back{
         width: 40%;
-        margin: center;
-        text-align: center;
-        color: #a0a0a0;
     }
 
     #textMapContainer {
-        width:100%;
-        height: 530px;
+        width: 100%;
+        height: 70%;
     }
     .leftContent {
-        float: left;
-        text-align: center;
         padding-top: 15px;
-        padding-right: 0px;
-        width: 590px;
-        height: 470px;
-        max-width: 450px;
+        max-width: 350px;
+        width: 100%;
+        height: 90%;
+        float: none;
+        margin: auto;
     }
 
     .leftContent .text {
         font-size: 1em;
-        height: 35px;
-        padding: .3em;
-        margin-bottom:.3em;
-        margin: auto;
+        height: 7.4%;
         width: 100%;
-        float: right;
+        float: none;
+        margin-bottom: 0.5em;
     }
 
     .leftContent div{
-        float: right;
-        height: 1.5em;
+        height: 7.4%;
         width: 100%;
+        float: none;
     }
 
     table {
         font-size: 12px;
     }
     #map {
-        width: 650px;
+        display: none;
+        width: 49.6%;
         height: 470px;
-        float: right;
         border: 18px solid white;
         border-radius: 4px;
     }
       #listing {   /*hotel result list*/
-        position: relative;
         width: 100%;
-        height: 470px;
+        height: 60%;
         overflow: auto;
         float: right;
         cursor: pointer;
@@ -233,21 +301,253 @@ body{
         text-align: right;
     }
     .datepage_roundclick{
-        border: 1px #000000;
-        text-align: center;
         bottom: 20px;
-        margin-bottom: 50px;
+        width: 19.6%;
+        min-width: 140px;
+        height: 1.5em;
+        border-radius: 1em;
+        font-size: 1em;
+    }
+    
+	
+}
+
+
+
+@media screen and (max-width: 1480px) and (min-width: 1001px) {   
+    .datepage_div{
+        width: 400px;
+        border-radius: 5px;
+    }	
+    .datepage_div input {
+        font-size: 1em;
+        width:80%;
+    }		
+    .datapage_back{
+        width: 40%;
+    }
+
+    #textMapContainer {
+        width:100%;
+        height: 70%;
+    }
+    .leftContent {
+        padding-top: 15px;
+        width: 43.2%;
+        height: 470px;
+        float: left;
+    }
+
+    .leftContent .text {
+        font-size: 1em;
+        height: 7.4%;
+        width: 85%;
+        float: right;
+    }
+
+    .leftContent div{
+        height: 7.4%;
+        width: 85%;
+        float: right;
+    }
+
+    table {
+        font-size: 12px;
+    }
+    #map {
+        width: 49.6%;
+        height: 68%;
+        border: 18px solid white;
+        border-radius: 4px;
+    }
+      #listing {   /*hotel result list*/
+        width: 43.2%;
+        height: 400px;
+        overflow: auto;
+        float: right;
+        cursor: pointer;
+        overflow-x: hidden;
+      }
+      #findhotels {
+        position: relative;
+        text-align: right;
+        width: 100px;
+        font-size: 14px;
+        padding: 4px;
+        z-index: 5;
+        background-color: #fff;
+      }
+      #locationField {
+        position: relative;
+        width: 190px;
+        height: 25px;
+        left: 108px;
+        top: 0px;
+        z-index: 5;
+        background-color: #fff;
+      }
+      #controls {
+        width: 0px;
+      }
+      #autocomplete {
+        width: 100%;
+      }
+      #country {
+        width: 100%;
+        height: 100%;
+      }
+      .placeIcon {
+        width: 20px;
+        height: 34px;
+        margin: 4px;
+      }
+      .hotelIcon {
+        width: 24px;
+        height: 24px;
+      }
+      #resultsTable { /*hotel result list*/
+        border-collapse: collapse;
+        width: 100%;
+      }
+      #rating {
+        font-size: 13px;
+        font-family: Arial Unicode MS;
+      }
+      .iw_table_row { /* iw : 호텔 클릭하면 뜨는 정보창 */
+        height: 35px;
+      }
+      .iw_attribute_name {
+        font-weight: bold;
+        text-align: right;
+      }
+      .iw_table_icon {
+        text-align: right;
+    }
+    .datepage_roundclick{
+        bottom: 20px;
+        width: 19.6%;
+        height: 38px;
+        border-radius: 27px;
+    }
+}
+
+
+
+@media screen and (min-width: 1481px)
+{
+
+    .datepage_div{
+        width: 400px;
+        border-radius: 5px;
+    }	
+    .datepage_div input {
+        font-size: 1em;
+        width:80%;
+    }		
+    .datapage_back{
+        width: 40%;
+    }
+
+    #textMapContainer {
+        width:100%;
+        height: 530px;
+    }
+    .leftContent {
+        padding-top: 15px;
+        width: 540px;
+        height: 470px;
+        float: left;
+    }
+
+    .leftContent .text {
+        font-size: 1em;
+        height: 35px;
+        width: 400px;
+        float: right;
+    }
+
+    .leftContent div{
+        height: 35px;
+        width: 400px;
+        float: right;
+    }
+
+    table {
+        font-size: 12px;
+    }
+    #map {
+        width: 620px;
+        height: 470px;
+        border: 18px solid white;
+        border-radius: 4px;
+    }
+      #listing {   /*hotel result list*/
+        width: 400px;
+        height: 400px;
+        overflow: auto;
+        float: right;
+        cursor: pointer;
+        overflow-x: hidden;
+      }
+      #findhotels {
+        position: relative;
+        text-align: right;
+        width: 100px;
+        font-size: 14px;
+        padding: 4px;
+        z-index: 5;
+        background-color: #fff;
+      }
+      #locationField {
+        position: relative;
+        width: 190px;
+        height: 25px;
+        left: 108px;
+        top: 0px;
+        z-index: 5;
+        background-color: #fff;
+      }
+      #controls {
+        width: 0px;
+      }
+      #autocomplete {
+        width: 100%;
+      }
+      #country {
+        width: 100%;
+        height: 100%;
+      }
+      .placeIcon {
+        width: 20px;
+        height: 34px;
+        margin: 4px;
+      }
+      .hotelIcon {
+        width: 24px;
+        height: 24px;
+      }
+      #resultsTable { /*hotel result list*/
+        border-collapse: collapse;
+        width: 100%;
+      }
+      #rating {
+        font-size: 13px;
+        font-family: Arial Unicode MS;
+      }
+      .iw_table_row { /* iw : 호텔 클릭하면 뜨는 정보창 */
+        height: 35px;
+      }
+      .iw_attribute_name {
+        font-weight: bold;
+        text-align: right;
+      }
+      .iw_table_icon {
+        text-align: right;
+    }
+    .datepage_roundclick{
+        bottom: 20px;
         width: 245px;
         height: 38px;
-        margin: auto;
-        padding: .3em;
-        border: none;
         border-radius: 27px;
-        background-color: #ffa200;
-        color: white;
-        -webkit-box-shadow: -1px 4px 20px -2px rgba(0,0,0,0.28);
-        -moz-box-shadow: -1px 4px 20px -2px rgba(0,0,0,0.28);
-        box-shadow: -1px 4px 20px -2px rgba(0,0,0,0.28);
-
     }
 }

@@ -1,8 +1,8 @@
 <?php // header.php
-session_start();
+/*session_start();
 require_once 'functions.php';
 require_once 'dbsetup.php';
-?>
+*/?>
 
 <!DOCTYPE html>
 
@@ -42,7 +42,7 @@ require_once 'dbsetup.php';
                         </div>
                         <div class="collapse navbar-collapse" id=".navbar-collapse">
                         <ul class = "nav navbar-nav navbar-right">
-                            <li><a href = "#"><p>About</p></a></li>
+                            <li><a href = "about.html"><p>About</p></a></li>
                         </ul>
                         </div>
                     </div>

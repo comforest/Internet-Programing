@@ -40,36 +40,37 @@ $_SESSION['theme'] = $_POST['themeinfo'];
         <style type = "text/css">
         a{text-decoration:none}
         </style>
-        <script>
-            function clickLetsDoThis() {
-                if (document.getElementById('date').value == "") {
-                    // 경고 메시지 출력 : 디자인이 필요함.
-                    console.log("date 없음");
-                } else  {
-                    document.getElementById('datePlaceInfoForm').submit();
-                }
-            }
-        </script>
-    
-        <style>
-        </style>
     </head>
     <body>
-        <br><br>
+    	<?php
+          require_once 'navbar.inc';
+        ?>
+		<div class="progress-box">
+			<img src="/static/image/progress_theme_orange.png" style="width: 4%;">
+			<img src="/static/image/progresslineorange.png" style="width: 10%; margin-bottom: 1.2%;">
+			<img src="/static/image/progress_calendar_orange.png" style="width: 3.5%;">
+			<img src="/static/image/progresslinegrey.png" style="width: 10%; margin-bottom: 1.2%;">
+			<img src="/static/image/progress_accommodation_grey.png" style="width: 4.5%;">
+		</div>
+        <form action="search.php" method="post" id="datePlaceInfoForm">
+        <div class = "datepage_space1">&nbsp </div>
+		<div class = "datepage_word">from when?</div>
+		<div class="datepage_space2">&nbsp </div>
+		<div class = "datepage_word_desktop">till when?</div><br>
+        <div class = "datepage_space1">&nbsp </div>
+		<div class ="datepage_div">
+			<input class="datepage_input" type="text" id="from">
+        </div>
+		<div class="datepage_space2">&nbsp </div>
+		<div class = "datepage_word_mobile"><p style="font-size:1em;"></p>till when?<p style="font-size:1em;"></p></div>
+		<div class ="datepage_div">
+			<input class="datepage_input" type="text" id="to">
+        </div><br>
+        </form>
         
-        <!--<form action="search.php" method="post" id="datePlaceInfoForm" style="display: block">
-        <p style= "text-align: center;">When is your trip?</p>
-            <div class ="datepage_div">
-                <a href="#"><img class="image_div" src="static/image/calendar_grey.png"></a>
-				<input class="mobile_size" type="text" id="from">
-            </div><br>
-        </form>-->
-
-        
-        <a href="#"><div class = "datepage_roundclick" onclick="clickLetsDoThis()">let's do this</div></a>
+        <a href="#"><div class = "datepage_roundclick" onclick="clickLetsDoThis()">ok, next</div></a>
+        <a href="#"><div class = "datepage_roundclick2" onclick="clickLetsDoThis()">back please</div></a>
     </body>
-	<footer>
-	</footer>
 </html>
 
 

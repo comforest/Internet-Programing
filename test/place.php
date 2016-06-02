@@ -4,6 +4,7 @@
 <html>
 	<head>
 			<title>Travers</title>
+			<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
 			<script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/24/11a/intl/ko_ALL/common.js"></script>
 			<script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/24/11a/intl/ko_ALL/map.js"></script>
 			<script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/24/11a/intl/ko_ALL/util.js"></script>
@@ -49,7 +50,7 @@
 			  var service = new google.maps.places.PlacesService(map);
 			  service.nearbySearch({
 			    location: pyrmont,
-			    radius: 7000,
+			    radius: 8000,
 			    types: []
 			  }, callback);
 			}

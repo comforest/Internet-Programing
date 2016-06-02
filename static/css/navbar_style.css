@@ -28,7 +28,8 @@
 }
 
 .navicon{
-	margin-left: 3vw;
+	margin-left: 3%;
+	margin-right: 3%;
 	width: 10%;
 	float: left;
 	vertical-align: middle;
@@ -68,10 +69,10 @@
 
 .mobnav{
 	width: 100%;
-	height: 50px;
+	height: 100px;
 	display: none;
 	background-color:rgba(230,236,236,1);
-	float: left;
+	clear: both;
 	text-align: center;
 	box-shadow: 0px 2px 2px #888888;
 }
@@ -79,7 +80,7 @@
 .navblock{
 	width: 25%;
 	height: 100%;
-	font-size: 16pt;
+	font-size: 24pt;
 	font-weight: bold;
 	color: #ababab;
 	float: left;
@@ -88,7 +89,7 @@
 }
 
 .navblock img{
-	height: 40px;
+	height: 60px;
 	width: auto;
 	vertical-align: middle;
 }
@@ -118,6 +119,7 @@
 	z-index: 100;
 	padding-left: 10px;
 	padding-top: 3px;
+	position: relative;
 }
 
 .logout:hover{
