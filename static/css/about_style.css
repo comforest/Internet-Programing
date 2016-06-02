@@ -1,0 +1,179 @@
+body
+{
+	font-family: 'Hind', sans-serif;
+}
+
+.nav
+{
+	height: 50px;
+	padding-left: 30px;
+	background-color: #e6ebec;
+	-webkit-box-shadow: 0px 7px 38px -5px rgba(0,0,0,0.18);
+-moz-box-shadow: 0px 7px 38px -5px rgba(0,0,0,0.18);
+box-shadow: 0px 7px 38px -5px rgba(0,0,0,0.18);
+}
+
+nav img
+{
+	max-height: 25px;
+}
+
+
+#logo_img
+{
+	margin: 0px;
+}
+
+#top h1
+{
+	font-weight: bolder;
+	font-size: 65px;
+}
+
+#top p
+{
+	font-size: 20px;
+}
+
+#top
+{
+	margin-top: 40px;
+	margin-bottom: 40px;
+}
+
+.container
+{
+	width: 100%;
+	padding-left: 0;
+	padding-right: 0;
+}
+
+ul
+{
+	list-style: none;
+	text-align: left;
+}
+
+#icon-line
+{
+
+}
+
+#icon-line img
+{
+	margin: 20px;
+	max-height: 50px;
+}
+
+#api
+{
+	/*height: 400px;*/
+	background-color: #87b4bd;
+	/*position: absolute;*/
+	/*display: inline-block;*/
+	padding-left: 10%;
+	
+}
+
+#apilist
+{
+	/*background-color: red;*/
+	margin-top: 9%;
+	color: white;
+	font-size: 20px;
+}
+
+.img-right
+{
+
+}
+
+#mockup1
+{
+	max-height: 400px;
+	margin-right: 0px;
+	/*position: relative;*/
+	/*position-left: 0%;*/
+	/*margin-left: 0px;*/
+}
+
+#team
+{
+	/*height: 600px;*/
+}
+
+#mockup2
+{
+	max-height: 600px;
+	margin-right: 15%;
+}
+
+.li_title
+{
+	font-weight: bold;
+	font-size: 40px;
+	margin-bottom: 5px;
+}
+
+#teamlist
+{
+	margin-top: 12%;
+	font-size: 20px;
+
+
+}
+
+footer .container
+{
+	width: 100%;
+	background-color: #1f1f1f;
+	height: 120px;
+	margin: 0px;
+	padding-top: 20px;
+}
+
+
+footer p
+{
+	font-size: 14px;
+	color: gray;
+	margin-top: 20px;
+}
+
+@media screen and (max-width: 800px)
+{
+
+#mockup1
+{
+	display: none;
+}
+
+#mockup2
+{
+	display: none;
+}
+
+#top
+{
+	padding-left: 25px;
+	padding-right: 25px;
+}
+
+#top h1
+{
+	font-size: 40px;
+}
+
+#api
+{
+	padding-top: 40px;
+	padding-bottom: 40px;
+}
+
+#team
+{
+	padding-top: 40px;
+	padding-bottom: 40px;
+}
+
+}
