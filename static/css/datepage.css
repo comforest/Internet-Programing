@@ -147,10 +147,10 @@ body{
 @media screen and (max-width: 1000px){
 	
 	.datepage_roundclick{
-		margin-top:20%;
+		margin-top:30%;
 	}
 	.progress-box {
-		margin-bottom:20%;
+		margin-bottom:10%;
 	}
 	.datepage_div{
 		border: none;
