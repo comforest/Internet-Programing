@@ -34,7 +34,11 @@ Youn Inseop
 		<li><a href="#">Plan</a></li>
 		<li>
 			<div class="userinfo">
-				<span onclick="toggle_visibility('logout');"><?php $_SESSION['userID'] ?></span>
+				<span onclick="toggle_visibility('logout');">
+					<?php
+						$_SESSION['userName']
+					?>
+				</span>
 				<img src="static/image/nature_theme.png"/>
 				
 			</div>
