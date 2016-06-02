@@ -24,6 +24,9 @@
 	<meta name="viewport" content="initial-scale=1.0">
     		<meta charset="utf-8">
 		    <style>
+		    	html, body {
+		    		height: 100%;
+		    	}
 		    	#map {
 		    		height: 100%;
 		    		width: 100%;
