@@ -47,7 +47,7 @@ $_SESSION['theme'] = $_POST['themeinfo'];
           require_once 'navbar.inc';
         ?>
 
-        <div id="textMapContainer" style="max-width: 1250px; margin-left: auto; margin-right: auto; margin-top: 100px;">
+        <div id="textMapContainer" style="max-width: 1250px; margin-left: auto; margin-right: auto; margin-top: 100px; margin-bottom: 100px;">
             <div class="leftContent">
                 <div class="text">search accomodation</div>
                 <div class = "datepage_div">
