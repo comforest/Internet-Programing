@@ -16,6 +16,7 @@ $_SESSION['theme'] = $_POST['themeinfo'];
         <link href='https://fonts.googleapis.com/css?family=Hind' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" type="text/css" href="static/css/style.css">
         <link rel="stylesheet" type="text/css" href="static/css/placepage.css">
+        <link rel="stylesheet" type="text/css" href="static/css/progress.css">
         <style type = "text/css">
         a{text-decoration:none}
         </style>
@@ -46,6 +47,13 @@ $_SESSION['theme'] = $_POST['themeinfo'];
         <?php
           require_once 'navbar.inc';
         ?>
+
+
+        <div class = "progress-box">
+          <img src = "static/image/place_pro.png">
+        </div>
+
+
 
         <div id="textMapContainer" style="max-width: 1250px; margin-left: auto; margin-right: auto; margin-top: 100px; margin-bottom: 100px;">
             <div class="leftContent">

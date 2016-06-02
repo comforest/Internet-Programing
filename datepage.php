@@ -16,6 +16,7 @@ $_SESSION['theme'] = $_POST['themeinfo'];
         <link href='https://fonts.googleapis.com/css?family=Hind' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" type="text/css" href="static/css/style.css">
         <link rel="stylesheet" type="text/css" href="static/css/datepage.css">
+        <link rel="stylesheet" type="text/css" href="static/css/progress.css">
 		<link rel="stylesheet" href="http://code.jquery.com/ui/1.8.18/themes/base/jquery-ui.css" type="text/css" media="all" />
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
 		<script src="http://code.jquery.com/ui/1.8.18/jquery-ui.min.js" type="text/javascript"></script>
@@ -45,13 +46,14 @@ $_SESSION['theme'] = $_POST['themeinfo'];
     	<?php
           require_once 'navbar.inc';
         ?>
-		<div class="progress-box">
-			<img src="/static/image/progress_theme_orange.png" style="width: 4%;">
-			<img src="/static/image/progresslineorange.png" style="width: 10%; margin-bottom: 1.2%;">
-			<img src="/static/image/progress_calendar_orange.png" style="width: 3.5%;">
-			<img src="/static/image/progresslinegrey.png" style="width: 10%; margin-bottom: 1.2%;">
-			<img src="/static/image/progress_accommodation_grey.png" style="width: 4.5%;">
-		</div>
+		
+
+        <div class = "progress-box">
+    		<img src = "static/image/date_pro.png">
+    	</div>
+
+
+
         <form action="search.php" method="post" id="datePlaceInfoForm">
         <div class = "datepage_space1">&nbsp </div>
 		<div class = "datepage_word">from when?</div>

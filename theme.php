@@ -9,6 +9,7 @@
 	<link href='https://fonts.googleapis.com/css?family=Hind' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="static/css/style.css">
 	<link rel="stylesheet" type="text/css" href="static/css/theme_style2.css">
+	<link rel="stylesheet" type="text/css" href="static/css/progress.css">
     <script>
         function cilck_culture_theme() {
             document.getElementById("themeinfo").setAttribute('value', 'culture');
@@ -39,13 +40,12 @@
     <form action="datepage.php" method="post" id="themeinfoForm">
             <input type="hidden" name="themeinfo" id="themeinfo" value="">
     </form>
-    <div class="progress-box">
-    	<img src="/static/image/progress_theme_orange.png" style="width: 4%;">
-    	<img src="/static/image/progresslinegrey.png" style="width: 10%; margin-bottom: 1.2%;">
-    	<img src="/static/image/progress_calendar_grey.png" style="width: 3.5%;">
-    	<img src="/static/image/progresslinegrey.png" style="width: 10%; margin-bottom: 1.2%;">
-    	<img src="/static/image/progress_accommodation_grey.png" style="width: 4.5%;">
+    
+    <div class = "progress-box">
+    	<img src = "static/image/theme_pro.png">
     </div>
+
+
 	<div class="themebox">
 		<div class="themeinner" onclick="cilck_culture_theme()">
             <div class="innerimage"><img src="static/image/culture_theme.png"/></div>
