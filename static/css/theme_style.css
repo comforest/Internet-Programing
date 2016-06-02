@@ -124,4 +124,9 @@
 
 .progress-box {
 	width: 100%;
+	text-align: center;
+}
+
+.progress-box img {
+	display: inline;
 }
