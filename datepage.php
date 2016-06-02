@@ -42,7 +42,16 @@ $_SESSION['theme'] = $_POST['themeinfo'];
         </style>
     </head>
     <body>
-        <br><br>
+    	<?php
+          require_once 'navbar.inc';
+        ?>
+		<div class="progress-box">
+			<img src="/static/image/progress_theme_orange.png" style="width: 4%;">
+			<img src="/static/image/progresslineorange.png" style="width: 10%; margin-bottom: 1.2%;">
+			<img src="/static/image/progress_calendar_orange.png" style="width: 3.5%;">
+			<img src="/static/image/progresslinegrey.png" style="width: 10%; margin-bottom: 1.2%;">
+			<img src="/static/image/progress_accommodation_grey.png" style="width: 4.5%;">
+		</div>
         <form action="search.php" method="post" id="datePlaceInfoForm">
         <div class = "datepage_space1">&nbsp </div>
 		<div class = "datepage_word">from when?</div>
