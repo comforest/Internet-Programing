@@ -1,0 +1,179 @@
+/*.themeupper{
+	margin-top: 80px;
+	margin-bottom: 60px;
+	text-align: center;
+	color: #3f3f3f;
+	font-size: 56pt;
+	font-size: 20px;
+	font-weight: bold;
+	position: relative;
+}*/
+
+body
+{
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+.themebox{
+	/*width: 1480px;*/
+	/*background: red;*/
+	width: 100%;
+	/*margin: auto;*/
+	/*margin-left: auto;*/
+	/*margin-right: auto;*/
+	/*position: absolute;*/
+	/*display: inline-block;*/
+	/*display: flex;
+	flex-wrap: wrap;*/
+	/*margin: auto;*/
+  	/*float: left;*/
+	text-align: center;
+	/*float: right;*/
+	/*clear: both;*/
+}
+
+.themeinner{
+	/*width: 350px;*/
+	width: 220px;
+	margin-right: 10px;
+	margin-left: 10px;
+	margin-top: 25px;
+	margin-bottom: 25px;
+	padding-top: 25px;
+	padding-bottom: 25px;
+	background-color: white;
+	box-shadow: 0 0 6px rgba(128,128,128,.2);
+	border-radius: 10px;
+	display: inline-block;
+}
+
+.innerimage img{
+	width: 50%;
+	margin-left: 25%;
+	margin-right: 25%;
+	margin-top: 15%;
+	margin-bottom: 15%;
+	height: auto;
+}
+.innercontent div{
+	color: #3f3f3f;
+	/*font-size: 40pt;*/
+	font-size: 30px;
+	font-weight: bolder;
+	text-align: center;
+}
+
+.innercontent p{
+	/*font-size: 20pt;*/
+	font-size: 16px;
+	color: #8e8e8e;
+	margin-left: 10%;
+	margin-right: 10%;
+	text-align: center;
+}
+.themelower{
+
+}
+
+.themelower div{
+	width: 220px;
+	margin-top: 30px;
+	margin-bottom: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 7px 0 7px 0;
+	text-align: center;
+	font-size: 14pt;
+	color: white;
+	background-color: #ffa200;
+	border-radius: 40px;
+	box-shadow: 0 0 6px rgba(128,128,128,.4);
+}
+
+#nevermind
+{
+	margin: auto;
+	text-align: center;
+	color: #ffa200;
+}
+
+
+
+.progress-box {
+	width: 100%;
+	text-align: center;
+	margin-top: 50px;
+}
+
+.progress-box img {
+	display: inline;
+	margin-left: 3px;
+	margin-right: 3px;
+}
+
+
+@media (max-width: 1480px){
+	/*.themeupper{
+		font-size: 40pt;
+	}*/
+	/*.themebox{
+		width: 800px;
+	}*/
+}
+
+@media (max-width: 1000px){
+
+	body
+	{
+		margin: 0px;
+	}
+
+	.themeupper{
+		font-size: 10vw;
+		margin-top: 160px;
+	}
+	.themebox{
+		width: 90vw;
+		margin: auto;
+		/*width: 100%;*/
+	}
+
+	.themeinner{
+		width: 80vw;
+		/*width: 90%;*/
+		margin: 2vw 0vw 2vw 0vw;
+		padding: 2vw 5vw 2vw 5vw;
+		background-color: white;
+		box-shadow: 0 0 6px rgba(128,128,128,.2);
+		border-radius: 10px;
+	}
+	.innerimage{
+		width: 25vw;
+		height: 25vw;
+		padding: 0 0 0 0;
+		float: left;
+	}
+	.innerimage img{
+		width: 80%;
+		margin: 10% 10% 10% 10%;
+		height: auto;
+	}
+	.innercontent{
+		width: 40vw;
+		margin-left: 5vw;
+		float: left;
+	}
+	.innercontent div{
+		font-size: 7vw;
+		margin-top: 2vw;
+		font-weight: bold;
+		text-align: left;
+	}
+
+	.innercontent p{
+		font-size: 3vw;
+		text-align: left;
+		margin: 0 0 0 0;
+	}
+}
