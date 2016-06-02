@@ -79,6 +79,7 @@
 @media (max-width: 1000px){
 	.themeupper{
 		font-size: 10vw;
+		margin-top: 160px;
 	}
 	.themebox{
 		width: 100vw;
