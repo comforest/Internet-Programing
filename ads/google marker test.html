@@ -25,7 +25,7 @@
             $(document).ready(function() {
                 $.getJSON("shopping.json", function(json1) {
                     $.each(json1, function(key, data) {
-                        var latLng = new google.maps.LatLng(data.LOCATION_X, data.LOCATION_Y); // Creating a marker and putting it on the map 
+                        var latLng = new google.maps.LatLng(data.LOCATION_Y, data.LOCATION_X);
                         var marker = new google.maps.Marker({
                             position: latLng,
                             title: data.title
@@ -35,6 +35,6 @@
                 });
             });
         </script>
-        <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key= AIzaSyCG21Y5X-wARtfSC6WkgO1nxoVU0WwcjwE"></script>
+        <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key= AIzaSyCG21Y5X-wARtfSC6WkgO1nxoVU0WwcjwE" async defer></script>
     </body>
 </html>
