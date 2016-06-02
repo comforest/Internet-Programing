@@ -15,7 +15,7 @@ $_SESSION['theme'] = $_POST['themeinfo'];
         <title>Date Page</title>
         <link href='https://fonts.googleapis.com/css?family=Hind' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" type="text/css" href="static/css/style.css">
-        <link rel="stylesheet" type="text/css" href="static/css/datepage.css">
+        <link rel="stylesheet" type="text/css" href="static/css/placepage.css">
 		<link rel="stylesheet" href="http://code.jquery.com/ui/1.8.18/themes/base/jquery-ui.css" type="text/css" media="all" />
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
 		<script src="http://code.jquery.com/ui/1.8.18/jquery-ui.min.js" type="text/javascript"></script>
@@ -47,54 +47,56 @@ $_SESSION['theme'] = $_POST['themeinfo'];
                 <input type="text" id = "place" name="place" value = "">
             </div><br>
         </form>-->
-        <div class="leftContent">
-            <div class="text">search accomodation</div>
-            <div class = "datepage_div">
-                <input type="text" id = "place" name="place" value = "">
-                <a href="#"><img src="static/image/search_grey.png"></a>
-            </div><br>
-            <div id="listing">
-                <table id="resultsTable">
-                    <tbody id="results"></tbody>
-                </table>
-            </div>
-            <div style="display: none">
-                <div id="info-content">
-                    <table>
-                      <tr id="iw-url-row" class="iw_table_row">
-                        <td id="iw-icon" class="iw_table_icon"></td>
-                        <td id="iw-url"></td>
-                      </tr>
-                      <tr id="iw-address-row" class="iw_table_row">
-                        <td class="iw_attribute_name">Address:</td>
-                        <td id="iw-address"></td>
-                      </tr>
-                      <tr id="iw-phone-row" class="iw_table_row">
-                        <td class="iw_attribute_name">Telephone:</td>
-                        <td id="iw-phone"></td>
-                      </tr>
-                      <tr id="iw-rating-row" class="iw_table_row">
-                        <td class="iw_attribute_name">Rating:</td>
-                        <td id="iw-rating"></td>
-                      </tr>
-                      <tr id="iw-website-row" class="iw_table_row">
-                        <td class="iw_attribute_name">Website:</td>
-                        <td id="iw-website"></td>
-                      </tr>
+        <div id="textMapContainer">
+            <div class="leftContent">
+                <div class="text">search accomodation</div>
+                <div class = "datepage_div">
+                    <input type="text" id = "place" name="place" value = "">
+                    <a href="#"><img src="static/image/search_grey.png"></a>
+                </div><br>
+                <div id="listing">
+                    <table id="resultsTable">
+                        <tbody id="results"></tbody>
                     </table>
                 </div>
+                <div style="display: none">
+                    <div id="info-content">
+                        <table>
+                          <tr id="iw-url-row" class="iw_table_row">
+                            <td id="iw-icon" class="iw_table_icon"></td>
+                            <td id="iw-url"></td>
+                          </tr>
+                          <tr id="iw-address-row" class="iw_table_row">
+                            <td class="iw_attribute_name">Address:</td>
+                            <td id="iw-address"></td>
+                          </tr>
+                          <tr id="iw-phone-row" class="iw_table_row">
+                            <td class="iw_attribute_name">Telephone:</td>
+                            <td id="iw-phone"></td>
+                          </tr>
+                          <tr id="iw-rating-row" class="iw_table_row">
+                            <td class="iw_attribute_name">Rating:</td>
+                            <td id="iw-rating"></td>
+                          </tr>
+                          <tr id="iw-website-row" class="iw_table_row">
+                            <td class="iw_attribute_name">Website:</td>
+                            <td id="iw-website"></td>
+                          </tr>
+                        </table>
+                    </div>
+                </div>
             </div>
-        </div>
-        
 
-        <div id="controls" style="display: none">
-          <select id="country">
-            <option value="all" selected>All</option>
-            <option value="ko" selected>Korea</option>
-          </select>
-        </div>
 
-        <div id="map"></div>
+            <div id="controls" style="display: none">
+              <select id="country">
+                <option value="all" selected>All</option>
+                <option value="ko" selected>Korea</option>
+              </select>
+            </div>
+
+            <div id="map"></div>
+        </div>
         
         <a href="#"><div class = "datepage_roundclick" onclick="clickLetsDoThis()">let's do this</div></a>
     </body>
