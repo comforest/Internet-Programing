@@ -27,7 +27,7 @@
 		    	html, body {
 		    		height: 100%;
 		    	}
-		    	#mapbox {
+		    	#mapbox, #map {
 		    		height: 100%;
 		    		width: 100%;
 		    	}
@@ -41,7 +41,7 @@
 		require_once("tourlist.inc");
 		require_once("tab.inc");
 	?>
-	<div class="mapbox">
+	<div id="mapbox">
 		<div id="map"></div>
 	</div>
 	<script>
