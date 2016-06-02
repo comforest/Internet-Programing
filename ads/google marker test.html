@@ -8,7 +8,9 @@
             #map_canvas { height: 100% }
         </style>
         <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
-        <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key= AIzaSyCG21Y5X-wARtfSC6WkgO1nxoVU0WwcjwE" async defer></script>
+    </head>
+    <body>
+        <div id="map_canvas" style="width:90%; height:90%; margin-left: 5%; margin-top: 5%;"></div>
         <script type="text/javascript">
             var map;
             
@@ -18,24 +20,23 @@
                     zoom: 7
                 };
                 map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions); 
+
+                loadmarkers();
             }
-        </script>
-    </head>
-    <body onload="initialize();">
-        <div id="map_canvas" style="width:90%; height:90%; margin-left: 5%; margin-top: 5%;"></div>
-        <script type="text/javascript">
-            $(document).ready(function() {
+
+            function loadmarkers() {
                 $.getJSON("shopping.json", function(json1) {
                     $.each(json1, function(key, data) {
                         var latLng = new google.maps.LatLng(data.LOCATION_Y, data.LOCATION_X);
                         var marker = new google.maps.Marker({
                             position: latLng,
-                            title: data.title
+                            title: data.title,
+                            map:map
                         }); 
-                        marker.setMap(map);
                     });
                 });
-            });
+            }
         </script>
+        <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key= AIzaSyCG21Y5X-wARtfSC6WkgO1nxoVU0WwcjwE&callback=initialize" async defer></script>
     </body>
 </html>
