@@ -42,6 +42,9 @@ $_SESSION['theme'] = $_POST['themeinfo'];
         </style>
     </head>
     <body>
+    	<?php
+          require_once 'navbar.inc';
+        ?>
 		<div class="progress-box">
 			<img src="/static/image/progress_theme_orange.png" style="width: 4%;">
 			<img src="/static/image/progresslineorange.png" style="width: 10%; margin-bottom: 1.2%;">
