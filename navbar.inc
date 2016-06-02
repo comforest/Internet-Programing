@@ -37,10 +37,10 @@ Youn Inseop
 				<span onclick="toggle_visibility('logout');">
 					<?php
 						if (isset($_SESSION['userName'])) {
-							echo $_SESSION['userName']
+							echo $_SESSION['userName'];
 						}
 						else {
-							echo 'NoName'
+							echo 'NoName';
 						}
 					?>
 				</span>
