@@ -33,6 +33,9 @@
     </script>
 </head>
 <body style="background-color: #f3f3f3;">
+	<?php
+		require_once 'navbar.inc';
+	?>
     <form action="datepage.php" method="post" id="themeinfoForm">
             <input type="hidden" name="themeinfo" id="themeinfo" value="">
     </form>
