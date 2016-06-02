@@ -57,8 +57,8 @@
 			for(var i=0;i<7;i++){
 				dd = AddDate(d,0,0,i);
 				div.innerHTML += ("<div href='#' class=\"oneline\">"+"<span class=\"desktop\">"+  (dd.getMonth()+1)+" / " +"</span>"+dd.getDate() +"</div>");   
-				div.innerHTML += ("<p class=\"date\" >"+week[dd.getDay()]+"</p>");
-				div.innerHTML += ("<br class=\"desktop\">");
+				div.innerHTML += ("<p class=\"date\" style = \"font-size: 15px\">"+week[dd.getDay()]+"</p>");
+				div.innerHTML += ("<span style=\"linesize\">"+"<br class=\"desktop\">"+"</span>");
 			}
 			var dd = AddDate(d,0,0,7);
 			div.innerHTML += ("<a href='#' class=\"desktop\" onclick=\"WriteVerticalCalendar("+dd.getFullYear()+","+dd.getMonth()+","+dd.getDate()+")\"><img class=\"datebar_div_down\" src=\"static/image/down_button.png\"></a>");
