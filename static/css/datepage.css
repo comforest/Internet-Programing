@@ -8,7 +8,7 @@ body{
 		border: 1px #000000;
 		width: 250px;
 		margin: auto;
-		margin-top: 400px;
+		margin-top: 100%;
 		padding: .3em;
 		height: 30px;
 		border: none;
@@ -43,6 +43,7 @@ body{
 	
 	.datepage_div input{
 		border:transparent;
+		text-align:center;
 	}
 	
 	.datepage_word{
@@ -146,10 +147,10 @@ body{
 @media screen and (max-width: 1000px){
 	
 	.datepage_roundclick{
-		margin-top:3px;
+		margin-top:40%;
 	}
 	.progress-box {
-		margin-bottom: 50px;
+		margin-bottom:100px
 	}
 	.datepage_div{
 		border: none;
