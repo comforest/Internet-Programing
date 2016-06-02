@@ -55,7 +55,7 @@ $_SESSION['theme'] = $_POST['themeinfo'];
         <form action="search.php" method="post" id="datePlaceInfoForm">
         <div class = "datepage_space1">&nbsp </div>
 		<div class = "datepage_word">from when?</div>
-		<div class="datepage_space2">&nbsp </div>
+		<div class="datepage_space2">&nbsp</div>
 		<div class = "datepage_word_desktop">till when?</div><br>
         <div class = "datepage_space1">&nbsp </div>
 		<div class ="datepage_div">
