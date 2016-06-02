@@ -76,7 +76,7 @@
 	margin: 0px;
 	line-height: 120%;
 	width: 100%;
-	height: 50px;
+	height: 100px;
 	background-color: #ffffff;
 	color: #888888;
 	border-radius: 0px;
@@ -101,15 +101,25 @@
 	margin-bottom: 0px;
 	display:none;
 }
-	
+.Llayer_fixed .datebar_div_up, .Llayer_fixed .datebar_div_down{
+	width:auto;
+	height: 60px;
+	margin-top: 10px;
+} 
 .Llayer_fixed .oneline{
 	display: inline;
 	float: left;
-	width: 2%;
-	height: auto;
-	margin:2% 6%;
-	margin-top: 12px;
+	width: 70px;
+	height: 70px;
+	margin: 15px 2%;
 	text-align: center;
+	font-size: 2em;
+}
+.Llayer_fixed .hDate{
+	display: block;
+	height:100%;
+	line-height: 70px;
+	vertical-align: middle;
 }
 .Llayer_fixed .oneline:hover{
 	position:relative;
