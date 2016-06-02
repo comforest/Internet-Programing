@@ -199,12 +199,12 @@ table {
     }
 
     #textMapContainer {
-        width:100%;
+        width: 100%;
         height: 70%;
     }
     .leftContent {
         padding-top: 15px;
-        max-width: 90px;
+        max-width: 350px;
         width: 100%;
         height: 90%;
         float: none;
