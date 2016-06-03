@@ -25,10 +25,12 @@
     		height: 100%;
     	}
     	#mapbox, #map {
-    		height: 100%;
-    		width: 100%;
     		z-index: -10;
     		position: absolute;
+    		top: 50px;
+    		bottom: 0px;
+    		left: 0px;
+    		right: 0px;
     	}
     </style>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
