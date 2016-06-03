@@ -56,7 +56,7 @@
             }
 
             function loadmarkers() {
-                $.getJSON("shopping.json", function(json1) {
+                $.getJSON("/static/js/shopping.json", function(json1) {
                     $.each(json1, function(key, data) {
                         var latLng = new google.maps.LatLng(data.LOCATION_Y, data.LOCATION_X);
                         var marker = new google.maps.Marker({
