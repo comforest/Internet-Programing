@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Theme Page</title>
+	<title>Set theme | Travers</title>
 	<link href='https://fonts.googleapis.com/css?family=Hind' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="/static/css/style.css">
 	<link rel="stylesheet" type="text/css" href="/static/css/theme_style2.css">
@@ -42,13 +42,13 @@
     </form>
     
     <div class = "progress-box">
-    	<img src = "static/image/theme_pro.png">
+    	<img src = "/static/image/theme_pro.png">
     </div>
 
 
 	<div class="themebox">
 		<div class="themeinner" onclick="cilck_culture_theme()">
-            <div class="innerimage"><img src="static/image/culture_theme.png"/></div>
+            <div class="innerimage"><img src="/static/image/culture_theme.png"/></div>
 			<div class="innercontent">
 				<div> Culture </div>
 				<p>
@@ -57,7 +57,7 @@
 			</div>
 		</div>
 		<div class="themeinner" onclick="cilck_shopping_theme()">
-			<div class="innerimage"><img id = "shopping_theme" src="static/image/shopping_theme.png"/></div>
+			<div class="innerimage"><img id = "shopping_theme" src="/static/image/shopping_theme.png"/></div>
 			<div class="innercontent">
 				<div> Shopping </div>
 				<p>
@@ -66,7 +66,7 @@
 			</div>
 		</div>
 		<div class="themeinner" onclick="cilck_nature_theme()">
-			<div class="innerimage"><img id = "nature_theme" src="static/image/nature_theme.png"/></div>
+			<div class="innerimage"><img id = "nature_theme" src="/static/image/nature_theme.png"/></div>
 			<div class="innercontent">	
 				<div> Nature </div>
 				<p>
@@ -75,7 +75,7 @@
 			</div>
 		</div>
 		<div class="themeinner" onclick="cilck_trend_theme()">
-			<div class="innerimage"><img id = "trend_theme" src="static/image/trend_theme.png"/></div>
+			<div class="innerimage"><img id = "trend_theme" src="/static/image/trend_theme.png"/></div>
 			<div class="innercontent">
 				<div> Trend </div>
 				<p>
