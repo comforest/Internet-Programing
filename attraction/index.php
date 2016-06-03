@@ -34,10 +34,10 @@
 </head>
 <body>
 	<?php
-		require_once("/include/navbar.inc");
-		require_once("/include/datebar.inc");
-		require_once("/include/tourlist.inc");
-		require_once("/include/tab.inc");
+		require_once($_SERVER['DOCUMENT_ROOT']."/include/navbar.inc");
+		require_once($_SERVER['DOCUMENT_ROOT']."/include/datebar.inc");
+		require_once($_SERVER['DOCUMENT_ROOT']."/include/tourlist.inc");
+		require_once($_SERVER['DOCUMENT_ROOT']."/include/tab.inc");
 	?>
 	<div id="mapbox">
 		<div id="map"></div>
