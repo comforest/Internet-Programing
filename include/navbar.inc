@@ -1,9 +1,4 @@
-﻿<!--
-Navigation bar
-Youn Inseop
-필요한 css : navbar_style.css
--->
-<head>
+﻿<head>
 	<link rel="stylesheet" type="text/css" href="/static/css/navbar_style.css">
 </head>
 <header>

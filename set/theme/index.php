@@ -40,12 +40,9 @@
     <form action="/set/date/" method="post" id="themeinfoForm">
             <input type="hidden" name="themeinfo" id="themeinfo" value="">
     </form>
-    
     <div class = "progress-box">
     	<img src = "/static/image/theme_pro.png">
     </div>
-
-
 	<div class="themebox">
 		<div class="themeinner" onclick="cilck_culture_theme()">
             <div class="innerimage"><img src="/static/image/culture_theme.png"/></div>
