@@ -7,9 +7,9 @@
 <head>
 	<title>Theme Page</title>
 	<link href='https://fonts.googleapis.com/css?family=Hind' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" type="text/css" href="static/css/style.css">
-	<link rel="stylesheet" type="text/css" href="static/css/theme_style2.css">
-	<link rel="stylesheet" type="text/css" href="static/css/progress.css">
+	<link rel="stylesheet" type="text/css" href="/static/css/style.css">
+	<link rel="stylesheet" type="text/css" href="/static/css/theme_style2.css">
+	<link rel="stylesheet" type="text/css" href="/static/css/progress.css">
     <script>
         function cilck_culture_theme() {
             document.getElementById("themeinfo").setAttribute('value', 'culture');
@@ -37,7 +37,7 @@
 	<?php
 		require_once 'navbar.inc';
 	?>
-    <form action="datepage.php" method="post" id="themeinfoForm">
+    <form action="/set/date/" method="post" id="themeinfoForm">
             <input type="hidden" name="themeinfo" id="themeinfo" value="">
     </form>
     

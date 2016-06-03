@@ -12,9 +12,9 @@ require_once '$_SERVER['DOCUMENT_ROOT']/include/themeTest.php';
         <meta charset = "utf-8">
         <title>Date Page</title>
         <link href='https://fonts.googleapis.com/css?family=Hind' rel='stylesheet' type='text/css'>
-        <link rel="stylesheet" type="text/css" href="static/css/style.css">
-        <link rel="stylesheet" type="text/css" href="static/css/datepage.css">
-        <link rel="stylesheet" type="text/css" href="static/css/progress.css">
+        <link rel="stylesheet" type="text/css" href="/static/css/style.css">
+        <link rel="stylesheet" type="text/css" href="/static/css/datepage.css">
+        <link rel="stylesheet" type="text/css" href="/static/css/progress.css">
 		<link rel="stylesheet" href="http://code.jquery.com/ui/1.8.18/themes/base/jquery-ui.css" type="text/css" media="all" />
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
 		<script src="http://code.jquery.com/ui/1.8.18/jquery-ui.min.js" type="text/javascript"></script>
@@ -39,7 +39,7 @@ require_once '$_SERVER['DOCUMENT_ROOT']/include/themeTest.php';
             document.getElementById("dateinfoForm").submit();
         }
         function cilck_back_please() {
-            location.replace('theme.php');
+            location.replace('/set/theme/');
         }
 		</script>
         <style type = "text/css">

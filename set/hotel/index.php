@@ -9,9 +9,9 @@ require_once '$_SERVER['DOCUMENT_ROOT']/include/dateTest.php';
         <meta charset = "utf-8">
         <title>Place Page</title>
         <link href='https://fonts.googleapis.com/css?family=Hind' rel='stylesheet' type='text/css'>
-        <link rel="stylesheet" type="text/css" href="static/css/style.css">
-        <link rel="stylesheet" type="text/css" href="static/css/placepage.css">
-        <link rel="stylesheet" type="text/css" href="static/css/progress.css">
+        <link rel="stylesheet" type="text/css" href="/static/css/style.css">
+        <link rel="stylesheet" type="text/css" href="/static/css/placepage.css">
+        <link rel="stylesheet" type="text/css" href="/static/css/progress.css">
         <style type = "text/css">
         a{text-decoration:none}
         </style>
@@ -44,7 +44,7 @@ require_once '$_SERVER['DOCUMENT_ROOT']/include/dateTest.php';
           require_once 'navbar.inc';
         ?>
 
-        <form action="search.php" method="post" id="placeInfoForm">
+        <form action="/attraction/" method="post" id="placeInfoForm">
             <input type="hidden" name="placeinfo" id="placeinfo" value="">
         </form>
         <div class = "progress-box">
