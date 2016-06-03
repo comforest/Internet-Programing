@@ -1,9 +1,8 @@
 <?php
-// require_once 'header.php';
-// if (!isset($_POST['date']) || !isset($_POST['place']))
-//     echo("<script>location.replace('datepage.php');</script>");
-// $_SESSION['date'] = $_POST['date'];
-// $_SESSION['place'] = $_POST['place'];
+require_once '$_SERVER['DOCUMENT_ROOT']/include/loginTest.php';
+require_once '$_SERVER['DOCUMENT_ROOT']/include/themeTest.php';
+require_once '$_SERVER['DOCUMENT_ROOT']/include/dateTest.php';
+require_once '$_SERVER['DOCUMENT_ROOT']/include/hotelTest.php';
 ?>
 <!DOCTYPE html>
 <html>
