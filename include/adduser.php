@@ -13,6 +13,6 @@ if (isset($_POST["userinfo"]))
     }
     $_SESSION['userID'] = $userID;
     $_SESSION['userName'] = $userName;
-    echo "<script>location.replace('theme.php');</script>";
+    echo "<script>location.replace('/set/theme');</script>";
 }
 ?>

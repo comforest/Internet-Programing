@@ -1,8 +1,8 @@
 <?php
-require_once '$_SERVER['DOCUMENT_ROOT']/include/loginTest.php';
-require_once '$_SERVER['DOCUMENT_ROOT']/include/themeTest.php';
-require_once '$_SERVER['DOCUMENT_ROOT']/include/dateTest.php';
-require_once '$_SERVER['DOCUMENT_ROOT']/include/hotelTest.php';
+    require_once($_SERVER['DOCUMENT_ROOT'].'/include/loginTest.php');
+    require_once($_SERVER['DOCUMENT_ROOT'].'/include/themeTest.php');
+    require_once($_SERVER['DOCUMENT_ROOT'].'/include/dateTest.php');
+    require_once($_SERVER['DOCUMENT_ROOT'].'/include/hotelTest.php');
 ?>
 <!DOCTYPE html>
 <html>
@@ -23,7 +23,7 @@ require_once '$_SERVER['DOCUMENT_ROOT']/include/hotelTest.php';
     	html, body {
     		height: 100%;
     	}
-    	#mapbox, #map {
+    	#mapbox {
     		z-index: -10;
     		position: absolute;
     		top: 0px;
@@ -31,6 +31,10 @@ require_once '$_SERVER['DOCUMENT_ROOT']/include/hotelTest.php';
     		left: 0px;
     		right: 0px;
     	}
+        #map {
+            width: 100%;
+            height: 100%;
+        }
     </style>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 </head>
@@ -46,7 +50,7 @@ require_once '$_SERVER['DOCUMENT_ROOT']/include/hotelTest.php';
 	</div>
 	<script type="text/javascript">
             var map;
-            
+
             function initialize() {
                 var mapOptions = {
                     center: new google.maps.LatLng(37.54, 127.00),

@@ -22,7 +22,7 @@ require_once 'dbsetup.php';
     <body>
         <script type="text/javascript" src="loginFB.js"></script>
         
-        <form action="/adduser.php" method="post" id="userinfoForm">
+        <form action="/include/adduser.php" method="post" id="userinfoForm">
             <input type="hidden" name="userinfo" id="userinfo" value="">
             <input type="hidden" name="userinfo2" id="userinfo2" value="">
         </form>
