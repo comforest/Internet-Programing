@@ -1,11 +1,10 @@
 <?php
 require_once 'header.php';
 
-/*
-if (!isset($_POST['dateinfo']))
-    echo("<script>location.replace('theme.php');</script>");
-$_SESSION['date_from'] = $_POST['dateStartinfo'];
-*/
+require_once '$_SERVER['DOCUMENT_ROOT']/include/loginTest.php';
+require_once '$_SERVER['DOCUMENT_ROOT']/include/themeTest.php';
+require_once '$_SERVER['DOCUMENT_ROOT']/include/dateTest.php';
+
 ?>
 <html>
     <head>

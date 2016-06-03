@@ -4,11 +4,9 @@
 필요한 css : datepage.css
  -->
 <?php // datepage.php
-/*require_once 'header.php';
-if (!isset($_POST['themeinfo']))
-    echo("<script>location.replace('theme.php');</script>");
-$_SESSION['theme'] = $_POST['themeinfo'];
-*/?>
+require_once '$_SERVER['DOCUMENT_ROOT']/include/loginTest.php';
+require_once '$_SERVER['DOCUMENT_ROOT']/include/themeTest.php';
+?>
 <html>
     <head>
         <meta charset = "utf-8">
