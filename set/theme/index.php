@@ -1,5 +1,5 @@
 <?php // theme.php
-   // require_once 'header.php';
+   require_once '$_SERVER['DOCUMENT_ROOT']/include/loginTest.php';
 ?>
 
 <!DOCTYPE html>
@@ -35,7 +35,7 @@
 </head>
 <body style="background-color: #f3f3f3;">
 	<?php
-		require_once 'navbar.inc';
+		require_once '/include/navbar.inc';
 	?>
     <form action="/set/date/" method="post" id="themeinfoForm">
             <input type="hidden" name="themeinfo" id="themeinfo" value="">
