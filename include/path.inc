@@ -10,34 +10,34 @@
 	</section>
 	<section class="dialog_body">
 		<article class="dialog_article path_article">
-			<img src="static/image/sampleImage.jpg">
+			<img src="/static/image/sampleImage.jpg">
 			<h1>Gyeongbokgung</h1>
 			<p class = "time">2h</p>
 		</article>
 		<article class="dialog_article path_info">
-			<img src="static/image/walk.png">
+			<img src="/static/image/walk.png">
 			<p>
 				Lorem ipsum dolor sit arnet, ee cctur consectetur ad...
 			</p>
 		</article>
 		<article class="dialog_article path_article">
-			<img src="static/image/sampleImage.jpg">
+			<img src="/static/image/sampleImage.jpg">
 			<h1>Gyeongbokgung</h1>
 			<p class = "time">2h</p>
 		</article>
 		<article class="dialog_article path_info">
-			<img src="static/image/walk.png">
+			<img src="/static/image/walk.png">
 			<p>
 				Lorem ipsum dolor sit arnet, ee cctur consectetur ad...
 			</p>
 		</article>
 		<article class="dialog_article path_article">
-			<img src="static/image/sampleImage.jpg">
+			<img src="/static/image/sampleImage.jpg">
 			<h1>Gyeongbokgung</h1>
 			<p class = "time">2h</p>
 		</article>
 		<article class="dialog_article path_info">
-			<img src="static/image/walk.png">
+			<img src="/static/image/walk.png">
 			<p>
 				Lorem ipsum dolor sit arnet, ee cctur consectetur ad...
 			</p>
