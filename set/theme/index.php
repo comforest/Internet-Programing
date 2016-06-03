@@ -1,5 +1,5 @@
-<?php // theme.php
-   require_once '$_SERVER['DOCUMENT_ROOT']/include/loginTest.php';
+<?php
+   require_once($_SERVER['DOCUMENT_ROOT'].'/include/loginTest.php');
 ?>
 
 <!DOCTYPE html>
@@ -35,17 +35,14 @@
 </head>
 <body style="background-color: #f3f3f3;">
 	<?php
-		require_once '/include/navbar.inc';
+		require_once($_SERVER['DOCUMENT_ROOT'].'/include/navbar.inc');
 	?>
     <form action="/set/date/" method="post" id="themeinfoForm">
             <input type="hidden" name="themeinfo" id="themeinfo" value="">
     </form>
-    
     <div class = "progress-box">
     	<img src = "/static/image/theme_pro.png">
     </div>
-
-
 	<div class="themebox">
 		<div class="themeinner" onclick="cilck_culture_theme()">
             <div class="innerimage"><img src="/static/image/culture_theme.png"/></div>
