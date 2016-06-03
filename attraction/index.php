@@ -17,7 +17,7 @@
 	<link rel="stylesheet" type="text/css" href="/static/css/tourlist.css">
 	<link rel="stylesheet" type="text/css" href="/static/css/datebar.css">
 	<link rel="stylesheet" type="text/css" href="/static/css/tab.css">
-	<meta name="viewport" content="initial-scale=1.0">
+	<meta name="viewport" content="initial-scale=1.0, user-scalable=yes">
 	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
     <meta charset="utf-8">
     <style>
@@ -27,7 +27,7 @@
     	#mapbox, #map {
     		z-index: -10;
     		position: absolute;
-    		top: 50px;
+    		top: 0px;
     		bottom: 0px;
     		left: 0px;
     		right: 0px;
