@@ -10,6 +10,6 @@ session_start();
 require_once($_SERVER['DOCUMENT_ROOT'].'/include/functions.php');
 //$_SESSION['userID'] = '1065100166913049';
 if (!isset($_SESSION['userID'])) {
-    echo("<script>location.replace('index.php');</script>");
+    echo("<script>location.replace('/index.php');</script>");
 }
 ?>
