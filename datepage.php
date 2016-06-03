@@ -37,6 +37,12 @@ $_SESSION['theme'] = $_POST['themeinfo'];
 		  }
 		  });
 		});
+        function cilck_okay_next() {
+            document.getElementById("dateinfoForm").submit();
+        }
+        function cilck_back_please() {
+            location.replace('theme.php');
+        }
 		</script>
         <style type = "text/css">
         a{text-decoration:none}
@@ -46,7 +52,6 @@ $_SESSION['theme'] = $_POST['themeinfo'];
     	<?php
           require_once 'navbar.inc';
         ?>
-		
 
         <div class = "progress-box">
     		<img src = "static/image/date_pro.png">
@@ -54,24 +59,24 @@ $_SESSION['theme'] = $_POST['themeinfo'];
 
 
 
-        <form action="search.php" method="post" id="datePlaceInfoForm">
-        <div class = "datepage_space1">&nbsp </div>
-		<div class = "datepage_word">from when?</div>
-		<div class="datepage_space2">&nbsp</div>
-		<div class = "datepage_word_desktop">till when?</div><br>
-        <div class = "datepage_space1">&nbsp </div>
-		<div class ="datepage_div">
-			<input class="datepage_input" type="text" id="from">
-        </div>
-		<div class="datepage_space2">&nbsp </div>
-		<div class = "datepage_word_mobile"><p style="font-size:1em;"></p>till when?<p style="font-size:1em;"></p></div>
-		<div class ="datepage_div">
-			<input class="datepage_input" type="text" id="to">
-        </div><br>
+        <form action="placepage.php" method="post" id="datePlaceInfoForm">
+            <div class = "datepage_space1">&nbsp; </div>
+            <div class = "datepage_word" id = "dateStartinfo">from when?</div>
+            <div class="datepage_space2">&nbsp;</div>
+            <div class = "datepage_word_desktop" id = "dateEndinfo">till when?</div><br>
+            <div class = "datepage_space1">&nbsp; </div>
+            <div class ="datepage_div">
+                <input class="datepage_input" type="text" id="from">
+            </div>
+            <div class="datepage_space2">&nbsp; </div>
+            <div class = "datepage_word_mobile"><p style="font-size:1em;"></p>till when?<p style="font-size:1em;"></p></div>
+            <div class ="datepage_div">
+                <input class="datepage_input" type="text" id="to">
+            </div><br>
         </form>
         
-        <a href="#"><div class = "datepage_roundclick" onclick="clickLetsDoThis()">ok, next</div></a>
-        <a href="#"><div class = "datepage_roundclick2" onclick="clickLetsDoThis()">back please</div></a>
+        <a href="#"><div class = "datepage_roundclick" onclick="cilck_okay_next()">ok, next</div></a>
+        <a href="#"><div class = "datepage_roundclick2" onclick="cilck_back_please()">back please</div></a>
     </body>
 </html>
 

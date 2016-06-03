@@ -2,9 +2,9 @@
 require_once 'header.php';
 
 /*
-if (!isset($_POST['themeinfo']))
+if (!isset($_POST['dateinfo']))
     echo("<script>location.replace('theme.php');</script>");
-$_SESSION['theme'] = $_POST['themeinfo'];
+$_SESSION['date_from'] = $_POST['dateStartinfo'];
 */
 ?>
 <html>
@@ -23,7 +23,8 @@ $_SESSION['theme'] = $_POST['themeinfo'];
                 if (document.getElementById('place').value == "") {
                     console.log("place 없음");
                 } else {
-                    document.getElementById('datePlaceInfoForm').submit();
+                    document.getElementById('placeinfo').value = document.getElementById('place').value;
+                    document.getElementById('placeInfoForm').submit();
                 }
             }
         </script>
@@ -46,7 +47,9 @@ $_SESSION['theme'] = $_POST['themeinfo'];
           require_once 'navbar.inc';
         ?>
 
-
+        <form action="search.php" method="post" id="placeInfoForm">
+            <input type="hidden" name="placeinfo" id="placeinfo" value="">
+        </form>
         <div class = "progress-box">
           <img src = "static/image/place_pro.png">
         </div>
