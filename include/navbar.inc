@@ -4,7 +4,7 @@ Youn Inseop
 필요한 css : navbar_style.css
 -->
 <head>
-	<link rel="stylesheet" type="text/css" href="static/css/navbar_style.css">
+	<link rel="stylesheet" type="text/css" href="/static/css/navbar_style.css">
 </head>
 <header>
 	<script type="text/javascript">
@@ -26,7 +26,7 @@ Youn Inseop
 	<ul class = "nav">
 		<li>
 			<div class="navicon">
-				<img src="static/image/logo.png"/>
+				<img src="/static/image/logo.png"/>
 			</div>
 		</li>
 		<li><a href="#">Set</a></li>
@@ -40,11 +40,11 @@ Youn Inseop
 							echo $_SESSION['userName'];
 						}
 						else {
-							echo 'NoName';
+							echo 'No Name';
 						}
 					?>
 				</span>
-				<img src="static/image/nature_theme.png"/>
+				<img src="/static/image/nature_theme.png"/>
 				
 			</div>
 		</li>
@@ -61,7 +61,7 @@ Youn Inseop
 		</div></a>
 		<div class="navblock">
 			<div class="content">
-				<img src="static/image/hamburger_nonactive.png" onclick="toggle_visibility('logout');" />
+				<img src="/static/image/hamburger_nonactive.png" onclick="toggle_visibility('logout');" />
 			</div>
 		</div>
 	</div>
