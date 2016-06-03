@@ -1,7 +1,3 @@
-<!-- 
-작성자 : 이호연
-페이지 설명 : Plan page
--->
 <!DOCTYPE html>
 <html>
 <head>

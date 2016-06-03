@@ -42,54 +42,32 @@
 	<div id="mapbox">
 		<div id="map"></div>
 	</div>
-	<script>
-			var map;
-			var infowindow;
+	<script type="text/javascript">
+            var map;
+            
+            function initialize() {
+                var mapOptions = {
+                    center: new google.maps.LatLng(37.54, 127.00),
+                    zoom: 12
+                };
+                map = new google.maps.Map(document.getElementById("map"), mapOptions); 
 
-			function initMap() {
-			  var pyrmont = {lat: 37.54, lng: 127.00};
+                loadmarkers();
+            }
 
-			  map = new google.maps.Map(document.getElementById('map'), {
-			    center: pyrmont,
-			    zoom: 12
-			  });
-
-			  infowindow = new google.maps.InfoWindow();
-
-			  var service = new google.maps.places.PlacesService(map);
-			  service.nearbySearch({
-			    location: pyrmont,
-			    radius: 8000,
-			    types: []
-			  }, callback);
-			}
-
-			function callback(results, status, pagination) {
-			  if (status === google.maps.places.PlacesServiceStatus.OK) {
-			    for (var i = 0; i < results.length; i++) {
-			      createMarker(results[i]);
-			    }
-
-			    if (pagination.hasNextPage) {
-			    	pagination.nextPage();
-			    }
-			  }
-			}
-
-			function createMarker(place) {
-			  var placeLoc = place.geometry.location;
-			  var marker = new google.maps.Marker({
-			    map: map,
-			    position: place.geometry.location
-			  });
-
-			  google.maps.event.addListener(marker, 'click', function() {
-			    infowindow.setContent(place.name);
-			    infowindow.open(map, this);
-			  });
-			}
-		</script>
-
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCG21Y5X-wARtfSC6WkgO1nxoVU0WwcjwE&signed_in=true&libraries=places&callback=initMap" async defer></script>
+            function loadmarkers() {
+                $.getJSON("shopping.json", function(json1) {
+                    $.each(json1, function(key, data) {
+                        var latLng = new google.maps.LatLng(data.LOCATION_Y, data.LOCATION_X);
+                        var marker = new google.maps.Marker({
+                            position: latLng,
+                            title: data.title,
+                            map:map
+                        });
+                    });
+                });
+            }
+        </script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCG21Y5X-wARtfSC6WkgO1nxoVU0WwcjwE&signed_in=true&libraries=places&callback=initialize" async defer></script>
 </body>
 </html>
