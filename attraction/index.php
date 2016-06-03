@@ -1,8 +1,4 @@
-<!-- 
-작성자 : 이호연
-페이지 설명 : Serach page
--->
-<?php // theme.php
+<?php
 // require_once 'header.php';
 // if (!isset($_POST['date']) || !isset($_POST['place']))
 //     echo("<script>location.replace('datepage.php');</script>");
@@ -38,10 +34,10 @@
 </head>
 <body>
 	<?php
-		require_once("navbar.inc");
-		require_once("datebar.inc");
-		require_once("tourlist.inc");
-		require_once("tab.inc");
+		require_once("/include/navbar.inc");
+		require_once("/include/datebar.inc");
+		require_once("/include/tourlist.inc");
+		require_once("/include/tab.inc");
 	?>
 	<div id="mapbox">
 		<div id="map"></div>
