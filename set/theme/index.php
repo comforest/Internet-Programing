@@ -1,5 +1,5 @@
 <?php // theme.php
-   require_once '$_SERVER['DOCUMENT_ROOT']/include/loginTest.php';
+   require_once($_SERVER['DOCUMENT_ROOT'].'/include/loginTest.php');
 ?>
 
 <!DOCTYPE html>
