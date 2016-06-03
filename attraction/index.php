@@ -43,34 +43,53 @@
 		<div id="map"></div>
 	</div>
 	<script>
-		function initMap() {
-			var chicago = {lat: 41.85, lng: -87.65};
-			var indianapolis = {lat: 39.79, lng: -86.14};
+			var map;
+			var infowindow;
 
-			var map = new google.maps.Map(document.getElementById('map'), {
-				center: chicago,
-				zoom: 7
-			});
+			function initMap() {
+			  var pyrmont = {lat: 37.54, lng: 127.00};
 
-			var directionsDisplay = new google.maps.DirectionsRenderer({
-				map: map
-			});
+			  map = new google.maps.Map(document.getElementById('map'), {
+			    center: pyrmont,
+			    zoom: 12
+			  });
 
-			var request = {
-				destination: indianapolis,
-				origin: chicago,
-				travelMode: google.maps.TravelMode.DRIVING
-			};
+			  infowindow = new google.maps.InfoWindow();
 
-			var directionsService = new google.maps.DirectionsService();
-			directionsService.route(request, function(response, status) {
-				if (status == google.maps.DirectionsStatus.OK) {
-					directionsDisplay.setDirections(response);
-				}
-			});
-		}
-	</script>
+			  var service = new google.maps.places.PlacesService(map);
+			  service.nearbySearch({
+			    location: pyrmont,
+			    radius: 8000,
+			    types: []
+			  }, callback);
+			}
 
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCG21Y5X-wARtfSC6WkgO1nxoVU0WwcjwE&callback=initMap" async defer></script>
+			function callback(results, status, pagination) {
+			  if (status === google.maps.places.PlacesServiceStatus.OK) {
+			    for (var i = 0; i < results.length; i++) {
+			      createMarker(results[i]);
+			    }
+
+			    if (pagination.hasNextPage) {
+			    	pagination.nextPage();
+			    }
+			  }
+			}
+
+			function createMarker(place) {
+			  var placeLoc = place.geometry.location;
+			  var marker = new google.maps.Marker({
+			    map: map,
+			    position: place.geometry.location
+			  });
+
+			  google.maps.event.addListener(marker, 'click', function() {
+			    infowindow.setContent(place.name);
+			    infowindow.open(map, this);
+			  });
+			}
+		</script>
+
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCG21Y5X-wARtfSC6WkgO1nxoVU0WwcjwE&signed_in=true&libraries=places&callback=initMap" async defer></script>
 </body>
 </html>
