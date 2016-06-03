@@ -4,12 +4,12 @@
 	<meta charset="utf-8">
 	<title></title>
 	<link href='https://fonts.googleapis.com/css?family=Hind' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" type="text/css" href="static/css/style.css">
-	<link rel="stylesheet" type="text/css" href="static/css/navbar_style.css">
-	<link rel="stylesheet" type="text/css" href="static/css/dialog.css">
-	<link rel="stylesheet" type="text/css" href="static/css/datebar.css">
-	<link rel="stylesheet" type="text/css" href="static/css/path.css">
-	<link rel="stylesheet" type="text/css" href="static/css/plan.css">    
+	<link rel="stylesheet" type="text/css" href="/static/css/style.css">
+	<link rel="stylesheet" type="text/css" href="/static/css/navbar_style.css">
+	<link rel="stylesheet" type="text/css" href="/static/css/dialog.css">
+	<link rel="stylesheet" type="text/css" href="/static/css/datebar.css">
+	<link rel="stylesheet" type="text/css" href="/static/css/path.css">
+	<link rel="stylesheet" type="text/css" href="/static/css/plan.css">    
 	<style type="text/css">
 		#map {
 			height: 100%;
@@ -19,12 +19,12 @@
 </head>
 <body>
 	<?php
-		require_once("navbar.inc");
+		require_once("/include/navbar.inc");
     ?>
     <div class="plancontainer">
 	<?php
-		require_once("datebar.inc");
-		require_once("path.inc");
+		require_once("/include/datebar.inc");
+		require_once("/include/path.inc");
 	?>
 		<div class="mapbox-lg">
 			<div id="map"></div>
