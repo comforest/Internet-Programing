@@ -1,8 +1,8 @@
 <?php // header.php
-/*session_start();
-require_once 'functions.php';
-require_once 'dbsetup.php';
-*/?>
+session_start();
+require_once($_SERVER['DOCUMENT_ROOT'].'/include/functions.php');
+require_once($_SERVER['DOCUMENT_ROOT'].'/include/dbsetup.php');
+?>
 
 <!DOCTYPE html>
 
