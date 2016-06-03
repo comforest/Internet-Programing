@@ -1,13 +1,10 @@
-<?php // header.php
-session_start();
-require_once($_SERVER['DOCUMENT_ROOT'].'/include/functions.php');
-require_once($_SERVER['DOCUMENT_ROOT'].'/include/dbsetup.php');
+<?php
+    session_start();
+    require_once($_SERVER['DOCUMENT_ROOT'].'/include/functions.php');
+    require_once($_SERVER['DOCUMENT_ROOT'].'/include/dbsetup.php');
 ?>
-
 <!DOCTYPE html>
-
 <html>
-
     <head>
         <title>Travers :: Login</title>
         <meta charset = "utf-8">
@@ -18,17 +15,14 @@ require_once($_SERVER['DOCUMENT_ROOT'].'/include/dbsetup.php');
         <link rel="stylesheet" type="text/css" href="https://ddo7jzca0m2vt.cloudfront.net/unify/css/plugins.css">
         <link rel="stylesheet" href="static/css/font-awesome.min.css">
     </head>
-
     <body>
         <script type="text/javascript" src="loginFB.js"></script>
-        
         <form action="/include/adduser.php" method="post" id="userinfoForm">
             <input type="hidden" name="userinfo" id="userinfo" value="">
             <input type="hidden" name="userinfo2" id="userinfo2" value="">
         </form>
         <section class = "jumbotron">
             <div class = "container text-center">
-
                 <nav class = "nav navbar-default">
                     <div class = "container-fluid">
                         <div class = "navbar-header">
@@ -47,7 +41,6 @@ require_once($_SERVER['DOCUMENT_ROOT'].'/include/dbsetup.php');
                         </div>
                     </div>
                 </nav>
-
                 <div class = "main-text">
                     <h1>Traversify your trip</h1>
                     <p>Only three steps for an epic travel experience</p>
@@ -57,7 +50,6 @@ require_once($_SERVER['DOCUMENT_ROOT'].'/include/dbsetup.php');
                 </div>
             </div>
         </section>
-
         <section class = "container text-center" id = "set">
             <div class = "row" id = "theme_row">
                 <div class = "col-sm-3 col-xs-6">
@@ -81,20 +73,17 @@ require_once($_SERVER['DOCUMENT_ROOT'].'/include/dbsetup.php');
                     </div>
                 </div>
             </div>
-
             <br/><br/>
             <h1>Set</h1>
             <p>We know that every people seek different things when they travel.</p>
             <p>So we let you set the theme for your adventure.</p>
         </section>
-
         <section class = "container" id = "add">
             <h1>Add</h1>
             <p>We give you a list of interesting places.<br/>Then you add those that you like.<br/>Yup, it's that simple.</p>
             <img src = "static/image/clipone.png" class = "img-responsive slideanim" alt = "Responsive image" id = "clip1">
             <img src = "static/image/cliptwo.png" class = "img-responsive slideanim" alt = "Responsive image" id = "clip2">
         </section>
-
         <section class = "container text-center" id = "plan">
             <h1>Plan</h1>
             <p>Then we plan your trip from the places you've added.<br/>So that you don't have to.</p>
@@ -116,7 +105,6 @@ require_once($_SERVER['DOCUMENT_ROOT'].'/include/dbsetup.php');
                 </div>
             </div>
         </section>
-
         <footer>
             <div class = "container text-center">
                 <a href="#top" title="To Top">
@@ -125,29 +113,21 @@ require_once($_SERVER['DOCUMENT_ROOT'].'/include/dbsetup.php');
                 <p> &copy; Travers, 2016</p>
             </div>
         </footer>
-
-
-
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
         <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
- <script>
-            
- $(document).ready(function(){
-  $(window).scroll(function() {
-    $(".slideanim").each(function(){
-      var pos = $(this).offset().top;
+        <script>
+            $(document).ready(function(){
+                $(window).scroll(function() {
+                    $(".slideanim").each(function(){
+                        var pos = $(this).offset().top;
 
-      var winTop = $(window).scrollTop();
-        if (pos < winTop + 600) {
-          $(this).addClass("slide");
-        }
-    });
-  });
-})
-
-
- </script>
-
+                        var winTop = $(window).scrollTop();
+                        if (pos < winTop + 600) {
+                            $(this).addClass("slide");
+                        }
+                    });
+                });
+            })
+        </script>
     </body>
-
 </html>
