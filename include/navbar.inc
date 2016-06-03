@@ -1,4 +1,4 @@
-<!--
+﻿<!--
 Navigation bar
 Youn Inseop
 필요한 css : navbar_style.css
@@ -29,9 +29,9 @@ Youn Inseop
 				<img src="/static/image/logo.png"/>
 			</div>
 		</li>
-		<li><a href="#">Set</a></li>
-		<li><a href="#">Add</a></li>
-		<li><a href="#">Plan</a></li>
+		<li><a href="$_SERVER['DOCUMENT_ROOT']/set/theme/index.php">Set</a></li>
+		<li><a href="$_SERVER['DOCUMENT_ROOT']/attraction/index.php">Add</a></li>
+		<li><a href="$_SERVER['DOCUMENT_ROOT']/plan/index.php">Plan</a></li>
 		<li>
 			<div class="userinfo">
 				<span onclick="toggle_visibility('logout');">
