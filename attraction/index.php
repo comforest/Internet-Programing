@@ -18,19 +18,20 @@
 	<link rel="stylesheet" type="text/css" href="/static/css/datebar.css">
 	<link rel="stylesheet" type="text/css" href="/static/css/tab.css">
 	<meta name="viewport" content="initial-scale=1.0">
-    		<meta charset="utf-8">
-		    <style>
-		    	html, body {
-		    		height: 100%;
-		    	}
-		    	#mapbox, #map {
-		    		height: 100%;
-		    		width: 100%;
-		    		z-index: -10;
-		    		position: absolute;
-		    	}
-		    </style>
-		    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <meta charset="utf-8">
+    <style>
+    	html, body {
+    		height: 100%;
+    	}
+    	#mapbox, #map {
+    		height: 100%;
+    		width: 100%;
+    		z-index: -10;
+    		position: absolute;
+    	}
+    </style>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 </head>
 <body>
 	<?php
