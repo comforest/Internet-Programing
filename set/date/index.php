@@ -4,13 +4,13 @@
 필요한 css : datepage.css
  -->
 <?php // datepage.php
-require_once '$_SERVER['DOCUMENT_ROOT']/include/loginTest.php';
-require_once '$_SERVER['DOCUMENT_ROOT']/include/themeTest.php';
+require_once($_SERVER['DOCUMENT_ROOT']/include/loginTest.php);
+require_once($_SERVER['DOCUMENT_ROOT']/include/themeTest.php);
 ?>
 <html>
     <head>
         <meta charset = "utf-8">
-        <title>Date Page</title>
+        <title>Set date | Travers</title>
         <link href='https://fonts.googleapis.com/css?family=Hind' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" type="text/css" href="/static/css/style.css">
         <link rel="stylesheet" type="text/css" href="/static/css/datepage.css">
@@ -48,11 +48,11 @@ require_once '$_SERVER['DOCUMENT_ROOT']/include/themeTest.php';
     </head>
     <body>
     	<?php
-          require_once 'navbar.inc';
+          require_once '/include/navbar.inc';
         ?>
 
         <div class = "progress-box">
-    		<img src = "static/image/date_pro.png">
+    		<img src = "/static/image/date_pro.png">
     	</div>
 
 

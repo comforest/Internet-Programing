@@ -1,13 +1,13 @@
 <?php
-require_once '$_SERVER['DOCUMENT_ROOT']/include/loginTest.php';
-require_once '$_SERVER['DOCUMENT_ROOT']/include/themeTest.php';
-require_once '$_SERVER['DOCUMENT_ROOT']/include/dateTest.php';
+require_once($_SERVER['DOCUMENT_ROOT']/include/loginTest.php);
+require_once($_SERVER['DOCUMENT_ROOT']/include/themeTest.php);
+require_once($_SERVER['DOCUMENT_ROOT']/include/dateTest.php);
 
 ?>
 <html>
     <head>
         <meta charset = "utf-8">
-        <title>Place Page</title>
+        <title>Set accommodation | Trave</title>
         <link href='https://fonts.googleapis.com/css?family=Hind' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" type="text/css" href="/static/css/style.css">
         <link rel="stylesheet" type="text/css" href="/static/css/placepage.css">
@@ -30,25 +30,25 @@ require_once '$_SERVER['DOCUMENT_ROOT']/include/dateTest.php';
         <!--<form action="search.php" method="post" id="datePlaceInfoForm" style="display: block">
         <p style= "text-align: center;">When is your trip?</p>
             <div class ="datepage_div">
-                <a href="#"><img class="image_div" src="static/image/calendar_grey.png"></a>
+                <a href="#"><img class="image_div" src="/static/image/calendar_grey.png"></a>
 				<input type="text" id="from">
             </div><br>
             <div>Where will you stay?</div>
             <div class = "datepage_div">
-                <a href="#"><img class="image_div" src="static/image/accomodation_grey.png"></a>
+                <a href="#"><img class="image_div" src="/static/image/accomodation_grey.png"></a>
                 <input type="text" id = "place" name="place" value = "">
             </div><br>
         </form>-->
 
         <?php
-          require_once 'navbar.inc';
+          require_once '/include/navbar.inc';
         ?>
 
         <form action="/attraction/" method="post" id="placeInfoForm">
             <input type="hidden" name="placeinfo" id="placeinfo" value="">
         </form>
         <div class = "progress-box">
-          <img src = "static/image/place_pro.png">
+          <img src = "/static/image/place_pro.png">
         </div>
 
 
@@ -58,7 +58,7 @@ require_once '$_SERVER['DOCUMENT_ROOT']/include/dateTest.php';
                 <div class="text">search accomodation</div>
                 <div class = "datepage_div">
                     <input type="text" id = "place" name="place" value = "">
-                    <a href="#"><img src="static/image/search_grey.png"></a>
+                    <a href="#"><img src="/static/image/search_grey.png"></a>
                 </div><br>
                 <div id="listing">
                     <table id="resultsTable">
@@ -116,7 +116,7 @@ var map, places, infoWindow;
 var markers = [];
 var autocomplete;
 var countryRestrict = {};
-var MARKER_PATH = 'https://maps.gstatic.com/intl/en_us/mapfiles/marker_green';
+var MARKER_PATH = 'https://maps.g/static.com/intl/en_us/mapfiles/marker_green';
 var hostnameRegexp = new RegExp('^https?://.+?/');
 
 var countries = {
