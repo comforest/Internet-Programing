@@ -6,6 +6,7 @@
 <html>
 <head>
 	<title>Set theme | Travers</title>
+	<meta charset = "utf-8">
 	<link href='https://fonts.googleapis.com/css?family=Hind' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="/static/css/style.css">
 	<link rel="stylesheet" type="text/css" href="/static/css/theme_style2.css">

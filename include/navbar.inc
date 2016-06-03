@@ -14,19 +14,19 @@
 		}
         function logout_this_app() {
             FB.logout();
-            location.replace('index.php');
+            location.replace('/');
         }
 	</script>
-	<script type="text/javascript" src="loginFB.js"></script>
+	<script type="text/javascript" src="/static/js/loginFB.js"></script>
 	<ul class = "nav">
 		<li>
 			<div class="navicon">
 				<img src="/static/image/logo.png"/>
 			</div>
 		</li>
-		<li><a href="$_SERVER['DOCUMENT_ROOT']/set/theme/index.php">Set</a></li>
-		<li><a href="$_SERVER['DOCUMENT_ROOT']/attraction/index.php">Add</a></li>
-		<li><a href="$_SERVER['DOCUMENT_ROOT']/plan/index.php">Plan</a></li>
+		<li><a href="/set/theme/index.php">Set</a></li>
+		<li><a href="/attraction/index.php">Add</a></li>
+		<li><a href="/plan/index.php">Plan</a></li>
 		<li>
 			<div class="userinfo">
 				<span onclick="toggle_visibility('logout');">
