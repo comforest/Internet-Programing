@@ -54,7 +54,7 @@
             function initialize() {
                 var mapOptions = {
                     center: new google.maps.LatLng(37.54, 127.00),
-                    scrollwheel: false,
+                    scrollwheel: true,
                     zoom: 12
                 };
                 map = new google.maps.Map(document.getElementById("map"), mapOptions); 
