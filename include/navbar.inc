@@ -1,4 +1,4 @@
-﻿
+﻿<header>
 	<script type="text/javascript">
 		function toggle_visibility(id){
 			var e = document.getElementById(id);
@@ -58,3 +58,4 @@
 		</div>
 	</div>
 	<div class="logout" id="logout" onclick="logout_this_app()">Log out</div>
+</header>
