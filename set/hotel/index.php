@@ -161,10 +161,18 @@ function onPlaceChanged() {
 
 // Search for hotels in the selected city, within the viewport of the map.
 function search() {
-  var search = {
-    bounds: map.getBounds(),
-    types: ['lodging']
-  };
+  if (window.innerWidth > 1000) {
+      var search = {
+        bounds: map.getBounds(),
+        types: ['lodging']
+      };
+  } else {
+      var place = autocomplete.getPlace();
+      var search = {
+        bounds: LatLngBounds(place.geometry.location/* | place.geometry.location.lat(), place.geometry.location.lng()*/),
+        types: ['lodging']
+      };
+  }
 
   places.nearbySearch(search, function(results, status) {
     if (status === google.maps.places.PlacesServiceStatus.OK) {
