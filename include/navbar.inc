@@ -1,18 +1,18 @@
-﻿<header>
+<header>
 	<script type="text/javascript">
-		function toggle_visibility(id){
-			var e = document.getElementById(id);
-			if(e.style.display == 'block'){
+		function toggle_visibility(id) {
+			var e = document.getElementById(id)
+			if (e.style.display == 'block') {
 				e.style.display = 'none';
-			}
-			else{
+			} else {
 				e.style.display = 'block';
 			}
 		}
-        function logout_this_app() {
-            FB.logout();
-            location.replace('/');
-        }
+
+		function logout_this_app() {
+			FB.logout();
+			location.replace('/');
+		}
 	</script>
 	<script type="text/javascript" src="/static/js/loginFB.js"></script>
 	<ul class = "nav">

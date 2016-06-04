@@ -1,4 +1,4 @@
-<?php
+﻿<?php
    /* require_once($_SERVER['DOCUMENT_ROOT'].'/include/loginTest.php');
     require_once($_SERVER['DOCUMENT_ROOT'].'/include/themeTest.php');
     require_once($_SERVER['DOCUMENT_ROOT'].'/include/dateTest.php');
@@ -8,6 +8,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0">
 	<title></title>
 	<link href='https://fonts.googleapis.com/css?family=Hind' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="/static/css/style.css">
@@ -16,7 +17,6 @@
 	<link rel="stylesheet" type="text/css" href="/static/css/tourlist.css">
 	<link rel="stylesheet" type="text/css" href="/static/css/datebar.css">
 	<link rel="stylesheet" type="text/css" href="/static/css/tab.css">
-	<meta name="viewport" content="initial-scale=1.0">
 	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
     <meta charset="utf-8">
     <style>
@@ -34,7 +34,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 </head>
 <body>
-	<?php
+    <?php
 		require_once($_SERVER['DOCUMENT_ROOT']."/include/navbar.inc");
 		require_once($_SERVER['DOCUMENT_ROOT']."/include/datebar.inc");
 		require_once($_SERVER['DOCUMENT_ROOT']."/include/tourlist.inc");
