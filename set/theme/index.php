@@ -37,8 +37,9 @@
 </head>
 <body style="background-color: #f3f3f3;">
 	<?php
+		echo 'start';
 		require_once($_SERVER['DOCUMENT_ROOT'].'/include/navbar.inc');
-		echo $_SERVER['DOCUMENT_ROOT'].'/include/navbar.inc';
+		echo 'end';
 	?>
     <form action="/set/date/" method="post" id="themeinfoForm">
             <input type="hidden" name="themeinfo" id="themeinfo" value="">
