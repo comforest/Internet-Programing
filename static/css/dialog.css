@@ -74,11 +74,11 @@ body{
 .dialog{
 	position: absolute;
 	display: inline;
-	height: calc(100%-200px);
+	height: calc(100% - 160px);
+	min-height: 0px;
 	margin: 0px;
-
 	width:auto;
-	top:200px;
+	top:160px;
 	left:0px;
 	right:0px;
 
@@ -90,23 +90,23 @@ body{
 	border-left: solid 30px #8174ba;
 }
 .dialog_head{
-	height:100px;
+	height:60px;
 }
 .dialog_head a{
 	margin: 0 2.5%;
 }
 .dialog_body{
-	top:100px;
-	bottom: 100px;
+	top:60px;
+	bottom: 60px;
 }
 .dialog_foot{
-	height: 100px;
+	height: 60px;
 }
 .dialog_foot *{
 	display: inline-block;
-	height: 100px;
+	height: 60px;
 	width:15%;
-	line-height: 100px;
+	line-height: 60px;
 	font-weight: 900;
 }
 .dialog_foot .click{
