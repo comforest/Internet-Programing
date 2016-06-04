@@ -36,7 +36,11 @@ require_once($_SERVER['DOCUMENT_ROOT'].'/include/themeTest.php');
 		  });
 		});
         function cilck_okay_next() {
-            document.getElementById("dateinfoForm").submit();
+            if (document.getElementById('dateStartinfo').value == "" || document.getElementById('dateEndinfo').value == "") {
+                    console.log("날짜를 입력해주세요 경고 띄우기");
+            } else {
+                document.getElementById("dateinfoForm").submit();
+            }
         }
         function cilck_back_please() {
             location.replace('/set/theme/');
@@ -64,17 +68,17 @@ require_once($_SERVER['DOCUMENT_ROOT'].'/include/themeTest.php');
             <div class = "datepage_word_desktop">till when?</div><br>
             <div class = "datepage_space1">&nbsp; </div>
             <div class ="datepage_div">
-                <input class="datepage_input" type="text" id = "dateStartinfo">
+                <input class="datepage_input" type="text" id = "dateStartinfo" value = "">
             </div>
             <div class="datepage_space2">&nbsp; </div>
             <div class = "datepage_word_mobile"><p style="font-size:1em;"></p>till when?<p style="font-size:1em;"></p></div>
             <div class ="datepage_div">
-                <input class="datepage_input" type="text" id = "dateEndinfo">
+                <input class="datepage_input" type="text" id = "dateEndinfo" value = "">
             </div><br>
         </form>
         
-        <a href="#"><div class = "datepage_roundclick" onclick="cilck_okay_next()">ok, next</div></a>
-        <a href="#"><div class = "datepage_roundclick2" onclick="cilck_back_please()">back please</div></a>
+        <div class = "datepage_roundclick" onclick="cilck_okay_next()">ok, next</div>
+        <div class = "datepage_roundclick2" onclick="cilck_back_please()">back please</div>
     </body>
 </html>
 
