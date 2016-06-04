@@ -59,17 +59,17 @@ require_once($_SERVER['DOCUMENT_ROOT'].'/include/themeTest.php');
 
         <form action="/set/hotel/" method="post" id="dateinfoForm">
             <div class = "datepage_space1">&nbsp; </div>
-            <div class = "datepage_word" id = "dateStartinfo">from when?</div>
+            <div class = "datepage_word">from when?</div>
             <div class="datepage_space2">&nbsp;</div>
-            <div class = "datepage_word_desktop" id = "dateEndinfo">till when?</div><br>
+            <div class = "datepage_word_desktop">till when?</div><br>
             <div class = "datepage_space1">&nbsp; </div>
             <div class ="datepage_div">
-                <input class="datepage_input" type="text" id="from">
+                <input class="datepage_input" type="text" id = "dateStartinfo">
             </div>
             <div class="datepage_space2">&nbsp; </div>
             <div class = "datepage_word_mobile"><p style="font-size:1em;"></p>till when?<p style="font-size:1em;"></p></div>
             <div class ="datepage_div">
-                <input class="datepage_input" type="text" id="to">
+                <input class="datepage_input" type="text" id = "dateEndinfo">
             </div><br>
         </form>
         
