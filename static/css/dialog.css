@@ -88,6 +88,7 @@ body{
 }	
 .dialog_article{
 	border-left: solid 30px #8174ba;
+	font-size: 1.7em;
 }
 .dialog_head{
 	height:100px;
@@ -108,6 +109,7 @@ body{
 	width:15%;
 	line-height: 100px;
 	font-weight: 900;
+	font-size: 1.6em;
 }
 .dialog_foot .click{
 	background: #87b4db;
