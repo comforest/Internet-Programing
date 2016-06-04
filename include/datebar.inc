@@ -27,18 +27,23 @@
 
 			var d = new Date(y,m,d);
 			var div = document.getElementsByClassName("Llayer_fixed")[0];
-		
+			
 			var dd = new Date();
 			dd.setDate(d.getDate() - 7);
-			div.innerHTML = ("<a href='#' class=\"mobile_left\" onclick=\"WriteVerticalCalendar("+dd.getFullYear()+","+dd.getMonth()+","+dd.getDate()+")\"><img class=\"datebar_div_up\" src=\"static/image/left_button.png\"></a>");
-			div.innerHTML += ("<a href='#' class=\"dateButton dateUp desktop\" onclick=\"WriteVerticalCalendar("+dd.getFullYear()+","+dd.getMonth()+","+dd.getDate()+")\"><img class=\"datebar_div_up\" src=\"static/image/up_button.png\"></a>");
+			div.innerHTML = ("<a href='#' class=\"mobile_left\" onclick=\"WriteVerticalCalendar("+dd.getFullYear()+","+dd.getMonth()+","+dd.getDate()+")\"><img class=\"datebar_div_up\" src=\"/static/image/left_button.png\"></a>");
+			div.innerHTML += ("<a href='#' class=\"dateButtonUp desktop\" onclick=\"WriteVerticalCalendar("+dd.getFullYear()+","+dd.getMonth()+","+dd.getDate()+")\"><img class=\"datebar_div_up\" src=\"/static/image/up_button.png\"></a>");
+			
+			var str = "<section class=\"dateBody\">";
 			for(var i=0;i<num;i++){
 				dd.setDate(d.getDate() + i);
-				div.innerHTML += ("<div href='#' class=\"oneline dateselect\">"+"<span class=\"desktop\">"+  (dd.getMonth()+1)+" / " +"</span> <span class=\"hDate\">"+dd.getDate() +"</span><p class=\"date\" >"+week[dd.getDay()]+"</p> </div>");
+				str += ("<div href='#' class=\"oneline dateSelect\">"+"<span class=\"desktop\">"+  (dd.getMonth()+1)+" / " +"</span> <span class=\"hDate\">"+dd.getDate() +"</span><p class=\"date\" >"+week[dd.getDay()]+"</p> </div>");
 			}
+			str += "</section>";
+			div.innerHTML += str;
+
 			dd.setDate(d.getDate() + 7);
-			div.innerHTML += ("<a href='#' class=\"dateButton dateDown desktop\" onclick=\"WriteVerticalCalendar("+dd.getFullYear()+","+dd.getMonth()+","+dd.getDate()+")\"><img class=\"datebar_div_down\" src=\"static/image/down_button.png\"></a>");
-			div.innerHTML += ("<a href='#' class=\"mobile_right\" onclick=\"WriteVerticalCalendar("+dd.getFullYear()+","+dd.getMonth()+","+dd.getDate()+")\"><img class=\"datebar_div_down\" src=\"static/image/right_button.png\"></a>");
+			div.innerHTML += ("<a href='#' class=\"dateButtonDown desktop\" onclick=\"WriteVerticalCalendar("+dd.getFullYear()+","+dd.getMonth()+","+dd.getDate()+")\"><img class=\"datebar_div_down\" src=\"/static/image/down_button.png\"></a>");
+			div.innerHTML += ("<a href='#' class=\"mobile_right\" onclick=\"WriteVerticalCalendar("+dd.getFullYear()+","+dd.getMonth()+","+dd.getDate()+")\"><img class=\"datebar_div_down\" src=\"/static/image/right_button.png\"></a>");
 		}
 	-->
 	</script>     
