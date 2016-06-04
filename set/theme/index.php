@@ -11,6 +11,7 @@
 	<link rel="stylesheet" type="text/css" href="/static/css/style.css">
 	<link rel="stylesheet" type="text/css" href="/static/css/theme_style2.css">
 	<link rel="stylesheet" type="text/css" href="/static/css/progress.css">
+	<link rel="stylesheet" type="text/css" href="/static/css/navbar_style.css">
     <script>
         function cilck_culture_theme() {
             document.getElementById("themeinfo").setAttribute('value', 'culture');
