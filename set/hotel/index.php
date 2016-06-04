@@ -174,7 +174,7 @@ function search() {
       // assign a letter of the alphabetic to each marker icon.
       for (var i = 0; i < results.length; i++) {
         var markerLetter = String.fromCharCode('A'.charCodeAt(0) + i);
-        var markerIcon = MARKER_PATH + markerLetter + '.png';
+        var markerIcon = MARKER_PATH/* + markerLetter + '.png'*/;
         // Use marker animation to drop the icons incrementally on the map.
         markers[i] = new google.maps.Marker({
           position: results[i].geometry.location,
@@ -229,7 +229,7 @@ function dropMarker(i) {
 function addResult(result, i) {
   var results = document.getElementById('results');
   var markerLetter = String.fromCharCode('A'.charCodeAt(0) + i);
-  var markerIcon = MARKER_PATH;
+  var markerIcon = MARKER_PATH/* + markerLetter + '.png'*/;
 
   var tr = document.createElement('tr');
   tr.style.backgroundColor = (i % 2 === 0 ? '#F0F0F0' : '#FFFFFF');
@@ -280,7 +280,7 @@ function buildIWContent(place) {
       '">' + place.name + '</a></b>';
   document.getElementById('iw-address').textContent = place.vicinity;
 
-  //document.getElementById('hotelinfo').setAttribute('value', place.name);
+  document.getElementById('hotelinfo').setAttribute('value', place.name); // 호텔이름 폼에 추가
     
   if (place.formatted_phone_number) {
     document.getElementById('iw-phone-row').style.display = '';
