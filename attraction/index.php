@@ -74,7 +74,7 @@
                 loadmarkers();
             }
 
-            $("#map").click(function(){
+            $("#mapbox").click(function(){
                 alert("clicked!");
             });
         </script>
