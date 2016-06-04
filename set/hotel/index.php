@@ -180,7 +180,7 @@ function search() {
     if (status === google.maps.places.PlacesServiceStatus.OK) {
       clearResults();
       clearMarkers();
-      var image = {
+      /*var image = {
         url: MARKER_PATH,
         // This marker is 20 pixels wide by 32 pixels high.
         size: new google.maps.Size(35, 35),
@@ -188,18 +188,17 @@ function search() {
         origin: new google.maps.Point(0, 0),
         // The anchor for this image is the base of the flagpole at (0, 32).
         anchor: new google.maps.Point(0, 32)
-      };
+      };*/
       // Create a marker for each hotel found, and
       // assign a letter of the alphabetic to each marker icon.
       for (var i = 0; i < results.length; i++) {
         var markerLetter = String.fromCharCode('A'.charCodeAt(0) + i);
-        //var markerIcon = MARKER_PATH/* + markerLetter + '.png'*/;
+        var markerIcon = MARKER_PATH/* + markerLetter + '.png'*/;
         // Use marker animation to drop the icons incrementally on the map.
         markers[i] = new google.maps.Marker({
           position: results[i].geometry.location,
           animation: google.maps.Animation.DROP,
-          icon: image,
-          map: map
+          icon: markerIcon
         });
         // If the user clicks a hotel marker, show the details of that hotel
         // in an info window.
