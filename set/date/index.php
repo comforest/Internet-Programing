@@ -20,12 +20,12 @@ require_once($_SERVER['DOCUMENT_ROOT'].'/include/themeTest.php');
 		<script src="http://code.jquery.com/ui/1.8.18/jquery-ui.min.js" type="text/javascript"></script>
 		<script>
 		$(function() {
-		  var dates = $( "#from, #to " ).datepicker({
+		  var dates = $( "#dateStartinfo, #dateEndinfo " ).datepicker({
 		  dateFormat: 'yy-mm-dd',
 		  showMonthAfterYear: true,
 		maxDate:'+360d',
 		  onSelect: function( selectedDate ) {
-			var option = this.id == "from" ? "minDate" : "maxDate",
+			var option = this.id == "dateStartinfo" ? "minDate" : "maxDate",
 			  instance = $( this ).data( "datepicker" ),
 			  date = $.datepicker.parseDate(
 				instance.settings.dateFormat ||
