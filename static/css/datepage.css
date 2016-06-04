@@ -8,7 +8,7 @@ body{
 		border: 1px #000000;
 		width: 250px;
 		margin: auto;
-		margin-top: 400px;
+		margin-top: 20%;
 		padding: .3em;
 		height: 30px;
 		border: none;
@@ -30,7 +30,7 @@ body{
 		height: auto;
 		border: none;
 		border-radius: 25px;
-		background-color: #white;
+		background-color: #f3f3f3;
 		color: #ffa200;
 		font-size: 25px;
 	}
@@ -43,6 +43,7 @@ body{
 	
 	.datepage_div input{
 		border:transparent;
+		text-align:center;
 	}
 	
 	.datepage_word{
@@ -71,7 +72,7 @@ body{
 	}
 	
 	.datepage_word_desktop{
-		width: 25%;
+		width: 22.5%;
 		float:left;
 		font-weight: bold;
 	}
@@ -146,10 +147,10 @@ body{
 @media screen and (max-width: 1000px){
 	
 	.datepage_roundclick{
-		margin-top:3px;
+		margin-top:30%;
 	}
 	.progress-box {
-		margin-bottom: 50px;
+		margin-bottom:10%;
 	}
 	.datepage_div{
 		border: none;

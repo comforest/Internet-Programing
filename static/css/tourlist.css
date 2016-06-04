@@ -71,6 +71,10 @@
 	height:100%;
 	float: right;
 	object-fit: cover;
+    
+#mapbox {
+    display:none;
+}
 }
 
 }

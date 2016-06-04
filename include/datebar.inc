@@ -1,0 +1,45 @@
+<!-- 
+작성자 : 김기현
+페이지 설명 : 달력 표시 바
+필요한 css : datebar.css
+ -->
+<aside class="Llayer_fixed">
+	<script type = "text/javascript">
+
+	<!--   
+		var p = new Date();
+		var td = p.getDate();
+		var tm = p.getMonth();
+		var ty = p.getFullYear();
+		WriteVerticalCalendar(ty,tm,td);
+		
+		function getLastDate(y, m){
+			var last = [31,28,31,30,31,30,31,31,30,31,30,31];        
+			if (y%4===0 && y%100!=0 || y%400===0) {
+				lastDate = last[1] = 29;
+			}
+			return last[m];
+		}
+
+		function WriteVerticalCalendar(y, m, d, num=7){   
+			
+			var week = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+
+			var d = new Date(y,m,d);
+			var div = document.getElementsByClassName("Llayer_fixed")[0];
+		
+			var dd = new Date();
+			dd.setDate(d.getDate() - 7);
+			div.innerHTML = ("<a href='#' class=\"mobile_left\" onclick=\"WriteVerticalCalendar("+dd.getFullYear()+","+dd.getMonth()+","+dd.getDate()+")\"><img class=\"datebar_div_up\" src=\"static/image/left_button.png\"></a>");
+			div.innerHTML += ("<a href='#' class=\"dateButton dateUp desktop\" onclick=\"WriteVerticalCalendar("+dd.getFullYear()+","+dd.getMonth()+","+dd.getDate()+")\"><img class=\"datebar_div_up\" src=\"static/image/up_button.png\"></a>");
+			for(var i=0;i<num;i++){
+				dd.setDate(d.getDate() + i);
+				div.innerHTML += ("<div href='#' class=\"oneline dateselect\">"+"<span class=\"desktop\">"+  (dd.getMonth()+1)+" / " +"</span> <span class=\"hDate\">"+dd.getDate() +"</span><p class=\"date\" >"+week[dd.getDay()]+"</p> </div>");
+			}
+			dd.setDate(d.getDate() + 7);
+			div.innerHTML += ("<a href='#' class=\"dateButton dateDown desktop\" onclick=\"WriteVerticalCalendar("+dd.getFullYear()+","+dd.getMonth()+","+dd.getDate()+")\"><img class=\"datebar_div_down\" src=\"static/image/down_button.png\"></a>");
+			div.innerHTML += ("<a href='#' class=\"mobile_right\" onclick=\"WriteVerticalCalendar("+dd.getFullYear()+","+dd.getMonth()+","+dd.getDate()+")\"><img class=\"datebar_div_down\" src=\"static/image/right_button.png\"></a>");
+		}
+	-->
+	</script>     
+</aside>	

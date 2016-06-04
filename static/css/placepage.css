@@ -1,14 +1,8 @@
-html {
-    padding-left: 3em;
-    padding-right: 3em;
-    
-}
+
 body{
 	background-color: #f3f3f3;
 	color: #3f3f3f;
 	font-size: 23px;
-    max-width: 1250px;
-    margin: auto;
 }
 
 .datePlaceInfoForm {
@@ -142,7 +136,7 @@ table {
     height: 100%;
   }
   .placeIcon {
-    width: 20px;
+    width: 34px;
     height: 34px;
     margin: 4px;
   }
@@ -232,10 +226,9 @@ table {
     }
     #map {
         display: none;
-        width: 49.6%;
-        height: 470px;
-        border: 18px solid white;
-        border-radius: 4px;
+        width: 500px;
+        height: 500px;
+        border: 0px;
     }
       #listing {   /*hotel result list*/
         width: 100%;
@@ -274,7 +267,7 @@ table {
         height: 100%;
       }
       .placeIcon {
-        width: 20px;
+        width: 34px;
         height: 34px;
         margin: 4px;
       }
@@ -361,8 +354,8 @@ table {
         border-radius: 4px;
     }
       #listing {   /*hotel result list*/
-        width: 43.2%;
-        height: 400px;
+        width: 85%;
+        height: 60%;
         overflow: auto;
         float: right;
         cursor: pointer;
@@ -397,7 +390,7 @@ table {
         height: 100%;
       }
       .placeIcon {
-        width: 20px;
+        width: 34px;
         height: 34px;
         margin: 4px;
       }
@@ -518,7 +511,7 @@ table {
         height: 100%;
       }
       .placeIcon {
-        width: 20px;
+        width: 34px;
         height: 34px;
         margin: 4px;
       }
