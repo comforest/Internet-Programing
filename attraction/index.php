@@ -24,7 +24,7 @@
     		height: 100%;
     	}
     	#mapbox {
-    		z-index: -10;
+    		z-index: 1;
     		height: calc(100% - 50px);
     	}
         #map {
@@ -33,7 +33,7 @@
     </style>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 </head>
-<body>
+<body style="z-index: -1000;">
 	<?php
 		require_once($_SERVER['DOCUMENT_ROOT']."/include/navbar.inc");
 		require_once($_SERVER['DOCUMENT_ROOT']."/include/datebar.inc");
