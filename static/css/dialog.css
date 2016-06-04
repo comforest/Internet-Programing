@@ -74,7 +74,7 @@ body{
 .dialog{
 	position: absolute;
 	display: inline;
-	height: calc(100%-100px);
+	height: calc(100%-200px);
 	margin: 0px;
 
 	width:auto;
