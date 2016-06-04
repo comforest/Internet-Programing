@@ -53,6 +53,7 @@
 .Llayer_fixed{
 	font-size: 16px;
 }
+@media screen and (min-width: 1001px){
 
 .Llayer_fixed .dateBody{
 	position: absolute;
@@ -94,7 +95,7 @@
 	bottom: 0;
 	margin-bottom: -33px;
 }
-
+}
 
 .Llayer_fixed .date{
 	margin:0px;
@@ -117,7 +118,8 @@
 	margin: 0px;
 	line-height: 120%;
 	width: 100%;
-	height: 100px;
+	height: 60px;
+	min-height: 0px;
 	background-color: #ffffff;
 	color: #888888;
 	border-radius: 0px;
@@ -129,40 +131,75 @@
 .Llayer_fixed .date{
 	display: none;
 }
-.Llayer_fixed .datebar_div_up, .Llayer_fixed .datebar_div_down{
-	width:auto;
-	height: 60px;
-	margin-top: 10px;
-} 
+.Llayer_fixed .dateBody{
+	position: absolute;
+	left : 50px;
+	right: 50px;
+	height:100%;
+}
 .Llayer_fixed .oneline{
-	display: inline;
-	float: left;
-	width: 70px;
-	height: 70px;
-	margin: 15px;
+	display: inline-block;
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	margin: 7px 0;
 	text-align: center;
-	font-size: 1.5em;
+	font-size: 1em;
+}
+.Llayer_fixed .dateBody .oneline:nth-child(1){
+	left: -20px;
+}
+.Llayer_fixed .dateBody .oneline:nth-child(2){
+	left: 16.6%;
+	margin-left:-20px;
+}
+.Llayer_fixed .dateBody .oneline:nth-child(3){
+	left: 33.2%;
+	margin-left:-20px;
+}
+.Llayer_fixed .dateBody .oneline:nth-child(4){
+	left: 50%;
+	margin-left:-20px;
+}
+.Llayer_fixed .dateBody .oneline:nth-child(5){
+	right: 33.2%;
+	margin-right: -20px;
+}
+.Llayer_fixed .dateBody .oneline:nth-child(6){
+	right: 16.6%;
+	margin-right: -20px;
+}
+.Llayer_fixed .dateBody .oneline:nth-child(7){
+	right: -20px;
 }
 .Llayer_fixed .hDate{
 	display: block;
 	height:100%;
-	line-height: 70px;
+	line-height: 48px;
 	vertical-align: middle;
 }
+
+
 .Llayer_fixed .mobile_left{
 	display: inline;
-	float: left;
+	position: absolute;
+	left: 10px;
 	margin-top: 10px;
-	height: 7%;
-	width: 7%;
+	height: 40px;
+	width: 40px;
 }
 .Llayer_fixed .mobile_right{
-	float: right;
 	display: inline;
+	position: absolute;
+	right:10px;
 	margin-top: 10px;
-	height: 7%;
-	width:7%;
+	height: 40px;
+	width:40px;
 }	
+.Llayer_fixed .datebar_div_up, .Llayer_fixed .datebar_div_down{
+	width:auto;
+	height: 40px;
+}
 .Llayer_fixed .desktop{
 	display: none;
 }
