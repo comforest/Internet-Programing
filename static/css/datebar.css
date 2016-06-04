@@ -111,9 +111,9 @@
 	float: left;
 	width: 70px;
 	height: 70px;
-	margin: 15px 2%;
+	margin: 15px;
 	text-align: center;
-	font-size: 2em;
+	font-size: 1.5em;
 }
 .Llayer_fixed .hDate{
 	display: block;
