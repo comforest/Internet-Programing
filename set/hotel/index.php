@@ -183,7 +183,10 @@ function search() {
       var image = {
         url: '/static/image/marker_hotel.png',
         // This marker is 20 pixels wide by 32 pixels high.
-        //size: new google.maps.Size(20, 32)
+        size: new google.maps.Size(500, 500),
+        origin: new google.maps.Point(0, 0),
+        anchor: new google.maps.Point(17, 34),
+        scaledSize: new google.maps.Size(25, 25)
       };
       // Create a marker for each hotel found, and
       // assign a letter of the alphabetic to each marker icon.
