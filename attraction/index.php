@@ -53,7 +53,13 @@
                         var marker = new google.maps.Marker({
                             position: latLng,
                             title: data.title,
-                            map:map
+                            map:map,
+                            icon: {
+                                url: '/static/image/round1.png',
+                                size: new google.maps.Size(20, 32);
+                                origin: new google.maps.Origin(0, 0);
+                                anchor: new google.maps.Point(0, 32)
+                            }
                         });
                     });
                 });
