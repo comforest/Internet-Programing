@@ -280,7 +280,7 @@ function buildIWContent(place) {
       '">' + place.name + '</a></b>';
   document.getElementById('iw-address').textContent = place.vicinity;
 
-  document.getElementById('hotelinfo').setAttribute('value', place.name);
+  //document.getElementById('hotelinfo').setAttribute('value', place.name);
     
   if (place.formatted_phone_number) {
     document.getElementById('iw-phone-row').style.display = '';
