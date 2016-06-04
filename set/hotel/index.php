@@ -17,11 +17,12 @@
         </style>
         <script>
             function clickLetsDoThis() {
-                if (document.getElementById('place').value == "") {
-                    console.log("place 없음");
+                if (document.getElementById('place').value == "" || document.getElementById('hotelinfo').value == "") {
+                    console.log("호텔을 선택하세요 에러메시지 띄우기");
                 } else {
                     document.getElementById('placeinfo').value = document.getElementById('place').value;
-                    document.getElementById('placeInfoForm').submit();
+                    console.log(document.getElementById('place').value + " " document.getElementById('hotelinfo').value);
+                    //document.getElementById('placeInfoForm').submit();
                 }
             }
         </script>
@@ -33,6 +34,7 @@
 
         <form action="/attraction/" method="post" id="placeInfoForm">
             <input type="hidden" name="placeinfo" id="placeinfo" value="">
+            <input type="hidden" name="hotelinfo" id="hotelinfo" value="">
         </form>
         <div class = "progress-box">
           <img src = "/static/image/place_pro.png">
@@ -103,7 +105,7 @@ var map, places, infoWindow;
 var markers = [];
 var autocomplete;
 var countryRestrict = {};
-var MARKER_PATH = 'https://maps.g/static.com/intl/en_us/mapfiles/marker_green';
+var MARKER_PATH = '/static/image/marker_hotel.png';
 var hostnameRegexp = new RegExp('^https?://.+?/');
 
 var countries = {
@@ -278,6 +280,8 @@ function buildIWContent(place) {
       '">' + place.name + '</a></b>';
   document.getElementById('iw-address').textContent = place.vicinity;
 
+  document.getElementById('hotelinfo').setAttribute('value', place.name);
+    
   if (place.formatted_phone_number) {
     document.getElementById('iw-phone-row').style.display = '';
     document.getElementById('iw-phone').textContent =

@@ -233,7 +233,7 @@ table {
         width: 100%;
         height: 60%;
         overflow: auto;
-        float: right;
+        float: none;
         cursor: pointer;
         overflow-x: hidden;
       }
@@ -353,8 +353,8 @@ table {
         border-radius: 4px;
     }
       #listing {   /*hotel result list*/
-        width: 43.2%;
-        height: 400px;
+        width: 85%;
+        height: 60%;
         overflow: auto;
         float: right;
         cursor: pointer;
