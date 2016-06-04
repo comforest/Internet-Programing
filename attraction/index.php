@@ -16,7 +16,7 @@
 	<link rel="stylesheet" type="text/css" href="/static/css/tourlist.css">
 	<link rel="stylesheet" type="text/css" href="/static/css/datebar.css">
 	<link rel="stylesheet" type="text/css" href="/static/css/tab.css">
-	<meta name="viewport" content="initial-scale=1.0, user-scalable=yes">
+	<meta name="viewport" content="initial-scale=1.0">
 	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
     <meta charset="utf-8">
     <style>
@@ -32,7 +32,6 @@
     		right: 0px;
     	}
         #map {
-            width: 100%;
             height: 100%;
         }
     </style>
