@@ -1,5 +1,5 @@
 <?php
-   require_once($_SERVER['DOCUMENT_ROOT'].'/include/loginTest.php');
+   //require_once($_SERVER['DOCUMENT_ROOT'].'/include/loginTest.php');
 ?>
 
 <!DOCTYPE html>
@@ -7,31 +7,36 @@
 <head>
 	<title>Set theme | Travers</title>
 	<meta charset = "utf-8">
+
+	<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+
+
 	<link href='https://fonts.googleapis.com/css?family=Hind' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="/static/css/style.css">
 	<link rel="stylesheet" type="text/css" href="/static/css/theme_style2.css">
 	<link rel="stylesheet" type="text/css" href="/static/css/progress.css">
 	<link rel="stylesheet" type="text/css" href="/static/css/navbar_style.css">
     <script>
+    	$(document).ready(function(){
+    		$(".themebox .themeinner").click(function(){
+    			$(".themebox .themeinner").css("background-color","#fff")
+            	$(this).css("background-color","#adf");
+    		})
+    	});
         function cilck_culture_theme() {
             document.getElementById("themeinfo").setAttribute('value', 'culture');
-            document.getElementById("themeinfoForm").submit();
         }
         function cilck_shopping_theme() {
             document.getElementById("themeinfo").setAttribute('value', 'shopping');
-            document.getElementById("themeinfoForm").submit();
         }
         function cilck_nature_theme() {
             document.getElementById("themeinfo").setAttribute('value', 'nature');
-            document.getElementById("themeinfoForm").submit();
         }
         function cilck_trend_theme() {
             document.getElementById("themeinfo").setAttribute('value', 'trend');
-            document.getElementById("themeinfoForm").submit();
         }
         function cilck_nothing_theme() {
             document.getElementById("themeinfo").setAttribute('value', 'nothing');
-            document.getElementById("themeinfoForm").submit();
         }
     </script>
 </head>
@@ -87,6 +92,6 @@
 		<div> okay, cool </div>
 		<!--div onclick="cilck_nothing_theme()"> nah, nevermind</div-->
 	</div>
-	<p onclick="cilck_nothing_theme()" id = "nevermind">nah, nevermind</p>
+	<p class="themefoot" onclick="cilck_nothing_theme()" id = "nevermind">nah, nevermind</p>
 </body>
 </html>
