@@ -24,7 +24,7 @@
     		height: 100%;
     	}
     	#mapbox {
-    		z-index: -10;
+    		z-index: 1;
     		height: calc(100% - 50px);
     	}
         #map {
@@ -33,7 +33,7 @@
     </style>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 </head>
-<body style="z-index: -1000;">
+<body>
 	<?php
 		require_once($_SERVER['DOCUMENT_ROOT']."/include/navbar.inc");
 		require_once($_SERVER['DOCUMENT_ROOT']."/include/datebar.inc");
@@ -50,9 +50,18 @@
                 $.getJSON("/static/js/shopping.json", function(json1) {
                     $.each(json1, function(key, data) {
                         var latLng = new google.maps.LatLng(data.LOCATION_Y, data.LOCATION_X);
+                        var image = {
+                            url: '/static/image/round1.png',
+                            size: new google.maps.Size(400, 400),
+                            origin: new google.maps.Point(0, 0),
+                            anchor: new google.maps.Point(0, 0),
+                            scaledSize: new google.maps.Size(60, 60)
+                        };
+
                         var marker = new google.maps.Marker({
                             position: latLng,
                             title: data.title,
+                            icon: image,
                             map:map
                         });
                     });

@@ -18,6 +18,7 @@
 	box-shadow: 2px 2px 24px #AAA;
 	text-align:center;
 	font-size:28px;
+	z-index: 10;
 }
 .Llayer_fixed p:active{
 	color: #323232;
