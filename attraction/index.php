@@ -56,8 +56,8 @@
                             map:map,
                             icon: {
                                 url: '/static/image/round1.png',
-                                size: new google.maps.Size(20, 32);
-                                origin: new google.maps.Origin(0, 0);
+                                size: new google.maps.Size(20, 32),
+                                origin: new google.maps.Origin(0, 0),
                                 anchor: new google.maps.Point(0, 32)
                             }
                         });
