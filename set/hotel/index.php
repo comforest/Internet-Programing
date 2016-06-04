@@ -21,8 +21,8 @@
                     console.log("호텔을 선택하세요 에러메시지 띄우기");
                 } else {
                     document.getElementById('placeinfo').value = document.getElementById('place').value;
-                    console.log(document.getElementById('place').value + " " document.getElementById('hotelinfo').value);
-                    //document.getElementById('placeInfoForm').submit();
+                    console.log(document.getElementById('place').value + " " + document.getElementById('hotelinfo').value);
+                    document.getElementById('placeInfoForm').submit();
                 }
             }
         </script>
