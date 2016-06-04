@@ -50,17 +50,6 @@
 	<script type="text/javascript">
             var map;
 
-            function initialize() {
-                var mapOptions = {
-                    center: new google.maps.LatLng(37.54, 127.00),
-                    scrollwheel: true,
-                    zoom: 12
-                };
-                map = new google.maps.Map(document.getElementById("map"), mapOptions); 
-
-                loadmarkers();
-            }
-
             function loadmarkers() {
                 $.getJSON("/static/js/shopping.json", function(json1) {
                     $.each(json1, function(key, data) {
@@ -73,6 +62,21 @@
                     });
                 });
             }
+
+            function initialize() {
+                var mapOptions = {
+                    center: new google.maps.LatLng(37.54, 127.00),
+                    scrollwheel: true,
+                    zoom: 12
+                };
+                map = new google.maps.Map(document.getElementById("map"), mapOptions); 
+
+                loadmarkers();
+            }
+
+            $("#map").click(function(){
+                alert("clicked!");
+            });
         </script>
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCG21Y5X-wARtfSC6WkgO1nxoVU0WwcjwE&signed_in=true&libraries=places&callback=initialize" async defer></script>
 </body>
