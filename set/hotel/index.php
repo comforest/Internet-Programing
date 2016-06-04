@@ -1,7 +1,7 @@
 <?php
-//require_once($_SERVER['DOCUMENT_ROOT'].'/include/loginTest.php');
-//require_once($_SERVER['DOCUMENT_ROOT'].'/include/themeTest.php');
-//require_once($_SERVER['DOCUMENT_ROOT'].'/include/dateTest.php');
+require_once($_SERVER['DOCUMENT_ROOT'].'/include/loginTest.php');
+require_once($_SERVER['DOCUMENT_ROOT'].'/include/themeTest.php');
+require_once($_SERVER['DOCUMENT_ROOT'].'/include/dateTest.php');
 
 ?>
 <html>
@@ -12,6 +12,7 @@
         <link rel="stylesheet" type="text/css" href="/static/css/style.css">
         <link rel="stylesheet" type="text/css" href="/static/css/placepage.css">
         <link rel="stylesheet" type="text/css" href="/static/css/progress.css">
+        <link rel="stylesheet" type="text/css" href="/static/css/navbar_style.css">
         <style type = "text/css">
         a{text-decoration:none}
         </style>
@@ -20,8 +21,7 @@
                 if (document.getElementById('place').value == "" || document.getElementById('hotelinfo').value == "") {
                     console.log("호텔을 선택하세요 에러메시지 띄우기");
                 } else {
-                    document.getElementById('placeinfo').value = document.getElementById('place').value;
-                    console.log(document.getElementById('place').value + " " + document.getElementById('hotelinfo').value);
+                    document.getElementById('placeinfo').setAttribute('value', document.getElementById('place').value);
                     document.getElementById('placeInfoForm').submit();
                 }
             }

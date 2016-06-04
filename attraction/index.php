@@ -16,7 +16,7 @@
 	<link rel="stylesheet" type="text/css" href="/static/css/tourlist.css">
 	<link rel="stylesheet" type="text/css" href="/static/css/datebar.css">
 	<link rel="stylesheet" type="text/css" href="/static/css/tab.css">
-	<meta name="viewport" content="initial-scale=1.0, user-scalable=yes">
+	<meta name="viewport" content="initial-scale=1.0">
 	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
     <meta charset="utf-8">
     <style>
@@ -25,20 +25,15 @@
     	}
     	#mapbox {
     		z-index: -10;
-    		position: absolute;
-    		top: 0px;
-    		bottom: 0px;
-    		left: 0px;
-    		right: 0px;
+    		height: calc(100% - 50px);
     	}
         #map {
-            width: 100%;
             height: 100%;
         }
     </style>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 </head>
-<body>
+<body style="z-index: -1000;">
 	<?php
 		require_once($_SERVER['DOCUMENT_ROOT']."/include/navbar.inc");
 		require_once($_SERVER['DOCUMENT_ROOT']."/include/datebar.inc");
@@ -51,16 +46,6 @@
 	<script type="text/javascript">
             var map;
 
-            function initialize() {
-                var mapOptions = {
-                    center: new google.maps.LatLng(37.54, 127.00),
-                    zoom: 12
-                };
-                map = new google.maps.Map(document.getElementById("map"), mapOptions); 
-
-                loadmarkers();
-            }
-
             function loadmarkers() {
                 $.getJSON("/static/js/shopping.json", function(json1) {
                     $.each(json1, function(key, data) {
@@ -72,6 +57,17 @@
                         });
                     });
                 });
+            }
+
+            function initialize() {
+                var mapOptions = {
+                    center: new google.maps.LatLng(37.54, 127.00),
+                    scrollwheel: true,
+                    zoom: 12
+                };
+                map = new google.maps.Map(document.getElementById("map"), mapOptions); 
+
+                loadmarkers();
             }
         </script>
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCG21Y5X-wARtfSC6WkgO1nxoVU0WwcjwE&signed_in=true&libraries=places&callback=initialize" async defer></script>

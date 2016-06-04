@@ -18,25 +18,27 @@ require_once($_SERVER['DOCUMENT_ROOT'].'/include/themeTest.php');
         <link rel="stylesheet" type="text/css" href="/static/css/datepage.css">
         <link rel="stylesheet" type="text/css" href="/static/css/progress.css">
 		<link rel="stylesheet" href="http://code.jquery.com/ui/1.8.18/themes/base/jquery-ui.css" type="text/css" media="all" />
+        <link rel="stylesheet" type="text/css" href="/static/css/navbar_style.css">
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
 		<script src="http://code.jquery.com/ui/1.8.18/jquery-ui.min.js" type="text/javascript"></script>
 		<script>
 		$(function() {
-		  var dates = $( "#dateStartinfo, #dateEndinfo " ).datepicker({
-		  dateFormat: 'yy-mm-dd',
-		  showMonthAfterYear: true,
-		maxDate:'+360d',
-		  onSelect: function( selectedDate ) {
-			var option = this.id == "dateStartinfo" ? "minDate" : "maxDate",
-			  instance = $( this ).data( "datepicker" ),
-			  date = $.datepicker.parseDate(
-				instance.settings.dateFormat ||
-				$.datepicker._defaults.dateFormat,
-				selectedDate, instance.settings );
-			dates.not( this ).datepicker( "option", option, date );
-		  }
-		  });
+            var dates = $( "#dateStartinfo, #dateEndinfo " ).datepicker({
+                dateFormat: 'yy-mm-dd',
+                showMonthAfterYear: true,
+                maxDate:'+360d',
+                onSelect: function( selectedDate ) {
+                    var option = this.id == "dateStartinfo" ? "minDate" : "maxDate",
+                    instance = $( this ).data( "datepicker" ),
+                    date = $.datepicker.parseDate(
+                    instance.settings.dateFormat ||
+                    $.datepicker._defaults.dateFormat,
+                    selectedDate, instance.settings );
+                    dates.not( this ).datepicker( "option", option, date );
+                }
+            });
 		});
+        
         function cilck_okay_next() {
             if (document.getElementById('dateStartinfo').value == "" || document.getElementById('dateEndinfo').value == "") {
                     console.log("날짜를 입력해주세요 경고 띄우기");
@@ -44,25 +46,25 @@ require_once($_SERVER['DOCUMENT_ROOT'].'/include/themeTest.php');
                 document.getElementById("dateinfoForm").submit();
             }
         }
+
         function cilck_back_please() {
             location.replace('/set/theme/');
         }
+
 		</script>
         <style type = "text/css">
-        a{text-decoration:none}
+            a {
+                text-decoration:none;
+            }
         </style>
     </head>
     <body>
     	<?php
-          require_once($_SERVER['DOCUMENT_ROOT'].'/include/navbar.inc');
+            require_once($_SERVER['DOCUMENT_ROOT'].'/include/navbar.inc');
         ?>
-
         <div class = "progress-box">
     		<img src = "/static/image/date_pro.png">
     	</div>
-
-
-
         <form action="/set/hotel/" method="post" id="dateinfoForm">
             <div class = "datepage_space1">&nbsp; </div>
             <div class = "datepage_word">from when?</div>
@@ -78,7 +80,6 @@ require_once($_SERVER['DOCUMENT_ROOT'].'/include/themeTest.php');
                 <input class="datepage_input" type="text" id = "dateEndinfo" value = "">
             </div><br>
         </form>
-        
         <div class = "datepage_roundclick" onclick="cilck_okay_next()">ok, next</div>
         <div class = "datepage_roundclick2" onclick="cilck_back_please()">back please</div>
     </body>
