@@ -133,8 +133,8 @@
 }
 .Llayer_fixed .dateBody{
 	position: absolute;
-	left : 80px;
-	right: 80px;
+	left : 50px;
+	right: 50px;
 	height:100%;
 }
 .Llayer_fixed .oneline{
@@ -144,10 +144,10 @@
 	height: 40px;
 	margin: 7px 0;
 	text-align: center;
-	font-size: 1.2em;
+	font-size: 1em;
 }
 .Llayer_fixed .dateBody .oneline:nth-child(1){
-	left: -20px;
+	left: 0px;
 }
 .Llayer_fixed .dateBody .oneline:nth-child(2){
 	left: 16.6%;
@@ -171,12 +171,11 @@
 }
 .Llayer_fixed .dateBody .oneline:nth-child(7){
 	right: 0;
-	margin-right: -20px;
 }
 .Llayer_fixed .hDate{
 	display: block;
 	height:100%;
-	line-height: 45px;
+	line-height: 48px;
 	vertical-align: middle;
 }
 
