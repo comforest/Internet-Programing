@@ -36,6 +36,7 @@
     </script>
 </head>
 <body style="background-color: #f3f3f3;">
+	aaa
 	<?php
 		require_once($_SERVER['DOCUMENT_ROOT'].'/include/navbar.inc');
 	?>
