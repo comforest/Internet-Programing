@@ -24,7 +24,7 @@
     		height: 100%;
     	}
     	#mapbox {
-    		z-index: 1;
+    		z-index: -10;
     		height: calc(100% - 50px);
     	}
         #map {
