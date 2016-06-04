@@ -1,7 +1,4 @@
-﻿<head>
-	<link rel="stylesheet" type="text/css" href="/static/css/navbar_style.css">
-</head>
-<header>
+﻿<header>
 	<script type="text/javascript">
 		function toggle_visibility(id){
 			var e = document.getElementById(id);
