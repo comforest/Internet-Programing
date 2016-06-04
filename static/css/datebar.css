@@ -118,7 +118,7 @@
 	margin: 0px;
 	line-height: 120%;
 	width: 100%;
-	height: 60px;
+	height: 100px;
 	min-height: 0px;
 	background-color: #ffffff;
 	color: #888888;
@@ -133,49 +133,49 @@
 }
 .Llayer_fixed .dateBody{
 	position: absolute;
-	left : 50px;
-	right: 50px;
+	left : 110px;
+	right: 110px;
 	height:100%;
 }
 .Llayer_fixed .oneline{
 	display: inline-block;
 	position: absolute;
-	width: 40px;
-	height: 40px;
-	margin: 7px 0;
+	width :	60px;
+ 	height: 60px;
+	margin: 15px 0;
 	text-align: center;
-	font-size: 1em;
+	font-size: 1.5em;
 }
 .Llayer_fixed .dateBody .oneline:nth-child(1){
-	left: -20px;
+	left: -30px;
 }
 .Llayer_fixed .dateBody .oneline:nth-child(2){
 	left: 16.6%;
-	margin-left:-20px;
+	margin-left:-30px;
 }
 .Llayer_fixed .dateBody .oneline:nth-child(3){
 	left: 33.2%;
-	margin-left:-20px;
+	margin-left:-30px;
 }
 .Llayer_fixed .dateBody .oneline:nth-child(4){
 	left: 50%;
-	margin-left:-20px;
+	margin-left:-30px;
 }
 .Llayer_fixed .dateBody .oneline:nth-child(5){
 	right: 33.2%;
-	margin-right: -20px;
+	margin-right: -30px;
 }
 .Llayer_fixed .dateBody .oneline:nth-child(6){
 	right: 16.6%;
-	margin-right: -20px;
+	margin-right: -30px;
 }
 .Llayer_fixed .dateBody .oneline:nth-child(7){
-	right: -20px;
+	right: -30px;
 }
 .Llayer_fixed .hDate{
 	display: block;
 	height:100%;
-	line-height: 48px;
+	line-height: 60px;
 	vertical-align: middle;
 }
 
@@ -184,21 +184,21 @@
 	display: inline;
 	position: absolute;
 	left: 10px;
-	margin-top: 10px;
-	height: 40px;
-	width: 40px;
+	margin-top: 20px;
+	height: 60px;
+	width: 60px;
 }
 .Llayer_fixed .mobile_right{
 	display: inline;
 	position: absolute;
 	right:10px;
-	margin-top: 10px;
-	height: 40px;
-	width:40px;
+	margin-top: 20px;
+	height: 60px;
+	width:60px;
 }	
 .Llayer_fixed .datebar_div_up, .Llayer_fixed .datebar_div_down{
 	width:auto;
-	height: 40px;
+	height: 60px;
 }
 .Llayer_fixed .desktop{
 	display: none;
