@@ -50,7 +50,13 @@
                 $.getJSON("/static/js/shopping.json", function(json1) {
                     $.each(json1, function(key, data) {
                         var latLng = new google.maps.LatLng(data.LOCATION_Y, data.LOCATION_X);
-                        var image = '/static/image/round1.png';
+                        var image = {
+                            url: '/static/image/round1.png',
+                            size: new google.maps.Size(500, 500),
+                            origin: new google.maps.Point(0, 0),
+                            anchor: new google.maps.Point(0, 0),
+                            scaledSize: new google.maps.Size(60, 60)
+                        };
 
                         var marker = new google.maps.Marker({
                             position: latLng,
