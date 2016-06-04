@@ -147,7 +147,7 @@
 	font-size: 1em;
 }
 .Llayer_fixed .dateBody .oneline:nth-child(1){
-	left: 0px;
+	left: -20px;
 }
 .Llayer_fixed .dateBody .oneline:nth-child(2){
 	left: 16.6%;
@@ -170,7 +170,7 @@
 	margin-right: -20px;
 }
 .Llayer_fixed .dateBody .oneline:nth-child(7){
-	right: 0;
+	right: -20px;
 }
 .Llayer_fixed .hDate{
 	display: block;
