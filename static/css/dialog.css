@@ -12,6 +12,7 @@ body{
 	border-radius: 5px;
 	margin:20px;
 	box-shadow: 2px 2px 24px #AAA;
+	z-index: 10;
 }
 
 
