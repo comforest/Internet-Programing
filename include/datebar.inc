@@ -36,7 +36,7 @@
 			var str = "<section class=\"dateBody\">";
 			for(var i=0;i<num;i++){
 				dd.setDate(d.getDate() + i);
-				str += ("<div href='#' class=\"oneline dateSelect\">"+"<span class=\"desktop\">"+  (dd.getMonth()+1)+" / " +"</span> <span class=\"hDate\">"+dd.getDate() +"</span><p class=\"date\" >"+week[dd.getDay()]+"</p> </div>");
+				str += ("<div href='#' class=\"oneline\">"+"<span class=\"desktop\">"+  (dd.getMonth()+1)+" / " +"</span> <span class=\"hDate\">"+dd.getDate() +"</span><p class=\"date\" >"+week[dd.getDay()]+"</p> </div>");
 			}
 			str += "</section>";
 			div.innerHTML += str;
