@@ -229,7 +229,7 @@ function dropMarker(i) {
 function addResult(result, i) {
   var results = document.getElementById('results');
   var markerLetter = String.fromCharCode('A'.charCodeAt(0) + i);
-  var markerIcon = MARKER_PATH + markerLetter + '.png';
+  var markerIcon = MARKER_PATH;
 
   var tr = document.createElement('tr');
   tr.style.backgroundColor = (i % 2 === 0 ? '#F0F0F0' : '#FFFFFF');
