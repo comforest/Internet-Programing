@@ -169,7 +169,7 @@ function search() {
   } else {
       var place = autocomplete.getPlace();
       var search = {
-        bounds: LatLngBounds(place.geometry.location/* | place.geometry.location.lat(), place.geometry.location.lng()*/),
+        bounds: LatLngBounds(place.geometry.location | place.geometry.location),
         types: ['lodging']
       };
   }
