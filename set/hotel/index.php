@@ -41,7 +41,7 @@ require_once($_SERVER['DOCUMENT_ROOT'].'/include/dateTest.php');
         </form>-->
 
         <?php
-          require_once '/include/navbar.inc';
+          require_once($_SERVER['DOCUMENT_ROOT'].'/include/navbar.inc');
         ?>
 
         <form action="/attraction/" method="post" id="placeInfoForm">

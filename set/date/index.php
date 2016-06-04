@@ -48,7 +48,7 @@ require_once($_SERVER['DOCUMENT_ROOT'].'/include/themeTest.php');
     </head>
     <body>
     	<?php
-          require_once '/include/navbar.inc';
+          require_once($_SERVER['DOCUMENT_ROOT'].'/include/navbar.inc');
         ?>
 
         <div class = "progress-box">
@@ -57,7 +57,7 @@ require_once($_SERVER['DOCUMENT_ROOT'].'/include/themeTest.php');
 
 
 
-        <form action="placepage.php" method="post" id="datePlaceInfoForm">
+        <form action="/set/hotel/" method="post" id="datePlaceInfoForm">
             <div class = "datepage_space1">&nbsp; </div>
             <div class = "datepage_word" id = "dateStartinfo">from when?</div>
             <div class="datepage_space2">&nbsp;</div>
