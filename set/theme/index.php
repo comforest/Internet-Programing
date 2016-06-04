@@ -1,5 +1,5 @@
 <?php
-   //require_once($_SERVER['DOCUMENT_ROOT'].'/include/loginTest.php');
+   require_once($_SERVER['DOCUMENT_ROOT'].'/include/loginTest.php');
 ?>
 
 <!DOCTYPE html>
@@ -36,7 +36,7 @@
             document.getElementById("themeinfo").setAttribute('value', 'trend');
         }
         function cilck_nothing_theme() {
-            document.getElementById("themeinfo").setAttribute('value', 'nothing');
+            document.getElementById("themeinfoForm").submit();
         }
     </script>
 </head>
