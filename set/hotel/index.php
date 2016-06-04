@@ -1,7 +1,7 @@
 <?php
-require_once($_SERVER['DOCUMENT_ROOT'].'/include/loginTest.php');
-require_once($_SERVER['DOCUMENT_ROOT'].'/include/themeTest.php');
-require_once($_SERVER['DOCUMENT_ROOT'].'/include/dateTest.php');
+//require_once($_SERVER['DOCUMENT_ROOT'].'/include/loginTest.php');
+//require_once($_SERVER['DOCUMENT_ROOT'].'/include/themeTest.php');
+//require_once($_SERVER['DOCUMENT_ROOT'].'/include/dateTest.php');
 
 ?>
 <html>
@@ -27,19 +27,6 @@ require_once($_SERVER['DOCUMENT_ROOT'].'/include/dateTest.php');
         </script>
     </head>
     <body>
-        <!--<form action="search.php" method="post" id="datePlaceInfoForm" style="display: block">
-        <p style= "text-align: center;">When is your trip?</p>
-            <div class ="datepage_div">
-                <a href="#"><img class="image_div" src="/static/image/calendar_grey.png"></a>
-				<input type="text" id="from">
-            </div><br>
-            <div>Where will you stay?</div>
-            <div class = "datepage_div">
-                <a href="#"><img class="image_div" src="/static/image/accomodation_grey.png"></a>
-                <input type="text" id = "place" name="place" value = "">
-            </div><br>
-        </form>-->
-
         <?php
           require_once($_SERVER['DOCUMENT_ROOT'].'/include/navbar.inc');
         ?>
