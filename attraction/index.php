@@ -81,16 +81,12 @@
                     zoom: 12
                 };
                 map = new google.maps.Map(document.getElementById("map"), mapOptions);
-                $.getJSON("/static/js/shopping.json", function(json1) {
+                $.getJSON("/static/js/formatted json/shopping.json", function(json1) {
                     $.each(json1, function(key, data) {
-                        var latLng = new google.maps.LatLng(data.LOCATION_Y, data.LOCATION_X);
+                        //var latLng = new google.maps.LatLng(data.geometry.lat, data.geometry.lng);
                         
-                        var service = new google.maps.places.PlacesService(map);
-                        service.nearbySearch({
-                            location: latLng,
-                            radius: 100,
-                            types: []
-                        }, callback)
+                        createMarker(data);
+                        
                         
                         /*
                         var image = {
