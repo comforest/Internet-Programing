@@ -82,14 +82,14 @@
                 };
                 map = new google.maps.Map(document.getElementById("map"), mapOptions);
                 $.getJSON("/static/js/formatted json/shopping.json", function(json1) {
-                    for (int i=0; i<40; ++i) {
-                        createMarker(json1[i]);
-                    }
-                    /*
-                    $.each(json1, function(key, data) {                      
+                    
+                    $.each(json1, function(key, data) {
+                        if (key == 40) {
+                            return false;
+                        }
                         createMarker(data);
                     });
-                    */
+                    
                 });
             }
         </script>
