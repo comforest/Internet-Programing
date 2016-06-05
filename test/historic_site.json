@@ -1,4 +1,4 @@
-﻿{"DESCRIPTION":{"MAIN_KEY":"키","CATE1_NAME":"분류1","CATE2_NAME":"분류2","CATE3_NAME":"분류3","NAME_KOR":"명칭","ADD_KOR":"주소","ADD_KOR_ROAD":"도로명주소","H_KOR_CITY":"행정 시","H_KOR_GU":"행정 구","H_KOR_DONG":"행정 동"}
+{"DESCRIPTION":{"MAIN_KEY":"키","CATE1_NAME":"분류1","CATE2_NAME":"분류2","CATE3_NAME":"분류3","NAME_KOR":"명칭","ADD_KOR":"주소","ADD_KOR_ROAD":"도로명주소","H_KOR_CITY":"행정 시","H_KOR_GU":"행정 구","H_KOR_DONG":"행정 동"}
 , "DATA":[
 {"MAIN_KEY":"BE_LiST40-0115","CATE1_NAME":"관광/숙박","CATE2_NAME":"관광","CATE3_NAME":"문화재/유적지/능-묘","NAME_KOR":"지광국사현묘탑","ADD_KOR":"","ADD_KOR_ROAD":"","H_KOR_CITY":"서울특별시","H_KOR_GU":"종로구","H_KOR_DONG":"청운효자동"}
 ,{"MAIN_KEY":"BE_LiST40-0116","CATE1_NAME":"관광/숙박","CATE2_NAME":"관광","CATE3_NAME":"문화재/유적지/능-묘","NAME_KOR":"창경궁홍화문","ADD_KOR":"","ADD_KOR_ROAD":"","H_KOR_CITY":"서울특별시","H_KOR_GU":"종로구","H_KOR_DONG":"종로1.2.3.4가동"}
@@ -156,5 +156,5 @@
 ,{"MAIN_KEY":"BE_LiST40-0111","CATE1_NAME":"관광/숙박","CATE2_NAME":"관광","CATE3_NAME":"문화재/유적지/능-묘","NAME_KOR":"종묘제정","ADD_KOR":"","ADD_KOR_ROAD":"","H_KOR_CITY":"서울특별시","H_KOR_GU":"종로구","H_KOR_DONG":"종로1.2.3.4가동"}
 ,{"MAIN_KEY":"BE_LiST40-0112","CATE1_NAME":"관광/숙박","CATE2_NAME":"관광","CATE3_NAME":"문화재/유적지/능-묘","NAME_KOR":"주합루","ADD_KOR":"","ADD_KOR_ROAD":"","H_KOR_CITY":"서울특별시","H_KOR_GU":"종로구","H_KOR_DONG":"종로1.2.3.4가동"}
 ,{"MAIN_KEY":"BE_LiST40-0113","CATE1_NAME":"관광/숙박","CATE2_NAME":"관광","CATE3_NAME":"문화재/유적지/능-묘","NAME_KOR":"중화문","ADD_KOR":"","ADD_KOR_ROAD":"","H_KOR_CITY":"서울특별시","H_KOR_GU":"중구","H_KOR_DONG":"소공동"}
-,{"MAIN_KEY":"BE_LiST40-0114","CATE1_NAME":"관광/숙박","CATE2_NAME":"관광","CATE3_NAME":"문화재/유적지/능-묘","NAME_KOR":"즉조당","ADD_KOR":"","ADD_KOR_ROAD":"","H_KOR_CITY":"서울특별시","H_KOR_GU":"중구","H_KOR_DONG":"소공동"},
+,{"MAIN_KEY":"BE_LiST40-0114","CATE1_NAME":"관광/숙박","CATE2_NAME":"관광","CATE3_NAME":"문화재/유적지/능-묘","NAME_KOR":"즉조당","ADD_KOR":"","ADD_KOR_ROAD":"","H_KOR_CITY":"서울특별시","H_KOR_GU":"중구","H_KOR_DONG":"소공동"}
 ]}

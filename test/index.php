@@ -43,50 +43,11 @@
 		<div id="map"></div>
 	</div>
 	<script type="text/javascript">
-            var map;
-            
-            var testimage = {
-                url: '/static/image/round1.png',
-                size: new google.maps.Size(400, 400),
-                origin: new google.maps.Point(0, 0),
-                anchor: new google.maps.Point(0, 0),
-                scaledSize: new google.maps.Size(60, 60)
-            };
-            
-            function createMarker(place) {
-                var placeLoc = place.geometry.location;
-                var marker = new google.maps.Marker({
-                    map: map,
-                    position: placeLoc,
-                    icon: testimage
-                });
-                
-                google.maps.event.addListener(marker, 'click', function() {
-                    console.log("이름: " + place.name + ", 위치: " + place.geometry.location);
-                })
-            }
-            
-            function callback(results, status) {
-                if (status == google.maps.places.PlacesServiceStatus.OK) {
-                    for (var i = 0; i < results.length; i++) {
-                        createMarker(results[i]);
-                    }
-                }
-            }
-            
             function initialize() {
-                var mapOptions = {
-                    center: new google.maps.LatLng(37.54, 127.00),
-                    scrollwheel: true,
-                    zoom: 12
-                };
-                map = new google.maps.Map(document.getElementById("map"), mapOptions);
-
-                $.getJSON("https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=-33.8670522,151.1957362&radius=500&types=food&name=cruise&key=AIzaSyCG21Y5X-wARtfSC6WkgO1nxoVU0WwcjwE
-", function(json1) {
+                $.getJSON("", function(json1) {
     
                     $.each(json1.results , function(key, data) {
-                        var latLng = new google.maps.LatLng(data.geometry.lat, data.Lgeometry.lng);
+                        var latLng = new google.maps.LatLng(data.geometry.lat, data.geometry.lng);
 
                         var service = new google.maps.places.PlacesService(map);
                         service.nearbySearch({
@@ -98,6 +59,8 @@
                     
                 });
             }
+            
+            initialize();
         </script>
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCG21Y5X-wARtfSC6WkgO1nxoVU0WwcjwE&signed_in=true&libraries=places&callback=initialize" async defer></script>
 </body>
