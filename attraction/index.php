@@ -8,7 +8,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Attractions | Travers</title>
+	<title></title>
 	<link href='https://fonts.googleapis.com/css?family=Hind' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="/static/css/style.css">
 	<link rel="stylesheet" type="text/css" href="/static/css/navbar_style.css">
@@ -81,18 +81,18 @@
                     zoom: 12
                 };
                 map = new google.maps.Map(document.getElementById("map"), mapOptions);
-
-                $.getJSON("https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=-33.8670522,151.1957362&radius=500&types=food&name=cruise&key=AIzaSyCG21Y5X-wARtfSC6WkgO1nxoVU0WwcjwE
-", function(json1) {
-    /*
+                $.getJSON("/static/js/shopping.json", function(json1) {
                     $.each(json1, function(key, data) {
+                        var latLng = new google.maps.LatLng(data.LOCATION_Y, data.LOCATION_X);
+                        
                         var service = new google.maps.places.PlacesService(map);
                         service.nearbySearch({
                             location: latLng,
-                            radius: 10,
+                            radius: 100,
                             types: []
-                            name: date.NAME
                         }, callback)
+                        
+                        /*
                         var image = {
                             url: '/static/image/round1.png',
                             size: new google.maps.Size(400, 400),
@@ -107,9 +107,8 @@
                             icon: image,
                             map:map
                         });
-                        
+                        */
                     });
-                    */
                 });
             }
         </script>
