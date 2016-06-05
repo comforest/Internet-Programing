@@ -84,32 +84,18 @@
 
                 $.getJSON("https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=-33.8670522,151.1957362&radius=500&types=food&name=cruise&key=AIzaSyCG21Y5X-wARtfSC6WkgO1nxoVU0WwcjwE
 ", function(json1) {
-    /*
-                    $.each(json1, function(key, data) {
+    
+                    $.each(json1.results , function(key, data) {
+                        var latLng = new google.maps.LatLng(data.geometry.lat, data.Lgeometry.lng);
+
                         var service = new google.maps.places.PlacesService(map);
                         service.nearbySearch({
                             location: latLng,
-                            radius: 10,
+                            radius: 100,
                             types: []
-                            name: date.NAME
                         }, callback)
-                        var image = {
-                            url: '/static/image/round1.png',
-                            size: new google.maps.Size(400, 400),
-                            origin: new google.maps.Point(0, 0),
-                            anchor: new google.maps.Point(0, 0),
-                            scaledSize: new google.maps.Size(60, 60)
-                        };
-                        
-                        var marker = new google.maps.Marker({
-                            position: latLng,
-                            title: data.title,
-                            icon: image,
-                            map:map
-                        });
-                        
                     });
-                    */
+                    
                 });
             }
         </script>
