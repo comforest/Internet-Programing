@@ -44,11 +44,56 @@
 	</div>
 	<script type="text/javascript">
             var map;
+            
+            var testimage = {
+                url: '/static/image/round1.png',
+                size: new google.maps.Size(400, 400),
+                origin: new google.maps.Point(0, 0),
+                anchor: new google.maps.Point(0, 0),
+                scaledSize: new google.maps.Size(60, 60)
+            };
+            
+            function createMarker(place) {
+                var placeLoc = place.geometry.location;
+                var marker = new google.maps.Marker({
+                    map: map,
+                    position: placeLoc,
+                    icon: testimage
+                });
+                
+                google.maps.event.addListener(marker, 'click', function() {
+                    console.log(place.name);
+                })
+            }
+            
+            function callback(results, status) {
+                if (status == google.maps.places.PlaceServicesStatus.OK) {
+                    for (var i = 0; i < results.length; i++) {
+                        createMarker(results[i]);
+                    }
+                }
+            }
+            
+            function initialize() {
+                var mapOptions = {
+                    center: new google.maps.LatLng(37.54, 127.00),
+                    scrollwheel: true,
+                    zoom: 12
+                };
+                map = new google.maps.Map(document.getElementById("map"), mapOptions);
 
-            function loadmarkers() {
                 $.getJSON("/static/js/shopping.json", function(json1) {
                     $.each(json1, function(key, data) {
                         var latLng = new google.maps.LatLng(data.LOCATION_Y, data.LOCATION_X);
+                        
+                        var service = new google.maps.places.PlacesService(map);
+                        service.nearbySearch({
+                            location: latLng,
+                            radius: 100,
+                            types: []
+                        }, callback)
+                        
+                        /*
                         var image = {
                             url: '/static/image/round1.png',
                             size: new google.maps.Size(400, 400),
@@ -63,19 +108,9 @@
                             icon: image,
                             map:map
                         });
+                        */
                     });
                 });
-            }
-
-            function initialize() {
-                var mapOptions = {
-                    center: new google.maps.LatLng(37.54, 127.00),
-                    scrollwheel: true,
-                    zoom: 12
-                };
-                map = new google.maps.Map(document.getElementById("map"), mapOptions);
-
-                loadmarkers();
             }
         </script>
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCG21Y5X-wARtfSC6WkgO1nxoVU0WwcjwE&signed_in=true&libraries=places&callback=initialize" async defer></script>
