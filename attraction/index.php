@@ -56,12 +56,25 @@
                             anchor: new google.maps.Point(0, 0),
                             scaledSize: new google.maps.Size(60, 60)
                         };
-
-                        var marker = new google.maps.Marker({
-                            position: latLng,
-                            title: data.title,
-                            icon: image,
-                            map:map
+                        
+                        var request = {
+                            location: new google.maps.LatLng(date.LOCATION_Y, data.LOCATION_X),
+                            radius: '1',
+                            types: []
+                        };
+                        
+                        var service = new google.maps.places.PlacesService(map);
+                        service.nearbySearch(request, function(results, status) {
+                            if (status == google.maps.places.PlaceServiceStatus.OK) {
+                                for (var i = 0; i < results.length; i++) {
+                                    var place = results[i];
+                                    var marker = new google.maps.Marker({
+                                        map: map,
+                                        position: place.geometry.location,
+                                        icon: image
+                                    });
+                                }
+                            }
                         });
                     });
                 });
@@ -73,7 +86,7 @@
                     scrollwheel: true,
                     zoom: 12
                 };
-                map = new google.maps.Map(document.getElementById("map"), mapOptions); 
+                map = new google.maps.Map(document.getElementById("map"), mapOptions);
 
                 loadmarkers();
             }
