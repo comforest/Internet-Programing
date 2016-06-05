@@ -1,6 +1,7 @@
 ﻿import json
 from urllib.request import urlopen                                                                                                                                                            
 from urllib.parse import quote                                                                                                                                                                
+from urllib.parse import urlparse                                                                                                                                                                
 
 CONFIG_FILE="historic_site.json"
 CONFIG={}
@@ -24,9 +25,10 @@ def main() :
         q = '+'.join(ss)
         
         url = 'https://maps.googleapis.com/maps/api/place/textsearch/json?query='+quote(q)+'&key=AIzaSyCG21Y5X-wARtfSC6WkgO1nxoVU0WwcjwE&location=37.563929,126.988169&radius=18000'
-        doc = urlopen(url).read(10)
+        up = urlparse(url)
+        doc = urlopen(up.geturl()).read(10)
         print(doc)
-        cnt--
+        cnt -= 1
         if (cnt == 0):
             break
         
