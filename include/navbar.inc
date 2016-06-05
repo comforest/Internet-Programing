@@ -22,7 +22,7 @@
 			</div>
 		</li>
 		<li><a href="/set/theme/index.php">Set</a></li>
-		<li><a href="/attraction/index.php">Add</a></li>
+		<li><a href="/attraction/index.php">Attraction</a></li>
 		<li><a href="/plan/index.php">Plan</a></li>
 		<li>
 			<div class="userinfo">
