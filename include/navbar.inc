@@ -24,7 +24,7 @@
 		<li><a href="/set/theme/index.php">Set</a></li>
 		<li><a href="/attraction/index.php">Attraction</a></li>
 		<li><a href="/plan/index.php">Plan</a></li>
-		<li>
+		<li><a href="#">
 			<div class="userinfo">
 				<span onclick="toggle_visibility('logout');">
 					<?php
@@ -38,7 +38,7 @@
 				</span>
 				<img src="/static/image/nature_theme.png"/>
 				
-			</div>
+			</div></a>
 		</li>
 	</ul>
 	<div class="mobnav">
