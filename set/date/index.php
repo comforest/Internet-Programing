@@ -3,11 +3,9 @@
 페이지 설명 : 날짜 및 숙박 검색
 필요한 css : datepage.css
  -->
-<?php // datepage.php
-/*
-require_once($_SERVER['DOCUMENT_ROOT'].'/include/loginTest.php');
-require_once($_SERVER['DOCUMENT_ROOT'].'/include/themeTest.php');
-*/
+<?php
+    require_once($_SERVER['DOCUMENT_ROOT'].'/include/loginTest.php');
+    require_once($_SERVER['DOCUMENT_ROOT'].'/include/themeTest.php');
 ?>
 <html>
     <head>
