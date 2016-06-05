@@ -90,6 +90,8 @@
 
                 loadmarkers();
             }
+            
+            google.maps.event.addDomListener(window, 'load', initialize);
         </script>
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCG21Y5X-wARtfSC6WkgO1nxoVU0WwcjwE&signed_in=true&libraries=places&callback=initialize" async defer></script>
 </body>
