@@ -67,7 +67,7 @@
             }
             
             function callback(results, status) {
-                if (status == google.maps.places.PlaceServicesStatus.OK) {
+                if (status == google.maps.places.PlacesServicesStatus.OK) {
                     for (var i = 0; i < results.length; i++) {
                         createMarker(results[i]);
                     }
