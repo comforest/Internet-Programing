@@ -3,6 +3,7 @@ body{
 }
 
 .dialog{
+	min-height: 729px;
 	position: absolute;
 	top: 50px;
 	bottom:0px;
@@ -12,6 +13,7 @@ body{
 	border-radius: 5px;
 	margin:20px;
 	box-shadow: 2px 2px 24px #AAA;
+	z-index: 10;
 }
 
 
@@ -72,7 +74,7 @@ body{
 .dialog{
 	position: absolute;
 	display: inline;
-	height: calc(100%-100px);
+	height: calc(100%-200px);
 	margin: 0px;
 
 	width:auto;
@@ -82,10 +84,11 @@ body{
 
 	border-radius: 0px;
 	box-shadow: none;
-	font-size:2.3em;
+	font-size:100%;
 }	
 .dialog_article{
 	border-left: solid 30px #8174ba;
+	font-size: 1.7em;
 }
 .dialog_head{
 	height:100px;
@@ -106,7 +109,20 @@ body{
 	width:15%;
 	line-height: 100px;
 	font-weight: 900;
+	font-size: 1.6em;
 }
 .dialog_foot .click{
 	background: #87b4db;
+}
+}
+
+@media screen and (max-width: 500px){
+.dialog{
+	font-size: 80%;
+}
+}
+@media screen and (max-width: 400px){
+.dialog{
+	font-size: 70%;
+}
 }
