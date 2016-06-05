@@ -82,29 +82,14 @@
                 };
                 map = new google.maps.Map(document.getElementById("map"), mapOptions);
                 $.getJSON("/static/js/formatted json/shopping.json", function(json1) {
-                    $.each(json1, function(key, data) {
-                        //var latLng = new google.maps.LatLng(data.geometry.lat, data.geometry.lng);
-                        
+                    for (int i=0; i<40; ++i) {
+                        createMarker(json1[i]);
+                    }
+                    /*
+                    $.each(json1, function(key, data) {                      
                         createMarker(data);
-                        
-                        
-                        /*
-                        var image = {
-                            url: '/static/image/round1.png',
-                            size: new google.maps.Size(400, 400),
-                            origin: new google.maps.Point(0, 0),
-                            anchor: new google.maps.Point(0, 0),
-                            scaledSize: new google.maps.Size(60, 60)
-                        };
-                        
-                        var marker = new google.maps.Marker({
-                            position: latLng,
-                            title: data.title,
-                            icon: image,
-                            map:map
-                        });
-                        */
                     });
+                    */
                 });
             }
         </script>
