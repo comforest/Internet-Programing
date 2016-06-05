@@ -89,8 +89,9 @@
                         var service = new google.maps.places.PlacesService(map);
                         service.nearbySearch({
                             location: latLng,
-                            radius: 100,
+                            radius: 10,
                             types: []
+                            name: date.NAME
                         }, callback)
                         
                         /*
