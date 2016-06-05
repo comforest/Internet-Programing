@@ -80,9 +80,6 @@
         </form>
         <div class = "datepage_roundclick" onclick="cilck_okay_next()">ok, next</div>
         <div class = "datepage_roundclick2" onclick="cilck_back_please()">back please</div>
-        <?php
-            echo $_SESSION['theme'];
-        ?>
     </body>
 </html>
 
