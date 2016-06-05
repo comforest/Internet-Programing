@@ -6,7 +6,7 @@ require_once($_SERVER['DOCUMENT_ROOT'].'/include/dateTest.php');
 <html>
     <head>
         <meta charset = "utf-8">
-        <title>Set accommodation | Trave</title>
+        <title>Set accommodation | Travers</title>
         <link href='https://fonts.googleapis.com/css?family=Hind' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" type="text/css" href="/static/css/style.css">
         <link rel="stylesheet" type="text/css" href="/static/css/placepage.css">
