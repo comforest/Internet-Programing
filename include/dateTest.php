@@ -1,6 +1,4 @@
 <?php
-    echo("<script>console.log(" . $_POST['dateStartinfo'].");</script>");
-    
     if (!(isset($_POST['dateStartinfo']) || isset($_SESSION['dateStart'])))
         echo("<script>location.replace('/set/theme');</script>");
     if (!(isset($_POST['dateEndinfo']) || isset($_SESSION['dateEnd'])))
