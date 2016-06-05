@@ -62,7 +62,7 @@
                 });
                 
                 google.maps.event.addListener(marker, 'click', function() {
-                    console.log(place.name);
+                    console.log("이름: " + place.name + ", 위치: " + place.geometry.location);
                 })
             }
             
