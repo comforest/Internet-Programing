@@ -59,7 +59,7 @@
                         
                         var request = {
                             location: new google.maps.LatLng(date.LOCATION_Y, data.LOCATION_X),
-                            radius: '1',
+                            radius: '100',
                             types: []
                         };
                         
