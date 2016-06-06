@@ -7,6 +7,7 @@
         echo("<script>location.replace('/set/theme');</script>");
 
     echo("시작");
+    echo($_SESSION['theme']);
     echo($_POST['dateStartinfo']);
     echo("시작");
     if (isset($_POST['dateStartinfo']) 
