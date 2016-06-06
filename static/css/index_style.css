@@ -33,6 +33,11 @@ p
 	color: black;
 }
 
+.about
+{
+	padding-top: 20px;
+}
+
 .jumbotron p
 {
 	color: white;
@@ -359,6 +364,12 @@ p
 {
 	margin-top: 25%;
 }
+
+.about
+{
+	padding-top: 10px;
+}
+
 
 #plan p
 {

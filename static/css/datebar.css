@@ -67,6 +67,9 @@
 	height:45px;
 	left:7px;
 	padding-top: 15px;
+	color:black;
+	text-decoration: none;
+	border:3px white solid;
 }
 .Llayer_fixed .dateBody .oneline:nth-child(1){
 	top: -33px;
@@ -103,7 +106,7 @@
 
 .Llayer_fixed .dateSelect{
 	background-color:#FFFFFF;
-	border: 3px #86B5BD solid;
+	border: 3px #86B5BD solid !important;
 	-webkit-border-radius:100%;
 	-moz-border-radius: 100%;
 	text-align:center;

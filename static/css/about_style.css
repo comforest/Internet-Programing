@@ -78,7 +78,8 @@ ul
 #apilist
 {
 	/*background-color: red;*/
-	margin-top: 9%;
+	/*margin-top: 9%;*/
+	margin-top: 70px;
 	color: white;
 	font-size: 20px;
 }
@@ -117,10 +118,9 @@ ul
 
 #teamlist
 {
-	margin-top: 12%;
+	/*margin-top: 12%;*/
+	margin-top: 130px;
 	font-size: 20px;
-
-
 }
 
 footer .container
@@ -174,6 +174,21 @@ footer p
 {
 	padding-top: 40px;
 	padding-bottom: 40px;
+}
+
+#teamlist
+{
+	margin-top: 11%;
+}
+
+#apilist
+{
+	margin-top: 8%;
+}
+
+.li_title
+{
+	font-size: 26px;
 }
 
 }
