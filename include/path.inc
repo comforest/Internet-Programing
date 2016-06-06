@@ -10,7 +10,7 @@
 	</section>
 	<section class="dialog_body">
 		<article class="dialog_article path_article">
-			<img src="/static/image/sampleImage.jpg">
+			<img src="/static/image/sampleImage.jpg" class="photo">
 			<h1>Gyeongbokgung</h1>
 			<p class = "time">2h</p>
             <img src="/static/image/bin_grey.png" class="trash">
@@ -22,7 +22,7 @@
 			</p>
 		</article>
 		<article class="dialog_article path_article">
-			<img src="/static/image/sampleImage.jpg">
+			<img src="/static/image/sampleImage.jpg" class="photo">
 			<h1>Gyeongbokgung</h1>
 			<p class = "time">2h</p>
             <img src="/static/image/bin_grey.png" class="trash">
@@ -34,7 +34,7 @@
 			</p>
 		</article>
 		<article class="dialog_article path_article">
-			<img src="/static/image/sampleImage.jpg">
+			<img src="/static/image/sampleImage.jpg" class="photo">
 			<h1>Gyeongbokgung</h1>
 			<p class = "time">2h</p>
             <img src="/static/image/bin_grey.png" class="trash">
