@@ -50,7 +50,7 @@
 
 @media screen and (max-width: 1000px){
 	.tourList .dialog_article{
-		height: 22%;
+		min-height: 22%;
 		border-left: solid 30px #8174ba;
 	}
 

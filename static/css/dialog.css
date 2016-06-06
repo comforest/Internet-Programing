@@ -88,7 +88,6 @@ body{
 .dialog_article{
 	border-left: solid 30px #8174ba;
 	font-size: 1.7em;
-	min-height: 90px;
 }
 .dialog_head{
 	height:100px;
