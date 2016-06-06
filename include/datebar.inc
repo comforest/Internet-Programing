@@ -26,14 +26,17 @@
  			var fy = dd.getFullYear() + y;
  			if(fd < 1){
  				--fm;
+	 			if(fm < 0){
+	 				fm += 12;
+	 				-- fy;
+	 			}
  				fd = getLastDate(fy, fm) + fd;
- 				console.log(fd + " " + fm);
  			}else if(fd > getLastDate(fy,fm)){
  				fd -= getLastDate(fy, fm);
  				++fm;
  			}
  			if(fm < 0){
- 				fm = 12 - fm;
+ 				fm += 12;
  				-- fy;
  			}else if(fm > 11){
  				fm = fm - 12;
