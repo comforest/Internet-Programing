@@ -1,7 +1,7 @@
 <?php
     require_once($_SERVER['DOCUMENT_ROOT'].'/include/functions.php');
 
-    if (!(isset($_POST['cityinfo']) || isset($_SESSION['city']))) {
+    if (!(isset($_POST['cityinfo']) || isset($_SESSION['hotelCity']))) {
         echo("<script>alert(\"No city\");</script>");
         echo("<script>location.replace('/set/theme');</script>");
     }
