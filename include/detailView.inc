@@ -6,11 +6,11 @@
 <!-- 관광지 목록 -->
 <section class="dialog detailView" style="display: none;">
 	<section class="dialog_head">
-		<a href="#"><img id="place_image" src="/static/image/left_button.png"></a>
+		<a href="#"><img src="/static/image/left_button.png"></a>
 	</section>
 	<section class="dialog_body">
 		<figure>
-			<img class="thumbnail" src="/static/image/sampleImage.jpg">
+			<img id="place_thumbnail" class="thumbnail" src="/static/image/sampleImage.jpg">
 			<img class="Button" style="right:0" src="/static/image/right_button.png">
 			<img class="Button" src="/static/image/left_button.png">
 		</figure>
