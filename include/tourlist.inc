@@ -13,7 +13,7 @@
 		<a href="#"><img src="/static/image/shopping_grey.png"></a>
 		<a class="search" href="#"><img src="/static/image/search_grey.png"></a>
 	</section>
-	<section class="dialog_body">
+	<section id="dialog_body" class="dialog_body">
 		<article class="dialog_article">
 			<img src="/static/image/sampleImage.jpg">
 			<h1>Gyeongbokgung</h1>
