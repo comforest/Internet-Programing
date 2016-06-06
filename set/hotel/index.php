@@ -248,7 +248,7 @@ function addResult(result, i) {
     
   results.onclick = function() {
       console.log("시작");
-      for (var i = 0; i < this.length; i++) {
+      for (var i = 0; i < this.childNodes.length; i++) {
       this.childNodes[i].style.backgroundColor = (i % 2 === 0 ? '#F0F0F0' : '#FFFFFF');
       console.log("중간");
     }
