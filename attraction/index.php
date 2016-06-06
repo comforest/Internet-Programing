@@ -148,7 +148,7 @@
                 });
                 $(document).on("click", "#image_add_place", function(){
                     var place_id = $(this).attr("data-place-id");
-                    var user_id = $_SESSION['userID'];
+                    var user_id = '@Request.RequestContext.HttpContext.Session["someKey"]';
                     $.ajax({
                         url:"/ajax/addPlace",
                         type:"get",
