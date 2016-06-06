@@ -99,6 +99,9 @@
         </script>
         <script type="text/javascript">
             function showDetail(place) {
+                if (place.photos) {
+                    $("#place_image").attr("src", place.photos[0].photo_reference)
+                }
                 $("#place_name").text(place.name);
                 $("#place_info").text("장소 세부 정보 여기에 적기");
                 $("#place_location").text(place.formatted_address);
