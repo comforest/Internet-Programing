@@ -10,6 +10,7 @@
         $_SESSION['hotelID'] = $_POST['hotelIDinfo'];
         
         //처음 저장하는 유저면 추가, 원래 있던 유저면 정보 업데이트 :
-        queryMysql($connect, "KEY UPDATE  planID= '" . $_SESSION['planID'] .  "', hotelID= '" . $_SESSION['hotelID'] . "'");
+        queryMysql($connect, "UPDATE plan set hotelID= '" . $_SESSION['hotelID'] . "' WHERE planID= '" . $_SESSION['planID'] .  "'");
+        echo("호텔 정보도 저장!");
     }
 ?>

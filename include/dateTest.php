@@ -18,7 +18,7 @@
         echo("디비에 저장을 시작해볼까?");
         echo($_SESSION['dateStart']);
         //처음 저장하는 유저면 추가, 원래 있던 유저면 정보 업데이트 :
-        $numOfuser = mysqli_query($connect, "SELECT COUNT(userID) FROM plan WHERE userID = '" . $userID . "'") or die("쿼리 실패");
+        $numOfuser = mysqli_query($connect, "SELECT COUNT(userID) FROM plan WHERE userID = '" . $_SESSION['userID'] . "'") or die("쿼리 실패");
         $numRow = mysqli_fetch_row($numOfuser);
         
         if ($numRow[0] == 0) {
@@ -30,7 +30,7 @@
             echo("플랜을 업데이트!");
             $planResult = queryMysql($connect, "SELECT planID FROM plan WHERE userID = '" . $userID . "'");
             $planRow = mysqli_fetch_row($planResult);
-            queryMysql($connect, "KEY UPDATE planID=" . $planRow[0] . ", travelStart= '" . $_SESSION['dateStart'] . "' , travelEnd= '" . $_SESSION['dateEnd'] . "'");
+            queryMysql($connect, "UPDATE plan set travelStart= '" . $_SESSION['dateStart'] . "' , travelEnd= '" . $_SESSION['dateEnd'] . "' WHERE userID= '" . $planRow[0] . "'");
         }
     }
 ?>
