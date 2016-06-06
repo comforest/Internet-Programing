@@ -74,6 +74,16 @@
 		float: right;
 		object-fit: cover;
 	}
+	#mapbox{
+		height: calc(100% - 200px)!important;
+	}
+}
+
+.hashtag{
+	background-color: #F3F3F3;
+	padding-right: 0.35em;
+	padding-left: 0.35em;
+	color: #539EFF;
 }
 
 /*
