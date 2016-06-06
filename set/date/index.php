@@ -60,7 +60,7 @@ require_once($_SERVER['DOCUMENT_ROOT'].'/include/themeTest.php');
     </head>
     <body>
     	<?php
-            //require_once($_SERVER['DOCUMENT_ROOT'].'/include/navbar.inc');
+            require_once($_SERVER['DOCUMENT_ROOT'].'/include/navbar.inc');
         ?>
         <div class = "progress-box">
     		<img src = "/static/image/date_pro.png">
