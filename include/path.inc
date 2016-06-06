@@ -47,8 +47,12 @@
                 <img src="/static/image/sampleImage.jpg" class="photo">
             </div>
             <div class="updownbox">
-                <img src="/static/image/up_button.png">
-                <img src="/static/image/down_button.png">
+                <div class="buttonwrap">
+                    <img src="/static/image/up_button.png">
+                </div>
+                <div class="buttonwrap">
+                    <img src="/static/image/down_button.png">
+                </div>
             </div>
 		</article>
 		<article class="dialog_article path_info">
@@ -56,7 +60,8 @@
 			<p>
 				Lorem ipsum dolor sit arnet, ee cctur consectetur ad...
 			</p>
-		</article>		<article class="dialog_article path_article">
+		</article>
+		<article class="dialog_article path_article">
             <div class="trashbox">
                 <img src="/static/image/bin_grey.png" class="trash">
             </div>
@@ -68,8 +73,12 @@
                 <img src="/static/image/sampleImage.jpg" class="photo">
             </div>
             <div class="updownbox">
-                <img src="/static/image/up_button.png">
-                <img src="/static/image/down_button.png">
+                <div class="buttonwrap">
+                    <img src="/static/image/up_button.png">
+                </div>
+                <div class="buttonwrap">
+                    <img src="/static/image/down_button.png">
+                </div>
             </div>
 		</article>
 		<article class="dialog_article path_info">
