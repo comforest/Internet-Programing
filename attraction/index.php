@@ -129,6 +129,7 @@
             
             $(".dialog_a").click(function() {
                 var index = $(this).data;
+                console.log(index);
                 showDetail(place_list[index]);
             });
         </script>
