@@ -7,7 +7,7 @@
 	<script type = "text/javascript">
 
 	<!--   
-        console.log($_SESSION['dateStart']);
+        console.log(<?php echo $_SESSION['dateStart']; ?>);
         var startDate = new Date('6/7/2016');
         var endDate = new Date('6/11/2016');
     
