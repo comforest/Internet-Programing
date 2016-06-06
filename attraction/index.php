@@ -97,7 +97,7 @@
 			            pre_html += "<img src=\"/static/image/sampleImage.jpg\">";
 			            pre_html += "<h1>" + data.name + "</h1>";
 			            pre_html += "<p>" + data.formatted_address + "</p>";
-                        pre_html += "<span style=\"clear: both;\"></span>";
+                        pre_html += "<div style=\"clear: both;\"></div>";
 		                pre_html += "</article>";
                         $("#dialog_body").html(pre_html);
                     });
