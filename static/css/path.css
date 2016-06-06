@@ -2,10 +2,6 @@
     margin: 6px;
 }
 
-.path_article div {
-    height:100%;
-}
-
 .trashbox {
     display:none;
 }
@@ -109,14 +105,11 @@
 
 @media screen and (max-width: 1000px){
 
-.path .dialog_head{
-	display: none;
-}
 .path .dialog_body{
-	top:0px;
+	top:100px;
 }
 .path_article{
-	height:13%;
+	height:17%;
 }
 .path_article h1{
 	margin-top: 3%;
@@ -128,8 +121,8 @@
 	max-width: 18%;
 }
 .path_article img{
-	max-width: 40%;
     height: 100%;
+    max-height:500px;
 }
 .path_info{
 	height: 8%;
@@ -146,6 +139,36 @@
 
 .mapbox-lg {
     display:none;
+}
+
+#edit {
+    font-size: 3em;
+    margin: 0.5em;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+p.time {
+    font-size: 1.5em;
+}
+
+.path_info {
+    font-size: 2em;
+}
+
+.editing .updownbox {
+    flex: 1;
+}
+.editing .photobox {
+    flex: 1;
+}
+.editing .namebox {
+    flex: 2;
+}
+.editing .trashbox {
+    flex: 1;
 }
 
 }
