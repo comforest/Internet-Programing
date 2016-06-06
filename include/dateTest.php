@@ -11,13 +11,17 @@
         $_SESSION['dateStart'] = $_POST['dateStartinfo'];
         $_SESSION['dateEnd'] = $_POST['dateEndinfo'];
         
+        echo("<script>console.log('디비에 저장을 시작해볼까?');</script>");
         //처음 저장하는 유저면 추가, 원래 있던 유저면 정보 업데이트 :
         $numOfuser = mysqli_query($connect, "SELECT COUNT(userID) FROM plan WHERE userID = '" . $userID . "'") or die("쿼리 실패");
         $numRow = mysqli_fetch_row($numOfuser);
         if ($numRow[0] == 0) {
+            echo("<script>console.log('플랜을 새로 추가!');</script>");
             queryMysql($connect, "INSERT INTO plan (userID, travelStart, travelEnd) VALUES (" . $_SESSION['userID'] . ", " . $_SESSION['dateStart'] . ", " . $_SESSION['dateEnd']);
             $_SESSION['planID'] = mysqli_insert_id($connect);
+            echo("<script>console.log($_SESSION['planID']);</script>");
         } else {
+            echo("<script>console.log('플랜을 업데이트!');</script>");
             $planResult = queryMysql($connect, "SELECT planID FROM plan WHERE userID = '" . $userID . "'");
             $planRow = mysqli_fetch_row($planResult);
             queryMysql($connect, "KEY UPDATE planID=" . $planRow['planID'] . ", travelStart=" . $_SESSION['dateStart'] . ", travelEnd=" . $_SESSION['dateEnd']);
