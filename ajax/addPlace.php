@@ -13,7 +13,7 @@
         $result = mysqli_query($connect, $que);
         $row = mysqli_fetch_row($result);
         if ($row[0] == 0) {
-            $que = "INSERT INTO route (planID, routeDate) VALUES (".$plan_id.",".$_GET['route_date'].")";
+            $que = "INSERT INTO route (planID, routeDate) VALUES ('".$plan_id."','".$_GET['route_date']."')";
             mysqli_query($connect, $que);
         }
         
@@ -28,7 +28,7 @@
         $result = mysqli_query($connect, $que);
         $row = mysqli_fetch_row($result);
         if ($row[0] == 0) {
-            $que = "INSERT INTO place (routeID, googleID, visitOrder) VALUES (".$route_id.",".$_GET['place_id'].",0)";
+            $que = "INSERT INTO place (routeID, googleID, visitOrder) VALUES ('".$route_id."','".$_GET['place_id']."','0')";
             mysqli_query($connect, $que);
         }
     }
