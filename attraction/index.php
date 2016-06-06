@@ -63,9 +63,7 @@
                 });
                 
                 google.maps.event.addListener(marker, 'click', function() {
-                    console.log("이름: " + place.name + ", 위치: {" + place.geometry.location.lat + "," + place.geometry.location.lng + "}, 고유번호: " + place.place_id);
-                    $(".tourList").css("display", "none");
-                    $(".detailView").css("display", "");
+                    console.log("이름: " + place.name + ", 위치: {" + place.geometry.location.lat + "," + place.geometry.location.lng + "}, 고유번호: " + place.place_id);                    
                     showDetail(place);
                 })
             }
@@ -99,9 +97,17 @@
         </script>
         <script type="text/javascript">
             function showDetail(place) {
+                $(".tourList").css("display", "none");
+                $(".detailView").css("display", "");
+                    
                 $("#place_name").text(place.name);
                 $("#place_info").text("장소 세부 정보 여기에 적기");
                 $("#place_location").text(place.formatted_address);
+            }
+            
+            function closeDetail() {
+                $(".tourList").css("display", "");
+                $(".detailView").css("display", "none");
             }
         </script>
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCG21Y5X-wARtfSC6WkgO1nxoVU0WwcjwE&signed_in=true&libraries=places&callback=initialize" async defer></script>

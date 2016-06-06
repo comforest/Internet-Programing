@@ -6,7 +6,7 @@
 <!-- 관광지 목록 -->
 <section class="dialog detailView" style="display: none;">
 	<section class="dialog_head">
-		<a href="#"><img src="/static/image/left_button.png"></a>
+		<a href="javascript:void(0);" onclick="closeDetail()"><img src="/static/image/left_button.png"></a>
 	</section>
 	<section class="dialog_body">
 		<figure>
