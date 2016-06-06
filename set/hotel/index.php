@@ -199,11 +199,6 @@ function search() {
         google.maps.event.addListener(markers[i], 'click', showInfoWindow);
         setTimeout(dropMarker(i), i * 100);
         addResult(results[i], i);
-        document.onclick = function() {
-            for (var i = 0; i < results.length; i++) {
-                results.childNodes[i].style.backgroundColor = (i % 2 === 0 ? '#F0F0F0' : '#FFFFFF');
-            }
-        }
       }
     }
   });
@@ -252,6 +247,9 @@ function addResult(result, i) {
   tr.style.backgroundColor = (i % 2 === 0 ? '#F0F0F0' : '#FFFFFF');
   tr.onclick = function() {
     google.maps.event.trigger(markers[i], 'click');
+    for (var i = 0; i < results.length; i++) {
+      results.childNodes[i].style.backgroundColor = (i % 2 === 0 ? '#F0F0F0' : '#FFFFFF');
+    }
     this.setAttribute("style", "background-color: #FF0000");    
   };
 
