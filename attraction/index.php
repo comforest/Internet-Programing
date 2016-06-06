@@ -99,7 +99,11 @@
                         
                         pre_html = $("#dialog_body").html();
                         pre_html += "<article class=\"dialog_article\" data-place-index=" + index_count + ">";
-			            pre_html += "<img src=\"/static/image/sampleImage.jpg\">";
+			            if (data.photos) {
+                            pre_html += "<img src=\"https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photoreference=" + data.photos[0].photo_reference + "&key=AIzaSyAYOKpuX6_Y9muKZCB4rBX7xiBCJKAJ2RQ\">";
+                        } else {
+                            pre_html += "<img src=\"/static/image/sampleImage.jpg\">";
+                        }
 			            pre_html += "<h1>" + data.name + "</h1>";
 			            pre_html += "<p>" + data.formatted_address + "</p>";
                         pre_html += "<div style=\"clear: both;\"></div>";
@@ -109,7 +113,6 @@
                         place_list.push(data);
                         index_count += 1;
                     });
-                    
                 });
             }
         </script>
