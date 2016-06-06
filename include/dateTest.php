@@ -13,6 +13,8 @@
         
         //처음 저장하는 유저면 추가, 원래 있던 유저면 정보 업데이트 :
         queryMysql($connect, "INSERT INTO plan (userID, travelStart, travelEnd) VALUES (" . $_SESSION['userID'] . ", " . $_SESSION['dateStart'] . ", " . $_SESSION['dateEnd'] . ") ON DUPLICATE KEY UPDATE travelStart=" . $_SESSION['dateStart'] . ", travelEnd=" . $_SESSION['dateEnd']);
+        if (!isset($_SESSION['planID']))
+            $_SESSION['planID'] = mysqli_insert_id($connect);
         
     }
 ?>
