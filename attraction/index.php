@@ -115,9 +115,9 @@
                 $(".tourList").css("display", "none");
                 $(".detailView").css("display", "");
                 gotolist();
-                var infotext = "";
                 $("#place_name").text(place.name);
-                $.each(place.types), function(data) {
+                var infotext = "";
+                $.each(place.types, function(data) {
                     infotext += "<span class=\"hashtag\">" + data + "</span>"
                 });
                 $("#place_location").html(infotext);
