@@ -1,10 +1,14 @@
 <?php
     require_once($_SERVER['DOCUMENT_ROOT'].'/include/functions.php');
 
-    if (!(isset($_POST['cityinfo']) || isset($_SESSION['city'])))
+    if (!(isset($_POST['cityinfo']) || isset($_SESSION['city']))) {
+        echo("<script>alert(\"No city\");</script>");
         echo("<script>location.replace('/set/theme');</script>");
-    if (!(isset($_POST['hotelinfo']) || isset($_SESSION['hotel'])))
+    }
+    if (!(isset($_POST['hotelinfo']) || isset($_SESSION['hotel']))) {
+        echo("<script>alert(\"No hotel\");</script>");
         echo("<script>location.replace('/set/theme');</script>");
+    }
 
     if (isset($_POST['cityinfo']) && isset($_POST['hotelinfo'])) {
         $_SESSION['hotelCity'] = $_POST['cityinfo'];

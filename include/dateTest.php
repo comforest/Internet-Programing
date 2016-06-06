@@ -1,10 +1,14 @@
 <?php
     require_once($_SERVER['DOCUMENT_ROOT'].'/include/functions.php');
 
-    if (!(isset($_POST['dateStartinfo']) || isset($_SESSION['dateStart'])))
+    if (!(isset($_POST['dateStartinfo']) || isset($_SESSION['dateStart']))) {
+        echo("<script>alert(\"No dateStart\");</script>");
         echo("<script>location.replace('/set/theme');</script>");
-    if (!(isset($_POST['dateEndinfo']) || isset($_SESSION['dateEnd'])))
+    }
+    if (!(isset($_POST['dateEndinfo']) || isset($_SESSION['dateEnd']))) {
+        echo("<script>alert(\"No dateEnd\");</script>");
         echo("<script>location.replace('/set/theme');</script>");
+    }
 
     echo $_POST['dateStartinfo'];
 
