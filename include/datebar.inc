@@ -69,7 +69,7 @@
 				str += ("<a href='#' class=\"oneline\" onclick=\"clickDate(this)\">"+"<span class=\"desktop\">"+  (dd.getMonth()+1)+" / " +"</span> <span class=\"hDate\">"+dd.getDate() +"</span><p class=\"date\" >"+week[dd.getDay()]+"</p> </a>");
                 }
             }
-				str += ("<a href='#' class=\"oneline\" data-date=\"" + dd.getFullYear() + "-" + dd.getFullMonth() + "-" + dd.getFullDate() + "\" onclick=\"clickDate(this)\">"+"<span class=\"desktop\">"+  (dd.getMonth()+1)+" / " +"</span> <span class=\"hDate\">"+dd.getDate() +"</span><p class=\"date\" >"+week[dd.getDay()]+"</p> </a>");
+				str += ("<a href='#' class=\"oneline\" data-date=\"" + dd.getFullYear() + "-" + ("0" + dd.getMonth()).slice(-2) + "-" + ("0" + dd.getDate()).slice(-2) + "\" onclick=\"clickDate(this)\">"+"<span class=\"desktop\">"+  (dd.getMonth()+1)+" / " +"</span> <span class=\"hDate\">"+dd.getDate() +"</span><p class=\"date\" >"+week[dd.getDay()]+"</p> </a>");
 			}
 			str += "</section>";
 			div.innerHTML += str;
