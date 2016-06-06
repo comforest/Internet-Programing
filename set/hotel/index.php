@@ -249,7 +249,7 @@ function addResult(result, i) {
   tr.style.backgroundColor = (i % 2 === 0 ? '#F0F0F0' : '#FFFFFF');
   $("tr").click(function(){
     $(this).animate({
-      backgroundColor: red
+      backgroundColor: "red"
     }, 1000, function() {
     // Animation complete.
     });
