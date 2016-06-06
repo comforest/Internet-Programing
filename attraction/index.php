@@ -64,10 +64,11 @@
                     console.log("이름: " + place.name + ", 위치: {" + place.geometry.location.lat + "," + place.geometry.location.lng + "}, 고유번호: " + place.place_id);
                     $.ajax({
                         type:"GET",
-                        url:"https://maps.googleapis.com/maps/api/place/details/json",
+                        url:"https://maps.googleapis.com/maps/api/place/photo",
                         dataType:"json",
                         data: {
-                            "placeid":place.place_id,
+                            "photoreference":place.reference,
+                            "maxwidth":400,
                             "key":"AIzaSyAYOKpuX6_Y9muKZCB4rBX7xiBCJKAJ2RQ"
                         },
                         contentType:"application/json",
