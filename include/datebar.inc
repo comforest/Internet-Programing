@@ -36,7 +36,7 @@
 			var str = "<section class=\"dateBody\">";
 			for(var i=0;i<num;i++){
 				dd.setDate(d.getDate() + i);
-				str += ("<div href='#' class=\"oneline dateSelect\">"+"<span class=\"desktop\">"+  (dd.getMonth()+1)+" / " +"</span> <span class=\"hDate\">"+dd.getDate() +"</span><p class=\"date\" >"+week[dd.getDay()]+"</p> </div>");
+				str += ("<a href='#' class=\"oneline\" onclick=\"clickDate(this)\">"+"<span class=\"desktop\">"+  (dd.getMonth()+1)+" / " +"</span> <span class=\"hDate\">"+dd.getDate() +"</span><p class=\"date\" >"+week[dd.getDay()]+"</p> </a>");
 			}
 			str += "</section>";
 			div.innerHTML += str;
@@ -44,7 +44,16 @@
 			dd.setDate(d.getDate() + 7);
 			div.innerHTML += ("<a href='#' class=\"dateButtonDown desktop\" onclick=\"WriteVerticalCalendar("+dd.getFullYear()+","+dd.getMonth()+","+dd.getDate()+")\"><img class=\"datebar_div_down\" src=\"/static/image/down_button.png\"></a>");
 			div.innerHTML += ("<a href='#' class=\"mobile_right\" onclick=\"WriteVerticalCalendar("+dd.getFullYear()+","+dd.getMonth()+","+dd.getDate()+")\"><img class=\"datebar_div_down\" src=\"/static/image/right_button.png\"></a>");
+
+		}
+		function clickDate(t){
+			var arr = document.getElementsByClassName("oneline");
+
+		for (i = 0; i < arr.length; i++) {
+		  arr[i].className = "oneline";
+		}
+			t.className += " dateSelect";
 		}
 	-->
-	</script>     
+	</script>
 </aside>	
