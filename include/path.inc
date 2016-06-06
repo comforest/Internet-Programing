@@ -4,7 +4,7 @@
 필요한 css : dialog.css, path.css
  -->
 <!-- 경로 목록 -->
-<section class="dialog path">
+<section class="dialog path" id="pathcontainer">
 	<section class="dialog_head">
 		<a href="#" id="edit">edit</a>
 	</section>
