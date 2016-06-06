@@ -37,7 +37,7 @@ require_once($_SERVER['DOCUMENT_ROOT'].'/include/dateTest.php');
             <input type="hidden" name="hotelinfo" id="hotelinfo" value="">
             <input type="hidden" name="hotelIDinfo" id="hotelIDinfo" value="">
         </form>
-        <div class = "progress-box" style="width: 100%;">
+        <div class = "progress-box" style="width: 100%; text-align: center;">
           <img src = "/static/image/place_pro.png">
         </div>
         <div id="textMapContainer" style="max-width: 1250px; margin-left: auto; margin-right: auto; margin-top: 100px; margin-bottom: 80px;">
