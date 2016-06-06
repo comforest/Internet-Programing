@@ -67,8 +67,8 @@
                         url:"https://maps.googleapis.com/maps/api/place/photo",
                         dataType:"json",
                         data: {
-                            "photoreference":place.reference,
                             "maxwidth":400,
+                            "photoreference":place.reference,
                             "key":"AIzaSyAYOKpuX6_Y9muKZCB4rBX7xiBCJKAJ2RQ"
                         },
                         contentType:"application/json",
