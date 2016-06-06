@@ -46,6 +46,8 @@
 	</div>
 	<script type="text/javascript">
             var map;
+            var index_count = 0;
+            var place_list = [];
             
             function createMarker(place) {
                 var placeLoc = place.geometry.location;
@@ -89,7 +91,22 @@
                         if (key == 40) {
                             return false;
                         }
+                        
                         createMarker(data);
+                        
+                        pre_html = $("#dialog_body").html();
+                        pre_html += "<a class=\"dialog_a\" href=\"javascript:void(0);\" data-place-index=\"" + index_count + "\">";
+                        pre_html += "<article class=\"dialog_article\">";
+			            pre_html += "<img src=\"/static/image/sampleImage.jpg\">";
+			            pre_html += "<h1>" + data.name + "</h1>";
+			            pre_html += "<p>" + data.formatted_address + "</p>";
+                        pre_html += "<div style=\"clear: both;\"></div>";
+		                pre_html += "</article>";
+                        pre_html += "</a>";
+                        $("#dialog_body").html(pre_html);
+                        
+                        place_list.push(data);
+                        index_count += 1;
                     });
                     
                 });
@@ -109,6 +126,14 @@
                 $(".tourList").css("display", "");
                 $(".detailView").css("display", "none");
             }
+            
+            $(function(){
+                $(".dialog_a").click(function() {
+                    var index = $(this).data;
+                    console.log(index);
+                    showDetail(place_list[index]);
+                });
+            });
         </script>
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCG21Y5X-wARtfSC6WkgO1nxoVU0WwcjwE&signed_in=true&libraries=places&callback=initialize" async defer></script>
 </body>
