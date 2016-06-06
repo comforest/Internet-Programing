@@ -54,18 +54,19 @@
                     size: new google.maps.Size(400, 400),
                     origin: new google.maps.Point(0, 0),
                     anchor: new google.maps.Point(0, 0),
-                    scaledSize: new google.maps.Size(60, 60)
+                    scaledSize: new google.maps.Size(50, 50)
                 };
                 var marker = new google.maps.Marker({
                     map: map,
                     position: placeLoc,
-                    icon: place.icon
+                    icon: testimage
                 });
                 
                 google.maps.event.addListener(marker, 'click', function() {
                     console.log("이름: " + place.name + ", 위치: {" + place.geometry.location.lat + "," + place.geometry.location.lng + "}, 고유번호: " + place.place_id);
                     $(".tourList").css("display", "none");
                     $(".detailView").css("display", "");
+                    showDetail(place);
                 })
             }
             
@@ -98,7 +99,8 @@
         </script>
         <script type="text/javascript">
             function showDetail(place) {
-                
+                $("#place_name").text(place.name);
+                $("#place_info").text(place.formatted_address);
             }
         </script>
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCG21Y5X-wARtfSC6WkgO1nxoVU0WwcjwE&signed_in=true&libraries=places&callback=initialize" async defer></script>

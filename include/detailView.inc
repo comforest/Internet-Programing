@@ -17,8 +17,8 @@
 		</figure>
 		<article class="dialog_article detailView_info">
 			<img src="/static/image/add.png">
-			<h1>Gyeongbokgung</h1>
-			<p>야라라라랄라ㅏㄹ라라라라라라라로로롤로로로로루루루루루루룰리리리리리리ㅏ하하하하하호호호호</p>
+			<h1 id="place_name">Gyeongbokgung</h1>
+			<p id="place_info">야라라라랄라ㅏㄹ라라라라라라라로로롤로로로로루루루루루루룰리리리리리리ㅏ하하하하하호호호호</p>
 		</article>
 		<article class="dialog_article detailView_location">
 			<img src="/static/image/location.png">
