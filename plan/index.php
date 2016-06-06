@@ -58,10 +58,9 @@
 			var request = {
 				destination: indianapolis,
 				origin: chicago,
-				travelMode: google.maps.TravelMode.DRIVING
+				travelMode: google.maps.TravelMode.DRIVING,
                 waypoints: waypts,
-                optimizeWaypoints: true,
-
+                optimizeWaypoints: true
 			};
 
 			var directionsService = new google.maps.DirectionsService();
