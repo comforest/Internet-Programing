@@ -62,7 +62,7 @@
                 
                 google.maps.event.addListener(marker, 'click', function() {
                     console.log("이름: " + place.name + ", 위치: {" + place.geometry.location.lat + "," + place.geometry.location.lng + "}, 고유번호: " + place.place_id);
-                    $('.dialog').css("display", "none");
+                    $(".tourList").css("display", "none");
                 })
             }
             
