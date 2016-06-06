@@ -129,7 +129,9 @@
             
             function showDetailByListClick() {
                 var index = $(this).data('place-index');
+                console.log (this);
                 console.log ($(this));
+                console.log ($(this)[0]);
                 console.log(index + " " + place_list[index]);
                 showDetail(place_list[index]);
             }
