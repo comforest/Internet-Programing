@@ -95,7 +95,7 @@
                         createMarker(data);
                         
                         pre_html = $("#dialog_body").html();
-                        pre_html += "<a href=\"javascript:void(0);\" onclick=\"showDetailByListClick()\" data-place-index=\"" + index_count + "\">";
+                        pre_html += "<a class=\"dialog_a\" href=\"javascript:void(0);\" data-place-index=\"" + index_count + "\">";
                         pre_html += "<article class=\"dialog_article\">";
 			            pre_html += "<img src=\"/static/image/sampleImage.jpg\">";
 			            pre_html += "<h1>" + data.name + "</h1>";
@@ -127,11 +127,10 @@
                 $(".detailView").css("display", "none");
             }
             
-            function showDetailByListClick() {
-                var index = $(this).data('place-index');
-                console.log(index + " " + place_list[index]);
+            $(".dialog_a").click(function() {
+                var index = $(this).data;
                 showDetail(place_list[index]);
-            }
+            });
         </script>
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCG21Y5X-wARtfSC6WkgO1nxoVU0WwcjwE&signed_in=true&libraries=places&callback=initialize" async defer></script>
 </body>
