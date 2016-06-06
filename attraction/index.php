@@ -61,7 +61,7 @@
                 });
                 
                 google.maps.event.addListener(marker, 'click', function() {
-                    console.log("이름: " + place.name + ", 위치: " + place.geometry.location);
+                    console.log("이름: " + place.name + ", 위치: " + place.geometry.location + ", 코드: " + place.place_id);
                 })
             }
             
