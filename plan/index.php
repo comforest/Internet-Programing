@@ -19,12 +19,12 @@
 </head>
 <body>
 	<?php
-		require_once("/include/navbar.inc");
+		require_once("$_SERVER['DOCUMENT_ROOT']./include/navbar.inc");
     ?>
     <div class="plancontainer">
 	<?php
-		require_once("/include/datebar.inc");
-		require_once("/include/path.inc");
+		require_once("$_SERVER['DOCUMENT_ROOT']./include/datebar.inc");
+		require_once("$_SERVER['DOCUMENT_ROOT']./include/path.inc");
 	?>
 		<div class="mapbox-lg">
 			<div id="map"></div>
