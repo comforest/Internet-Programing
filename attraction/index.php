@@ -120,7 +120,8 @@
                 $.each(place.types, function(data) {
                     infotext += "<span class=\"hashtag\">" + data + "</span>"
                 });
-                $("#place_location").html(infotext);
+                $("#place_info").html(infotext);
+                $("#place_location").text(place.formatted_address);
             }
             
             function closeDetail() {
