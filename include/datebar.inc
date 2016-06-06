@@ -7,8 +7,8 @@
 	<script type = "text/javascript">
 
 	<!--   
-        var startDate = new Date(6/7/2016);
-        var endDate = new Date(6/11/2016);
+        var startDate = new Date('6/7/2016');
+        var endDate = new Date('6/11/2016');
     
 		var p = new Date();
 		var td = p.getDate();
