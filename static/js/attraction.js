@@ -29,7 +29,7 @@ $(function(){
     });
     $(document).on("click", "#image_add_place", function(){
         var place_id = $(this).attr("data-place-id");
-        var user_id = '1041073355973984'; // 임시로 지정
+        var user_id = $("#session_userID").attr("value");
         $.ajax({
             url:"/ajax/addPlace.php",
             type:"get",
