@@ -3,11 +3,9 @@
 페이지 설명 : 날짜 및 숙박 검색
 필요한 css : datepage.css
  -->
-<?php // datepage.php
-/*
-require_once($_SERVER['DOCUMENT_ROOT'].'/include/loginTest.php');
-require_once($_SERVER['DOCUMENT_ROOT'].'/include/themeTest.php');
-*/
+<?php
+    require_once($_SERVER['DOCUMENT_ROOT'].'/include/loginTest.php');
+    require_once($_SERVER['DOCUMENT_ROOT'].'/include/themeTest.php');
 ?>
 <html>
     <head>
@@ -72,12 +70,12 @@ require_once($_SERVER['DOCUMENT_ROOT'].'/include/themeTest.php');
             <div class = "datepage_word_desktop">till when?</div><br>
             <div class = "datepage_space1">&nbsp; </div>
             <div class ="datepage_div">
-                <input class="datepage_input" type="text" id = "dateStartinfo" value = "">
+                <input class="datepage_input" type="text" id="dateStartinfo" name="dateStartinfo" value = "">
             </div>
             <div class="datepage_space2">&nbsp; </div>
             <div class = "datepage_word_mobile"><p style="font-size:1em;"></p>till when?<p style="font-size:1em;"></p></div>
             <div class ="datepage_div">
-                <input class="datepage_input" type="text" id = "dateEndinfo" value = "">
+                <input class="datepage_input" type="text" id="dateEndinfo" name="dateEndinfo" value = "">
             </div><br>
         </form>
         <div class = "datepage_roundclick" onclick="cilck_okay_next()">ok, next</div>

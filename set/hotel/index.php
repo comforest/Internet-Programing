@@ -2,19 +2,20 @@
 require_once($_SERVER['DOCUMENT_ROOT'].'/include/loginTest.php');
 require_once($_SERVER['DOCUMENT_ROOT'].'/include/themeTest.php');
 require_once($_SERVER['DOCUMENT_ROOT'].'/include/dateTest.php');
-
 ?>
 <html>
     <head>
         <meta charset = "utf-8">
-        <title>Set accommodation | Trave</title>
+        <title>Set accommodation | Travers</title>
         <link href='https://fonts.googleapis.com/css?family=Hind' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" type="text/css" href="/static/css/style.css">
         <link rel="stylesheet" type="text/css" href="/static/css/placepage.css">
         <link rel="stylesheet" type="text/css" href="/static/css/progress.css">
         <link rel="stylesheet" type="text/css" href="/static/css/navbar_style.css">
         <style type = "text/css">
-        a{text-decoration:none}
+            a {
+                text-decoration:none;
+            }
         </style>
         <script>
             function clickLetsDoThis() {
@@ -31,7 +32,6 @@ require_once($_SERVER['DOCUMENT_ROOT'].'/include/dateTest.php');
         <?php
           require_once($_SERVER['DOCUMENT_ROOT'].'/include/navbar.inc');
         ?>
-
         <form action="/attraction/" method="post" id="placeInfoForm">
             <input type="hidden" name="placeinfo" id="placeinfo" value="">
             <input type="hidden" name="hotelinfo" id="hotelinfo" value="">
@@ -39,9 +39,6 @@ require_once($_SERVER['DOCUMENT_ROOT'].'/include/dateTest.php');
         <div class = "progress-box">
           <img src = "/static/image/place_pro.png">
         </div>
-
-
-
         <div id="textMapContainer" style="max-width: 1250px; margin-left: auto; margin-right: auto; margin-top: 100px; margin-bottom: 100px;">
             <div class="leftContent">
                 <div class="text">search accomodation</div>
@@ -81,18 +78,14 @@ require_once($_SERVER['DOCUMENT_ROOT'].'/include/dateTest.php');
                     </div>
                 </div>
             </div>
-
-
             <div id="controls" style="display: none">
               <select id="country">
                 <option value="all" selected>All</option>
                 <option value="ko" selected>Korea</option>
               </select>
             </div>
-
             <div id="map"></div>
         </div>
-        
         <a href="#"><div class = "datepage_roundclick" onclick="clickLetsDoThis()">let's do this</div></a>
     </body>
     <script>

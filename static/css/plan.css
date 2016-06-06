@@ -31,3 +31,11 @@
     right: 30px;
     height: auto;
 }
+
+.path {
+    border-left: 1px #ccc solid;
+}
+
+#edit {
+    color: #888;
+}

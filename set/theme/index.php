@@ -1,16 +1,12 @@
 <?php
    require_once($_SERVER['DOCUMENT_ROOT'].'/include/loginTest.php');
 ?>
-
 <!DOCTYPE html>
 <html>
 <head>
 	<title>Set theme | Travers</title>
 	<meta charset = "utf-8">
-
 	<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
-
-
 	<link href='https://fonts.googleapis.com/css?family=Hind' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="/static/css/style.css">
 	<link rel="stylesheet" type="text/css" href="/static/css/theme_style2.css">
@@ -25,15 +21,19 @@
     	});
         function cilck_culture_theme() {
             document.getElementById("themeinfo").setAttribute('value', 'culture');
+			document.getElementById("themeinfoForm").submit();
         }
         function cilck_shopping_theme() {
             document.getElementById("themeinfo").setAttribute('value', 'shopping');
+			document.getElementById("themeinfoForm").submit();
         }
         function cilck_nature_theme() {
             document.getElementById("themeinfo").setAttribute('value', 'nature');
+			document.getElementById("themeinfoForm").submit();
         }
         function cilck_trend_theme() {
             document.getElementById("themeinfo").setAttribute('value', 'trend');
+			document.getElementById("themeinfoForm").submit();
         }
         function cilck_nothing_theme() {
             document.getElementById("themeinfoForm").submit();
