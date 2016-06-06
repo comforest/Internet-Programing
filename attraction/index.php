@@ -115,9 +115,12 @@
                 $(".tourList").css("display", "none");
                 $(".detailView").css("display", "");
                 gotolist();
-                    
                 $("#place_name").text(place.name);
-                $("#place_info").text("장소 세부 정보 여기에 적기");
+                var infotext = "";
+                $.each(place.types, function(key, data) {
+                    infotext += "<span class=\"hashtag\">#" + data + "</span> "
+                });
+                $("#place_info").html(infotext);
                 $("#place_location").text(place.formatted_address);
             }
             
