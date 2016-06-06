@@ -42,8 +42,7 @@ body{
 	width:100%;
 	overflow: auto;
 	background-color: #f3f3f3;
-	border-top: solid gray 1px; 
-	border-bottom: solid gray 1px; 
+	border-bottom: solid #ccc 1px; 
 }
 
 .dialog_article{

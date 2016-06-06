@@ -81,34 +81,15 @@
                     zoom: 12
                 };
                 map = new google.maps.Map(document.getElementById("map"), mapOptions);
-                $.getJSON("/static/js/shopping.json", function(json1) {
+                $.getJSON("/static/js/formatted json/shopping.json", function(json1) {
+                    
                     $.each(json1, function(key, data) {
-                        var latLng = new google.maps.LatLng(data.LOCATION_Y, data.LOCATION_X);
-                        
-                        var service = new google.maps.places.PlacesService(map);
-                        service.nearbySearch({
-                            location: latLng,
-                            radius: 100,
-                            types: []
-                        }, callback)
-                        
-                        /*
-                        var image = {
-                            url: '/static/image/round1.png',
-                            size: new google.maps.Size(400, 400),
-                            origin: new google.maps.Point(0, 0),
-                            anchor: new google.maps.Point(0, 0),
-                            scaledSize: new google.maps.Size(60, 60)
-                        };
-                        
-                        var marker = new google.maps.Marker({
-                            position: latLng,
-                            title: data.title,
-                            icon: image,
-                            map:map
-                        });
-                        */
+                        if (key == 40) {
+                            return false;
+                        }
+                        createMarker(data);
                     });
+                    
                 });
             }
         </script>
