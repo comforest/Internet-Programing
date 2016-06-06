@@ -1,11 +1,15 @@
 <?php
-    if (!(isset($_POST['placeinfo']) || isset($_SESSION['city'])))
+    if (!(isset($_POST['cityinfo']) || isset($_SESSION['city'])))
         echo("<script>location.replace('/set/theme');</script>");
     if (!(isset($_POST['hotelinfo']) || isset($_SESSION['hotel'])))
         echo("<script>location.replace('/set/theme');</script>");
 
-    if (isset($_POST['placeinfo']))
-        $_SESSION['city'] = $_POST['placeinfo'];
-    if (isset($_POST['hotelinfo']))
+    if (isset($_POST['cityinfo']) && isset($_POST['hotelinfo'])) {
+        $_SESSION['hotelCity'] = $_POST['cityinfo'];
         $_SESSION['hotel'] = $_POST['hotelinfo'];
+        $_SESSION['hotelID'] = $_POST['hotelIDinfo'];
+        
+        //처음 저장하는 유저면 추가, 원래 있던 유저면 정보 업데이트 :
+        queryMysql($connect, "INSERT INTO plan (userID, hotelName, hotelID, hotelCity) VALUES (" . $_SESSION['userID'] . ", " . $_SESSION['hotel'] . ", " . $_SESSION['hotelID'] . ", " . $_SESSION['hotelCity'] . ") ON DUPLICATE KEY UPDATE hotelName=" . $_SESSION['hotel'] . ", hotelID=" . $_SESSION['hotelID'] . ", hotelCity=" . $_SESSION['hotelCity']);
+    }
 ?>
