@@ -136,12 +136,15 @@
                 $("#gotolist").attr("class", "");
                 $("#gotomap").attr("class", "click");
                 $(".tourList").css("display", "none");
+                $(".dialog_head").css("display", "none");
+                $(".dialog_body").css("display", "none");
             }
             
             function gotolist() {
                 $("#gotolist").attr("class", "click");
                 $("#gotomap").attr("class", "");
-                $(".tourList").css("display", "");
+                $(".dialog_head").css("display", "");
+                $(".dialog_body").css("display", "");
             }
         </script>
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCG21Y5X-wARtfSC6WkgO1nxoVU0WwcjwE&signed_in=true&libraries=places&callback=initialize" async defer></script>

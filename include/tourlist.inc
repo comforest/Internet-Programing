@@ -5,7 +5,7 @@
 -->
 <!-- 관광지 목록 -->
 <section class="dialog tourList">
-	<section class="dialog_head">
+	<section id="dialog_head" class="dialog_head">
 		<a href="#"><img src="/static/image/all_grey.png"></a>
 		<a href="#"><img src="/static/image/culture_grey.png"></a>
 		<a href="#"><img src="/static/image/nature_grey.png"></a>
@@ -16,7 +16,7 @@
 	<section id="dialog_body" class="dialog_body">
 	</section>
 	<section class="dialog_foot">
-		<a class="click">list</a>
-		<a>map</a>
+		<a id="gotolist" class="click" onclick="gotolist()">list</a>
+		<a id="gotomap" onclick="gotomap()">map</a>
 	</section>
 </section>
