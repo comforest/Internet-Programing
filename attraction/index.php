@@ -135,7 +135,6 @@
             function gotomap() {
                 $("#gotolist").attr("class", "");
                 $("#gotomap").attr("class", "click");
-                $(".tourList").css("display", "none");
                 $(".dialog_head").css("display", "none");
                 $(".dialog_body").css("display", "none");
             }
