@@ -247,9 +247,11 @@ function addResult(result, i) {
   tr.style.backgroundColor = (i % 2 === 0 ? '#F0F0F0' : '#FFFFFF');
     
   results.onclick = function() {
+      console.log("시작");
       for (var i = 0; i < this.length; i++) {
       this.childNodes[i].style.backgroundColor = (i % 2 === 0 ? '#F0F0F0' : '#FFFFFF');
     }
+    console.log("끝");
   }
     
   tr.onclick = function() {
