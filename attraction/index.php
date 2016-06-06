@@ -68,7 +68,7 @@
                         dataType:"json",
                         data: {
                             "maxwidth":400,
-                            "photoreference":place.reference,
+                            "photoreference":place.photoreference,
                             "key":"AIzaSyAYOKpuX6_Y9muKZCB4rBX7xiBCJKAJ2RQ"
                         },
                         contentType:"application/json",
