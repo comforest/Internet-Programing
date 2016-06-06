@@ -1,4 +1,6 @@
 <?php
+    require_once($_SERVER['DOCUMENT_ROOT'].'/include/functions.php');
+
     if (!(isset($_POST['cityinfo']) || isset($_SESSION['city'])))
         echo("<script>location.replace('/set/theme');</script>");
     if (!(isset($_POST['hotelinfo']) || isset($_SESSION['hotel'])))
