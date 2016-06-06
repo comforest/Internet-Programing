@@ -128,7 +128,7 @@
             }
             
             function showDetailByListClick() {
-                var index = $(this)[0].data('place-index');
+                var index = $(this).data('place-index');
                 console.log(index + " " + place_list[index]);
                 showDetail(place_list[index]);
             }
