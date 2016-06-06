@@ -248,12 +248,12 @@ function addResult(result, i, markers) {
   if (i % 2 === 0) {
     tr.onclick = function() {
       google.maps.event.trigger(markers[i], 'click');
-      this.setAttribute("style", "animation: changeColer1");    
+      this.setAttribute("style", "animation: changeColer1; animation-duration: 1s");    
     };
   } else {
     tr.onclick = function() {
       google.maps.event.trigger(markers[i], 'click');
-      this.setAttribute("style", "animation: changeColer2");    
+      this.setAttribute("style", "animation: changeColer2; animation-duration: 1s");    
     };
   }
 
