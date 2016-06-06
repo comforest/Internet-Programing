@@ -201,7 +201,7 @@ function search() {
         addResult(results[i], i);
         document.onclick = function() {
             for (var i = 0; i < results.length; i++) {
-                results[i].style.backgroundColor = (i % 2 === 0 ? '#F0F0F0' : '#FFFFFF');
+                results.childNodes[i].style.backgroundColor = (i % 2 === 0 ? '#F0F0F0' : '#FFFFFF');
             }
         }
       }
