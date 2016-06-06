@@ -9,7 +9,7 @@
         $plan_id = $row['planID'];
         
         // if route does not exist, create it
-        $que = "SELECT COUNT(*) FROM route WHERE planID=".$plan_id;
+        $que = "SELECT COUNT(*) FROM route WHERE planID='".$plan_id."' AND routeDate='".$_GET['route_date']."'";
         $result = mysqli_query($connect, $que);
         $row = mysqli_fetch_row($result);
         if ($row[0] == 0) {
@@ -18,13 +18,13 @@
         }
         
         // find route
-        $que = "SELECT * FROM route WHERE planID=".$plan_id;
+        $que = "SELECT * FROM route WHERE planID='".$plan_id."' AND routeDate='".$_GET['route_date']."'";
         $result = mysqli_query($connect, $que);
         $row = mysqli_fetch_array($result);
         $route_id = $row['routeID'];
         
         // add place. if place already exist, do nothing.
-        $que = "SELECT COUNT(*) FROM place WHERE routeID=".$route_id." AND googleID=".$_GET['place_id'];
+        $que = "SELECT COUNT(*) FROM place WHERE routeID='".$route_id."' AND googleID='".$_GET['place_id']."'";
         $result = mysqli_query($connect, $que);
         $row = mysqli_fetch_row($result);
         if ($row[0] == 0) {

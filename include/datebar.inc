@@ -69,6 +69,8 @@
 				str += ("<a href='#' class=\"oneline\" onclick=\"clickDate(this)\">"+"<span class=\"desktop\">"+  (dd.getMonth()+1)+" / " +"</span> <span class=\"hDate\">"+dd.getDate() +"</span><p class=\"date\" >"+week[dd.getDay()]+"</p> </a>");
                 }
             }
+				str += ("<a href='#' class=\"oneline\" data-date=\"" + dd.getFullYear() + "-" + dd.getFullMonth() + "-" + dd.getFullDate() + "\" onclick=\"clickDate(this)\">"+"<span class=\"desktop\">"+  (dd.getMonth()+1)+" / " +"</span> <span class=\"hDate\">"+dd.getDate() +"</span><p class=\"date\" >"+week[dd.getDay()]+"</p> </a>");
+			}
 			str += "</section>";
 			div.innerHTML += str;
 
@@ -84,6 +86,8 @@
 		  arr[i].className = "oneline";
 		}
 			t.className += " dateSelect";
+
+			$("#selected_date").attr("value", t.getAttribute("data-date"));
 		}
 	-->
 	</script>
