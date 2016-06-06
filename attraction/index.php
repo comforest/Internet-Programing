@@ -59,7 +59,7 @@
                 var marker = new google.maps.Marker({
                     map: map,
                     position: placeLoc,
-                    icon: testimage
+                    icon: place.icon
                 });
                 
                 google.maps.event.addListener(marker, 'click', function() {
