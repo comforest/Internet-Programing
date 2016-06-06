@@ -9,9 +9,9 @@
 		<a href="#" id="edit" onclick="toggle()">edit</a>
 	</section>
 	<section class="dialog_body">
-		<article class="dialog_article path_article">
+		<article class="dialog_article path_article" id="n100">
             <div class="trashbox">
-                <a href="#" onclick=""><img src="/static/image/bin_grey.png" class="trash"></a>
+                <a href="#" onclick="del('100')"><img src="/static/image/bin_grey.png" class="trash"></a>
             </div>
             <div class="namebox">
                 <h1>Gyeongbokgung</h1>
@@ -22,10 +22,10 @@
             </div>
             <div class="updownbox">
                 <div class="buttonwrap">
-                    <a href="#" onclick=""><img src="/static/image/up_button.png"></a>
+                    <a href="#" onclick="up('100')"><img src="/static/image/up_button.png"></a>
                 </div>
                 <div class="buttonwrap">
-                    <a href="#" onclick=""><img src="/static/image/down_button.png"></a>
+                    <a href="#" onclick="down('100')"><img src="/static/image/down_button.png"></a>
                 </div>
             </div>
 		</article>
