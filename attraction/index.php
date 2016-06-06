@@ -34,6 +34,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 </head>
 <body>
+    <input type="hidden" name="selected_date" id="selected_date" value="2016-06-07">
     <?php
 		require_once($_SERVER['DOCUMENT_ROOT']."/include/navbar.inc");
 		require_once($_SERVER['DOCUMENT_ROOT']."/include/datebar.inc");
@@ -154,7 +155,8 @@
                         type:"get",
                         data:{
                             user_id:user_id,
-                            place_id:place_id
+                            place_id:place_id,
+                            route_date: $("#selected_date").val()
                         },
                         success:function(){
                             console.log("유저 [" + user_id + "]에 장소 [" + place_id + "]가 추가되었습니다.");
