@@ -198,7 +198,7 @@ function search() {
         markers[i].placeResult = results[i];
         google.maps.event.addListener(markers[i], 'click', showInfoWindow);
         setTimeout(dropMarker(i), i * 100);
-        addResult(results[i], i);
+        addResult(results[i], i, markers);
       }
     }
   });
@@ -238,7 +238,7 @@ function dropMarker(i) {
   };
 }
 
-function addResult(result, i) {
+function addResult(result, i, markers) {
   var results = document.getElementById('results');
   var markerLetter = String.fromCharCode('A'.charCodeAt(0) + i);
   var markerIcon = MARKER_PATH/* + markerLetter + '.png'*/;
@@ -247,8 +247,10 @@ function addResult(result, i) {
   tr.style.backgroundColor = (i % 2 === 0 ? '#F0F0F0' : '#FFFFFF');
   tr.onclick = function() {
     google.maps.event.trigger(markers[i], 'click');
-    this.setAttribute("style", "background-color: #FF0000");
-    
+    for (var i = 0; i < markers.length; i++) {
+      tr.style.backgroundColor = (i % 2 === 0 ? '#F0F0F0' : '#FFFFFF');  
+    }
+    this.setAttribute("style", "background-color: #FF0000");    
   };
 
   var iconTd = document.createElement('td');
