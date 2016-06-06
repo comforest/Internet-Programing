@@ -90,8 +90,7 @@
 	</div>
 	<div class="themelower">
 		<div> okay, cool </div>
-		<!--div onclick="cilck_nothing_theme()"> nah, nevermind</div-->
+		<div onclick="cilck_nothing_theme()"> nah, nevermind</div>
 	</div>
-	<p class="themefoot" onclick="cilck_nothing_theme()" id = "nevermind">nah, nevermind</p>
 </body>
 </html>
