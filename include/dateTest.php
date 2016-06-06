@@ -28,10 +28,10 @@
             echo("<script>console.log(" . $_SESSION['planID'] . ");</script>");
         } else {
             echo("플랜을 업데이트!");
-            while ( $this->dbh->more_results() ) $this->dbh->next_result();
             $planResult = queryMysql($connect, "SELECT planID FROM plan WHERE userID = '" . $_SESSION['userID'] . "'");
             $planRow = mysqli_fetch_row($planResult);
-            queryMysql($connect, "UPDATE plan set travelStart= '" . $_SESSION['dateStart'] . "' , travelEnd= '" . $_SESSION['dateEnd'] . "' WHERE planID= " . $planRow[0]);
+            mysqli_free_result($planResult);
+            queryMysql($connect, "UPDATE plan SET travelStart= '" . $_SESSION['dateStart'] . "' , travelEnd= '" . $_SESSION['dateEnd'] . "' WHERE planID= " . $planRow[0]);
             $_SESSION['planID'] = $planRow[0];
             echo("플랜 ID: " . $_SESSION['planID']);
         }
