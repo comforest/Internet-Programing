@@ -42,7 +42,7 @@
 	float: right;
 	object-fit: cover;
 }
-.tourList .dialog_article img:after{
+.tourList .dialog_article:after{
 	clear: both;
 }
 
