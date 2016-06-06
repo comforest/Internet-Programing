@@ -8,7 +8,7 @@
 
     echo("시작");
     echo($_POST['dateStartinfo']);
-
+    echo("시작");
     if (isset($_POST['dateStartinfo']) 
        && isset($_POST['dateEndinfo'])) {
         $_SESSION['dateStart'] = $_POST['dateStartinfo'];
