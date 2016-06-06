@@ -199,6 +199,7 @@ function search() {
         google.maps.event.addListener(markers[i], 'click', showInfoWindow);
         setTimeout(dropMarker(i), i * 100);
         addResult(results[i], i, markers);
+        
       }
     }
   });
@@ -248,11 +249,10 @@ function addResult(result, i, markers) {
   tr.onclick = function() {
     google.maps.event.trigger(markers[i], 'click');
     for (var i = 0; i < results.length; i++) {
-        result[i].style.backgroundColor = (i % 2 === 0 ? '#F0F0F0' : '#FFFFFF');
+        results[i].style.backgroundColor = (i % 2 === 0 ? '#F0F0F0' : '#FFFFFF');
     }
     this.setAttribute("style", "background-color: #FF0000");    
   };
-
   var iconTd = document.createElement('td');
   var nameTd = document.createElement('td');
   var icon = document.createElement('img');
@@ -266,6 +266,16 @@ function addResult(result, i, markers) {
   tr.appendChild(nameTd);
   results.appendChild(tr);
 }
+/*        
+function addOnclick(result, i, markers) {
+    tr.onclick = function() {
+    google.maps.event.trigger(markers[i], 'click');
+    for (var i = 0; i < results.length; i++) {
+        result[i].style.backgroundColor = (i % 2 === 0 ? '#F0F0F0' : '#FFFFFF');
+    }
+    this.setAttribute("style", "background-color: #FF0000");    
+  };
+}*/
 
 function clearResults() {
   var results = document.getElementById('results');
