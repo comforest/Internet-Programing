@@ -87,19 +87,17 @@ body
 	padding: 7px 0 7px 0;
 	text-align: center;
 	font-size: 14pt;
+	color: #ffa200;
+	background-color: #f3f3f3;
+	border-radius: 40px;
+}
+
+.themelower div:hover{
 	color: white;
 	background-color: #ffa200;
-	border-radius: 40px;
 	box-shadow: 0 0 6px rgba(128,128,128,.4);
+	
 }
-
-#nevermind
-{
-	margin: auto;
-	text-align: center;
-	color: #ffa200;
-}
-
 
 
 .progress-box {

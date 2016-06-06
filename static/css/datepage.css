@@ -14,12 +14,14 @@ body{
 		height: 30px;
 		border: none;
 		border-radius: 25px;
-		background-color: #ffa200;
-		color: white;
-		-webkit-box-shadow: -1px 4px 20px -2px rgba(0,0,0,0.28);
-		-moz-box-shadow: -1px 4px 20px -2px rgba(0,0,0,0.28);
-		box-shadow: -1px 4px 20px -2px rgba(0,0,0,0.28);
+		background-color: #f3f3f3;
+		color: #ffa200;
 		font-size: 25px;
+	}
+	.datepage_roundclick:hover{
+		color: white;
+		background-color: #ffa200;
+		box-shadow: 0 0 6px rgba(128,128,128,.4);
 	}
 	
 	.datepage_roundclick2{
@@ -35,13 +37,13 @@ body{
 		color: #ffa200;
 		font-size: 25px;
 	}
-	
-	.datepage_roundclick:hover{
-	-webkit-box-shadow: -1px 4px 20px -2px rgba(0,0,0,0.67);
-	-moz-box-shadow: -1px 4px 20px -2px rgba(0,0,0,0.67);
-	box-shadow: -1px 4px 20px -2px rgba(0,0,0,0.67);
+
+	.datepage_roundclick2:hover{
+		color: white;
+		background-color: #ffa200;
+		box-shadow: 0 0 6px rgba(128,128,128,.4);
 	}
-	
+
 	.datepage_div input{
 		border:transparent;
 		text-align:center;
