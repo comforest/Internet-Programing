@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Plan | Travers</title>
+	<title></title>
 	<link href='https://fonts.googleapis.com/css?family=Hind' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="/static/css/style.css">
 	<link rel="stylesheet" type="text/css" href="/static/css/navbar_style.css">
@@ -19,12 +19,12 @@
 </head>
 <body>
 	<?php
-		require_once("/include/navbar.inc");
+		//require_once("/include/navbar.inc");
     ?>
     <div class="plancontainer">
 	<?php
-		require_once("/include/datebar.inc");
-		require_once("/include/path.inc");
+		//require_once("/include/datebar.inc");
+		//require_once("/include/path.inc");
 	?>
 		<div class="mapbox-lg">
 			<div id="map"></div>
