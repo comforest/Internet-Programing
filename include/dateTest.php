@@ -7,6 +7,7 @@
         echo("<script>location.replace('/set/theme');</script>");
 
     echo("시작");
+/*
     if (isset($_POST['dateStartinfo']) 
        && isset($_POST['dateEndinfo'])) {
         $_SESSION['dateStart'] = $_POST['dateStartinfo'];
@@ -27,5 +28,5 @@
             $planRow = mysqli_fetch_row($planResult);
             queryMysql($connect, "KEY UPDATE planID=" . $planRow['planID'] . ", travelStart=" . $_SESSION['dateStart'] . ", travelEnd=" . $_SESSION['dateEnd']);
         }        
-    }
+    }*/
 ?>
