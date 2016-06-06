@@ -9,7 +9,8 @@
 	<link rel="stylesheet" type="text/css" href="/static/css/dialog.css">
 	<link rel="stylesheet" type="text/css" href="/static/css/datebar.css">
 	<link rel="stylesheet" type="text/css" href="/static/css/path.css">
-	<link rel="stylesheet" type="text/css" href="/static/css/plan.css">    
+	<link rel="stylesheet" type="text/css" href="/static/css/plan.css"> 
+    <script src="/static/js/path.js"></script>
 	<style type="text/css">
 		#map {
 			height: 100%;
