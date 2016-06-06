@@ -7,6 +7,9 @@
 	<script type = "text/javascript">
 
 	<!--   
+        var startDate = new Date(6/7/2016);
+        var endDate = new Date(6/11/2016);
+    
 		var p = new Date();
 		var td = p.getDate();
 		var tm = p.getMonth();
@@ -60,8 +63,12 @@
 			var str = "<section class=\"dateBody\">";
 			for(var i=0;i<num;i++){
 				dd = AddDate(d, 0,0,i);
+                if (dd.valueOf() < startDate.valueOf() || dd.valueOf() > endDate.valueOf()) {
+                    str += ("<div class=\"oneline outofrange\">"+"<span class=\"desktop\">"+  (dd.getMonth()+1)+" / " +"</span> <span class=\"hDate\">"+dd.getDate() +"</span><p class=\"date\" >"+week[dd.getDay()]+"</p> </div>");
+                } else {         
 				str += ("<a href='#' class=\"oneline\" onclick=\"clickDate(this)\">"+"<span class=\"desktop\">"+  (dd.getMonth()+1)+" / " +"</span> <span class=\"hDate\">"+dd.getDate() +"</span><p class=\"date\" >"+week[dd.getDay()]+"</p> </a>");
-			}
+                }
+            }
 			str += "</section>";
 			div.innerHTML += str;
 
