@@ -1,8 +1,8 @@
 ﻿<?php
-    require_once($_SERVER['DOCUMENT_ROOT'].'/include/loginTest.php');
-    require_once($_SERVER['DOCUMENT_ROOT'].'/include/themeTest.php');
-    require_once($_SERVER['DOCUMENT_ROOT'].'/include/dateTest.php');
-    require_once($_SERVER['DOCUMENT_ROOT'].'/include/hotelTest.php');
+//    require_once($_SERVER['DOCUMENT_ROOT'].'/include/loginTest.php');
+//    require_once($_SERVER['DOCUMENT_ROOT'].'/include/themeTest.php');
+//    require_once($_SERVER['DOCUMENT_ROOT'].'/include/dateTest.php');
+//    require_once($_SERVER['DOCUMENT_ROOT'].'/include/hotelTest.php');
 ?>
 <!DOCTYPE html>
 <html>
@@ -45,16 +45,15 @@
 	<script type="text/javascript">
             var map;
             
-            var testimage = {
-                url: '/static/image/round1.png',
-                size: new google.maps.Size(400, 400),
-                origin: new google.maps.Point(0, 0),
-                anchor: new google.maps.Point(0, 0),
-                scaledSize: new google.maps.Size(60, 60)
-            };
-            
             function createMarker(place) {
                 var placeLoc = place.geometry.location;
+                var testimage = {
+                    url: '/static/image/round1.png',
+                    size: new google.maps.Size(400, 400),
+                    origin: new google.maps.Point(0, 0),
+                    anchor: new google.maps.Point(0, 0),
+                    scaledSize: new google.maps.Size(60, 60)
+                };
                 var marker = new google.maps.Marker({
                     map: map,
                     position: placeLoc,
