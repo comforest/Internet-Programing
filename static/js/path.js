@@ -20,7 +20,7 @@ function toggle() {
     }
 }
 
-$(document).ready(
+window.onload = function () {
     var editButton = document.getElementById("edit");
     editButton.addEventListener("click", toggle);
 );
