@@ -23,14 +23,14 @@
         
         if ($numRow[0] == 0) {
             echo("플랜을 새로 추가!");
-            mysqli_query($connect, "INSERT INTO plan (userID, travelStart, travelEnd) VALUES('" . $_SESSION['userID'] . "', '" . $_SESSION['dateStart'] . "', '" . $_SESSION['dateEnd'] . "')") or die("쿼리 실패". mysqli_error($connect));
-            $_SESSION['planID'] = mysqli_insert_id($connect) or die("insert id에서 에러");
-            echo("<script>console.log($_SESSION['planID']);</script>");
+            mysqli_query($connect, "INSERT INTO plan (userID, travelStart, travelEnd) VALUES(" . $_SESSION['userID'] . ", '" . $_SESSION['dateStart'] . "', '" . $_SESSION['dateEnd'] . "')") or die("쿼리 실패". mysqli_error($connect));
+            /*$_SESSION['planID'] = mysqli_insert_id($connect) or die("insert id에서 에러");
+            echo("<script>console.log($_SESSION['planID']);</script>");*/
         } else {
             echo("플랜을 업데이트!");
-            $planResult = queryMysql($connect, "SELECT planID FROM plan WHERE userID = '" . $userID . "'");
+            /*$planResult = queryMysql($connect, "SELECT planID FROM plan WHERE userID = '" . $userID . "'");
             $planRow = mysqli_fetch_row($planResult);
-            queryMysql($connect, "KEY UPDATE planID=" . $planRow['planID'] . ", travelStart=" . $_SESSION['dateStart'] . ", travelEnd=" . $_SESSION['dateEnd']);
+            queryMysql($connect, "KEY UPDATE planID=" . $planRow['planID'] . ", travelStart=" . $_SESSION['dateStart'] . ", travelEnd=" . $_SESSION['dateEnd']);*/
         }
     }
 ?>
