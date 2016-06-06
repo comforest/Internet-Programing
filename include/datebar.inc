@@ -103,7 +103,9 @@
 			var arr = document.getElementsByClassName("oneline");
 
 		for (i = 0; i < arr.length; i++) {
-		  arr[i].className = "oneline";
+            if (arr[i].className != "oneline outofrange") {
+                arr[i].className = "oneline";
+            }
 		}
 			t.className += " dateSelect";
 
