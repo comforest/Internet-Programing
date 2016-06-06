@@ -247,6 +247,7 @@ function addResult(result, i) {
   tr.style.backgroundColor = (i % 2 === 0 ? '#F0F0F0' : '#FFFFFF');
   tr.onclick = function() {
     google.maps.event.trigger(markers[i], 'click');
+    this.setAttribute("style", "background-color: #FF0000");
     
   };
 
