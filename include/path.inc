@@ -6,7 +6,7 @@
 <!-- 경로 목록 -->
 <section class="dialog path" id="pathcontainer">
 	<section class="dialog_head">
-		<a href="#" id="edit" onclick="clickEdit">edit</a>
+		<a href="#" id="edit" onclick="clickEdit()">edit</a>
 	</section>
 	<section class="dialog_body">
 		<article class="dialog_article path_article">
