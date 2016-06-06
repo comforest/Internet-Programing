@@ -12,9 +12,15 @@
         $_SESSION['dateEnd'] = $_POST['dateEndinfo'];
         
         //처음 저장하는 유저면 추가, 원래 있던 유저면 정보 업데이트 :
-        queryMysql($connect, "INSERT INTO plan (userID, travelStart, travelEnd) VALUES (" . $_SESSION['userID'] . ", " . $_SESSION['dateStart'] . ", " . $_SESSION['dateEnd'] . ") ON DUPLICATE KEY UPDATE travelStart=" . $_SESSION['dateStart'] . ", travelEnd=" . $_SESSION['dateEnd']);
-        if (!isset($_SESSION['planID']))
+        $numOfuser = mysqli_query($connect, "SELECT COUNT(userID) FROM plan WHERE userID = '" . $userID . "'") or die("쿼리 실패");
+        $numRow = mysqli_fetch_row($numOfuser);
+        if ($numRow[0] == 0) {
+            queryMysql($connect, "INSERT INTO plan (userID, travelStart, travelEnd) VALUES (" . $_SESSION['userID'] . ", " . $_SESSION['dateStart'] . ", " . $_SESSION['dateEnd']);
             $_SESSION['planID'] = mysqli_insert_id($connect);
-        
+        } else {
+            $planResult = queryMysql($connect, "SELECT planID FROM plan WHERE userID = '" . $userID . "'");
+            $planRow = mysqli_fetch_row($planResult);
+            queryMysql($connect, "KEY UPDATE planID=" . $planRow['planID'] . ", travelStart=" . $_SESSION['dateStart'] . ", travelEnd=" . $_SESSION['dateEnd']);
+        }        
     }
 ?>
