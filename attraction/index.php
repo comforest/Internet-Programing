@@ -46,6 +46,7 @@
 	</div>
 	<script type="text/javascript">
             var map;
+            var place_list = [];
             
             function createMarker(place) {
                 var placeLoc = place.geometry.location;
@@ -93,12 +94,14 @@
                         createMarker(data);
                         
                         pre_html = $("#dialog_body").html();
+                        pre_html += "<a href=\"#\">";
                         pre_html += "<article class=\"dialog_article\">";
 			            pre_html += "<img src=\"/static/image/sampleImage.jpg\">";
 			            pre_html += "<h1>" + data.name + "</h1>";
 			            pre_html += "<p>" + data.formatted_address + "</p>";
                         pre_html += "<div style=\"clear: both;\"></div>";
 		                pre_html += "</article>";
+                        pre_html += "</a>"'
                         $("#dialog_body").html(pre_html);
                     });
                     
