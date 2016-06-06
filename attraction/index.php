@@ -69,7 +69,7 @@
                         data: {
                             "placeid":place.place_id,
                             "key":"AIzaSyCG21Y5X-wARtfSC6WkgO1nxoVU0WwcjwE"
-                        }
+                        },
                         contentType:"application/json",
                         success: function(data) {
                             console.log(data);
