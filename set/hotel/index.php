@@ -245,13 +245,17 @@ function addResult(result, i, markers) {
 
   var tr = document.createElement('tr');
   tr.style.backgroundColor = (i % 2 === 0 ? '#F0F0F0' : '#FFFFFF');
-  tr.onclick = function() {
-    google.maps.event.trigger(markers[i], 'click');
-    for (var i = 0; i < markers.length; i++) {
-      tr.style.backgroundColor = (i % 2 === 0 ? '#F0F0F0' : '#FFFFFF');  
-    }
-    this.setAttribute("style", "background-color: #FF0000");    
-  };
+  if (i % 2 === 0) {
+    tr.onclick = function() {
+      google.maps.event.trigger(markers[i], 'click');
+      this.setAttribute("style", "animation: changeColer1");    
+    };
+  } else {
+    tr.onclick = function() {
+      google.maps.event.trigger(markers[i], 'click');
+      this.setAttribute("style", "animation: changeColer2");    
+    };
+  }
 
   var iconTd = document.createElement('td');
   var nameTd = document.createElement('td');
