@@ -1,3 +1,7 @@
+.trash {
+    display:none;
+}
+
 .path .dialog_head a{
 	display: inline-block;
 	height: 46px;
