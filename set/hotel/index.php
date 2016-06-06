@@ -246,17 +246,12 @@ function addResult(result, i) {
   var tr = document.createElement('tr');
   tr.style.backgroundColor = (i % 2 === 0 ? '#F0F0F0' : '#FFFFFF');
     
-  results.onclick = function() {
-      console.log("시작");
-      for (var i = 0; i < this.childNodes.length; i++) {
-      this.childNodes[i].style.backgroundColor = (i % 2 === 0 ? '#F0F0F0' : '#FFFFFF');
-      console.log("중간");
-    }
-    console.log("끝");
-  }
-    
   tr.onclick = function() {
     google.maps.event.trigger(markers[i], 'click');
+    for (var i = 0; i < this.parentNode.childNodes.length; i++) {
+      this.parentNode.childNodes[i].style.backgroundColor = (i % 2 === 0 ? '#F0F0F0' : '#FFFFFF');
+      console.log("중간");
+    }
     this.setAttribute("style", "background-color: #FF0000");    
   };
 
