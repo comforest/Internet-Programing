@@ -28,9 +28,9 @@
             echo("<script>console.log(" . $_SESSION['planID'] . ");</script>");
         } else {
             echo("플랜을 업데이트!");
-            /*$planResult = queryMysql($connect, "SELECT planID FROM plan WHERE userID = '" . $userID . "'");
+            $planResult = queryMysql($connect, "SELECT planID FROM plan WHERE userID = '" . $userID . "'");
             $planRow = mysqli_fetch_row($planResult);
-            queryMysql($connect, "KEY UPDATE planID=" . $planRow['planID'] . ", travelStart=" . $_SESSION['dateStart'] . ", travelEnd=" . $_SESSION['dateEnd']);*/
+            queryMysql($connect, "KEY UPDATE planID=" . $planRow[0] . ", travelStart= '" . $_SESSION['dateStart'] . "' , travelEnd= '" . $_SESSION['dateEnd'] . "'");
         }
     }
 ?>
