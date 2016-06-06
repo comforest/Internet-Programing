@@ -145,9 +145,16 @@ body{
 }
 
 @media screen and (max-width: 1000px){
-	
 	.datepage_roundclick{
+		width: 30%;
+		padding: 0;
 		margin-top:30%;
+		font-size: 2em;
+		height:70px;
+	}
+	.datepage_roundclick2{
+		font-size: 2em;
+		width: 50%;
 	}
 	.progress-box {
 		margin-bottom:10%;
@@ -171,6 +178,7 @@ body{
 		margin: auto;
 		float: none;
 		width: 100%;
+		font-size: 2em;	
 	}
 	.datepage_space1{
 		display: none;
@@ -178,13 +186,38 @@ body{
 	.datepage_space2{
 		display: none;	
 	}
-	.datepage_word_desktop{
+	.datepage_word_desktop{	
 		display: none;
 	}
 	.datepage_word_mobile{
 		display:block;
-		
+		font-size: 2em;	
 		font-weight: bold;
 		
+	}
+	
+}
+
+@media screen and (max-width: 800px){
+	.datepage_roundclick{
+		width: 40%;
+	}
+}
+@media screen and (max-width: 600px){
+	.datepage_roundclick{
+		width: 60%;
+	}
+	.datepage_roundclick2{
+		font-size: 2em;
+		width: 60%;
+	}
+}
+@media screen and (max-width: 500px){
+	.datepage_roundclick{
+		width: 70%;
+	}
+	.datepage_roundclick2{
+		font-size: 2em;
+		width: 70%;
 	}
 }
