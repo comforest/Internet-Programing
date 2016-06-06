@@ -33,7 +33,7 @@ function up(num) {
         return;
     }
     
-    $(id).append($(id).prev());
+    $(id).after($(id).prev());
 }
 
 function down(num) {
@@ -42,5 +42,5 @@ function down(num) {
         return;
     }
     
-    $(id).prepend($(id).next());
+    $(id).before($(id).next());
 }
