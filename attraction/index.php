@@ -66,6 +66,7 @@
                         type:"GET",
                         url:"https://maps.googleapis.com/maps/api/place/details/json?placeid=" + place.place_id + "&key=AIzaSyCG21Y5X-wARtfSC6WkgO1nxoVU0WwcjwE",
                         dataType:"jsonp",
+                        contentType:"application/json",
                         success: function(data) {
                             console.log(data);
                         },
