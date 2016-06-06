@@ -128,7 +128,7 @@
             $(function(){
                 $(document).on("click", ".dialog_article", function(){
                     var index = $(this).data("place-index");
-                    console.log(index);
+                    showDetail(place_list[index]);
                 });
             });
         </script>
