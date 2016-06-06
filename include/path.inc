@@ -21,8 +21,8 @@
                 <img src="/static/image/sampleImage.jpg" class="photo">
             </div>
             <div class="updownbox">
-                <img src="/static/image/up_buttom.png">
-                <img src="/statlc/image/down_buttom.png">
+                <img src="/static/image/up_button.png">
+                <img src="/statlc/image/down_button.png">
             </div>
 		</article>
 		<article class="dialog_article path_info">
