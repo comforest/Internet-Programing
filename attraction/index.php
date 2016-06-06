@@ -125,10 +125,11 @@
                 $(".detailView").css("display", "none");
             }
             
-            $("article.dialog_article").click(function() {
-                var index = $(this).data("place-index");
-                console.log(index);
-                showDetail(place_list[index]);
+            $(function(){
+                $(document).on("click", ".dialog_article", function(){
+                    var index = $(this).data("place-index");
+                    console.log(index);
+                });
             });
         </script>
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCG21Y5X-wARtfSC6WkgO1nxoVU0WwcjwE&signed_in=true&libraries=places&callback=initialize" async defer></script>
