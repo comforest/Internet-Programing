@@ -149,7 +149,7 @@
                 });
                 $(document).on("click", "#image_add_place", function(){
                     var place_id = $(this).attr("data-place-id");
-                    var user_id = '@Request.RequestContext.HttpContext.Session["someKey"]';
+                    var user_id = '@Request.RequestContext.HttpContext.Session["userID"]';
                     $.ajax({
                         url:"/ajax/addPlace.php",
                         type:"get",
