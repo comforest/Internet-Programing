@@ -43,6 +43,7 @@ require_once($_SERVER['DOCUMENT_ROOT'].'/include/themeTest.php');
             if (document.getElementById('dateStartinfo').value == "" || document.getElementById('dateEndinfo').value == "") {
                     console.log("날짜를 입력해주세요 경고 띄우기");
             } else {
+                console.log(document.getElementById('dateStartinfo').value);
                 document.getElementById("dateinfoForm").submit();
             }
         }
