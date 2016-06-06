@@ -62,26 +62,7 @@
                 
                 google.maps.event.addListener(marker, 'click', function() {
                     console.log("이름: " + place.name + ", 위치: {" + place.geometry.location.lat + "," + place.geometry.location.lng + "}, 고유번호: " + place.place_id);
-                    $.ajax({
-                        type:"GET",
-                        url:"https://maps.googleapis.com/maps/api/place/photo",
-                        dataType:"json",
-                        data: {
-                            "maxwidth":400,
-                            "photoreference":place.photoreference,
-                            "key":"AIzaSyAYOKpuX6_Y9muKZCB4rBX7xiBCJKAJ2RQ"
-                        },
-                        contentType:"application/json",
-                        success: function(data) {
-                            console.log(data);
-                        },
-                        complete: function(data) {
-                            console.log("finished");
-                        },
-                        error: function(xhr, status, error) {
-                            console.log(error);
-                        }
-                    });
+                    $('dialog').setAttribute("display", "none");
                 })
             }
             
@@ -110,6 +91,11 @@
                     });
                     
                 });
+            }
+        </script>
+        <script type="text/javascript">
+            function showDetail(place) {
+                
             }
         </script>
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCG21Y5X-wARtfSC6WkgO1nxoVU0WwcjwE&signed_in=true&libraries=places&callback=initialize" async defer></script>
