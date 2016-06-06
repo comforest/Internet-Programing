@@ -77,6 +77,8 @@
 		  arr[i].className = "oneline";
 		}
 			t.className += " dateSelect";
+
+			$("#selected_date").attr("value", t.attr("data-date"));
 		}
 	-->
 	</script>
