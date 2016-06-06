@@ -7,6 +7,7 @@
         echo("<script>location.replace('/set/theme');</script>");
 
     echo("시작");
+    echo($_POST['dateStartinfo']);
 
     if (isset($_POST['dateStartinfo']) 
        && isset($_POST['dateEndinfo'])) {
