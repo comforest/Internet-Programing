@@ -198,8 +198,7 @@ function search() {
         markers[i].placeResult = results[i];
         google.maps.event.addListener(markers[i], 'click', showInfoWindow);
         setTimeout(dropMarker(i), i * 100);
-        addResult(results[i], i, markers);
-        
+        addResult(results[i], i);
       }
     }
   });
@@ -239,7 +238,7 @@ function dropMarker(i) {
   };
 }
 
-function addResult(result, i, markers) {
+function addResult(result, i) {
   var results = document.getElementById('results');
   var markerLetter = String.fromCharCode('A'.charCodeAt(0) + i);
   var markerIcon = MARKER_PATH/* + markerLetter + '.png'*/;
@@ -248,11 +247,14 @@ function addResult(result, i, markers) {
   tr.style.backgroundColor = (i % 2 === 0 ? '#F0F0F0' : '#FFFFFF');
   tr.onclick = function() {
     google.maps.event.trigger(markers[i], 'click');
-    for (var i = 0; i < results.length; i++) {
-        results[i].style.backgroundColor = (i % 2 === 0 ? '#F0F0F0' : '#FFFFFF');
-    }
-    this.setAttribute("style", "background-color: #FF0000");    
+    $(this).animate({
+      backgroundColor: red
+    }, 1000, function() {
+    // Animation complete.
+    });
+    this.setAttribute("style", "background-color: #FF0000");   
   };
+
   var iconTd = document.createElement('td');
   var nameTd = document.createElement('td');
   var icon = document.createElement('img');
@@ -266,16 +268,6 @@ function addResult(result, i, markers) {
   tr.appendChild(nameTd);
   results.appendChild(tr);
 }
-/*        
-function addOnclick(result, i, markers) {
-    tr.onclick = function() {
-    google.maps.event.trigger(markers[i], 'click');
-    for (var i = 0; i < results.length; i++) {
-        result[i].style.backgroundColor = (i % 2 === 0 ? '#F0F0F0' : '#FFFFFF');
-    }
-    this.setAttribute("style", "background-color: #FF0000");    
-  };
-}*/
 
 function clearResults() {
   var results = document.getElementById('results');
