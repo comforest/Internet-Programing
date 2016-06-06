@@ -21,5 +21,6 @@ function toggle() {
 }
 
 $(document).ready(
-    object.addEventListener("clickEdit", toggle);
+    var editButton = document.getElementById("edit");
+    editButton.addEventListener("click", toggle);
 );
