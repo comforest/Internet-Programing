@@ -191,7 +191,7 @@ function search() {
         markers[i] = new google.maps.Marker({
           position: results[i].geometry.location,
           animation: google.maps.Animation.DROP,
-          icon: image
+          icon: markerIcon/*image*/
         });
         // If the user clicks a hotel marker, show the details of that hotel
         // in an info window.
