@@ -13,7 +13,7 @@
         echo("호텔 저장 쿼리 전");
         echo($_SESSION['hotelID']);
         //처음 저장하는 유저면 추가, 원래 있던 유저면 정보 업데이트 :
-        queryMysql($connect, "UPDATE plan set hotelID= '" . $_SESSION['hotelID'] . "' WHERE planID= '" . $_SESSION['planID'] .  "'");
+        queryMysql($connect, "UPDATE plan set hotelID= '" . $_SESSION['hotelID'] . "' WHERE planID=" . $_SESSION['planID']);
         echo("호텔 정보도 저장!");
     }
 ?>
