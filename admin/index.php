@@ -59,7 +59,6 @@
                             <th>travelStart</th>
                             <th>travelEnd</th>
                             <th>hotelID</th>
-                            <th>lastLocation</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -74,7 +73,6 @@
                                 echo '<td>'.$row['travelStart'].'</td>';
                                 echo '<td>'.$row['travelEnd'].'</td>';
                                 echo '<td>'.$row['hotelID'].'</td>';
-                                echo '<td>'.$row['lastLocation'].'</td>';
                                 echo '</tr>';
                             }
                         ?>
@@ -124,6 +122,7 @@
                         <tr>
                             <th>placeID</th>
                             <th>routeID</th>
+                            <th>googleID</th>
                             <th>visitOrder</th>
                         </tr>
                     </thead>
@@ -136,6 +135,7 @@
                                 echo '<tr>';
                                 echo '<td>'.$row['placeID'].'</td>';
                                 echo '<td>'.$row['routeID'].'</td>';
+                                echo '<td>'.$row['googleID'].'</td>';
                                 echo '<td>'.$row['visitOrder'].'</td>';
                                 echo '</tr>';
                             }

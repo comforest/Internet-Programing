@@ -150,7 +150,7 @@
                     var place_id = $(this).attr("data-place-id");
                     var user_id = '@Request.RequestContext.HttpContext.Session["someKey"]';
                     $.ajax({
-                        url:"/ajax/addPlace",
+                        url:"/ajax/addPlace.php",
                         type:"get",
                         data:{
                             user_id:user_id,
