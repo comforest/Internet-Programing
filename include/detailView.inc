@@ -15,7 +15,7 @@
 			<img class="Button" src="/static/image/left_button.png">
 		</figure>
 		<article class="dialog_article detailView_info">
-			<a id="image_add_place"><img src="/static/image/add.png"></a>
+			<a id="image_add_place" href="javascript:void(0);"><img src="/static/image/add.png"></a>
 			<h1 id="place_name">Gyeongbokgung</h1>
 			<p id="place_info">야라라라랄라ㅏㄹ라라라라라라라로로롤로로로로루루루루루루룰리리리리리리ㅏ하하하하하호호호호</p>
 		</article>

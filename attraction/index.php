@@ -148,7 +148,7 @@
                 });
                 $(document).on("click", "#image_add_place", function(){
                     var place_id = $(this).attr("data-place-id");
-                    var user_id = $_SESSION['userID'];
+                    var user_id = $.session.get("userID");
                     $.ajax({
                         url:"/ajax/addPlace",
                         type:"get",
