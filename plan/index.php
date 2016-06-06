@@ -52,8 +52,12 @@
 			});
 
             var waypts = [
-                {lat:40.331110, lng:-86.850635},
-                {lat:40.956313, lng:-87.388965}
+            {
+                location: {lat:40.331110, lng:-86.850635}
+            },
+            {    
+                location: {lat:40.956313, lng:-87.388965}
+            }
             ];
 			var request = {
 				destination: indianapolis,
