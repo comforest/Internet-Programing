@@ -248,11 +248,7 @@ function addResult(result, i) {
     
   tr.onclick = function() {
     google.maps.event.trigger(markers[i], 'click');
-    for (var i = 0; i < this.parentNode.childNodes.length; i++) {
-      this.parentNode.childNodes[i].style.backgroundColor = (i % 2 === 0 ? '#F0F0F0' : '#FFFFFF');
-      console.log("중간");
-    }
-    this.setAttribute("style", "background-color: #FF0000");    
+    //this.setAttribute("style", "background-color: #FF0000");    
   };
 
   var iconTd = document.createElement('td');
