@@ -28,19 +28,23 @@ function del(num) {
 }
 
 function up(num) {
+    $('.path_info').remove();
+    
     var id = "#n"+num;
     if ($(id).is(":first-child")) {
         return;
     }
     
-    $(id).append($(id).prev());
+    $(id).after($(id).prev());
 }
 
 function down(num) {
+    $('.path_info').remove();
+
     var id = "#n"+num;
     if ($(id).is(":last-child")) {
         return;
     }
     
-    $(id).prepend($(id).next());
+    $(id).before($(id).next());
 }
