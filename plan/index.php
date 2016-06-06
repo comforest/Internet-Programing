@@ -51,10 +51,17 @@
 				map: map
 			});
 
+            var waypts = [
+                {lat:40.331110, lng:-86.850635},
+                {lat:40.956313, lng:-87.388965}
+            ];
 			var request = {
 				destination: indianapolis,
 				origin: chicago,
 				travelMode: google.maps.TravelMode.DRIVING
+                waypoints: waypts,
+                optimizeWaypoints: true,
+
 			};
 
 			var directionsService = new google.maps.DirectionsService();
@@ -64,6 +71,8 @@
 				}
 			});
 		}
+        
+        
 	</script>
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCG21Y5X-wARtfSC6WkgO1nxoVU0WwcjwE&callback=initMap" async defer></script>
 </body>
