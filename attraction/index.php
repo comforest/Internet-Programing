@@ -123,7 +123,9 @@
                 gotolist();
                 $("#place_name").text(place.name);
                 if (place.photos) {
-                    $("#place_thumbnail").attr("src", 'https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=' + place.photos[0].photo_reference + '&key=AIzaSyAYOKpuX6_Y9muKZCB4rBX7xiBCJKAJ2RQ')
+                    $("#place_thumbnail").attr("src", 'https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=' + place.photos[0].photo_reference + '&key=AIzaSyAYOKpuX6_Y9muKZCB4rBX7xiBCJKAJ2RQ');
+                } else {
+                    $("#place_thumbnail").attr("src", "/static/image/sampleImage.jpg");
                 }
                 var infotext = "";
                 $.each(place.types, function(key, data) {
