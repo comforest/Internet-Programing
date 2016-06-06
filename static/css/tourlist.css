@@ -42,7 +42,9 @@
 	float: right;
 	object-fit: cover;
 }
-
+.tourList .dialog_article img:after{
+	clear: both;
+}
 
 @media screen and (max-width: 1000px){
 
