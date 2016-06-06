@@ -114,6 +114,7 @@
             function showDetail(place) {
                 $(".tourList").css("display", "none");
                 $(".detailView").css("display", "");
+                $(".dialog").removeClass("dialog_map");
                     
                 $("#place_name").text(place.name);
                 $("#place_info").text("장소 세부 정보 여기에 적기");
