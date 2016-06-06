@@ -20,4 +20,6 @@ function toggle() {
     }
 }
 
-object.addEventListener("clickEdit", toggle);
+$(document).ready(
+    object.addEventListener("clickEdit", toggle);
+);
