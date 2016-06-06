@@ -19,29 +19,68 @@
 </head>
 <body>
     <div class="row">
-        <div class="col-md-12">
-            <h1>User</h1>
-            <table class="table table-hover">
-                <thead>
-                    <tr>
-                        <th>userID</th>
-                        <th>userName</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <?php
-                        $connect = mysqli_connect("localhost", "traversapp", "haveagoodtrip", "travers");
-                        $que = "SELECT * FROM user";
-                        $result = mysqli_query($connect, $que);
-                        while ($row = mysqli_fetch_array($result)) {
-                            echo '<tr>';
-                            echo '<td>'.$row['userID'].'</td>';
-                            echo '<td>'.$row['userName'].'</td>';
-                            echo '</tr>';
-                        }
-                    ?>
-                </tbody>
-            </table>
+        <div class="col-md-10 col-md-offset-1">
+            <div class="table-responsive">
+                <h1>User</h1>
+                <table class="table table-bordered table-striped table-hover">
+                    <thead>
+                        <tr>
+                            <th>userID</th>
+                            <th>userName</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php
+                            $connect = mysqli_connect("localhost", "traversapp", "haveagoodtrip", "travers");
+                            $que = "SELECT * FROM user";
+                            $result = mysqli_query($connect, $que);
+                            while ($row = mysqli_fetch_array($result)) {
+                                echo '<tr>';
+                                echo '<td>'.$row['userID'].'</td>';
+                                echo '<td>'.$row['userName'].'</td>';
+                                echo '</tr>';
+                            }
+                        ?>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <br><br>
+    <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+            <div class="table-responsive">
+                <h1>Plan</h1>
+                <table class="table table-bordered table-striped table-hover">
+                    <thead>
+                        <tr>
+                            <th>planID</th>
+                            <th>userID</th>
+                            <th>travelStart</th>
+                            <th>travelEnd</th>
+                            <th>hotelID</th>
+                            <th>lastLocation</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php
+                            $connect = mysqli_connect("localhost", "traversapp", "haveagoodtrip", "travers");
+                            $que = "SELECT * FROM plan";
+                            $result = mysqli_query($connect, $que);
+                            while ($row = mysqli_fetch_array($result)) {
+                                echo '<tr>';
+                                echo '<td>'.$row['planID'].'</td>';
+                                echo '<td>'.$row['userID'].'</td>';
+                                echo '<td>'.$row['travelStart'].'</td>';
+                                echo '<td>'.$row['travelEnd'].'</td>';
+                                echo '<td>'.$row['hotelID'].'</td>';
+                                echo '<td>'.$row['lastLocation'].'</td>';
+                                echo '</tr>';
+                            }
+                        ?>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
 </body>
