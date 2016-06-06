@@ -37,7 +37,7 @@ require_once($_SERVER['DOCUMENT_ROOT'].'/include/dateTest.php');
             <input type="hidden" name="hotelinfo" id="hotelinfo" value="">
             <input type="hidden" name="hotelIDinfo" id="hotelIDinfo" value="">
         </form>
-        <div class = "progress-box" style="width: 100%;">
+        <div class = "progress-box" style="width: 100%; text-align: center; padding-top: 35px;">
           <img src = "/static/image/place_pro.png">
         </div>
         <div id="textMapContainer" style="max-width: 1250px; margin-left: auto; margin-right: auto; margin-top: 100px; margin-bottom: 80px;">
@@ -174,24 +174,24 @@ function search() {
     if (status === google.maps.places.PlacesServiceStatus.OK) {
       clearResults();
       clearMarkers();
-      var image = {
+      /*var image = {
         url: '/static/image/marker_hotel.png',
         // This marker is 20 pixels wide by 32 pixels high.
         size: new google.maps.Size(500, 500),
         origin: new google.maps.Point(0, 0),
         anchor: new google.maps.Point(0, 0),
         scaledSize: new google.maps.Size(60, 60)
-      };
+      };*/
       // Create a marker for each hotel found, and
       // assign a letter of the alphabetic to each marker icon.
       for (var i = 0; i < results.length; i++) {
         var markerLetter = String.fromCharCode('A'.charCodeAt(0) + i);
-        //var markerIcon = MARKER_PATH/* + markerLetter + '.png'*/;
+        var markerIcon = MARKER_PATH/* + markerLetter + '.png'*/;
         // Use marker animation to drop the icons incrementally on the map.
         markers[i] = new google.maps.Marker({
           position: results[i].geometry.location,
           animation: google.maps.Animation.DROP,
-          icon: image
+          icon: markerIcon/*image*/
         });
         // If the user clicks a hotel marker, show the details of that hotel
         // in an info window.
