@@ -147,7 +147,7 @@
                     showDetail(place_list[index]);
                 });
                 $(document).on("click", "#image_add_place", function(){
-                    var place_id = $(this).data("place-id");
+                    var place_id = $(this).attr("data-place-id");
                     var user_id = $_SESSION['userID'];
                     $.ajax({
                         url:"/ajax/addPlace",
