@@ -25,7 +25,7 @@
 		</article>
 	</section>
 	<section class="dialog_foot">
-		<a class="click">list</a>
-		<a>map</a>
+		<a id="gotolist" class="click" onclick="gotolist()">list</a>
+		<a id="gotomap" onclick="gotomap()">map</a>
 	</section>
 </section>
