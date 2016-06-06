@@ -1,8 +1,8 @@
 ﻿<?php
-    // require_once($_SERVER['DOCUMENT_ROOT'].'/include/loginTest.php');
-    // require_once($_SERVER['DOCUMENT_ROOT'].'/include/themeTest.php');
-    // require_once($_SERVER['DOCUMENT_ROOT'].'/include/dateTest.php');
-    // require_once($_SERVER['DOCUMENT_ROOT'].'/include/hotelTest.php');
+    require_once($_SERVER['DOCUMENT_ROOT'].'/include/loginTest.php');
+    require_once($_SERVER['DOCUMENT_ROOT'].'/include/themeTest.php');
+    require_once($_SERVER['DOCUMENT_ROOT'].'/include/dateTest.php');
+    require_once($_SERVER['DOCUMENT_ROOT'].'/include/hotelTest.php');
 ?>
 <!DOCTYPE html>
 <html>
