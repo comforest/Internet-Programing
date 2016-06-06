@@ -83,5 +83,67 @@
             </div>
         </div>
     </div>
+    <br><br>
+    <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+            <div class="table-responsive">
+                <h1>Route</h1>
+                <table class="table table-bordered table-striped table-hover">
+                    <thead>
+                        <tr>
+                            <th>routeID</th>
+                            <th>planID</th>
+                            <th>routeDate</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php
+                            $connect = mysqli_connect("localhost", "traversapp", "haveagoodtrip", "travers");
+                            $que = "SELECT * FROM route";
+                            $result = mysqli_query($connect, $que);
+                            while ($row = mysqli_fetch_array($result)) {
+                                echo '<tr>';
+                                echo '<td>'.$row['routeID'].'</td>';
+                                echo '<td>'.$row['planID'].'</td>';
+                                echo '<td>'.$row['routeDate'].'</td>';
+                                echo '</tr>';
+                            }
+                        ?>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <br><br>
+    <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+            <div class="table-responsive">
+                <h1>Place</h1>
+                <table class="table table-bordered table-striped table-hover">
+                    <thead>
+                        <tr>
+                            <th>placeID</th>
+                            <th>routeID</th>
+                            <th>visitOrder</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php
+                            $connect = mysqli_connect("localhost", "traversapp", "haveagoodtrip", "travers");
+                            $que = "SELECT * FROM place";
+                            $result = mysqli_query($connect, $que);
+                            while ($row = mysqli_fetch_array($result)) {
+                                echo '<tr>';
+                                echo '<td>'.$row['placeID'].'</td>';
+                                echo '<td>'.$row['routeID'].'</td>';
+                                echo '<td>'.$row['visitOrder'].'</td>';
+                                echo '</tr>';
+                            }
+                        ?>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
