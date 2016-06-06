@@ -198,7 +198,12 @@ function search() {
         markers[i].placeResult = results[i];
         google.maps.event.addListener(markers[i], 'click', showInfoWindow);
         setTimeout(dropMarker(i), i * 100);
-        addResult(results[i], i, markers);
+        addResult(results[i], i);
+        document.onclick = function() {
+            for (var i = 0; i < results.length; i++) {
+                results[i].style.backgroundColor = (i % 2 === 0 ? '#F0F0F0' : '#FFFFFF');
+            }
+        }
       }
     }
   });
@@ -238,24 +243,17 @@ function dropMarker(i) {
   };
 }
 
-function addResult(result, i, markers) {
+function addResult(result, i) {
   var results = document.getElementById('results');
   var markerLetter = String.fromCharCode('A'.charCodeAt(0) + i);
   var markerIcon = MARKER_PATH/* + markerLetter + '.png'*/;
 
   var tr = document.createElement('tr');
   tr.style.backgroundColor = (i % 2 === 0 ? '#F0F0F0' : '#FFFFFF');
-  if (i % 2 === 0) {
-    tr.onclick = function() {
-      google.maps.event.trigger(markers[i], 'click');
-      this.setAttribute("style", "animation: changeColer1; animation-duration: 1s");    
-    };
-  } else {
-    tr.onclick = function() {
-      google.maps.event.trigger(markers[i], 'click');
-      this.setAttribute("style", "animation: changeColer2; animation-duration: 1s");    
-    };
-  }
+  tr.onclick = function() {
+    google.maps.event.trigger(markers[i], 'click');
+    this.setAttribute("style", "background-color: #FF0000");    
+  };
 
   var iconTd = document.createElement('td');
   var nameTd = document.createElement('td');
