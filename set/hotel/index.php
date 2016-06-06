@@ -13,6 +13,7 @@ require_once($_SERVER['DOCUMENT_ROOT'].'/include/dateTest.php');
         <link rel="stylesheet" type="text/css" href="/static/css/progress.css">
         <link rel="stylesheet" type="text/css" href="/static/css/navbar_style.css">
         <style type = "text/css">
+        <script src="http://code.jquery.com/ui/1.8.18/jquery-ui.min.js" type="text/javascript"></script>
             a {
                 text-decoration:none;
             }
