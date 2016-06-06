@@ -42,6 +42,7 @@
 	height:100px;
 	float: right;
 	object-fit: cover;
+	margin-left: 12px;
 }
 
 .tourList .dialog_body a{
