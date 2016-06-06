@@ -22,7 +22,7 @@ require_once($_SERVER['DOCUMENT_ROOT'].'/include/dateTest.php');
                 if (document.getElementById('place').value == "" || document.getElementById('hotelinfo').value == "") {
                     console.log("호텔을 선택하세요 에러메시지 띄우기");
                 } else {
-                    document.getElementById('placeinfo').setAttribute('value', document.getElementById('place').value);
+                    document.getElementById('cityinfo').setAttribute('value', document.getElementById('place').value);
                     document.getElementById('placeInfoForm').submit();
                 }
             }
@@ -33,8 +33,9 @@ require_once($_SERVER['DOCUMENT_ROOT'].'/include/dateTest.php');
           require_once($_SERVER['DOCUMENT_ROOT'].'/include/navbar.inc');
         ?>
         <form action="/attraction/" method="post" id="placeInfoForm">
-            <input type="hidden" name="placeinfo" id="placeinfo" value="">
+            <input type="hidden" name="cityinfo" id="cityinfo" value="">
             <input type="hidden" name="hotelinfo" id="hotelinfo" value="">
+            <input type="hidden" name="hotelIDinfo" id="hotelIDinfo" value="">
         </form>
         <div class = "progress-box">
           <img src = "/static/image/place_pro.png">
@@ -293,6 +294,8 @@ function buildIWContent(place) {
   document.getElementById('iw-address').textContent = place.vicinity;
 
   document.getElementById('hotelinfo').setAttribute('value', place.name); // 호텔이름 폼에 추가
+  console.log(place.placeId);
+  document.getElementById('hotelIDinfo').setAttribute('value', place.placeId); // 호텔 아이디 폼에 추가
     
   if (place.formatted_phone_number) {
     document.getElementById('iw-phone-row').style.display = '';
