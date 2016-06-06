@@ -134,7 +134,7 @@
                 $("#place_info").html(infotext);
                 $("#place_location").text(place.formatted_address);
                 $("#image_add_place").data("place-id", place.place_id);
-                console.log(place.place_id + "가 버튼에 추가됨");
+                console.log("data added: " + $("#image_add_place").data("place-id"));
             }
             
             function closeDetail() {
