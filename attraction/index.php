@@ -101,7 +101,7 @@
 			            pre_html += "<p>" + data.formatted_address + "</p>";
                         pre_html += "<div style=\"clear: both;\"></div>";
 		                pre_html += "</article>";
-                        pre_html += "</a>"'
+                        pre_html += "</a>";
                         $("#dialog_body").html(pre_html);
                     });
                     
