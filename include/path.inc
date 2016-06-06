@@ -13,6 +13,7 @@
 			<img src="/static/image/sampleImage.jpg">
 			<h1>Gyeongbokgung</h1>
 			<p class = "time">2h</p>
+            <img src="/static/image/trashcan.jpg" class="trash">
 		</article>
 		<article class="dialog_article path_info">
 			<img src="/static/image/walk.png">
@@ -24,6 +25,7 @@
 			<img src="/static/image/sampleImage.jpg">
 			<h1>Gyeongbokgung</h1>
 			<p class = "time">2h</p>
+            <img src="/static/image/trashcan.jpg" class="trash">
 		</article>
 		<article class="dialog_article path_info">
 			<img src="/static/image/walk.png">
@@ -35,6 +37,7 @@
 			<img src="/static/image/sampleImage.jpg">
 			<h1>Gyeongbokgung</h1>
 			<p class = "time">2h</p>
+            <img src="/static/image/trashcan.jpg" class="trash">
 		</article>
 		<article class="dialog_article path_info">
 			<img src="/static/image/walk.png">
