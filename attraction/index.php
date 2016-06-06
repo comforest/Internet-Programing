@@ -125,8 +125,8 @@
                 $(".detailView").css("display", "none");
             }
             
-            $(".dialog_article").click(function() {
-                var index = $(this).data;
+            $("article.dialog_article").click(function() {
+                var index = $(this).data("place-index");
                 console.log(index);
                 showDetail(place_list[index]);
             });
