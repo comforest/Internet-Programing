@@ -4,10 +4,10 @@
 필요한 css : datepage.css
  -->
 <?php // datepage.php
-/*
+
 require_once($_SERVER['DOCUMENT_ROOT'].'/include/loginTest.php');
 require_once($_SERVER['DOCUMENT_ROOT'].'/include/themeTest.php');
-*/
+
 ?>
 <html>
     <head>
