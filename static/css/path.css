@@ -1,5 +1,46 @@
-.trash {
+.buttonwrap {
+    margin: 6px;
+}
+
+.path_article div {
+    height:100%;
+}
+
+.trashbox {
     display:none;
+}
+
+.trashbox img {
+    width: 50px;
+}
+
+.updownbox {
+    display:none;
+}
+
+.updownbox img {
+    width: 40px;
+}
+
+.path_article {
+    display:flex;
+}
+
+.editing .path_info {
+    display:none;
+}
+
+.namebox {
+    flex: 1;
+}
+
+.editing .trashbox {
+    display: block;
+    padding: 20px 15px 0 0; 
+}
+
+.editing .updownbox {
+    display: block;
 }
 
 .editing .photo {
