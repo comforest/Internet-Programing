@@ -247,7 +247,15 @@ function addResult(result, i) {
 
   var tr = document.createElement('tr');
   tr.style.backgroundColor = (i % 2 === 0 ? '#F0F0F0' : '#FFFFFF');
-  tr.onclick = function() {
+  $("tr").click(function(){
+    $(this).animate({
+      backgroundColor: red
+    }, 1000, function() {
+    // Animation complete.
+    });
+    google.maps.event.trigger(markers[i], 'click');
+  });
+  /*tr.onclick = function() {
     google.maps.event.trigger(markers[i], 'click');
     $(this).animate({
       backgroundColor: red
@@ -255,7 +263,7 @@ function addResult(result, i) {
     // Animation complete.
     });
     this.setAttribute("style", "background-color: #FF0000");   
-  };
+  };*/
 
   var iconTd = document.createElement('td');
   var nameTd = document.createElement('td');
