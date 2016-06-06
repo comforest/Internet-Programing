@@ -1,5 +1,13 @@
-.trash {
+.trashbox {
     display:none;
+}
+
+.updownbox {
+    display:none;
+}
+
+.path_article {
+    display:flex;
 }
 
 .editing .photo {
