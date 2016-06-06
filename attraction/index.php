@@ -138,6 +138,7 @@
                 $(".dialog_head").css("display", "none");
                 $(".dialog_body").css("display", "none");
                 $("#mapbox").css("z-index", 100);
+                $(".dialog").addClass("dialog_map");
             }
             
             function gotolist() {

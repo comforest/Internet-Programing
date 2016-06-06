@@ -84,7 +84,16 @@ body{
 	border-radius: 0px;
 	box-shadow: none;
 	font-size:100%;
-}	
+}
+.dialog_map{
+	min-height: 0;
+	height:100px;
+	top:calc(100% - 100px);
+	bottom:0px;
+}
+.dialog_map .dialog_head, .dialog_map .dialog_body{
+	display : none;
+}
 .dialog_article{
 	border-left: solid 30px #8174ba;
 	font-size: 1.7em;
