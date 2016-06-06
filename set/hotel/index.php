@@ -245,12 +245,10 @@ function addResult(result, i) {
 
   var tr = document.createElement('tr');
   tr.style.backgroundColor = (i % 2 === 0 ? '#F0F0F0' : '#FFFFFF');
+    
   tr.onclick = function() {
     google.maps.event.trigger(markers[i], 'click');
-    for (var i = 0; i < results.length; i++) {
-      results.childNodes[i].style.backgroundColor = (i % 2 === 0 ? '#F0F0F0' : '#FFFFFF');
-    }
-    this.setAttribute("style", "background-color: #FF0000");    
+    //this.setAttribute("style", "background-color: #FF0000");    
   };
 
   var iconTd = document.createElement('td');

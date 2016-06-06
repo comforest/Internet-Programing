@@ -69,7 +69,7 @@
             <p>So we let you set the theme for your adventure.</p>
         </section>
         <section class = "container" id = "add">
-            <h1>Add</h1>
+            <h1>Attraction</h1>
             <p>We give you a list of interesting places.<br/>Then you add those that you like.<br/>Yup, it's that simple.</p>
             <img src = "static/image/clipone.png" class = "img-responsive slideanim" alt = "Responsive image" id = "clip1">
             <img src = "static/image/cliptwo.png" class = "img-responsive slideanim" alt = "Responsive image" id = "clip2">
