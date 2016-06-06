@@ -51,17 +51,20 @@
             
             function createMarker(place) {
                 var placeLoc = place.geometry.location;
-                var testimage = {
+                var image = {
                     url: '/static/image/round1.png',
                     size: new google.maps.Size(400, 400),
                     origin: new google.maps.Point(0, 0),
                     anchor: new google.maps.Point(0, 0),
                     scaledSize: new google.maps.Size(50, 50)
                 };
+                if (place.photos) {
+                    image.url = 'https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=' + place.photos[0].photo_reference + '&key=AIzaSyAYOKpuX6_Y9muKZCB4rBX7xiBCJKAJ2RQ'
+                }
                 var marker = new google.maps.Marker({
                     map: map,
                     position: placeLoc,
-                    icon: testimage
+                    icon: image
                 });
                 
                 google.maps.event.addListener(marker, 'click', function() {
