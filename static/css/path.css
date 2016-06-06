@@ -62,12 +62,9 @@
 	margin-right:10px;
 }
 
-
 .path_article, .path_info{
 	border-left: none;
 }
-
-
 
 .path_article h1{
 	margin: 0px;
@@ -88,9 +85,6 @@
 	float: right;
 	object-fit: cover;
 }
-
-
-
 
 .path_info{
 	height:80px;
@@ -149,4 +143,9 @@
 	margin-left: 2%;
 	margin-right: 2%;
 }
+
+.mapbox-lg {
+    display:none;
+}
+
 }
