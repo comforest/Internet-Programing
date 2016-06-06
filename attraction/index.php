@@ -95,7 +95,7 @@
                         createMarker(data);
                         
                         pre_html = $("#dialog_body").html();
-                        pre_html += "<article class=\"dialog_article\" data-place-index=" index_count + ">";
+                        pre_html += "<article class=\"dialog_article\" data-place-index=" + index_count + ">";
 			            pre_html += "<img src=\"/static/image/sampleImage.jpg\">";
 			            pre_html += "<h1>" + data.name + "</h1>";
 			            pre_html += "<p>" + data.formatted_address + "</p>";
