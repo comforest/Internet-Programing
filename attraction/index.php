@@ -37,6 +37,7 @@
 		require_once($_SERVER['DOCUMENT_ROOT']."/include/navbar.inc");
 		require_once($_SERVER['DOCUMENT_ROOT']."/include/datebar.inc");
 		require_once($_SERVER['DOCUMENT_ROOT']."/include/tourlist.inc");
+        require_once($_SERVER['DOCUMENT_ROOT']."/include/detailView.inc");
 		require_once($_SERVER['DOCUMENT_ROOT']."/include/tab.inc");
 	?>
 	<div id="mapbox">
@@ -63,6 +64,7 @@
                 google.maps.event.addListener(marker, 'click', function() {
                     console.log("이름: " + place.name + ", 위치: {" + place.geometry.location.lat + "," + place.geometry.location.lng + "}, 고유번호: " + place.place_id);
                     $(".tourList").css("display", "none");
+                    $(".detailView").css("display", "");
                 })
             }
             

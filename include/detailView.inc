@@ -4,7 +4,7 @@
 필요한 css : dialog.css, detailView.css
  -->
 <!-- 관광지 목록 -->
-<section class="dialog detailView">
+<section class="dialog detailView" style="display: none;">
 	<section class="dialog_head">
 		<a href="#"><img src="static/image/left_button.png"></a>
 		
