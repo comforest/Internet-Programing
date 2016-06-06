@@ -10,6 +10,6 @@
         $_SESSION['hotelID'] = $_POST['hotelIDinfo'];
         
         //처음 저장하는 유저면 추가, 원래 있던 유저면 정보 업데이트 :
-        queryMysql($connect, "INSERT INTO plan (userID, hotelID) VALUES (" . $_SESSION['userID'] . ", " . $_SESSION['hotelID'] . ") ON DUPLICATE KEY UPDATE " . "hotelID=" . $_SESSION['hotelID']);
+        queryMysql($connect, "INSERT INTO plan (userID, hotelID) VALUES (" . $_SESSION['userID'] . ", " . $_SESSION['hotelID'] . ") ON DUPLICATE KEY UPDATE " . "hotelID='" . $_SESSION['hotelID'] . "'");
     }
 ?>
