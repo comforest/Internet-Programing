@@ -1,5 +1,5 @@
 <?php
-    require_once($_SERVER['DOCUMENT_ROOT'].'/include/functions.php');
+    echo("출력이 되나 보자"); require_once($_SERVER['DOCUMENT_ROOT'].'/include/functions.php');
 
     if (!(isset($_POST['cityinfo']) || isset($_SESSION['city'])))
         echo("<script>location.replace('/set/theme');</script>");
