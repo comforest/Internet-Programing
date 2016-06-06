@@ -24,7 +24,7 @@
         $route_id = $row['routeID'];
         
         // add place. if place already exist, do nothing.
-        $que = "SELECT COUNT(*) FROM place WHERE routeID=".$route_id." AND googleID=".$_GET['place_id'];
+        $que = "SELECT COUNT(*) FROM place WHERE routeID='".$route_id."' AND googleID='".$_GET['place_id']."'";
         $result = mysqli_query($connect, $que);
         $row = mysqli_fetch_row($result);
         if ($row[0] == 0) {
