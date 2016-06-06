@@ -38,7 +38,7 @@
 	word-break:break-all;
 }
 .tourList .dialog_article img{
-	max-width:130px;
+	width:130px;
 	height:100px;
 	float: right;
 	object-fit: cover;

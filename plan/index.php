@@ -1,3 +1,9 @@
+<?php
+    require_once($_SERVER['DOCUMENT_ROOT'].'/include/loginTest.php');
+    require_once($_SERVER['DOCUMENT_ROOT'].'/include/themeTest.php');
+    require_once($_SERVER['DOCUMENT_ROOT'].'/include/dateTest.php');
+    require_once($_SERVER['DOCUMENT_ROOT'].'/include/hotelTest.php');
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,7 +16,6 @@
 	<link rel="stylesheet" type="text/css" href="/static/css/datebar.css">
 	<link rel="stylesheet" type="text/css" href="/static/css/path.css">
 	<link rel="stylesheet" type="text/css" href="/static/css/plan.css"> 
-    <script src="http://code.jquery.com/jquery-1.4.4.min.js"></script>
     <script src="/static/js/path.js"></script>
 	<style type="text/css">
 		#map {
