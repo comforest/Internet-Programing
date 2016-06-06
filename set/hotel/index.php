@@ -294,7 +294,8 @@ function buildIWContent(place) {
   document.getElementById('iw-address').textContent = place.vicinity;
 
   document.getElementById('hotelinfo').setAttribute('value', place.name); // 호텔이름 폼에 추가
-  document.getElementById('hotelIDinfo').setAttribute('value', place.id); // 호텔 아이디 폼에 추가
+  console.log(place.placeId);
+  document.getElementById('hotelIDinfo').setAttribute('value', place.placeId); // 호텔 아이디 폼에 추가
     
   if (place.formatted_phone_number) {
     document.getElementById('iw-phone-row').style.display = '';
