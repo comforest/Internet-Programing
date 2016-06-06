@@ -1,5 +1,6 @@
 <?php
-    require_once($_SERVER['DOCUMENT_ROOT'].'/include/header.php');
+    session_start();
+    require_once($_SERVER['DOCUMENT_ROOT'].'/include/functions.php');
 
     if (isset($_POST["userinfo"]))
     {
