@@ -78,7 +78,7 @@
 		}
 			t.className += " dateSelect";
 
-			$("#selected_date").attr("value", t.attr("data-date"));
+			$("#selected_date").attr("value", t.getAttribute("data-date"));
 		}
 	-->
 	</script>
