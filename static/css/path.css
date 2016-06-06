@@ -36,6 +36,7 @@
 
 .editing .trashbox {
     display: block;
+    padding: 20px 15px 0 0; 
 }
 
 .editing .updownbox {
