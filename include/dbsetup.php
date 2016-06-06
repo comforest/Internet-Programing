@@ -9,7 +9,7 @@ createTable($connect, 'plan',
             userID CHAR(16),
             travelStart DATE, 
             travelEnd DATE,
-            hotelID CHAR(40), 
+            hotelID CHAR(27), 
             lastLocation INT, 
             INDEX(userID(6))');
 createTable($connect, 'route', 
