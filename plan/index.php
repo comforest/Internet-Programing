@@ -10,6 +10,7 @@
 	<link rel="stylesheet" type="text/css" href="/static/css/datebar.css">
 	<link rel="stylesheet" type="text/css" href="/static/css/path.css">
 	<link rel="stylesheet" type="text/css" href="/static/css/plan.css"> 
+    <script src="http://code.jquery.com/jquery-1.4.4.min.js"></script>
     <script src="/static/js/path.js"></script>
 	<style type="text/css">
 		#map {
