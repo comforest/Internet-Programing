@@ -100,7 +100,8 @@
         <script type="text/javascript">
             function showDetail(place) {
                 $("#place_name").text(place.name);
-                $("#place_info").text(place.formatted_address);
+                $("#place_info").text("장소 세부 정보 여기에 적기");
+                $("#place_location").text(place.formatted_address);
             }
         </script>
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCG21Y5X-wARtfSC6WkgO1nxoVU0WwcjwE&signed_in=true&libraries=places&callback=initialize" async defer></script>

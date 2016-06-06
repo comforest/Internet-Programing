@@ -22,7 +22,7 @@
 		</article>
 		<article class="dialog_article detailView_location">
 			<img src="/static/image/location.png">
-			<p>야라라라랄라ㅏㄹ라라라라라로호ddd호호호</p>
+			<p id="place_location">야라라라랄라ㅏㄹ라라라라라로호ddd호호호</p>
 		</article>
 	</section>
 	<section class="dialog_foot">
