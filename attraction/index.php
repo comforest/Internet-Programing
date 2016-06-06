@@ -133,7 +133,7 @@
                 });
                 $("#place_info").html(infotext);
                 $("#place_location").text(place.formatted_address);
-                #("#image_add_place").data("place-id", place.place_id);
+                $("#image_add_place").data("place-id", place.place_id);
             }
             
             function closeDetail() {
