@@ -14,7 +14,7 @@
                 <a href="#" onclick="del('100')"><img src="/static/image/bin_grey.png" class="trash"></a>
             </div>
             <div class="namebox">
-                <h1>Gyeongbokgung</h1>
+                <h1>1</h1>
                 <p class = "time">2h</p>
             </div>
             <div class="photobox">
@@ -34,13 +34,12 @@
 			<p>
 				Lorem ipsum dolor sit arnet, ee cctur consectetur ad...
 			</p>
-		</article>
-		<article class="dialog_article path_article">
+		</article>		<article class="dialog_article path_article" id="n101">
             <div class="trashbox">
-                <img src="/static/image/bin_grey.png" class="trash">
+                <a href="#" onclick="del('101')"><img src="/static/image/bin_grey.png" class="trash"></a>
             </div>
             <div class="namebox">
-                <h1>Gyeongbokgung</h1>
+                <h1>2</h1>
                 <p class = "time">2h</p>
             </div>
             <div class="photobox">
@@ -48,10 +47,10 @@
             </div>
             <div class="updownbox">
                 <div class="buttonwrap">
-                    <img src="/static/image/up_button.png">
+                    <a href="#" onclick="up('101')"><img src="/static/image/up_button.png"></a>
                 </div>
                 <div class="buttonwrap">
-                    <img src="/static/image/down_button.png">
+                    <a href="#" onclick="down('101')"><img src="/static/image/down_button.png"></a>
                 </div>
             </div>
 		</article>
@@ -60,13 +59,12 @@
 			<p>
 				Lorem ipsum dolor sit arnet, ee cctur consectetur ad...
 			</p>
-		</article>
-		<article class="dialog_article path_article">
+		</article>		<article class="dialog_article path_article" id="n102">
             <div class="trashbox">
-                <img src="/static/image/bin_grey.png" class="trash">
+                <a href="#" onclick="del('102')"><img src="/static/image/bin_grey.png" class="trash"></a>
             </div>
             <div class="namebox">
-                <h1>Gyeongbokgung</h1>
+                <h1>3</h1>
                 <p class = "time">2h</p>
             </div>
             <div class="photobox">
@@ -74,10 +72,10 @@
             </div>
             <div class="updownbox">
                 <div class="buttonwrap">
-                    <img src="/static/image/up_button.png">
+                    <a href="#" onclick="up('102')"><img src="/static/image/up_button.png"></a>
                 </div>
                 <div class="buttonwrap">
-                    <img src="/static/image/down_button.png">
+                    <a href="#" onclick="down('102')"><img src="/static/image/down_button.png"></a>
                 </div>
             </div>
 		</article>
