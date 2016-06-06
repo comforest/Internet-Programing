@@ -179,7 +179,7 @@ function search() {
         // This marker is 20 pixels wide by 32 pixels high.
         size: new google.maps.Size(500, 500),
         origin: new google.maps.Point(0, 0),
-        anchor: new google.maps.Point(15, 15),
+        anchor: new google.maps.Point(0, 0),
         scaledSize: new google.maps.Size(60, 60)
       };
       // Create a marker for each hotel found, and
