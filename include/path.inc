@@ -11,7 +11,7 @@
 	<section class="dialog_body">
 		<article class="dialog_article path_article">
             <div class="trashbox">
-                <img src="/static/image/bin_grey.png" class="trash">
+                <a href="#" onclick=""><img src="/static/image/bin_grey.png" class="trash"></a>
             </div>
             <div class="namebox">
                 <h1>Gyeongbokgung</h1>
@@ -22,10 +22,10 @@
             </div>
             <div class="updownbox">
                 <div class="buttonwrap">
-                    <img src="/static/image/up_button.png">
+                    <a href="#" onclick=""><img src="/static/image/up_button.png"></a>
                 </div>
                 <div class="buttonwrap">
-                    <img src="/static/image/down_button.png">
+                    <a href="#" onclick=""><img src="/static/image/down_button.png"></a>
                 </div>
             </div>
 		</article>
@@ -80,12 +80,6 @@
                     <img src="/static/image/down_button.png">
                 </div>
             </div>
-		</article>
-		<article class="dialog_article path_info">
-			<img src="/static/image/walk.png">
-			<p>
-				Lorem ipsum dolor sit arnet, ee cctur consectetur ad...
-			</p>
 		</article>
 	</section>
 	<section class="dialog_foot">
