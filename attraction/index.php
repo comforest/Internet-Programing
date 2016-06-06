@@ -133,6 +133,7 @@
                 });
                 $("#place_info").html(infotext);
                 $("#place_location").text(place.formatted_address);
+                $("#image_add_place").attr("data-place-id", place.place_id);
             }
             
             function closeDetail() {
@@ -144,6 +145,21 @@
                 $(document).on("click", ".dialog_article", function(){
                     var index = $(this).data("place-index");
                     showDetail(place_list[index]);
+                });
+                $(document).on("click", "#image_add_place", function(){
+                    var place_id = $(this).attr("data-place-id");
+                    var user_id = $_SESSION['userID'];
+                    $.ajax({
+                        url:"/ajax/addPlace",
+                        type:"get",
+                        data:{
+                            user_id:user_id,
+                            place_id:place_id
+                        },
+                        success:function(){
+                            console.log("유저 [" + user_id + "]에 장소 [" + place_id + "]가 추가되었습니다.");
+                        }
+                    });
                 });
             });
             
