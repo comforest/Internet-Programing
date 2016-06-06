@@ -117,8 +117,8 @@
                 gotolist();
                 $("#place_name").text(place.name);
                 var infotext = "";
-                $.each(place.types, function(data) {
-                    infotext += "<span class=\"hashtag\">" + data + "</span>"
+                $.each(place.types, function(key, data) {
+                    infotext += "<span class=\"hashtag\">#" + data + "</span> "
                 });
                 $("#place_info").html(infotext);
                 $("#place_location").text(place.formatted_address);
