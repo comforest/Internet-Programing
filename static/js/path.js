@@ -28,6 +28,8 @@ function del(num) {
 }
 
 function up(num) {
+    $('.path_info').remove();
+    
     var id = "#n"+num;
     if ($(id).is(":first-child")) {
         return;
@@ -37,6 +39,8 @@ function up(num) {
 }
 
 function down(num) {
+    $('.path_info').remove();
+
     var id = "#n"+num;
     if ($(id).is(":last-child")) {
         return;
