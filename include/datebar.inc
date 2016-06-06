@@ -20,7 +20,28 @@
 			}
 			return last[m];
 		}
-
+		function AddDate(dd,y,m,d){
+ 			var fd = dd.getDate() + d;
+ 			var fm = dd.getMonth() + m;
+ 			var fy = dd.getFullYear() + y;
+ 			if(fd < 1){
+ 				--fm;
+ 				fd = getLastDate(fy, fm) + fd;
+ 				console.log(fd + " " + fm);
+ 			}else if(fd > getLastDate(fy,fm)){
+ 				fd -= getLastDate(fy, fm);
+ 				++fm;
+ 			}
+ 			if(fm < 0){
+ 				fm = 12 - fm;
+ 				-- fy;
+ 			}else if(fm > 11){
+ 				fm = fm - 12;
+ 				++ fy;
+ 			}
+ 			var da = new Date(fy,fm,fd);
+ 			return da;
+ 		}
 		function WriteVerticalCalendar(y, m, d, num=7){   
 			
 			var week = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
@@ -29,19 +50,19 @@
 			var div = document.getElementsByClassName("Llayer_fixed")[0];
 			
 			var dd = new Date();
-			dd.setDate(d.getDate() - 7);
+			dd = AddDate(d, 0,0,-7);
 			div.innerHTML = ("<a href='#' class=\"mobile_left\" onclick=\"WriteVerticalCalendar("+dd.getFullYear()+","+dd.getMonth()+","+dd.getDate()+")\"><img class=\"datebar_div_up\" src=\"/static/image/left_button.png\"></a>");
 			div.innerHTML += ("<a href='#' class=\"dateButtonUp desktop\" onclick=\"WriteVerticalCalendar("+dd.getFullYear()+","+dd.getMonth()+","+dd.getDate()+")\"><img class=\"datebar_div_up\" src=\"/static/image/up_button.png\"></a>");
 			
 			var str = "<section class=\"dateBody\">";
 			for(var i=0;i<num;i++){
-				dd.setDate(d.getDate() + i);
+				dd = AddDate(d, 0,0,i);
 				str += ("<a href='#' class=\"oneline\" onclick=\"clickDate(this)\">"+"<span class=\"desktop\">"+  (dd.getMonth()+1)+" / " +"</span> <span class=\"hDate\">"+dd.getDate() +"</span><p class=\"date\" >"+week[dd.getDay()]+"</p> </a>");
 			}
 			str += "</section>";
 			div.innerHTML += str;
 
-			dd.setDate(d.getDate() + 7);
+			dd = AddDate(d, 0,0,7);
 			div.innerHTML += ("<a href='#' class=\"dateButtonDown desktop\" onclick=\"WriteVerticalCalendar("+dd.getFullYear()+","+dd.getMonth()+","+dd.getDate()+")\"><img class=\"datebar_div_down\" src=\"/static/image/down_button.png\"></a>");
 			div.innerHTML += ("<a href='#' class=\"mobile_right\" onclick=\"WriteVerticalCalendar("+dd.getFullYear()+","+dd.getMonth()+","+dd.getDate()+")\"><img class=\"datebar_div_down\" src=\"/static/image/right_button.png\"></a>");
 
