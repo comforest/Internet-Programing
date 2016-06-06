@@ -11,32 +11,38 @@
 	<link rel="stylesheet" type="text/css" href="/static/css/datebar.css">
 	<link rel="stylesheet" type="text/css" href="/static/css/tab.css">
     <link rel="stylesheet" type="text/css" href="/static/css/detailView.css">
-	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
     <meta charset="utf-8">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 </head>
 <body>
-    <h1>User</h1>
-    <table>
-        <thead>
-            <tr>
-                <th>userID</th>
-                <th>userName</th>
-            </tr>
-        </thead>
-        <tbody>
-            <?php
-                $connect = mysqli_connect("localhost", "traversapp", "haveagoodtrip", "travers");
-                $que = "SELECT * FROM user";
-                $result = mysqli_query($connect, $que);
-                while ($row = mysqli_fetch_array($result)) {
-                    echo '<tr>';
-                    echo '<td>'.$row['userID'].'</td>';
-                    echo '<td>'.$row['userName'].'</td>';
-                    echo '</tr>';
-                }
-            ?>
-        </tbody>
-    </table>
+    <div class="row">
+        <div class="col-md-12">
+            <h1>User</h1>
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>userID</th>
+                        <th>userName</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php
+                        $connect = mysqli_connect("localhost", "traversapp", "haveagoodtrip", "travers");
+                        $que = "SELECT * FROM user";
+                        $result = mysqli_query($connect, $que);
+                        while ($row = mysqli_fetch_array($result)) {
+                            echo '<tr>';
+                            echo '<td>'.$row['userID'].'</td>';
+                            echo '<td>'.$row['userName'].'</td>';
+                            echo '</tr>';
+                        }
+                    ?>
+                </tbody>
+            </table>
+        </div>
+    </div>
 </body>
 </html>
