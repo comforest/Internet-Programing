@@ -293,6 +293,7 @@ function buildIWContent(place) {
   document.getElementById('iw-address').textContent = place.vicinity;
 
   document.getElementById('hotelinfo').setAttribute('value', place.name); // 호텔이름 폼에 추가
+  console.log(place.id);
     
   if (place.formatted_phone_number) {
     document.getElementById('iw-phone-row').style.display = '';
