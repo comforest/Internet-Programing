@@ -1,3 +1,9 @@
+<?php
+    require_once($_SERVER['DOCUMENT_ROOT'].'/include/loginTest.php');
+    require_once($_SERVER['DOCUMENT_ROOT'].'/include/themeTest.php');
+    require_once($_SERVER['DOCUMENT_ROOT'].'/include/dateTest.php');
+    require_once($_SERVER['DOCUMENT_ROOT'].'/include/hotelTest.php');
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,7 +16,6 @@
 	<link rel="stylesheet" type="text/css" href="/static/css/datebar.css">
 	<link rel="stylesheet" type="text/css" href="/static/css/path.css">
 	<link rel="stylesheet" type="text/css" href="/static/css/plan.css"> 
-    <script src="http://code.jquery.com/jquery-1.4.4.min.js"></script>
     <script src="/static/js/path.js"></script>
 	<style type="text/css">
 		#map {
@@ -46,10 +51,17 @@
 				map: map
 			});
 
+            var waypts = [
+                {lat:40.331110, lng:-86.850635},
+                {lat:40.956313, lng:-87.388965}
+            ];
 			var request = {
 				destination: indianapolis,
 				origin: chicago,
 				travelMode: google.maps.TravelMode.DRIVING
+                waypoints: waypts,
+                optimizeWaypoints: true,
+
 			};
 
 			var directionsService = new google.maps.DirectionsService();
@@ -59,6 +71,8 @@
 				}
 			});
 		}
+        
+        
 	</script>
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCG21Y5X-wARtfSC6WkgO1nxoVU0WwcjwE&callback=initMap" async defer></script>
 </body>
