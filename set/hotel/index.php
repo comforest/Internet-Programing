@@ -13,8 +13,6 @@ require_once($_SERVER['DOCUMENT_ROOT'].'/include/dateTest.php');
         <link rel="stylesheet" type="text/css" href="/static/css/progress.css">
         <link rel="stylesheet" type="text/css" href="/static/css/navbar_style.css">
         <style type = "text/css">
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
-        <script src="http://code.jquery.com/ui/1.8.18/jquery-ui.min.js" type="text/javascript"></script>
             a {
                 text-decoration:none;
             }
@@ -201,6 +199,11 @@ function search() {
         google.maps.event.addListener(markers[i], 'click', showInfoWindow);
         setTimeout(dropMarker(i), i * 100);
         addResult(results[i], i);
+        document.onclick = function() {
+            for (var i = 0; i < results.length; i++) {
+                results[i].style.backgroundColor = (i % 2 === 0 ? '#F0F0F0' : '#FFFFFF');
+            }
+        }
       }
     }
   });
@@ -247,23 +250,10 @@ function addResult(result, i) {
 
   var tr = document.createElement('tr');
   tr.style.backgroundColor = (i % 2 === 0 ? '#F0F0F0' : '#FFFFFF');
-  $("tr").click(function(){
-    $(this).animate({
-      backgroundColor: "red"
-    }, 1000, function() {
-    // Animation complete.
-    });
+  tr.onclick = function() {
     google.maps.event.trigger(markers[i], 'click');
-  });
-  /*tr.onclick = function() {
-    google.maps.event.trigger(markers[i], 'click');
-    $(this).animate({
-      backgroundColor: red
-    }, 1000, function() {
-    // Animation complete.
-    });
-    this.setAttribute("style", "background-color: #FF0000");   
-  };*/
+    this.setAttribute("style", "background-color: #FF0000");    
+  };
 
   var iconTd = document.createElement('td');
   var nameTd = document.createElement('td');
