@@ -64,7 +64,7 @@
                     console.log("이름: " + place.name + ", 위치: {" + place.geometry.location.lat + "," + place.geometry.location.lng + "}, 고유번호: " + place.place_id);
                     $.ajax({
                         type:"GET",
-                        url:"https://maps.googleapis.com/maps/api/place/details/json?placeid=" + place.place_id + "&key=AIzaSyCN3lxtHhMBMS3YIplrq4WSDyQWLGm_iJc",
+                        url:"https://maps.googleapis.com/maps/api/place/details/json?placeid=" + place.place_id + "&key=AIzaSyCG21Y5X-wARtfSC6WkgO1nxoVU0WwcjwE",
                         dataType:"json",
                         contentType:"application/json",
                         success: function(data) {
