@@ -46,6 +46,7 @@
 	</div>
 	<script type="text/javascript">
             var map;
+            var index_count = 0;
             var place_list = [];
             
             function createMarker(place) {
@@ -94,7 +95,7 @@
                         createMarker(data);
                         
                         pre_html = $("#dialog_body").html();
-                        pre_html += "<a href=\"#\">";
+                        pre_html += "<a href=\"javascript:void(0);\" onclick=\"showDetailByListClick()\" data-place-index=\"" + index_count + "\">";
                         pre_html += "<article class=\"dialog_article\">";
 			            pre_html += "<img src=\"/static/image/sampleImage.jpg\">";
 			            pre_html += "<h1>" + data.name + "</h1>";
@@ -103,6 +104,9 @@
 		                pre_html += "</article>";
                         pre_html += "</a>";
                         $("#dialog_body").html(pre_html);
+                        
+                        place_list.push(data);
+                        index_count += 1;
                     });
                     
                 });
@@ -121,6 +125,11 @@
             function closeDetail() {
                 $(".tourList").css("display", "");
                 $(".detailView").css("display", "none");
+            }
+            
+            function showDetailByListClick() {
+                var index = $(this).data('place-index');
+                showDetail(place_list[index]);
             }
         </script>
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCG21Y5X-wARtfSC6WkgO1nxoVU0WwcjwE&signed_in=true&libraries=places&callback=initialize" async defer></script>
