@@ -74,6 +74,9 @@
 		float: right;
 		object-fit: cover;
 	}
+	#mapbox{
+		height: calc(100% - 200px);
+	}
 }
 
 /*
