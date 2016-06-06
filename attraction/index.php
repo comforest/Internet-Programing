@@ -68,7 +68,7 @@
                         dataType:"json",
                         data: {
                             "placeid":place.place_id,
-                            "key":"AIzaSyCG21Y5X-wARtfSC6WkgO1nxoVU0WwcjwE"
+                            "key":"AIzaSyAYOKpuX6_Y9muKZCB4rBX7xiBCJKAJ2RQ"
                         },
                         contentType:"application/json",
                         success: function(data) {
