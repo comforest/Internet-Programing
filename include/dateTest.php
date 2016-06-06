@@ -6,6 +6,8 @@
     if (!(isset($_POST['dateEndinfo']) || isset($_SESSION['dateEnd'])))
         echo("<script>location.replace('/set/theme');</script>");
 
+    echo $_POST['dateStartinfo'];
+
     if (isset($_POST['dateStartinfo']) 
        && isset($_POST['dateEndinfo'])) {
         $_SESSION['dateStart'] = $_POST['dateStartinfo'];
