@@ -250,6 +250,7 @@ function addResult(result, i) {
       console.log("시작");
       for (var i = 0; i < this.length; i++) {
       this.childNodes[i].style.backgroundColor = (i % 2 === 0 ? '#F0F0F0' : '#FFFFFF');
+      console.log("중간");
     }
     console.log("끝");
   }
