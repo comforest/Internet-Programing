@@ -19,10 +19,10 @@
 </head>
 <body>
     <div class="row">
-        <div class="col-md-12">
+        <div class="col-md-10 col-md-offset-1">
             <div class="table-responsive">
                 <h1>User</h1>
-                <table class="table table-bordered table-hover">
+                <table class="table table-bordered table-striped table-hover">
                     <thead>
                         <tr>
                             <th>userID</th>
@@ -48,10 +48,10 @@
     </div>
     <br><br>
     <div class="row">
-        <div class="col-md-12">
+        <div class="col-md-10 col-md-offset-1">
             <div class="table-responsive">
                 <h1>Plan</h1>
-                <table class="table table-bordered table-hover">
+                <table class="table table-bordered table-striped table-hover">
                     <thead>
                         <tr>
                             <th>planID</th>
@@ -65,7 +65,7 @@
                     <tbody>
                         <?php
                             $connect = mysqli_connect("localhost", "traversapp", "haveagoodtrip", "travers");
-                            $que = "SELECT * FROM user";
+                            $que = "SELECT * FROM plan";
                             $result = mysqli_query($connect, $que);
                             while ($row = mysqli_fetch_array($result)) {
                                 echo '<tr>';
