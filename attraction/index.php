@@ -156,7 +156,7 @@
                         data:{
                             user_id:user_id,
                             place_id:place_id,
-                            route_date: $("#selected_date").val()
+                            route_date: $("#selected_date").attr("value")
                         },
                         success:function(){
                             console.log("유저 [" + user_id + "]에 장소 [" + place_id + "]가 추가되었습니다.");
