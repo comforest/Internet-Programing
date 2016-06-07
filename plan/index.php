@@ -146,8 +146,8 @@
 			});
 
 			directionsService.route({
-				origin: path_list[0],
-				destination: path_list[-1],
+				origin: path_list[0].googleID,
+				destination: path_list[-1].googleID,
 				waypoints: waypts,
 				optimizeWaypoints: true,
 				travelMode: google.maps.TravelMode.DRIVING
