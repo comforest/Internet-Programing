@@ -73,7 +73,7 @@ function gotomap() {
     $(".dialog_head").css("display", "none");
     $(".dialog_body").css("display", "none");
     $("#mapbox").css("z-index", 100);
-    $("#geo").css("z-index", 100);
+    $("#geo").css("z-index", 101);
     $(".dialog").addClass("dialog_map");
 }
 
