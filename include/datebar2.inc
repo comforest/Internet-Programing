@@ -135,7 +135,7 @@
 					console.log("유저 [" + user_id + "]에 대한 요청 결과: ");
 					console.log(result);
 
-					var pre_html = $("#path_list_body").html();
+					var pre_html = "";
 					$.each(result, function(key, data) {
 						pre_html += '<article class="dialog_article path_article" id="n100">';
 						pre_html += '<div class="trashbox">';
