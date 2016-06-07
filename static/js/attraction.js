@@ -15,6 +15,9 @@ function showDetail(place) {
     $("#place_info").html(infotext);
     $("#place_location").text(place.formatted_address);
     $("#image_add_place").attr("data-place-id", place.place_id);
+    $("#image_add_place").attr("data-place-name", place.name);
+    $("#image_add_place").attr("data-place-lat", place.geometry.location.lat);
+    $("#image_add_place").attr("data-place-lng", place.geometry.location.lng);
 }
 
 function closeDetail() {
