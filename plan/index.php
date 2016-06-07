@@ -42,6 +42,40 @@
     </div>
     <script>
 		function initMap() {
+			var start = {lat:37.5709359, lng:127.0231935};
+			var finish = {lat:37.5709359, lng:127.0231935};
+
+			var map = new google.maps.Map(document.getElementById('map'), {
+				center: start,
+				zoom: 7
+			});
+
+			var directionsDisplay = new google.maps.DirectionsRenderer({
+				map: map
+			});
+
+            var waypts = [
+            {    
+                location: {lat:37.549058, lng:126.993913}
+            }
+            ];
+			var request = {
+				destination: finish,
+				origin: start,
+				travelMode: google.maps.TravelMode.DRIVING,
+                waypoints: waypts,
+                optimizeWaypoints: true
+			};
+
+			var directionsService = new google.maps.DirectionsService();
+			directionsService.route(request, function(response, status) {
+				if (status == google.maps.DirectionsStatus.OK) {
+					directionsDisplay.setDirections(response);
+				}
+			});
+		}
+        
+        function refreshMap() {
 			var jsonurl = 'https://maps.googleapis.com/maps/api/place/details/json?placeid=' + path_list[0].googleID + '&key=AIzaSyCG21Y5X-wARtfSC6WkgO1nxoVU0WwcjwE';
 			var start;
 			$.getJSON(jsonurl, function(data){
@@ -82,8 +116,6 @@
 				}
 			});
 		}
-        
-        
 	</script>
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCG21Y5X-wARtfSC6WkgO1nxoVU0WwcjwE&callback=initMap" async defer></script>
 </body>
