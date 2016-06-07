@@ -22,7 +22,10 @@
         while ($row = mysqli_fetch_array($result)) {
             $data = array(
                 'placeID' => $row['placeID'],
-                'googleID' => $row['googleID']
+                'googleID' => $row['googleID'],
+                'name' => $row['name'],
+                'lat' => $row['lat'],
+                'lng' => $row['lng']
             );
             array_push($rows, $data);
         }
