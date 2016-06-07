@@ -39,13 +39,13 @@
         echo '<input type="hidden" name="session_userID" id="session_userID" value="'.$_SESSION['userID'].'">';
     ?>
     <?php
-        <div style="display:absolute; top: 150px; left: 150px;" onclick="currentLoaction()"><img src="/static/image/geo.png"/></div>
 		require_once($_SERVER['DOCUMENT_ROOT']."/include/navbar.inc");
 		require_once($_SERVER['DOCUMENT_ROOT']."/include/datebar.inc");
 		require_once($_SERVER['DOCUMENT_ROOT']."/include/tourlist.inc");
         require_once($_SERVER['DOCUMENT_ROOT']."/include/detailView.inc");
 		require_once($_SERVER['DOCUMENT_ROOT']."/include/tab.inc");
 	?>
+    <div style="display:absolute; top: 150px; left: 150px;" onclick="currentLocation()"><img src="/static/image/geo.png"/></div>
 	<div id="mapbox">
 		<div id="map"></div>
 	</div>
@@ -118,6 +118,19 @@
                         place_list.push(data);
                         index_count += 1;
                     });
+                });
+            }
+            
+            function currentLocation() {
+                var watchID = navigator.geolocation.watchPosition(function(position) {
+                    var pos = {
+                        lat: position.coords.latitude,
+                        lng: position.coords.longitude
+                    };
+
+                    map.setCenter(pos);
+                }, function() {
+                    
                 });
             }
         </script>
