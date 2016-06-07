@@ -20,7 +20,7 @@
         $row = mysqli_fetch_row($result);
 
         $rows = array();
-        while ($row = mysql_fetch_assoc($result)) {
+        while ($row = mysql_fetch_array($result)) {
             array_push($rows, $row['placeID']);
         }
         echo (json_encode($rows));
