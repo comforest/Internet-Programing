@@ -76,16 +76,8 @@
 		}
         
         function refreshMap() {
-			var jsonurl = 'https://maps.googleapis.com/maps/api/place/details/json?placeid=' + path_list[0].googleID + '&key=AIzaSyCG21Y5X-wARtfSC6WkgO1nxoVU0WwcjwE';
-			var start;
-			$.getJSON(jsonurl, function(data){
-				start = data.geomery.location;
-			});
-			var jsonurl = 'https://maps.googleapis.com/maps/api/place/details/json?placeid=' + path_list[-1].googleID + '&key=AIzaSyCG21Y5X-wARtfSC6WkgO1nxoVU0WwcjwE';
-			var finish;
-			$.getJSON(jsonurl, function(data){
-				finish = data.geomery.location;
-			});
+			var start = new google.maps.Place(path_list[0].googleID);
+			var finish = new google.maps.Place(path_list[-1].googleID);
 
 			var directionsDisplay = new google.maps.DirectionsRenderer({
 				map: map
