@@ -18,6 +18,7 @@
 	<link rel="stylesheet" type="text/css" href="/static/css/tab.css">
     <link rel="stylesheet" type="text/css" href="/static/css/detailView.css">
 	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script type="text/javascript" src="/static/js/tourList.js"></script>
     <meta charset="utf-8">
     <style>
     	html, body {
