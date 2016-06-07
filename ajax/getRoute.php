@@ -17,7 +17,6 @@
         // get list of places
         $que = "SELECT * FROM place WHERE routeID='".$route_id."'";
         $result = mysqli_query($connect, $que);
-        $row = mysqli_fetch_row($result);
 
         $rows = array();
         while ($row = mysqli_fetch_array($result)) {
