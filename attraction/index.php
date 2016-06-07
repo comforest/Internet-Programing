@@ -102,6 +102,8 @@
                 };
                 map = new google.maps.Map(document.getElementById("map"), mapOptions);
                 
+                place_list = []
+                
                 var address = {
                   "all":   "/static/js/formatted json/shopping.json",
                   "shopping": "/static/js/formatted json/shopping.json",
@@ -110,7 +112,7 @@
                   "nature": "/static/js/formatted json/nature.json"
                 };
                 
-                $.getJSON(var[mode], function(json1) {
+                $.getJSON(address[mode], function(json1) {
                     
                     $.each(json1, function(key, data) {
                         if (key == 40) {
