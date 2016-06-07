@@ -9,6 +9,7 @@
     require_once($_SERVER['DOCUMENT_ROOT'].'/include/functions.php');
     //$_SESSION['userID'] = '1065100166913049';
     if (!isset($_SESSION['userID'])) {
+        echo("<script>alert(\"No userID\");</script>");
         echo("<script>location.replace('/');</script>");
     }
 ?>

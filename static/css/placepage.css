@@ -1,3 +1,16 @@
+@keyframes changeColer1 {
+    0%   {background-color: #F0F0F0;}
+    25%  {background-color: yellow;}
+    50%  {background-color: blue;}
+    100% {background-color: #F0F0F0;}
+}
+
+@keyframes changeColor2 {
+    0%   {background-color: #FFFFFF;}
+    25%  {background-color: yellow;}
+    50%  {background-color: blue;}
+    100% {background-color: #FFFFFF;}
+}
 
 body{
 	background-color: #f3f3f3;
@@ -154,6 +167,7 @@ table {
   }
   .iw_table_row { /* iw : 호텔 클릭하면 뜨는 정보창 */
     height: 35px;
+    animation-duration: 1s;
   }
   .iw_attribute_name {
     font-weight: bold;

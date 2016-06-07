@@ -1,17 +1,20 @@
 <?php
     require_once($_SERVER['DOCUMENT_ROOT'].'/include/functions.php');
 
-    if (!(isset($_POST['dateStartinfo']) || isset($_SESSION['dateStart'])))
+    if (!(isset($_POST['dateStartinfo']) || isset($_SESSION['dateStart']))) {
+        echo("<script>alert(\"No dateStart\");</script>");
         echo("<script>location.replace('/set/theme');</script>");
-    if (!(isset($_POST['dateEndinfo']) || isset($_SESSION['dateEnd'])))
+    }
+    if (!(isset($_POST['dateEndinfo']) || isset($_SESSION['dateEnd']))) {
+        echo("<script>alert(\"No dateEnd\");</script>");
         echo("<script>location.replace('/set/theme');</script>");
+    }
 
     if (isset($_POST['dateStartinfo']) 
        && isset($_POST['dateEndinfo'])) {
         $_SESSION['dateStart'] = $_POST['dateStartinfo'];
         $_SESSION['dateEnd'] = $_POST['dateEndinfo'];
         
-        echo($_SESSION['dateStart']);
         //처음 저장하는 유저면 추가, 원래 있던 유저면 정보 업데이트 :
         $numOfuser = mysqli_query($connect, "SELECT COUNT(userID) FROM plan WHERE userID = '" . $_SESSION['userID'] . "'") or die("쿼리 실패");
         $numRow = mysqli_fetch_row($numOfuser);

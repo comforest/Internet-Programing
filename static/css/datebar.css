@@ -55,6 +55,10 @@
 }
 @media screen and (min-width: 1001px){
 
+.outofrange * {
+    color:#EEE;
+}
+
 .Llayer_fixed .dateBody{
 	position: absolute;
 	top:95px;

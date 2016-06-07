@@ -38,17 +38,38 @@
 	word-break:break-all;
 }
 .tourList .dialog_article img{
-	max-width:130px;
+	width:130px;
 	height:100px;
 	float: right;
 	object-fit: cover;
+	margin-left: 12px;
 }
 
 .tourList .dialog_body a{
 	text-decoration: none;
 }
 
+#geo {
+    position: absolute; top: 100px; left: 150px; width: 100px; height: 100px; z-index: 101; border-radius: 100%; background-color: rgb(170, 170, 170);
+}
+
+#geo img {
+    width: 100px; height: 100px;
+}
+
 @media screen and (max-width: 1000px){
+    #geo {
+        top: 17em;
+        left: 7em;
+        width: 7em;
+        height: 7em;
+    }
+    
+    #geo img [
+        width: 7em;
+        height: 7em;
+    ]
+    
 	.tourList .dialog_article{
 		min-height: 22%;
 		border-left: solid 30px #8174ba;

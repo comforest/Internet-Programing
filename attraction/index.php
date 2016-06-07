@@ -1,8 +1,8 @@
 <?php
-    // require_once($_SERVER['DOCUMENT_ROOT'].'/include/loginTest.php');
-    // require_once($_SERVER['DOCUMENT_ROOT'].'/include/themeTest.php');
-    // require_once($_SERVER['DOCUMENT_ROOT'].'/include/dateTest.php');
-    // require_once($_SERVER['DOCUMENT_ROOT'].'/include/hotelTest.php');
+    require_once($_SERVER['DOCUMENT_ROOT'].'/include/loginTest.php');
+    require_once($_SERVER['DOCUMENT_ROOT'].'/include/themeTest.php');
+    require_once($_SERVER['DOCUMENT_ROOT'].'/include/dateTest.php');
+    require_once($_SERVER['DOCUMENT_ROOT'].'/include/hotelTest.php');
 ?>
 <!DOCTYPE html>
 <html>
@@ -35,6 +35,10 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 </head>
 <body>
+    <input type="hidden" name="selected_date" id="selected_date" value="2016-06-07">
+    <?php
+        echo '<input type="hidden" name="session_userID" id="session_userID" value="'.$_SESSION['userID'].'">';
+    ?>
     <?php
 		require_once($_SERVER['DOCUMENT_ROOT']."/include/navbar.inc");
 		require_once($_SERVER['DOCUMENT_ROOT']."/include/datebar.inc");
@@ -42,6 +46,7 @@
         require_once($_SERVER['DOCUMENT_ROOT']."/include/detailView.inc");
 		require_once($_SERVER['DOCUMENT_ROOT']."/include/tab.inc");
 	?>
+    <div onclick="currentLocation()" id="geo"><img src="/static/image/geo.png"/></div>
 	<div id="mapbox">
 		<div id="map"></div>
 	</div>
@@ -49,12 +54,13 @@
             var map;
             var index_count = 0;
             var place_list = [];
+            var mode = "all";
             
             function createMarker(place) {
                 var placeLoc = place.geometry.location;
-                var testimage = {
-                    url: '/static/image/round1.png',
-                    size: new google.maps.Size(400, 400),
+                var image = {
+                    url: '/static/image/marker_culture.png',
+                    size: new google.maps.Size(500, 500),
                     origin: new google.maps.Point(0, 0),
                     anchor: new google.maps.Point(0, 0),
                     scaledSize: new google.maps.Size(50, 50)
@@ -62,7 +68,7 @@
                 var marker = new google.maps.Marker({
                     map: map,
                     position: placeLoc,
-                    icon: testimage
+                    icon: image
                 });
                 
                 google.maps.event.addListener(marker, 'click', function() {
@@ -86,7 +92,20 @@
                     zoom: 12
                 };
                 map = new google.maps.Map(document.getElementById("map"), mapOptions);
-                $.getJSON("/static/js/formatted json/shopping.json", function(json1) {
+                
+                place_list = [];
+                $("#dialog_body").html("");
+                index_count = 0;
+                
+                var address = {
+                  "all":   "/static/js/formatted json/shopping.json",
+                  "shopping": "/static/js/formatted json/shopping.json",
+                  "historic": "/static/js/formatted json/historic site.json",
+                  "trend": "/static/js/formatted json/trend.json",
+                  "nature": "/static/js/formatted json/nature.json"
+                };
+                
+                $.getJSON(address[mode], function(json1) {
                     
                     $.each(json1, function(key, data) {
                         if (key == 40) {
@@ -97,7 +116,11 @@
                         
                         pre_html = $("#dialog_body").html();
                         pre_html += "<article class=\"dialog_article\" data-place-index=" + index_count + ">";
-			            pre_html += "<img src=\"/static/image/sampleImage.jpg\">";
+			            if (data.photos) {
+                            pre_html += "<img src=\"https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photoreference=" + data.photos[0].photo_reference + "&key=AIzaSyAYOKpuX6_Y9muKZCB4rBX7xiBCJKAJ2RQ\">";
+                        } else {
+                            pre_html += "<img src=\"/static/image/sampleImage.jpg\">";
+                        }
 			            pre_html += "<h1>" + data.name + "</h1>";
 			            pre_html += "<p>" + data.formatted_address + "</p>";
                         pre_html += "<div style=\"clear: both;\"></div>";
@@ -107,54 +130,23 @@
                         place_list.push(data);
                         index_count += 1;
                     });
+                });
+            }
+            
+            function currentLocation() {
+                var watchID = navigator.geolocation.watchPosition(function(position) {
+                    var pos = {
+                        lat: position.coords.latitude,
+                        lng: position.coords.longitude
+                    };
+
+                    map.setCenter(pos);
+                }, function() {
                     
                 });
             }
         </script>
-        <script type="text/javascript">
-            function showDetail(place) {
-                $(".tourList").css("display", "none");
-                $(".detailView").css("display", "");
-                gotolist();
-                $("#place_name").text(place.name);
-                var infotext = "";
-                $.each(place.types, function(key, data) {
-                    infotext += "<span class=\"hashtag\">#" + data + "</span> "
-                });
-                $("#place_info").html(infotext);
-                $("#place_location").text(place.formatted_address);
-            }
-            
-            function closeDetail() {
-                $(".tourList").css("display", "");
-                $(".detailView").css("display", "none");
-            }
-            
-            $(function(){
-                $(document).on("click", ".dialog_article", function(){
-                    var index = $(this).data("place-index");
-                    showDetail(place_list[index]);
-                });
-            });
-            
-            function gotomap() {
-                $("#gotolist").attr("class", "");
-                $("#gotomap").attr("class", "click");
-                $(".dialog_head").css("display", "none");
-                $(".dialog_body").css("display", "none");
-                $("#mapbox").css("z-index", 100);
-                $(".dialog").addClass("dialog_map");
-            }
-            
-            function gotolist() {
-                $("#gotolist").attr("class", "click");
-                $("#gotomap").attr("class", "");
-                $(".dialog_head").css("display", "");
-                $(".dialog_body").css("display", "");
-                $("#mapbox").css("z-index", 1);
-                $(".dialog").removeClass("dialog_map");
-            }
-        </script>
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCG21Y5X-wARtfSC6WkgO1nxoVU0WwcjwE&signed_in=true&libraries=places&callback=initialize" async defer></script>
+        <script type="text/javascript" src="/static/js/attraction.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCG21Y5X-wARtfSC6WkgO1nxoVU0WwcjwE&signed_in=true&libraries=places&callback=initialize&language=en" async defer></script>
 </body>
 </html>
