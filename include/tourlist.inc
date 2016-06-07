@@ -8,7 +8,7 @@
 <script type="text/javascript">
 <!--
 	function headerIcon(img, index) {
-		var arr = document.getElementsByClassName("haedBuuton");
+		var arr = document.getElementsByClassName("headButton");
 		var str = {"all", "culture", "nature", "trend", "shopping"};
 		var addr = "/static/image/";
 		for(var i = 0; i < arr.length; ++i=){
