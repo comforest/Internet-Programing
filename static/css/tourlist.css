@@ -51,8 +51,16 @@
 
 @media screen and (max-width: 1000px){
     #geo {
-        display:none;
+        top: 17em;
+        left: 7em;
+        width: 7em;
+        height: 7em;
     }
+    
+    #geo img [
+        width: 7em;
+        height: 7em;
+    ]
     
 	.tourList .dialog_article{
 		min-height: 22%;
