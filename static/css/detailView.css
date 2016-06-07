@@ -1,5 +1,5 @@
 .detailView{
-	width: 400px;
+	width: 350px;
 	float:right;
 	right: 0px;
 }
@@ -25,7 +25,7 @@
 }
 
 .detailView_info{
-	border-left: solid 15px yellow;
+	border-left: solid 15px #817b4a;
 	padding: 20px 15px;
 	position: relative;
 }
