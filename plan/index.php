@@ -75,13 +75,102 @@
 					directionsDisplay.setDirections(response);
 				}
 			});
-		}
-        
-        function refreshMap() {
-			$.each(path_list, function(key, data){
-				addMarker(map, new google.maps.LatLng(data.lat, data.lng));
+			var directionsDisplay = new google.maps.DirectionsRenderer;
+			directionsDisplay.setMap(map);
+
+			$(".oneline").click(function(){
+				var arr = document.getElementsByClassName("oneline");
+				console.log("clicked!");
+
+				for (i = 0; i < arr.length; i++) {
+					if (arr[i].className != "oneline outofrange") {
+						arr[i].className = "oneline";
+					}
+				}
+				$(this).className += " dateSelect";
+
+				$("#selected_date").attr("value", $(this).attr("data-date"));
+
+				var user_id = $("#session_userID").attr("value");
+
+				$.ajax({
+					url:"/ajax/getRoute.php",
+					type:"get",
+					dataType:"json",
+					data:{
+						user_id:user_id,
+						route_date: $("#selected_date").attr("value")
+					},
+					success:function(result){
+						path_list = result;
+
+						var pre_html = "";
+						$.each(result, function(key, data) {
+							pre_html += '<article class="dialog_article path_article" id="n100">';
+							pre_html += '<div class="trashbox">';
+							pre_html += '<a href="#" onclick="del("100")"><img src="/static/image/bin_grey.png" class="trash"></a>';
+							pre_html += '</div>';
+							pre_html += '<div class="namebox">';
+							pre_html += '<h1>' + data.name + '</h1>';
+							pre_html += '<p class = "time">' + ("" + data.lat).slice(-2) + '</p>';
+							pre_html += '</div>';
+							pre_html += '<div class="photobox">';
+							pre_html += '<img src="/static/image/sampleImage.jpg" class="photo">';
+							pre_html += '</div>';
+							pre_html += '<div class="updownbox">';
+							pre_html += '<div class="buttonwrap">';
+							pre_html += '<a href="#" onclick="up("100")"><img src="/static/image/up_button.png"></a>';
+							pre_html += '</div>';
+							pre_html += '<div class="buttonwrap">';
+							pre_html += '<a href="#" onclick="down("100")"><img src="/static/image/down_button.png"></a>';
+							pre_html += '</div>';
+							pre_html += '</div>';
+							pre_html += '</article>';
+						});
+						$("#path_list_body").html(pre_html);
+					},
+					error:function(info, xhr){
+						console.log("에러: " + info.status + "\n" + info.responseText);
+					}
+				});
+
+				calculateAndDisplayRoute(directionsService, directionsDisplay);
 			});
 		}
+
+		function calculateAndDisplayRoute(directionsService, directionsDisplay) {
+			var waypts = [];
+
+			$.each(path_list, function(key, value){
+				waypts.push({location: value.location, stopover:true});
+			});
+
+			directionsService.route({
+				origin: path_list[0].googleID,
+				destination: path_list[-1].googleID,
+				waypoints: waypts,
+				optimizeWaypoints: true,
+				travelMode: google.maps.TravelMode.DRIVING
+			}, function(response, status) {
+				if (status === google.maps.DirectionsStatus.OK) {
+				directionsDisplay.setDirections(response);
+				var route = response.routes[0];
+				var summaryPanel = document.getElementById('directions-panel');
+				summaryPanel.innerHTML = '';
+				// For each route, display summary information.
+				for (var i = 0; i < route.legs.length; i++) {
+					var routeSegment = i + 1;
+					summaryPanel.innerHTML += '<b>Route Segment: ' + routeSegment +
+						'</b><br>';
+					summaryPanel.innerHTML += route.legs[i].start_address + ' to ';
+					summaryPanel.innerHTML += route.legs[i].end_address + '<br>';
+					summaryPanel.innerHTML += route.legs[i].distance.text + '<br><br>';
+				}
+				} else {
+				window.alert('Directions request failed due to ' + status);
+				}
+			});
+}
 	</script>
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCG21Y5X-wARtfSC6WkgO1nxoVU0WwcjwE&callback=initMap&language=en" async defer></script>
 </body>
