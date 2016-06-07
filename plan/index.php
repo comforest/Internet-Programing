@@ -42,8 +42,8 @@
     </div>
     <script>
 		function initMap() {
-			var start = {lat:37.534, lng:126.9725};
-			var finish = {lat:37.5734, lng:127.0160};
+			var start = new google.maps.LatLng(37.534, 126.9725);
+			var finish = new google.maps.LatLng(37.5734, 127.0160);
 
 			var map = new google.maps.Map(document.getElementById('map'), {
 				center: start,
