@@ -39,6 +39,7 @@
         echo '<input type="hidden" name="session_userID" id="session_userID" value="'.$_SESSION['userID'].'">';
     ?>
     <?php
+        <div style="display:absolute; top: 150px; left: 150px;" onclick="currentLoaction()"><img src="/static/image/geo.png"/></div>
 		require_once($_SERVER['DOCUMENT_ROOT']."/include/navbar.inc");
 		require_once($_SERVER['DOCUMENT_ROOT']."/include/datebar.inc");
 		require_once($_SERVER['DOCUMENT_ROOT']."/include/tourlist.inc");
