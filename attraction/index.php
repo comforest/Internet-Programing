@@ -110,7 +110,7 @@
                   "nature": "/static/js/formatted json/nature.json"
                 };
                 
-                $.getJSON(var[mode], function(json1) {
+                $.getJSON(address[mode], function(json1) {
                     
                     $.each(json1, function(key, data) {
                         if (key == 40) {
