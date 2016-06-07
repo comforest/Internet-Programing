@@ -48,3 +48,19 @@ function down(num) {
     
     $(id).before($(id).next());
 }
+
+$("a.oneline").click(function() {
+    var user_id = $("#session_userID").attr("value");
+    $.ajax({
+        url:"/ajax/getRoute.php",
+        type:"get",
+        data:{
+            user_id:user_id,
+            route_date: $("#selected_date").attr("value")
+        },
+        success:function(result){
+            console.log("유저 [" + user_id + "]에 대한 요청 결과: ");
+            console.log(result);
+        }
+    });
+});

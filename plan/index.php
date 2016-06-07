@@ -26,6 +26,7 @@
 	</style>   
 </head>
 <body>
+    <input type="hidden" name="session_userID" id="session_userID" value="<?php echo $_SESSION['userID']; ?>">
 	<?php
 		require_once($_SERVER['DOCUMENT_ROOT']."/include/navbar.inc");
     ?>
