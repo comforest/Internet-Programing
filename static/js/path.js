@@ -62,6 +62,9 @@ $("a.oneline").click(function() {
         success:function(result){
             console.log("유저 [" + user_id + "]에 대한 요청 결과: ");
             console.log(result);
+        },
+        error:function(info, xhr){
+            console.log("에러: " + info.status + "\n" + info.responseText);
         }
     });
 });
