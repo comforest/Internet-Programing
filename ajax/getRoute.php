@@ -20,7 +20,11 @@
 
         $rows = array();
         while ($row = mysqli_fetch_array($result)) {
-            array_push($rows, $row['placeID']);
+            $data = array(
+                'placeID' => $row['placeID'],
+                'googleID' => $row['googleID']
+            );
+            array_push($rows, $data);
         }
         echo (strip_tags(json_encode($rows)));
     }
