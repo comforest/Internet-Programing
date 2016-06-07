@@ -8,7 +8,7 @@
 	<section class="dialog_head">
 		<a href="#" id="edit" onclick="toggle()">edit</a>
 	</section>
-	<section class="dialog_body">
+	<section id="path_list_body" class="dialog_body">
 	</section>
 	<section class="dialog_foot">
 		<a class="click">list</a>

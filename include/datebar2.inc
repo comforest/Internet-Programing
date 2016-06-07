@@ -134,6 +134,31 @@
 				success:function(result){
 					console.log("유저 [" + user_id + "]에 대한 요청 결과: ");
 					console.log(result);
+
+					var pre_html = $("#path_list_body").html();
+					$.each(result, function(key, data) {
+						pre_html += '<article class="dialog_article path_article" id="n100">';
+						pre_html += '<div class="trashbox">';
+						pre_html += '<a href="#" onclick="del("100")"><img src="/static/image/bin_grey.png" class="trash"></a>';
+						pre_html += '</div>';
+						pre_html += '<div class="namebox">';
+						pre_html += '<h1>1</h1>';
+						pre_html += '<p class = "time">2h</p>';
+						pre_html += '</div>';
+						pre_html += '<div class="photobox">';
+						pre_html += '<img src="/static/image/sampleImage.jpg" class="photo">';
+						pre_html += '</div>';
+						pre_html += '<div class="updownbox">';
+						pre_html += '<div class="buttonwrap">';
+						pre_html += '<a href="#" onclick="up("100")"><img src="/static/image/up_button.png"></a>';
+						pre_html += '</div>';
+						pre_html += '<div class="buttonwrap">';
+						pre_html += '<a href="#" onclick="down("100")"><img src="/static/image/down_button.png"></a>';
+						pre_html += '</div>';
+						pre_html += '</div>';
+						pre_html += '</article>';
+					});
+					$("#path_list_body").html(pre_html);
 				},
 				error:function(info, xhr){
 					console.log("에러: " + info.status + "\n" + info.responseText);
