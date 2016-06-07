@@ -102,7 +102,8 @@
                 };
                 map = new google.maps.Map(document.getElementById("map"), mapOptions);
                 
-                place_list = []
+                place_list = [];
+                $("#dialog_body").html() = "";
                 
                 var address = {
                   "all":   "/static/js/formatted json/shopping.json",
