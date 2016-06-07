@@ -18,16 +18,11 @@
         $que = "SELECT * FROM place WHERE routeID='".$route_id."'";
         $result = mysqli_query($connect, $que);
         $row = mysqli_fetch_row($result);
-        
+            
         $rows = array();
-        while ($row = mysql_fetch_assoc($result))
-            {
-                $JSONres = array
-                (   
-                    "placeID"     => urlencode($row['placeID']),
-                ); 
-                array_push($rows, $JSONres);
-            }
-        echo (strip_tags(urldecode(json_encode($rows))));
+        while ($row = mysql_fetch_assoc($result)) {
+            array_push($rows, $row['placeID']);
+        }
+        echo (strip_tags(json_encode($rows)));
     }
 ?>
