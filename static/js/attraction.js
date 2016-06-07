@@ -43,6 +43,28 @@ $(function(){
             }
         });
     });
+    
+    $(document).on("click", "#all", function() {
+       mode = "all"; 
+       initialize();
+    });
+    $(document).on("click", "#shopping", function() {
+       mode = "shopping"; 
+       initialize();
+    });
+    $(document).on("click", "#trend", function() {
+       mode = "trend"; 
+       initialize();
+    });
+    $(document).on("click", "#nature", function() {
+       mode = "nature"; 
+       initialize();
+    });
+    $(document).on("click", "#historic", function() {
+       mode = "historic"; 
+       initialize();
+    });
+    
 });
 
 function gotomap() {

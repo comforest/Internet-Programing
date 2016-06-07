@@ -60,6 +60,7 @@
             var map;
             var index_count = 0;
             var place_list = [];
+            var mode = "all";
             
             function createMarker(place) {
                 var placeLoc = place.geometry.location;
@@ -100,7 +101,16 @@
                     zoom: 12
                 };
                 map = new google.maps.Map(document.getElementById("map"), mapOptions);
-                $.getJSON("/static/js/formatted json/shopping.json", function(json1) {
+                
+                var address = {
+                  "all":   "/static/js/formatted json/shopping.json",
+                  "shopping": "/static/js/formatted json/shopping.json",
+                  "historic", "/static/js/formatted json/historic site.json",
+                  "trend": "/static/js/formatted json/trend.json",
+                  "nature": "/static/js/formatted json/nature.json"
+                };
+                
+                $.getJSON(var[mode], function(json1) {
                     
                     $.each(json1, function(key, data) {
                         if (key == 40) {
