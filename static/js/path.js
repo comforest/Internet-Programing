@@ -52,6 +52,6 @@ function down(num) {
 function addMarker(map, location) {
     var marker = new google.maps.Marker({
         position: location,
+        setMap: map
     });
-    marker.setMap(map);
 }
