@@ -80,6 +80,7 @@
 
 			$(".oneline").addEventListener('click', function(){
 				var arr = document.getElementsByClassName("oneline");
+				console.log("clicked!");
 
 				for (i = 0; i < arr.length; i++) {
 					if (arr[i].className != "oneline outofrange") {
