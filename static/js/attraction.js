@@ -73,6 +73,7 @@ function gotomap() {
     $(".dialog_head").css("display", "none");
     $(".dialog_body").css("display", "none");
     $("#mapbox").css("z-index", 100);
+    $("#geo").css("z-index", 100);
     $(".dialog").addClass("dialog_map");
 }
 
@@ -82,5 +83,6 @@ function gotolist() {
     $(".dialog_head").css("display", "");
     $(".dialog_body").css("display", "");
     $("#mapbox").css("z-index", 1);
+    $("#geo").css("z-index", 1);
     $(".dialog").removeClass("dialog_map");
 }
