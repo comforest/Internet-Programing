@@ -101,6 +101,7 @@
                 
                 place_list = [];
                 $("#dialog_body").html("");
+                index_count = 0;
                 
                 var address = {
                   "all":   "/static/js/formatted json/shopping.json",
