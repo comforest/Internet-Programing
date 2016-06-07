@@ -6,17 +6,26 @@
 <aside class="Llayer_fixed">
 	<script type = "text/javascript">
 
-	<!--   
-        console.log(<?php echo $_SESSION['dateStart']; ?>);
-        var startDate = new Date('6/7/2016');
-        var endDate = new Date('6/11/2016');
+	<!--
+        <?php  
+            $datestart = $_SESSION['dateStart'];
+            $arr = explode("-", $datestart);
+            $strstart = $arr[1]."/".$arr[2]."/".$arr[0];
+            
+            $dateend = $_SESSION['dateEnd'];
+            $arr = explode("-", $dateend);
+            $strend = $arr[1]."/".$arr[2]."/".$arr[0];
+        ?>
+        var startDate = new Date('<?php echo $strstart; ?>');
+        var endDate = new Date('<?php echo $strend; ?>');
     
-		var p = new Date();
+		var p = new Date('<?php echo $strstart; ?>');
 		var td = p.getDate();
 		var tm = p.getMonth();
 		var ty = p.getFullYear();
-		WriteVerticalCalendar(ty,tm,td);
 		
+        WriteVerticalCalendar(ty,tm,td);
+        
 		function getLastDate(y, m){
 			var last = [31,28,31,30,31,30,31,31,30,31,30,31];        
 			if (y%4===0 && y%100!=0 || y%400===0) {

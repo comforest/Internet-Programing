@@ -9,76 +9,42 @@
 		<a href="#" id="edit" onclick="toggle()">edit</a>
 	</section>
 	<section class="dialog_body">
-		<article class="dialog_article path_article" id="n100">
-            <div class="trashbox">
-                <a href="#" onclick="del('100')"><img src="/static/image/bin_grey.png" class="trash"></a>
-            </div>
-            <div class="namebox">
-                <h1>1</h1>
-                <p class = "time">2h</p>
-            </div>
-            <div class="photobox">
-                <img src="/static/image/sampleImage.jpg" class="photo">
-            </div>
-            <div class="updownbox">
-                <div class="buttonwrap">
-                    <a href="#" onclick="up('100')"><img src="/static/image/up_button.png"></a>
-                </div>
-                <div class="buttonwrap">
-                    <a href="#" onclick="down('100')"><img src="/static/image/down_button.png"></a>
-                </div>
-            </div>
-		</article>
-		<article class="dialog_article path_info">
-			<img src="/static/image/walk.png">
-			<p>
-				Lorem ipsum dolor sit arnet, ee cctur consectetur ad...
-			</p>
-		</article>		<article class="dialog_article path_article" id="n101">
-            <div class="trashbox">
-                <a href="#" onclick="del('101')"><img src="/static/image/bin_grey.png" class="trash"></a>
-            </div>
-            <div class="namebox">
-                <h1>2</h1>
-                <p class = "time">2h</p>
-            </div>
-            <div class="photobox">
-                <img src="/static/image/sampleImage.jpg" class="photo">
-            </div>
-            <div class="updownbox">
-                <div class="buttonwrap">
-                    <a href="#" onclick="up('101')"><img src="/static/image/up_button.png"></a>
-                </div>
-                <div class="buttonwrap">
-                    <a href="#" onclick="down('101')"><img src="/static/image/down_button.png"></a>
-                </div>
-            </div>
-		</article>
-		<article class="dialog_article path_info">
-			<img src="/static/image/walk.png">
-			<p>
-				Lorem ipsum dolor sit arnet, ee cctur consectetur ad...
-			</p>
-		</article>		<article class="dialog_article path_article" id="n102">
-            <div class="trashbox">
-                <a href="#" onclick="del('102')"><img src="/static/image/bin_grey.png" class="trash"></a>
-            </div>
-            <div class="namebox">
-                <h1>3</h1>
-                <p class = "time">2h</p>
-            </div>
-            <div class="photobox">
-                <img src="/static/image/sampleImage.jpg" class="photo">
-            </div>
-            <div class="updownbox">
-                <div class="buttonwrap">
-                    <a href="#" onclick="up('102')"><img src="/static/image/up_button.png"></a>
-                </div>
-                <div class="buttonwrap">
-                    <a href="#" onclick="down('102')"><img src="/static/image/down_button.png"></a>
-                </div>
-            </div>
-		</article>
+<?php
+        $connect = mysqli_connect("localhost", "traversapp", "haveagoodtrip", "travers");
+        
+        // find plan
+        $que = "SELECT * FROM plan WHERE userID=".$_SESSION['user_id'];
+        $result = mysqli_query($connect, $que);
+        $row = mysqli_fetch_array($result);
+        $plan_id = $row['planID'];
+        
+        // if route does not exist, create it
+        $que = "SELECT COUNT(*) FROM route WHERE planID='".$plan_id."' AND routeDate='".$_GET['route_date']."'";
+        $result = mysqli_query($connect, $que);
+        $row = mysqli_fetch_row($result);
+        if ($row[0] == 0) {
+            $que = "INSERT INTO route (planID, routeDate) VALUES ('".$plan_id."','".$_GET['route_date']."')";
+            mysqli_query($connect, $que);
+        }
+        
+        // find route
+        $que = "SELECT * FROM route WHERE planID='".$plan_id."' AND routeDate='".$_GET['route_date']."'";
+        $result = mysqli_query($connect, $que);
+        $row = mysqli_fetch_array($result);
+        $route_id = $row['routeID'];
+        
+        // add place. if place already exist, do nothing.
+        $que = "SELECT COUNT(*) FROM place WHERE routeID='".$route_id."' AND googleID='".$_GET['place_id']."'";
+        $result = mysqli_query($connect, $que);
+        $row = mysqli_fetch_row($result);
+        if ($row[0] == 0) {
+            $que = "INSERT INTO place (routeID, googleID, visitOrder) VALUES ('".$route_id."','".$_GET['place_id']."','0')";
+            mysqli_query($connect, $que);
+        }
+
+
+
+?>
 	</section>
 	<section class="dialog_foot">
 		<a class="click">list</a>
