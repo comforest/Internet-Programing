@@ -78,7 +78,7 @@
 			var directionsDisplay = new google.maps.DirectionsRenderer;
 			directionsDisplay.setMap(map);
 
-			$(".oneline").addEventListener('click', function(){
+			$(".oneline").click(function(){
 				var arr = document.getElementsByClassName("oneline");
 				console.log("clicked!");
 
