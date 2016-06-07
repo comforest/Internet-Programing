@@ -23,6 +23,6 @@
         while ($row = mysqli_fetch_array($result)) {
             array_push($rows, $row['placeID']);
         }
-        echo (json_encode($rows));
+        echo (strip_tags(json_encode($rows)));
     }
 ?>
