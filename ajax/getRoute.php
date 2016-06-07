@@ -15,7 +15,7 @@
         $route_id = $row['routeID'];
         
         // get list of places
-        $que = "SELECT placeID FROM place WHERE routeID='".$route_id."'";
+        $que = "SELECT * FROM place WHERE routeID='".$route_id."'";
         $result = mysqli_query($connect, $que);
         $row = mysqli_fetch_row($result);
         
@@ -24,8 +24,7 @@
             {
                 $JSONres = array
                 (   
-                    "title"     => urlencode($row['title']),
-                    "content"   => urlencode($row['content'])
+                    "placeID"     => urlencode($row['placeID']),
                 ); 
                 array_push($rows, $JSONres);
             }
