@@ -105,7 +105,7 @@
                 var address = {
                   "all":   "/static/js/formatted json/shopping.json",
                   "shopping": "/static/js/formatted json/shopping.json",
-                  "historic", "/static/js/formatted json/historic site.json",
+                  "historic": "/static/js/formatted json/historic site.json",
                   "trend": "/static/js/formatted json/trend.json",
                   "nature": "/static/js/formatted json/nature.json"
                 };
