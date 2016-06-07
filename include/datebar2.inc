@@ -111,11 +111,10 @@
 		}
 		function clickDate(t){
 			var user_id = $("#session_userID").attr("value");
-			
+
 			$.ajax({
 				url:"/ajax/getRoute.php",
 				type:"get",
-				dataType:"json",
 				data:{
 					user_id:user_id,
 					route_date: $("#selected_date").attr("value")
