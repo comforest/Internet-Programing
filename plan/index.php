@@ -41,11 +41,13 @@
 		</div>
     </div>
     <script>
+		var map;
+
 		function initMap() {
 			var start = new google.maps.LatLng(37.534, 126.9725);
 			var finish = new google.maps.LatLng(37.5734, 127.0160);
 
-			var map = new google.maps.Map(document.getElementById('map'), {
+			map = new google.maps.Map(document.getElementById('map'), {
 				center: start,
 				zoom: 7
 			});
