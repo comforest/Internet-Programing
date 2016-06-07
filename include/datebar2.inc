@@ -161,6 +161,7 @@
 						pre_html += '</article>';
 					});
 					$("#path_list_body").html(pre_html);
+					initMap();
 				},
 				error:function(info, xhr){
 					console.log("에러: " + info.status + "\n" + info.responseText);
