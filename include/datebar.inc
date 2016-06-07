@@ -5,6 +5,7 @@
  -->
 <aside class="Llayer_fixed">
 	<script type = "text/javascript">
+	<!--
         <?php  
             $datestart = $_SESSION['dateStart'];
             $arr = explode("-", $datestart);
@@ -78,7 +79,7 @@
             return 0;
 
         }
-		function WriteVerticalCalendar(y, m, d, num=7){   
+		function WriteVerticalCalendar(y, m, d){   
 			
 			var week = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
 
@@ -91,7 +92,7 @@
 			div.innerHTML += ("<a href='#' class=\"dateButtonUp desktop\" onclick=\"WriteVerticalCalendar("+dd.getFullYear()+","+dd.getMonth()+","+dd.getDate()+")\"><img class=\"datebar_div_up\" src=\"/static/image/up_button.png\"></a>");
 			
 			var str = "<section class=\"dateBody\">";
-			for(var i=0;i<num;i++){
+			for(var i=0;i<7;i++){
 				dd = AddDate(d, 0,0,i);
                 if (cmp(dd, startDate) < 0 || cmp(dd, endDate) > 0) {
                     str += ("<div class=\"oneline outofrange\" data-date=\"" + dd.getFullYear() + "-" + ("0" + (dd.getMonth()+1)).slice(-2) + "-" + ("0" + dd.getDate()).slice(-2) + "\">"+"<span class=\"desktop\">"+  (dd.getMonth()+1)+" / " +"</span> <span class=\"hDate\">"+dd.getDate() +"</span><p class=\"date\" >"+week[dd.getDay()]+"</p> </div>");
@@ -119,5 +120,6 @@
 
 			$("#selected_date").attr("value", t.getAttribute("data-date"));
 		}
+		-->
 	</script>
 </aside>	
