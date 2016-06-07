@@ -146,8 +146,8 @@
 			});
 
 			directionsService.route({
-				origin: document.getElementById('start').value,
-				destination: document.getElementById('end').value,
+				origin: path_list[0],
+				destination: path_list[-1],
 				waypoints: waypts,
 				optimizeWaypoints: true,
 				travelMode: google.maps.TravelMode.DRIVING
