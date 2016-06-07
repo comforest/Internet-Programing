@@ -133,7 +133,6 @@
 				},
 				success:function(result){
 					console.log("유저 [" + user_id + "]에 대한 요청 결과: ");
-					console.log(result);
 
 					path_list = result;
 
