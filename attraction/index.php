@@ -52,7 +52,7 @@
     height: 100px;
     z-index: 150;
     background-color: #aaa; 
-    border-radius: 100%;" onclick="currentLocation()"><img style="width:100px; height:100px;" src="/static/image/geo.png"/></div>
+    border-radius: 100%;" onclick="currentLocation()" id="geo"><img style="width:100px; height:100px;" src="/static/image/geo.png"/></div>
 	<div id="mapbox">
 		<div id="map"></div>
 	</div>
