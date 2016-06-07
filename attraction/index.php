@@ -45,14 +45,7 @@
         require_once($_SERVER['DOCUMENT_ROOT']."/include/detailView.inc");
 		require_once($_SERVER['DOCUMENT_ROOT']."/include/tab.inc");
 	?>
-    <div style="position: absolute;
-    top: 100px;
-    left: 150px;
-    width: 100px;
-    height: 100px;
-    z-index: 150;
-    background-color: #aaa; 
-    border-radius: 100%;" onclick="currentLocation()" id="geo"><img style="width:100px; height:100px;" src="/static/image/geo.png"/></div>
+    <div onclick="currentLocation()" id="geo"><img src="/static/image/geo.png"/></div>
 	<div id="mapbox">
 		<div id="map"></div>
 	</div>

@@ -49,6 +49,10 @@
 	text-decoration: none;
 }
 
+#geo {
+    position: absolute; top: 100px; left: 150px; width: 100px; height: 100px; z-index: 101; border-radius: 100%; background-color: rgb(170, 170, 170);
+}
+
 @media screen and (max-width: 1000px){
     #geo {
         top: 17em;
