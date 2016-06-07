@@ -77,31 +77,8 @@
 		}
         
         function refreshMap() {
-			var start = new google.maps.Place(path_list[0].googleID);
-			var finish = new google.maps.Place(path_list[-1].googleID);
-
-			var directionsDisplay = new google.maps.DirectionsRenderer({
-				map: map
-			});
-
-            var waypts = [
-            {    
-                location: {lat:37.549058, lng:126.993913}
-            }
-            ];
-			var request = {
-				destination: finish,
-				origin: start,
-				travelMode: google.maps.TravelMode.DRIVING,
-                waypoints: waypts,
-                optimizeWaypoints: true
-			};
-
-			var directionsService = new google.maps.DirectionsService();
-			directionsService.route(request, function(response, status) {
-				if (status == google.maps.DirectionsStatus.OK) {
-					directionsDisplay.setDirections(response);
-				}
+			$.each(path_list, function(key, data){
+				addMarker(map, new google.maps.LatLng(data.lat, data.lng));
 			});
 		}
 	</script>
