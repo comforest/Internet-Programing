@@ -139,16 +139,11 @@
 		}
 
 		function calculateAndDisplayRoute(directionsService, directionsDisplay) {
-			var waypts = [];
-			var checkboxArray = document.getElementById('waypoints');
-			for (var i = 0; i < checkboxArray.length; i++) {
-				if (checkboxArray.options[i].selected) {
-				waypts.push({
-					location: checkboxArray[i].value,
-					stopover: true
-				});
-				}
-			}
+			var waypts = array();
+
+			$.each(path_list, function(key, value){
+				waypts.push({location: value.location, stopover:true});
+			});
 
 			directionsService.route({
 				origin: document.getElementById('start').value,
