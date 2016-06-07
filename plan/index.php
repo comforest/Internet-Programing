@@ -139,7 +139,7 @@
 		}
 
 		function calculateAndDisplayRoute(directionsService, directionsDisplay) {
-			var waypts = array();
+			var waypts = [];
 
 			$.each(path_list, function(key, value){
 				waypts.push({location: value.location, stopover:true});
