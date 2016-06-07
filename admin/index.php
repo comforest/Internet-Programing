@@ -123,6 +123,9 @@
                             <th>placeID</th>
                             <th>routeID</th>
                             <th>googleID</th>
+                            <th>name</th>
+                            <th>lat</th>
+                            <th>lng</th>
                             <th>visitOrder</th>
                         </tr>
                     </thead>
@@ -136,6 +139,9 @@
                                 echo '<td>'.$row['placeID'].'</td>';
                                 echo '<td>'.$row['routeID'].'</td>';
                                 echo '<td>'.$row['googleID'].'</td>';
+                                echo '<td>'.$row['name'].'</td>';
+                                echo '<td>'.$row['lat'].'</td>';
+                                echo '<td>'.$row['lng'].'</td>';
                                 echo '<td>'.$row['visitOrder'].'</td>';
                                 echo '</tr>';
                             }

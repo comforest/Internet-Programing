@@ -28,7 +28,7 @@
         $result = mysqli_query($connect, $que);
         $row = mysqli_fetch_row($result);
         if ($row[0] == 0) {
-            $que = "INSERT INTO place (routeID, googleID, visitOrder) VALUES ('".$route_id."','".$_GET['place_id']."','0')";
+            $que = "INSERT INTO place (routeID, googleID, name, lat, lng, visitOrder) VALUES ('".$route_id."','".$_GET['place_id']."','".$_GET['name']."','".$_GET['lat']."','".$_GET['lng']."','0')";
             mysqli_query($connect, $que);
         }
     }

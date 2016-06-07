@@ -29,6 +29,9 @@ $(function(){
     });
     $(document).on("click", "#image_add_place", function(){
         var place_id = $(this).attr("data-place-id");
+        var name = $(this).attr("data-place-name");
+        var lat = $(this).attr("data-place-lat");
+        var lng = $(this).attr("data-place-lng");
         var user_id = $("#session_userID").attr("value");
         $.ajax({
             url:"/ajax/addPlace.php",
@@ -36,6 +39,9 @@ $(function(){
             data:{
                 user_id:user_id,
                 place_id:place_id,
+                name:name,
+                lat:lat,
+                lng:lng,
                 route_date: $("#selected_date").attr("value")
             },
             success:function(){
