@@ -23,7 +23,7 @@
 			height: 100%;
 			width: 100%;
 		}
-	</style>   
+	</style>
 </head>
 <body>
     <input type="hidden" name="session_userID" id="session_userID" value="<?php echo $_SESSION['userID']; ?>">
