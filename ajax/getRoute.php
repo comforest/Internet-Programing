@@ -28,6 +28,8 @@
         $result = mysqli_query($connect, $que);
         $row = mysqli_fetch_row($result);
         
-        echo serialize($row);
+        foreach($row as $value) {
+            echo $value;
+        }
     }
 ?>
