@@ -89,7 +89,7 @@
 				}
 				$(this).className += " dateSelect";
 
-				$("#selected_date").attr("value", t.getAttribute("data-date"));
+				$("#selected_date").attr("value", $(this).getAttribute("data-date"));
 
 				var user_id = $("#session_userID").attr("value");
 
