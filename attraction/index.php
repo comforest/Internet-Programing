@@ -146,6 +146,6 @@
             }
         </script>
         <script type="text/javascript" src="/static/js/attraction.js"></script>
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCG21Y5X-wARtfSC6WkgO1nxoVU0WwcjwE&signed_in=true&libraries=places&callback=initialize" async defer></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCG21Y5X-wARtfSC6WkgO1nxoVU0WwcjwE&signed_in=true&libraries=places&callback=initialize&language=en" async defer></script>
 </body>
 </html>
