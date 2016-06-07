@@ -50,6 +50,10 @@
 }
 
 @media screen and (max-width: 1000px){
+    #geo {
+        display:none;
+    }
+    
 	.tourList .dialog_article{
 		min-height: 22%;
 		border-left: solid 30px #8174ba;
