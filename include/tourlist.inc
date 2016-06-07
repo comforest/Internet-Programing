@@ -7,7 +7,7 @@
 <section class="dialog tourList">
 	<section id="dialog_head" class="dialog_head">
 		<a href="#"><img src="/static/image/all_grey.png" id="all"></a>
-		<a href="#"><img src="/static/image/culture_grey.png" id="culture"></a>
+		<a href="#"><img src="/static/image/culture_grey.png" id="historic"></a>
 		<a href="#"><img src="/static/image/nature_grey.png" id="nature"></a>
 		<a href="#"><img src="/static/image/trend_grey.png" id="trend"></a>
 		<a href="#"><img src="/static/image/shopping_grey.png" id="shopping"></a>
