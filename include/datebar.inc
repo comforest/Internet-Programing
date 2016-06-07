@@ -5,8 +5,6 @@
  -->
 <aside class="Llayer_fixed">
 	<script type = "text/javascript">
-
-	<!--
         <?php  
             $datestart = $_SESSION['dateStart'];
             $arr = explode("-", $datestart);
@@ -121,6 +119,5 @@
 
 			$("#selected_date").attr("value", t.getAttribute("data-date"));
 		}
-	-->
 	</script>
 </aside>	
