@@ -16,8 +16,8 @@
 	<link rel="stylesheet" type="text/css" href="/static/css/datebar.css">
 	<link rel="stylesheet" type="text/css" href="/static/css/path.css">
 	<link rel="stylesheet" type="text/css" href="/static/css/plan.css"> 
-    <script src="/static/js/path.js"></script>
     <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="/static/js/path.js"></script>
 	<style type="text/css">
 		#map {
 			height: 100%;
