@@ -110,6 +110,17 @@
 
 		}
 		function clickDate(t){
+			var arr = document.getElementsByClassName("oneline");
+
+            for (i = 0; i < arr.length; i++) {
+                if (arr[i].className != "oneline outofrange") {
+                    arr[i].className = "oneline";
+                }
+            }
+			t.className += " dateSelect";
+
+			$("#selected_date").attr("value", t.getAttribute("data-date"));
+
 			var user_id = $("#session_userID").attr("value");
 
 			$.ajax({
