@@ -22,7 +22,7 @@
 .nav a:hover{
 	text-decoration: none;
 }
-.nav a:active{
+.nav a:active, .nav .navselect{
 	color: #323232;
 	font-weight: bold;
 }
