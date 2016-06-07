@@ -42,11 +42,19 @@
     </div>
     <script>
 		function initMap() {
-			var chicago = {lat: 41.85, lng: -87.65};
-			var indianapolis = {lat: 39.79, lng: -86.14};
+			var jsonurl = 'https://maps.googleapis.com/maps/api/place/details/json?placeid=' + place_list[0].googleID + '&key=AIzaSyCG21Y5X-wARtfSC6WkgO1nxoVU0WwcjwE';
+			var start;
+			$.getJSON(jsonurl, function(data){
+				start = data.geomery.location;
+			});
+			var jsonurl = 'https://maps.googleapis.com/maps/api/place/details/json?placeid=' + place_list[-1].googleID + '&key=AIzaSyCG21Y5X-wARtfSC6WkgO1nxoVU0WwcjwE';
+			var finish;
+			$.getJSON(jsonurl, function(data){
+				finish = data.geomery.location;
+			});
 
 			var map = new google.maps.Map(document.getElementById('map'), {
-				center: chicago,
+				center: start,
 				zoom: 7
 			});
 
@@ -55,16 +63,13 @@
 			});
 
             var waypts = [
-            {
-                location: {lat:40.331110, lng:-86.850635}
-            },
             {    
-                location: {lat:40.956313, lng:-87.388965}
+                location: {lat:37.549058, lng:126.993913}
             }
             ];
 			var request = {
-				destination: indianapolis,
-				origin: chicago,
+				destination: finish,
+				origin: start,
 				travelMode: google.maps.TravelMode.DRIVING,
                 waypoints: waypts,
                 optimizeWaypoints: true
