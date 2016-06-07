@@ -71,6 +71,7 @@
 			directionsService.route(request, function(response, status) {
 				if (status == google.maps.DirectionsStatus.OK) {
 					directionsDisplay.setDirections(response);
+					console.log(response);
 				}
 			});
 		}
