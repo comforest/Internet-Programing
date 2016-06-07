@@ -144,8 +144,8 @@
 						pre_html += '<a href="#" onclick="del("100")"><img src="/static/image/bin_grey.png" class="trash"></a>';
 						pre_html += '</div>';
 						pre_html += '<div class="namebox">';
-						pre_html += '<h1>' + data.googleID + '</h1>';
-						pre_html += '<p class = "time">' + data.placeID + '</p>';
+						pre_html += '<h1>' + data.name + '</h1>';
+						pre_html += '<p class = "time">' + data.lat + '/' + data.lng + '</p>';
 						pre_html += '</div>';
 						pre_html += '<div class="photobox">';
 						pre_html += '<img src="/static/image/sampleImage.jpg" class="photo">';
