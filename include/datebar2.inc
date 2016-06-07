@@ -145,7 +145,7 @@
 						pre_html += '</div>';
 						pre_html += '<div class="namebox">';
 						pre_html += '<h1>' + data.name + '</h1>';
-						pre_html += '<p class = "time">' + data.lat + '/' + data.lng + '</p>';
+						pre_html += '<p class = "time">' + ("" + data.lat).slice(-2) + '</p>';
 						pre_html += '</div>';
 						pre_html += '<div class="photobox">';
 						pre_html += '<img src="/static/image/sampleImage.jpg" class="photo">';
