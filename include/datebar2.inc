@@ -132,8 +132,6 @@
 					route_date: $("#selected_date").attr("value")
 				},
 				success:function(result){
-					console.log("유저 [" + user_id + "]에 대한 요청 결과: ");
-
 					path_list = result;
 
 					var pre_html = "";
