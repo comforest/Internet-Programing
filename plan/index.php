@@ -32,7 +32,7 @@
     ?>
     <div class="plancontainer">
 	<?php
-		require_once($_SERVER['DOCUMENT_ROOT']."/include/datebar.inc");
+		require_once($_SERVER['DOCUMENT_ROOT']."/include/datebar2.inc");
 		require_once($_SERVER['DOCUMENT_ROOT']."/include/path.inc");
 	?>
 		<div class="mapbox-lg">

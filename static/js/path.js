@@ -48,7 +48,7 @@ function down(num) {
     
     $(id).before($(id).next());
 }
-
+/*
 $("a.oneline").click(function() {
     var user_id = $("#session_userID").attr("value");
     $.ajax({
@@ -68,3 +68,4 @@ $("a.oneline").click(function() {
         }
     });
 });
+*/
