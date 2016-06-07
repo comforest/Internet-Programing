@@ -8,15 +8,6 @@
         $row = mysqli_fetch_array($result);
         $plan_id = $row['planID'];
         
-        // if route does not exist, create it
-        $que = "SELECT COUNT(*) FROM route WHERE planID='".$plan_id."' AND routeDate='".$_GET['route_date']."'";
-        $result = mysqli_query($connect, $que);
-        $row = mysqli_fetch_row($result);
-        if ($row[0] == 0) {
-            $que = "INSERT INTO route (planID, routeDate) VALUES ('".$plan_id."','".$_GET['route_date']."')";
-            mysqli_query($connect, $que);
-        }
-        
         // find route
         $que = "SELECT * FROM route WHERE planID='".$plan_id."' AND routeDate='".$_GET['route_date']."'";
         $result = mysqli_query($connect, $que);
@@ -28,8 +19,16 @@
         $result = mysqli_query($connect, $que);
         $row = mysqli_fetch_row($result);
         
-        foreach($row as $value) {
-            echo $value;
-        }
+        $rows = array();
+        while ($row = mysql_fetch_assoc($result))
+            {
+                $JSONres = array
+                (   
+                    "title"     => urlencode($row['title']),
+                    "content"   => urlencode($row['content'])
+                ); 
+                array_push($rows, $JSONres);
+            }
+        echo (strip_tags(urldecode(json_encode($rows))));
     }
 ?>
