@@ -98,7 +98,7 @@
                 if (cmp(dd, startDate) < 0 || cmp(dd, endDate) > 0) {
                     str += ("<div class=\"oneline outofrange\" data-date=\"" + dd.getFullYear() + "-" + ("0" + (dd.getMonth()+1)).slice(-2) + "-" + ("0" + dd.getDate()).slice(-2) + "\">"+"<span class=\"desktop\">"+  (dd.getMonth()+1)+" / " +"</span> <span class=\"hDate\">"+dd.getDate() +"</span><p class=\"date\" >"+week[dd.getDay()]+"</p> </div>");
                 } else {         
-                    str += ("<a href='#' class=\"oneline\" data-date=\"" + dd.getFullYear() + "-" + ("0" + (dd.getMonth()+1)).slice(-2) + "-" + ("0" + dd.getDate()).slice(-2) + "\" onclick=\"clickDate(this)\">"+"<span class=\"desktop\">"+  (dd.getMonth()+1)+" / " +"</span> <span class=\"hDate\">"+dd.getDate() +"</span><p class=\"date\" >"+week[dd.getDay()]+"</p> </a>");
+                    str += ("<a href='#' class=\"oneline\" data-date=\"" + dd.getFullYear() + "-" + ("0" + (dd.getMonth()+1)).slice(-2) + "-" + ("0" + dd.getDate()).slice(-2) + "\" "+"<span class=\"desktop\">"+  (dd.getMonth()+1)+" / " +"</span> <span class=\"hDate\">"+dd.getDate() +"</span><p class=\"date\" >"+week[dd.getDay()]+"</p> </a>");
                 }
             }
 			str += "</section>";
@@ -108,63 +108,6 @@
 			div.innerHTML += ("<a href='#' class=\"dateButtonDown desktop\" onclick=\"WriteVerticalCalendar("+dd.getFullYear()+","+dd.getMonth()+","+dd.getDate()+")\"><img class=\"datebar_div_down\" src=\"/static/image/down_button.png\"></a>");
 			div.innerHTML += ("<a href='#' class=\"mobile_right\" onclick=\"WriteVerticalCalendar("+dd.getFullYear()+","+dd.getMonth()+","+dd.getDate()+")\"><img class=\"datebar_div_down\" src=\"/static/image/right_button.png\"></a>");
 
-		}
-		function clickDate(t){
-			var arr = document.getElementsByClassName("oneline");
-
-            for (i = 0; i < arr.length; i++) {
-                if (arr[i].className != "oneline outofrange") {
-                    arr[i].className = "oneline";
-                }
-            }
-			t.className += " dateSelect";
-
-			$("#selected_date").attr("value", t.getAttribute("data-date"));
-
-			var user_id = $("#session_userID").attr("value");
-
-			$.ajax({
-				url:"/ajax/getRoute.php",
-				type:"get",
-				dataType:"json",
-				data:{
-					user_id:user_id,
-					route_date: $("#selected_date").attr("value")
-				},
-				success:function(result){
-					path_list = result;
-
-					var pre_html = "";
-					$.each(result, function(key, data) {
-						pre_html += '<article class="dialog_article path_article" id="n100">';
-						pre_html += '<div class="trashbox">';
-						pre_html += '<a href="#" onclick="del("100")"><img src="/static/image/bin_grey.png" class="trash"></a>';
-						pre_html += '</div>';
-						pre_html += '<div class="namebox">';
-						pre_html += '<h1>' + data.name + '</h1>';
-						pre_html += '<p class = "time">' + ("" + data.lat).slice(-2) + '</p>';
-						pre_html += '</div>';
-						pre_html += '<div class="photobox">';
-						pre_html += '<img src="/static/image/sampleImage.jpg" class="photo">';
-						pre_html += '</div>';
-						pre_html += '<div class="updownbox">';
-						pre_html += '<div class="buttonwrap">';
-						pre_html += '<a href="#" onclick="up("100")"><img src="/static/image/up_button.png"></a>';
-						pre_html += '</div>';
-						pre_html += '<div class="buttonwrap">';
-						pre_html += '<a href="#" onclick="down("100")"><img src="/static/image/down_button.png"></a>';
-						pre_html += '</div>';
-						pre_html += '</div>';
-						pre_html += '</article>';
-					});
-					$("#path_list_body").html(pre_html);
-					
-					refreshMap();
-				},
-				error:function(info, xhr){
-					console.log("에러: " + info.status + "\n" + info.responseText);
-				}
-			});
 		}
 	-->
 	</script>

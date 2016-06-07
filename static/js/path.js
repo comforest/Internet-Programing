@@ -48,10 +48,3 @@ function down(num) {
     
     $(id).before($(id).next());
 }
-
-function addMarker(map, location) {
-    var marker = new google.maps.Marker({
-        position: location,
-        setMap: map
-    });
-}
