@@ -6,16 +6,9 @@
 <!-- 관광지 목록 -->
 
 <script type="text/javascript">
-	function headerIcon(img, index) {
-		var arr = document.getElementsByClassName("haedBuuton");
-		var str = {"all", "culture", "nature", "trend", "shopping"};
-		var addr = "/static/image/";
-		for(var i = 0; i < arr.length; ++i=){
-			arr[i].src = addr + str[i] +"_grey";
-		}
-
-		img.src = addr + str[index] +"_black";
-	}
+<!--
+	
+-->
 </script>
 <section class="dialog tourList">
 	<section id="dialog_head" class="dialog_head">
